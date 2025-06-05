@@ -3,7 +3,7 @@ import Hero from "../components/Hero"
 import Header from "../components/Header"
 import Gallery from "../components/Gallery"
 import Contact from "../components/Contact"
-import NewSetter from "../components/NewSetter"
+import NewSetter from "../components/NewSetter.jsx"
 import Footer from "../components/Footer"
 
 function Home() {

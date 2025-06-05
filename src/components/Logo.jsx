@@ -1,12 +1,12 @@
 const UmaLogo = () => (
-  <svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+  <svg width="100" height="80">
     <text
       x="50%"
-      y="55%"
+      y="50%"
       textAnchor="middle"
       style={{
         fontFamily: "Quicksand, sans-serif",
-        fontSize: "48px",
+        fontSize: "40px",
         fill: "#ffffff",
       }}
     >
