@@ -1,5 +1,5 @@
 import CircularButton from "./CircularButton";
-import { ArrowDown } from "./ArrowDown";
+import { ArrowDown } from "./Icons";
 
 function Hero() {
   return (

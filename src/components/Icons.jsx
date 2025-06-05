@@ -9,3 +9,12 @@ export const ArrowDown = () => {
     )
 }
 
+
+export const ArrowUp = () => {
+    return (
+        <svg width="30px" height="30px" viewBox="0 0 48 48" fill="none">
+            <rect width="48" height="48"/>
+            <path d="M13 30L25 18L37 30" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    )
+}
