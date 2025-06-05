@@ -34,11 +34,11 @@ function NewSetter(){
 
     return (
         <section ref={sectionRef} className="bg-[#e7e0d0] overflow-hidden"> {/*py-12 md:py-10 */}
-            <div className="container">
+            <div>
                 <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
                     {/* Texto a la izquierda (o arriba en mobile) */}
                     <div
-                        className={`basis-2/3 md:w-1/2 text-[#2c2c2c] transition-all duration-1000 ease-out px-6 my-5 ${
+                        className={`w-full md:w-1/2 text-[#2c2c2c] transition-all duration-1000 ease-out px-6 my-5 ${
                         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                         }`}
                     >
@@ -55,7 +55,7 @@ function NewSetter(){
                     </div>
                     {/* ✅ Imagen a la derecha (o abajo en mobile) */}
                     <div
-                        className={`basis-1/3 md:w-1/2 flex ${isMobile ? "justify-center" : "justify-end"} transition-all duration-1000 ease-out ${
+                        className={`w-full md:w-1/2 flex ${isMobile ? "justify-center" : "justify-end"} transition-all duration-1000 ease-out ${
                         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                         }`}
                     >
