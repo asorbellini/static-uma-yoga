@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
+import HeroAbout from "../components/HeroAbout";
 
 const Members = [
     {name: "Alba Muzzarelli", slug:"alba-muzzarelli"},
@@ -9,10 +10,11 @@ const Members = [
 
 function About() {
   return (
-    <div>
+    <div className="min-h-screen w-full">
       <Header />
-      <div className="relative h-screen flex items-center justify-center text-white">
-          <div className="absolute inset-0 bg-[url('/images/homebg.png')] bg-cover bg-center" />
+      <HeroAbout />
+      <div className="relative flex items-center justify-center text-white">
+          <div className="absolute inset-0 bg-bottom bg-contain" />
           <div className="absolute inset-0 bg-black opacity-50">
             <div className="py-16 px-4 bg-neutral-100 text-center">
               <h3 className="text-3xl font-serif mb-4">Sobre UMĀ</h3>

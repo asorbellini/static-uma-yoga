@@ -17,8 +17,8 @@ function Home() {
       <ScrollToTop />
       <UmaSummary />
       <CosaFacciamo />
-      <Gallery />
-      <Contact  />
+      {/* <Gallery />
+      <Contact  /> */}
       <NewSetter />
       <Footer />
     </div>
