@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import UmaLogo from "./Logo";
 
-const navItems = [{'name':'Chi siamo', 'url':"/about"},
-  {'name':'Classi', 'url':"/classes"},
+const navItems = [{'name':'Chi siamo', 'url':"/chi-siamo"},
+  {'name':'Classi', 'url':"/classi"},
   {'name':'Navakaraṇa vinyāsa', 'url':"/navakarana-vinyasa"},
   {'name':'Retreat e workshop', 'url':"/retreat-e-workshop"},
-  {'name':'Contatti', 'url':"/contact-us"}
+  {'name':'Contatti', 'url':"/contatti"}
 ]
 
 const Header = () => {

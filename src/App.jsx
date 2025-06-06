@@ -12,13 +12,13 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />}/>
-        <Route path="/about/:memberName" element={<PersonalDetail />}/>
-        <Route path="/classes" element={<Classes />} />
-        {/*<Route path="/classes/:nameClass" element={<ClassesDetail />} /> */}
+        <Route path="/chi-siamo" element={<About />}/>
+        <Route path="/chi-siamo/:memberName" element={<PersonalDetail />}/>
+        <Route path="/classi" element={<Classes />} />
+        {/*<Route path="/classi/:nameClass" element={<ClassesDetail />} /> */}
         <Route path="/navakarana-vinyasa" element={<NavakaranaVinyasa />} />
         <Route path="/retreat-e-workshop" element={<RetreateWorkshop />} />
-        <Route path="/contact-us" element={<ContactUs />} />  
+        <Route path="/contatti" element={<ContactUs />} />  
         {/*<Route path="/press-e-media" element={<Press />} /> */}
         {/* <Route path="/events" element={<Events />} />        */}
       </Routes>

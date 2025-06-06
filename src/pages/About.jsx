@@ -24,7 +24,7 @@ function About() {
               {Members.map((m)=>(
                 <li key={m.slug}>
                   <h1>{m.name}</h1>
-                  <Link to={`/about/${m.slug}`}>
+                  <Link to={`/chi-siamo/${m.slug}`}>
                     <button className="bg-rose-600 text-white px-4 py-2 rounded">
                         Saber más
                     </button>
