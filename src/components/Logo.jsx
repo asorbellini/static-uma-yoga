@@ -4,8 +4,10 @@ const UmaLogo = () => (
       x="50%"
       y="50%"
       textAnchor="middle"
+      dominantBaseline="middle"
       style={{
         fontFamily: "Quicksand, sans-serif",
+        verticalAlign:"bottom",
         fontSize: "40px",
         fill: "#ffffff",
       }}

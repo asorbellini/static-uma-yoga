@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import UmaLogo from "./Logo";
 
-const navItems = [{'item':'CHI SIAMO', 'url':"/about"},
-  {'item':'CLASSI', 'url':"/classes"},
-  {'item':'NAVAKARANA VINYASA', 'url':"/navakarana-vinyasa"},
-  {'item':'RETREAT E WORKSHOP', 'url':"/retreat-e-workshop"},
-  {'item':'CONTATTI', 'url':"/contact-us"}
+const navItems = [{'name':'Chi siamo', 'url':"/about"},
+  {'name':'Classi', 'url':"/classes"},
+  {'name':'Navakaraṇa vinyāsa', 'url':"/navakarana-vinyasa"},
+  {'name':'Retreat e workshop', 'url':"/retreat-e-workshop"},
+  {'name':'Contatti', 'url':"/contact-us"}
 ]
 
 const Header = () => {
@@ -15,7 +15,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      setIsScrolled(window.scrollY > 30)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
@@ -24,12 +24,12 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out ${
-        isScrolled ? "bg-transparent backdrop-blur-md shadow-lg py-3 md:py-4" : "bg-transparent py-4 md:py-6"
+        isScrolled ? "bg-transparent backdrop-blur-xl shadow-lg py-2 md:py-3" : "bg-transparent py-2 md:py-3"
       }`}
     >
-      <nav className="container mx-auto px-4 sm:px-6 flex justify-between items-center">
+      <nav className="w-full mx-auto px-4 sm:px-6 flex flex-row justify-between items-center">
         {/* Logo */}
-        <div className="text-lg sm:text-xl md:text-2xl font-light tracking-wider text-neutral-200">
+        <div className="tracking-wider">
           <NavLink to="/">
               <UmaLogo />
             {/* <span className="hidden sm:inline">UMĀ YOGA</span>
@@ -38,15 +38,15 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation Menu */}
-        <ul className="hidden lg:flex space-x-6 xl:space-x-8">
+        <ul className="hidden lg:flex flex-row space-x-6 xl:space-x-8">
           {navItems.map((item, index) => (
             <li key={index}>
               <NavLink
                 to={item.url}
-                className="text-xs xl:text-sm font-light tracking-wide text-neutral-200 hover:text-neutral-500 transition-colors duration-300 relative group"
+                className="uppercase text-xs md:text-sm xl:text-base font-medium tracking-wide text-white transition-colors duration-300 relative group"
               >
-                {item.item}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-stone-800 transition-all duration-300 group-hover:w-full"></span>
+                {item.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
               </NavLink>
             </li>
           ))}
@@ -75,12 +75,12 @@ const Header = () => {
           isMobileMenuOpen ? "max-h-screen opacity-100 visible" : "max-h-0 opacity-0 invisible"
         } bg-transparent backdrop-blur-md border-t border-stone-200/50`}
       >
-        <ul className="container mx-auto px-4 sm:px-6 py-4 space-y-4">
+        <ul className="w-full mx-auto px-4 sm:px-6 py-4 space-y-4">
           {navItems.map((item, index) => (
             <li key={index}>
               <NavLink
                 to={item.url}
-                className="block text-sm font-light tracking-wide text-neutral-200 hover:text-neutral-400 transition-colors duration-300 py-2"
+                className="block text-base font-medium tracking-wide text-white hover:text-white transition-colors duration-300 py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.item}
