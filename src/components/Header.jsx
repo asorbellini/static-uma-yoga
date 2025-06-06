@@ -29,7 +29,7 @@ const Header = () => {
     >
       <nav className="w-full mx-auto px-4 sm:px-6 flex flex-row justify-between items-center">
         {/* Logo */}
-        <div className="tracking-wider">
+        <div>
           <NavLink to="/">
               <UmaLogo />
             {/* <span className="hidden sm:inline">UMĀ YOGA</span>
@@ -38,7 +38,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation Menu */}
-        <ul className="hidden lg:flex flex-row space-x-6 xl:space-x-8">
+        <ul className="hidden md:flex flex-row space-x-6 xl:space-x-8">
           {navItems.map((item, index) => (
             <li key={index}>
               <NavLink
@@ -53,7 +53,7 @@ const Header = () => {
         </ul>
 
         {/* Mobile Menu Button */}
-        <button className="lg:hidden text-neutral-200 p-2" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+        <button className="md:hidden text-neutral-200 p-2" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
           <svg
             className={`w-6 h-6 transition-transform duration-300 ${isMobileMenuOpen ? "rotate-90" : ""}`}
             fill="none"
@@ -71,7 +71,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden transition-all duration-300 ease-in-out ${
+        className={`md:hidden transition-all duration-300 ease-in-out ${
           isMobileMenuOpen ? "max-h-screen opacity-100 visible" : "max-h-0 opacity-0 invisible"
         } bg-transparent backdrop-blur-md border-t border-stone-200/50`}
       >

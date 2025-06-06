@@ -3,14 +3,16 @@ import { ArrowDown } from "./Icons";
 
 function Hero() {
   return (
-    <div className="relative h-[80vh] flex flex-row items-end justify-center text-white">
-      <div className="absolute inset-0 bg-[url('/images/homebg1.png')] bg-cover bg-center" />
-      <div className="relative z-10 p-12">
-          <h2 className="text-5xl font-quicksand p-4 rounded">Benvenuto</h2>
+    <div className="relative h-[90vh] w-full flex flex-row items-end justify-center text-white">
+      <div className="absolute inset-0 bg-[url('/images/homebg1.png')] bg-center bg-cover" /> {/*r */}
+      <div className="relative z-10 p-12 text-center">
+          <h2 className="text-2xl md:text-5xl/4 p-2 md:p-4 rounded font-quicksand
+          ">¡Benvenuti a UMĀ!</h2>
+          <p className="text-base md:text-xl p-2 md:p-4 rounded">Uno spazio sacro di crescita ed evoluzione personale che unisce e presenta i nostri progetti e percorsi yoga e in cui yu possa riconoscerti e sentirti a casa.</p>
       </div>
       {/* <CircularButton />  ver si lo ponemos */}
-      <div className="absolute z-20 flex flex-row items-center justify-center hover:animate-bounce">
-          <a href="#gallery"> {/* La sección es provisoria */}
+      <div className="absolute z-20 flex flex-row items-center justify-center hover:animate-pulse">
+          <a href="#uma-summary"> {/* La sección es provisoria */}
               <ArrowDown />
           </a>
       </div>

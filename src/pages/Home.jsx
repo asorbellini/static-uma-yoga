@@ -6,6 +6,7 @@ import Contact from "../components/Contact.jsx"
 import NewSetter from "../components/NewSetter.jsx"
 import Footer from "../components/Footer.jsx"
 import ScrollToTop from "../components/ScrollToTop.jsx"
+import UmaSummary from "../components/UmaSummary.jsx"
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <Header />
       <Hero />
       <ScrollToTop />
+      <UmaSummary />
       <Gallery />
       <Contact  />
       <NewSetter />
