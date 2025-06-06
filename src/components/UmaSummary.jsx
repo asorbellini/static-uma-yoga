@@ -2,6 +2,7 @@
 import FotoPortadaAlba from "../assets/images/PortadaAlba.png"
 import FotoPortadaDiletta from "../assets/images/PortadaDiletta.png"
 import FotoPortadaTiziano from "../assets/images/PortadaTiziano.png" 
+import { ArrowDown } from "./Icons"
 
 const SummaryMembers = [{
     'fullName':'Alba Muzzarelli',
@@ -23,7 +24,7 @@ const SummaryMembers = [{
 
 function UmaSummary(){
     return(
-        <section id="uma-summary" className="min-h-screen w-full py-28 px-4 bg-gradient-to-t from-[#ccbe9d] to-[#9c8e6e] "> {/* to-[#aa935c] */}
+        <section id="uma-summary" className="min-h-screen w-full pt-28 px-4 bg-gradient-to-t from-[#ccbe9d] to-[#9c8e6e] "> {/* to-[#aa935c]  */}
             <div className="">
                 <h3 className="text-2xl md:text-5xl/4 p-2 md:p-4 rounded font-quicksand text-neutral-300 text-center underline-offset-2">
                 Conocerci
@@ -56,6 +57,11 @@ function UmaSummary(){
                     <button className="bg-white text-[#2c2c2c] px-6 py-3 text-sm tracking-wide">
                         CHI SIAMO
                     </button>
+                </a>
+            </div>
+            <div className="z-20 flex items-center justify-center hover:animate-pulse">
+                <a href="#cosa-facciamo">
+                    <ArrowDown />
                 </a>
             </div>
         </section>
