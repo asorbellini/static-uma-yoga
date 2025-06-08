@@ -1,6 +1,20 @@
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import UmaLogo from "./Logo";
+import { split } from "postcss/lib/list";
+
+
+const useActiveSection = () => {
+    const location = useLocation()
+    const [activeSecction, setActiveSeccion] = useState(null)
+    useEffect(()=>{
+      const path = location.pathname;
+      const section = path || ''
+      setActiveSeccion(section)
+    }, [location])
+    return activeSecction
+}
+
 
 const navItems = [{'name':'Chi siamo', 'url':"/chi-siamo"},
   {'name':'Classi', 'url':"/classi"},
@@ -12,7 +26,7 @@ const navItems = [{'name':'Chi siamo', 'url':"/chi-siamo"},
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
+  const activeSecction = useActiveSection()
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 30)
@@ -46,7 +60,7 @@ const Header = () => {
                 className="uppercase text-xs md:text-sm xl:text-base font-medium tracking-wide text-white transition-colors duration-300 relative group"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full ${activeSecction === `${item.url}` ? "w-full": ""}`}></span>
               </NavLink>
             </li>
           ))}
