@@ -6,6 +6,8 @@
   body {
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-weight: 300;
+    transition: all;
+    transition-duration: 500ms;
   }
 }
 

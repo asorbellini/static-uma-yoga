@@ -81,8 +81,7 @@ function UmaSummary(){
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nobis quidem tempore eum nisi voluptatem nihil perferendis reprehenderit magnam cumque. Quibusdam, consequuntur. Vel sapiente veniam ipsam placeat accusantium iste esse.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-10 mt-4">
-                            
-                    </div>
+                        </div>
                 </div>
                 <div className="flex justify-center my-2">
                     <a href="/retreat-e-workshop">
@@ -90,6 +89,30 @@ function UmaSummary(){
                             SCOPRI I NOSTRI RITIRI
                         </button>
                     </a>
+                </div>
+            </section>
+            <section id="nostre-classi" className="min-h-screen w-full pt-28 px-4 bg-gradient-to-b from-[#9c8e6e] to-[#e7e0d0]" >
+                <h1>
+                    Le notri classi
+                </h1>
+                <div className="flex flex-col sm:flex-row">
+                        <div>
+                            <h3>
+                                Classi Yoga live streaming
+                            </h3>
+                            <p>
+                                Pratica dove vuoi seguendo i nostri corsi in live streaming o comincia un percorso yoga personalizzato online.
+                            </p>
+                        </div>
+                        <div>
+                            <h3>
+                                Classi Yoga Live
+                            </h3>
+                            <p>
+                                Pratica con noi seguendo i nostri corsi live o comincia in presenza un percorso yoga personalizzato.
+                            </p>
+                        </div>
+                    <button >Scorpi di piu</button>
                 </div>
             </section>
         </div>
