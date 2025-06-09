@@ -17,6 +17,7 @@ function App() {
         <Route path="/classi" element={<Classes />} />
         {/*<Route path="/classi/:nameClass" element={<ClassesDetail />} /> */}
         <Route path="/navakarana-vinyasa" element={<NavakaranaVinyasa />} />
+        <Route path="/anubhuti" element={<Anubhuti />} />
         <Route path="/retreat-e-workshop" element={<RetreateWorkshop />} />
         <Route path="/contatti" element={<ContactUs />} />  
         {/*<Route path="/press-e-media" element={<Press />} /> */}

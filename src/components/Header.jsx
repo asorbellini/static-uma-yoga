@@ -18,6 +18,7 @@ const useActiveSection = () => {
 const navItems = [{'name':'Chi siamo', 'url':"/chi-siamo"},
   {'name':'Classi', 'url':"/classi"},
   {'name':'Navakaraṇa vinyāsa', 'url':"/navakarana-vinyasa"},
+  {'name':'Anubhuti', 'url':"/anubhuti"},
   {'name':'Retreat e workshop', 'url':"/retreat-e-workshop"},
   {'name':'Contatti', 'url':"/contatti"}
 ]
