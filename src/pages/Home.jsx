@@ -5,6 +5,7 @@ import NewSetter from "../components/NewSetter.jsx"
 import Footer from "../components/Footer.jsx"
 import ScrollToTop from "../components/ScrollToTop.jsx"
 import UmaSummary from "../components/UmaSummary.jsx"
+import ToRetreateWorkshop from "../components/ToRetreateWorkshop.jsx"
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
       <ScrollToTop />
       <UmaSummary />
       <NewSetter />
+      <ToRetreateWorkshop />
       <Footer />
     </div>
   )
