@@ -17,7 +17,7 @@ const SummaryMembers = [{
 {
     'fullName':'Tiziano Sorbellini',
     'imageUrl':FotoPortadaTiziano,
-    'shortDescription':'Tiziano, creatore della pratica Anubhuti e autore di libri come "Semi del nulla" e "Anubhuti".',
+    'shortDescription':'Tiziano, creatore della pratica Anubhūti e autore di libri come "Semi del nulla" e "Anubhuti".',
 },
 ]
 
