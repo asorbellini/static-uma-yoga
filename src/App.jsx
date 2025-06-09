@@ -6,6 +6,7 @@ import NavakaranaVinyasa from "./pages/NavakaranaVinyasa.jsx"
 import ContactUs from "./pages/ContactUs.jsx"
 import RetreateWorkshop from "./pages/RetreateWorkshop.jsx"
 import MemberDetail from "./pages/MemberDetail.jsx"
+import Anubhuti from "./pages/Anubhuti.jsx"
 
 function App() {
   return (
