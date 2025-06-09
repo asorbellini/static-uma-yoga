@@ -8,7 +8,7 @@ function formatName(slug) {
 }
 
 
-function PersonalDetail(){
+function MemberDetail(){
     const {memberName} = useParams()
     return(
         <div>
@@ -19,4 +19,4 @@ function PersonalDetail(){
     )
 }
 
-export default PersonalDetail
+export default MemberDetail

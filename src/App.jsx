@@ -5,7 +5,7 @@ import Classes from "./pages/Classes.jsx"
 import NavakaranaVinyasa from "./pages/NavakaranaVinyasa.jsx"
 import ContactUs from "./pages/ContactUs.jsx"
 import RetreateWorkshop from "./pages/RetreateWorkshop.jsx"
-import PersonalDetail from "./pages/PersonalDetail.jsx"
+import MemberDetail from "./pages/MemberDetail.jsx"
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/chi-siamo" element={<About />}/>
-        <Route path="/chi-siamo/:memberName" element={<PersonalDetail />}/>
+        <Route path="/chi-siamo/:memberName" element={<MemberDetail />}/>
         <Route path="/classi" element={<Classes />} />
         {/*<Route path="/classi/:nameClass" element={<ClassesDetail />} /> */}
         <Route path="/navakarana-vinyasa" element={<NavakaranaVinyasa />} />
