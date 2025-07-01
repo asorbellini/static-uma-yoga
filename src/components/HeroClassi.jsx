@@ -1,4 +1,4 @@
-import cosaFacciamo2 from "../assets/images/CosaFacciamo2.png"
+import cosaFacciamo2 from "../assets/images/Cosafacciamo2.png"
 import { ArrowDown } from "../components/Icons.jsx";
 
 function HeroClassi() {
