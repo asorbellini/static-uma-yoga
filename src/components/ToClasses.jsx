@@ -33,12 +33,12 @@ function ToClasses(){
     }, [])
 
     return (
-        <section ref={sectionRef} className="bg-[#9f8853] overflow-hidden"> {/*py-12 md:py-10 */}
+        <section ref={sectionRef} className="bg-[#d4af7f] overflow-hidden"> {/*py-12 md:py-10 */}
             <div>
                 <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
                     {/* Texto a la izquierda */}
                     <div
-                        className={`w-full md:w-1/2 text-[#ffffff] transition-all duration-1000 ease-out px-6 my-5 ${
+                        className={`w-full md:w-1/2 text-[#2c2c2c] transition-all duration-1000 ease-out px-6 my-5 ${
                         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                         }`}
                     >
@@ -49,8 +49,8 @@ function ToClasses(){
                             Pratica dove vuoi seguendo i nostri corsi in live streaming o comincia un percorso yoga personalizzato online.
                         </p>
                         <div className={`${isMobile ? "flex justify-center" : ""}`}>
-                            <a href="/chi-siamo" target="_blank">
-                                <button className="bg-[#c6b4a1] text-[#2c2c2c] px-6 py-3 text-sm tracking-wide">
+                            <a href="/classi" target="_blank">
+                                <button className="bg-[#5c7c5c] text-white px-6 py-3 text-sm tracking-wide hover:bg-[#7da87d]">
                                     SCORPI DI PIU
                                 </button>
                             </a>

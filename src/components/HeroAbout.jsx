@@ -1,20 +1,23 @@
-
+import ChiSiamo from "../assets/images/ChiSiamo.png"
 import { ArrowDown } from "./Icons";
 
 function HeroAbout() {
   return (
-    <div className="relative h-[90vh] w-full flex flex-row items-center justify-center text-white bg-gradient-to-tr from-[#ccbe9d] to-[#9c8e6e]">
-      <div className="absolute flex items-center align-middle">
-        <img src="/images/aboutbg.png" alt="prueba" className=""/>
+    <div className="relative w-full h-[100vh] flex flex-row items-center justify-center bg-gradient-to-br to-[#5c7c5c] from-[#d4af7f]">
+      <div className="absolute w-full px-12">
+        {/* Imagen */}
+                <img
+                    src={ChiSiamo}
+                    alt="chi siamo"
+                    className="w-full h-[50vh] sm:h-[70vh] object-cover md:object-contain opacity-90 "
+                />
+        {/* CHI SIAMO superpuesto en la parte superior de imágen*/}
+                <h2 className="w-full absolute -top-6 left-1/2 -translate-x-1/2 text-3xl md:text-4xl lg:text-5xl rounded font-quicksand text-white font-bold text-center drop-shadow-2xl">
+                    CHI SIAMO
+                </h2>
       </div>
-      <div className="relative z-10 p-12 text-center">
-          <h2 className="text-2xl md:text-5xl/4 p-2 md:p-4 rounded font-quicksand
-          ">CHI SIAMO</h2>
-          <p className="text-base md:text-xl p-2 md:p-4 rounded">Uno spazio sacro di crescita ed evoluzione personale che unisce e presenta i nostri progetti e percorsi yoga e in cui yu possa riconoscerti e sentirti a casa.</p>
-      </div>
-
-      <div className="absolute z-20 flex flex-row items-center justify-center hover:animate-pulse">
-          <a href="#"> {/* La sección es provisoria */}
+      <div className="absolute bottom-10 z-20 flex flex-row items-center justify-center hover:animate-pulse">
+          <a href="#about-uma-summary">
               <ArrowDown />
           </a>
       </div>
