@@ -3,7 +3,7 @@ import imageUrlAlba from "../assets/images/PortadaAlba.png"
 import imageUrlDiletta from "../assets/images/PortadaDiletta.png"
 import imageUrlTiziano from "../assets/images/PortadaTiziano.png" 
 import cosaFacciamo from "../assets/images/CosaFacciamo.png"
-import cosaFacciamo2 from "../assets/images/cosaFacciamo2.png"
+import cosaFacciamo2 from "../assets/images/CosaFacciamo2.png"
 
 import { ArrowDown } from "./Icons"
 
