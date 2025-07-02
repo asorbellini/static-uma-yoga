@@ -50,7 +50,7 @@ function ToRetreateWorkshop(){
                         </p>
                         <div className={`${isMobile ? "flex justify-center" : ""}`}>
                             <a href="/retreat-e-workshop" target="_blank">
-                                <button className="bg-[#aa935c] text-[#2c2c2c] px-6 py-3 text-sm tracking-wide font-semibold hover:bg-[#beac83] transition-colors duration-300">
+                                <button className="bg-dorado text-oscuro px-6 py-3 text-sm tracking-wide font-semibold hover:bg-[#beac83] transition-colors duration-300">
                                     SCORPI DI PIU
                                 </button>
                             </a>

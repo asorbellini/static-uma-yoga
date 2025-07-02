@@ -10,7 +10,7 @@ function HeroClassi() {
                     alt="`Cosa Facciamo 2"
                     className="w-[40vw] h-[50vh] xl:h-[60vh] object-cover rounded-br-full rounded-tl-full shadow-lg" />
             </div>
-            <div className="absolute inset-0  bg-gradient-to-br from-[#a66c5b] from-0% via-[#d4af7f] via-50%  to-[#a66c5b] to-90%" />
+            <div className="absolute inset-0  bg-gradient-to-br from-marronrosa from-0% via-dorado via-50%  to-marronrosa to-90%" />
             <div className="relative z-10 p-12 text-left">
                 <h1 className="text-2xl md:text-5xl/4 p-2 md:p-4 rounded font-quicksand font-bold
                 ">LE CLASSI DI UMĀ</h1>

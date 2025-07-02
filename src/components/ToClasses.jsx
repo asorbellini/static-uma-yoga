@@ -33,12 +33,12 @@ function ToClasses(){
     }, [])
 
     return (
-        <section ref={sectionRef} className="bg-[#d4af7f] overflow-hidden"> {/*py-12 md:py-10 */}
+        <section ref={sectionRef} className="bg-dorado overflow-hidden"> {/*py-12 md:py-10 */}
             <div>
                 <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
                     {/* Texto a la izquierda */}
                     <div
-                        className={`w-full md:w-1/2 text-[#2c2c2c] transition-all duration-1000 ease-out px-6 my-5 ${
+                        className={`w-full md:w-1/2 text-oscuro transition-all duration-1000 ease-out px-6 my-5 ${
                         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                         }`}
                     >
@@ -50,7 +50,7 @@ function ToClasses(){
                         </p>
                         <div className={`${isMobile ? "flex justify-center" : ""}`}>
                             <a href="/classi" target="_blank">
-                                <button className="bg-[#5c7c5c] text-white px-6 py-3 text-sm tracking-wide hover:bg-[#7da87d]">
+                                <button className="bg-musgo text-white px-6 py-3 text-sm tracking-wide hover:bg-hoja">
                                     SCORPI DI PIU
                                 </button>
                             </a>

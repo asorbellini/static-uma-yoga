@@ -26,7 +26,7 @@ function AboutUmaSummary(){
     }, [])
     return(
         <div>
-            <section ref={sectionRef} id="about-uma-summary" className="min-h-screen w-full px-4 bg-gradient-to-tr from-[#D4AF7F] to-[#5c7c5c]">
+            <section ref={sectionRef} id="about-uma-summary" className="min-h-screen w-full px-4 bg-gradient-to-tr from-dorado to-musgo">
         {/* CHI SIAMMO titulo de sección */}
                 <div className="px-12 pt-24 pb-12 flex flex-col sm:flex-row gap-3 items-center">
                     <div className="basis-1/3">
@@ -53,7 +53,7 @@ function AboutUmaSummary(){
                                     <div className="p-2 md:p-4 basis-1/2">
                                         <h2 className="font-quicksand text-base text-center font-semibold text-white">Alba Muzzarelli</h2>
                                         <p className="font-sans text-white">Nata con il Sole in Acquario, la Luna in Pesci e con Ariete come Ascendente, Alba è un’insaziabile curiosa, qualità che nel 2014 la conduce per la prima volta su un tappetino da yoga.</p>
-                                        <div className="bg-[#a66c5b] justify-center my-2 rounded-full px-6 py-3  hover:bg-[#d4af7f] hover:border-[#5a66c5b]  transition-all duration-500">
+                                        <div className="bg-marronrosa justify-center my-2 rounded-full px-6 py-3  hover:bg-dorado hover:border-[#5a66c5b]  transition-all duration-500">
                                             <a href="/chi-siamo/alba-muzzarelli">
                                                 <button className="text-white text-sm font-semibold tracking-wide">
                                                     SCOPRI DI PIÙ
@@ -75,7 +75,7 @@ function AboutUmaSummary(){
                                 <div className="p-2 md:p-4 basis-1/2">
                                     <h2 className="font-quicksand text-base text-center font-semibold text-white">Diletta Muzzarelli</h2>
                                     <p className="font-sans text-white">Diletta incontra lo Yoga da bambina. Grazie alla pratica accede a un metaspazio amorevole e inclusivo in cui sperimenta una piena libertà di ascolto ed espressione che la guida ad approfondirne lo studio.</p>
-                                    <div className="bg-[#a66c5b] justify-center my-2 rounded-full px-6 py-3  hover:bg-[#d4af7f] hover:border-[#5a66c5b]  transition-all duration-500">
+                                    <div className="bg-marronrosa justify-center my-2 rounded-full px-6 py-3  hover:bg-dorado hover:border-[#5a66c5b]  transition-all duration-500">
                                         <a href="/chi-siamo/diletta-muzzarelli">
                                             <button className="text-white text-sm font-semibold tracking-wide">
                                                 SCOPRI DI PIÙ
@@ -97,7 +97,7 @@ function AboutUmaSummary(){
                                 <div className="p-2 md:p-4 basis-1/2">
                                     <h2 className="font-quicksand text-base text-center font-semibold text-white">Tiziano Sorbellini</h2>
                                     <p className="font-sans text-white">Tiziano, creatore della pratica Anubhūti e autore di libri come "Semi del nulla" e "Anubhuti".</p>
-                                    <div className="bg-[#a66c5b] justify-center my-2 rounded-full px-6 py-3  hover:bg-[#d4af7f] hover:border-[#5a66c5b]  transition-all duration-500">
+                                    <div className="bg-marronrosa justify-center my-2 rounded-full px-6 py-3  hover:bg-dorado hover:border-[#5a66c5b]  transition-all duration-500">
                                         <a href="/chi-siamo/tiziano-sorbellini">
                                             <button className="text-white text-sm font-semibold tracking-wide">
                                                 SCOPRI DI PIÙ

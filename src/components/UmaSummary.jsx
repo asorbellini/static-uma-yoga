@@ -30,7 +30,7 @@ function UmaSummary(){
     }, [])
     return(
         <div>
-            <section ref={sectionRef} id="uma-summary" className="min-h-screen w-full px-4 bg-gradient-to-t from-[#D4AF7F] to-[#a66c5b]">
+            <section ref={sectionRef} id="uma-summary" className="min-h-screen w-full px-4 bg-gradient-to-t from-dorado to-marronrosa">
         {/* CHI SIAMMO titulo de sección */}
                 <div className="p-2 md:p-4 pt-24 md:pt-24">
                     <h3 className="text-2xl md:text-4xl rounded font-quicksand text-white text-center font-light">
@@ -48,8 +48,8 @@ function UmaSummary(){
                                     className=" h-[45vh] object-cover shadow rounded-bl-full " />
                                 </div>
                                 <div className="p-2 md:p-4">
-                                    <h2 className="font-quicksand text-base text-right font-semibold text-[#2c2c2c] hover:underline transition-all">Alba Muzzarelli</h2>
-                                    <p className="font-sans text-[#2c2c2c]">Nata con il Sole in Acquario, la Luna in Pesci e con Ariete come Ascendente, Alba è un’insaziabile curiosa, qualità che nel 2014 la conduce per la prima volta su un tappetino da yoga.</p>
+                                    <h2 className="font-quicksand text-base text-right font-semibold text-oscuro hover:underline transition-all">Alba Muzzarelli</h2>
+                                    <p className="font-sans text-oscuro">Nata con il Sole in Acquario, la Luna in Pesci e con Ariete come Ascendente, Alba è un’insaziabile curiosa, qualità che nel 2014 la conduce per la prima volta su un tappetino da yoga.</p>
                                 </div>
                             </a>
                         </div>
@@ -63,8 +63,8 @@ function UmaSummary(){
                                     className="h-[45vh] object-cover shadow" />
                                 </div>
                                 <div className="p-2 md:p-4">
-                                    <h2 className="font-quicksand text-base text-center font-semibold text-[#2c2c2c] hover:underline transition-all">Diletta Muzzarelli</h2>
-                                    <p className="font-sans text-[#2c2c2c]">Diletta incontra lo Yoga da bambina. Grazie alla pratica accede a un metaspazio amorevole e inclusivo in cui sperimenta una piena libertà di ascolto ed espressione che la guida ad approfondirne lo studio.</p>
+                                    <h2 className="font-quicksand text-base text-center font-semibold text-oscuro hover:underline transition-all">Diletta Muzzarelli</h2>
+                                    <p className="font-sans text-oscuro">Diletta incontra lo Yoga da bambina. Grazie alla pratica accede a un metaspazio amorevole e inclusivo in cui sperimenta una piena libertà di ascolto ed espressione che la guida ad approfondirne lo studio.</p>
                                 </div>
                             </a>
                         </div>
@@ -78,8 +78,8 @@ function UmaSummary(){
                                     className="h-[45vh] object-cover shadow rounded-tr-full" />
                                 </div>
                                 <div className="p-2 md:p-4">
-                                    <h2 className="font-quicksand text-base text-left font-semibold text-[#2c2c2c] hover:underline transition-all">Tiziano Sorbellini</h2>
-                                    <p className="font-sans text-[#2c2c2c]">Tiziano, creatore della pratica Anubhūti e autore di libri come "Semi del nulla" e "Anubhuti".</p>
+                                    <h2 className="font-quicksand text-base text-left font-semibold text-oscuro hover:underline transition-all">Tiziano Sorbellini</h2>
+                                    <p className="font-sans text-oscuro">Tiziano, creatore della pratica Anubhūti e autore di libri come "Semi del nulla" e "Anubhuti".</p>
                                 </div>
                             </a>
                         </div>
@@ -87,7 +87,7 @@ function UmaSummary(){
                     </div>
                 </div>
                 <div className="flex items-center justify-center ">
-                    <div className="bg-[#5C7C5C] justify-center my-2 rounded-full px-6 py-3  hover:bg-[#7DA87D] hover:border-[#5C7C5C]  transition-all duration-500">
+                    <div className="bg-musgo justify-center my-2 rounded-full px-6 py-3  hover:bg-hoja hover:border-musgo transition-all duration-500">
                         <a href="/chi-siamo">
                             <button className="text-white text-sm font-semibold tracking-wide">
                                 SCOPRI DI PIÙ SU CHI SIAMO
@@ -96,7 +96,7 @@ function UmaSummary(){
                     </div>
                 </div>
             </section>
-            <section className="min-h-screen w-full px-4 bg-gradient-to-b from-[#D4AF7F] to-[#a66c5b] flex flex-col items-center justify-center">
+            <section className="min-h-screen w-full px-4 bg-gradient-to-b from-dorado to-marronrosa flex flex-col items-center justify-center">
                 <div className="relative w-full px-12 mt-24">
             {/* Imagen */}
                     <img
@@ -144,7 +144,7 @@ function UmaSummary(){
             </section>
 
 
-            <section id="nostre-classi" className="min-h-screen w-full pt-28 px-4 bg-[#a66c5b] " > {/*bg-gradient-to-t from-[#CCBE9D] to-[#a66c5b]  */}
+            <section id="nostre-classi" className="min-h-screen w-full pt-28 px-4 bg-marronrosa " > {/*bg-gradient-to-t from-arena to-marronrosa  */}
                 <div className="p-2 md:p-4 ">
                     <h3 className="text-2xl md:text-4xl rounded font-quicksand text-white text-center font-light">
                     LE NOSTRE CLASSI
@@ -156,13 +156,13 @@ function UmaSummary(){
                 
                 <div className="px-12">
                     <div className="flex flex-col md:flex-row gap-3 mt-4">
-                        <div className="flex-1 bg-gradient-to-r from-[#D4AF7F] from-40% to-[#CCBE9D] to-90% rounded-3xl">
+                        <div className="flex-1 bg-gradient-to-r from-dorado from-40% to-arena to-90% rounded-3xl">
                             <div className="p-2 md:p-4">
                                 <h2 className="font-quicksand text-base text-center font-semibold uppercase underline underline-offset-1">Vinyāsa Yoga del Risveglio (in presenza)</h2>
                                 <p className="font-sans py-4">Una pratica fluida attraverso cui risvegliare corpo e mente con consapevolezza e intenzione per cominciare la giornata con energia e presenza mentale.
                                 La classe è caratterizzata da numerose variazioni e da un’attenzione particolare agli allineamenti del corpo e alla dinamica del respiro. Il corso è accessibile a tutti.</p>
                                 <div className="flex items-center justify-center ">
-                                    <div className="bg-[#5C7C5C] justify-center my-2 rounded-full px-6 py-3  hover:bg-[#7DA87D] hover:border-[#5C7C5C]  transition-all duration-500">
+                                    <div className="bg-musgo justify-center my-2 rounded-full px-6 py-3  hover:bg-hoja hover:border-musgo  transition-all duration-500">
                                         <a href="/classi/vinyasa-yoga-del-risveglio">
                                             <button className="text-white text-sm font-semibold tracking-wide">
                                                 SCOPRI
@@ -172,13 +172,13 @@ function UmaSummary(){
                                 </div>
                             </div>
                         </div>
-                        <div className="flex-1 bg-gradient-to-r from-[#CCBE9D] from-10% via-[#D4AF7F] via-50% to-[#CCBE9D] rounded-3xl">
+                        <div className="flex-1 bg-gradient-to-r from-arena from-10% via-dorado via-50% to-arena rounded-3xl">
                             <div className="p-2 md:p-4">
-                                <h2 className="font-quicksand text-base text-center font-semibold text-[#2c2c2c] uppercase underline underline-offset-1">Vinyāsa krama (in presenza)</h2>
+                                <h2 className="font-quicksand text-base text-center font-semibold text-oscuro uppercase underline underline-offset-1">Vinyāsa krama (in presenza)</h2>
                                 <p className="font-sans py-4">Una pratica intensa, dinamica, nella quale gli asana (posture) sono intimamente connessi al respiro e si susseguono, a ritmo sostenuto, in un flusso continuo, per favorire il riequilibrio del sistema corpo-mente e facilitare uno stato di rinnovata freschezza energetica.
                                 </p>
                                 <div className="flex items-center justify-center ">
-                                    <div className="bg-[#5C7C5C] justify-center my-2 rounded-full px-6 py-3  hover:bg-[#7DA87D] hover:border-[#5C7C5C]  transition-all duration-500">
+                                    <div className="bg-musgo justify-center my-2 rounded-full px-6 py-3  hover:bg-hoja hover:border-musgo transition-all duration-500">
                                         <a href="/classi/gentle-vinyasa">
                                             <button className="text-white text-sm font-semibold tracking-wide">
                                                 SCOPRI
@@ -188,14 +188,14 @@ function UmaSummary(){
                                 </div>
                             </div>
                         </div>
-                        <div className="flex-1 bg-gradient-to-l from-[#D4AF7F] from-40% to-[#CCBE9D] to-90% rounded-3xl">
+                        <div className="flex-1 bg-gradient-to-l from-dorado from-40% to-arena to-90% rounded-3xl">
                             <div className="p-2 md:p-4">
-                                <h2 className="font-quicksand text-base text-center font-semibold  text-[#2c2c2c] uppercase underline underline-offset-1">Gentle Vinyāsa</h2>
+                                <h2 className="font-quicksand text-base text-center font-semibold  text-oscuro uppercase underline underline-offset-1">Gentle Vinyāsa</h2>
                                 <p className="font-sans py-4">Gentle Vinyāsa propone un flusso di posture morbido, gentile ma efficace, prevedendo delle semplici sequenze che variano in base alle necessità di ogni praticante.
                                 Questa dolce pratica migliora la consapevolezza e la percezione del proprio corpo, scioglie rigidità muscolari, nutre la forza e l’elasticità del movimento.
                                 </p>
                                 <div className="flex items-center justify-center ">
-                                    <div className="bg-[#5C7C5C] justify-center my-2 rounded-full px-6 py-3  hover:bg-[#7DA87D] hover:border-[#5C7C5C]  transition-all duration-500">
+                                    <div className="bg-musgo justify-center my-2 rounded-full px-6 py-3  hover:bg-hoja hover:border-musgo  transition-all duration-500">
                                         <a href="/classi/vinyasa-flow">
                                             <button className="text-white text-sm font-semibold tracking-wide">
                                                 SCOPRI

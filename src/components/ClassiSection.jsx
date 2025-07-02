@@ -7,7 +7,7 @@ import imageUrlVinyasaFlow from "../assets/images/VinyasaFlow.png"
 function ClassiSection() {
     return(
         <div>
-            <section id="classi" className="min-h-screen w-full px-4 bg-gradient-to-tr from-[#a66c5b] from-0% via-[#d4af7f] via-50%  to-[#a66c5b] to-90% flex flex-col items-center justify-center">
+            <section id="classi" className="min-h-screen w-full px-4 bg-gradient-to-tr from-marronrosa from-0% via-dorado via-50%  to-marronrosa to-90% flex flex-col items-center justify-center">
                 <div className="p-2 md:p-4 ">
                     <p className="font-quicksand text-lg text-center font-semibold text-white pt-4">
                         Pratica con noi per cominciare un percorso di autotrasformazione fisica e mentale seguendo i nostri corsi in presenza o in live streaming.
