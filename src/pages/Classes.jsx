@@ -1,9 +1,9 @@
 
-import NewSetter from "../components/NewSetter.jsx"
 import Footer from "../components/Footer.jsx"
 import HeroClassi from "../components/HeroClassi.jsx";
 import ClassiSection from "../components/ClassiSection.jsx";
 import ScrollToTop from "../components/ScrollToTop.jsx";
+import ToRetreateWorkshop from "../components/ToRetreateWorkshop.jsx"
 
 function Classes() {
   return (
@@ -11,7 +11,7 @@ function Classes() {
         <HeroClassi />
         <ScrollToTop />
         <ClassiSection />
-        <NewSetter />
+        <ToRetreateWorkshop />
         <Footer />
     </div>
   );
