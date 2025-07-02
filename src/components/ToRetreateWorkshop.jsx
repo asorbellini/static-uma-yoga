@@ -33,12 +33,12 @@ function ToRetreateWorkshop(){
     }, [])
 
     return (
-        <section ref={sectionRef} className="bg-gradient-to-tr from-[#2b2517] to-[#aa935c] overflow-hidden"> {/*py-12 md:py-10 */}
+        <section ref={sectionRef} className="bg-gradient-to-tr from-[#2b2517] to-[#aa935c] overflow-hidden px-12"> {/*py-12 md:py-10 */}
             <div>
                 <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8">
                     {/* Texto a la izquierda */}
                     <div
-                        className={`w-full md:w-1/2 text-[#ffffff] transition-all duration-1000 ease-out px-6 my-5 ${
+                        className={`w-full md:w-1/2 text-[#ffffff] transition-all duration-1000 ease-out px-4 my-5 ${
                         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                         }`}
                     >
@@ -63,7 +63,7 @@ function ToRetreateWorkshop(){
                         }`}
                     >
                         <div
-                        className={`relative ${isMobile ? "h-full w-[166px]" : "h-[300px] w-[500px] "} rounded-br-full rounded-bl-full overflow-hidden hover:scale-105 transition-all`}
+                        className={`absolute ${isMobile ? "h-full w-[166px]" : "h-[300px] w-[500px] "} rounded-br-full rounded-bl-full overflow-hidden hover:scale-105 transition-all`}
                         >
                         <img
                             src={ToRetreateWorkshopImage}

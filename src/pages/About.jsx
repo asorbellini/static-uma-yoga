@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import Header from "../components/Header";
+
 import HeroAbout from "../components/HeroAbout";
 import ScrollToTop from "../components/ScrollToTop";
 import AboutUmaSummary from "../components/AboutUmaSummary";
@@ -15,7 +14,6 @@ const Members = [
 function About() {
   return (
     <div className="min-h-screen w-full">
-      <Header />
       <HeroAbout />
       <ScrollToTop />
       <AboutUmaSummary />

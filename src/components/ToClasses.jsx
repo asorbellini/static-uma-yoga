@@ -35,10 +35,10 @@ function ToClasses(){
     return (
         <section ref={sectionRef} className="bg-dorado overflow-hidden"> {/*py-12 md:py-10 */}
             <div>
-                <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+                <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 px-12">
                     {/* Texto a la izquierda */}
                     <div
-                        className={`w-full md:w-1/2 text-oscuro transition-all duration-1000 ease-out px-6 my-5 ${
+                        className={`w-full md:w-1/2 text-oscuro transition-all duration-1000 ease-out px-4 my-5 ${
                         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                         }`}
                     >
@@ -56,14 +56,14 @@ function ToClasses(){
                             </a>
                         </div>
                     </div>
-                    {/* ✅ Imagen a la derecha (o abajo en mobile) */}
+                    {/* ✅ Imagen a la derecha (hidden en mobile) */}
                     <div
                         className={`w-full md:w-1/2 flex ${isMobile ? "justify-center" : "justify-center"} transition-all duration-1000 ease-out ${
                         isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
                         }`}
                     >
                         <div
-                        className={`relative ${isMobile ? "hidden" : "w-[400px]"} rounded-bl-full rounded-tr-full overflow-hidden `}
+                        className={`absolute -right-12 -translate-y-1/2 ${isMobile ? "hidden" : "w-[400px]"} rounded-bl-full rounded-tr-full overflow-hidden `}
                         >
                         <img
                             src={ToClassesImage}

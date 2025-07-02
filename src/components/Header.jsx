@@ -70,7 +70,7 @@ const Header = () => {
           <svg
             className={`w-6 h-6 transition-transform duration-300 ${isMobileMenuOpen ? "rotate-90" : ""}`}
             fill="none"
-            stroke="currentColor"
+            stroke="white"
             viewBox="0 0 24 24"
           >
             {isMobileMenuOpen ? (

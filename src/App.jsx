@@ -7,10 +7,14 @@ import ContactUs from "./pages/ContactUs.jsx"
 import RetreateWorkshop from "./pages/RetreateWorkshop.jsx"
 import MemberDetail from "./pages/MemberDetail.jsx"
 import Anubhuti from "./pages/Anubhuti.jsx"
+import Header from "./components/Header.jsx"
+import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange.jsx"
 
 function App() {
   return (
     <Router>
+      <ScrollToTopOnRouteChange />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/chi-siamo" element={<About />}/>
