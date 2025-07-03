@@ -1,4 +1,4 @@
-import logoNavakarana from "../assets/images/logoNavakarana.png"
+import logoNavakarana from "../assets/images/LogoNavakarana.png"
 
 function HeroNavakarana() {
     return(
