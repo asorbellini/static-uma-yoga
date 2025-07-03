@@ -83,7 +83,6 @@ function UmaSummary(){
                                 </div>
                             </a>
                         </div>
-                        
                     </div>
                 </div>
                 <div className="flex items-center justify-center ">
