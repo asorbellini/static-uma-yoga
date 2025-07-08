@@ -1,0 +1,53 @@
+[
+    {
+        "id":1,
+        "Name":"Alba Muzzarelli",
+        "memberName":"alba-muzzarelli",
+        "profession":"Insegnante di yoga",
+        "fotografia":{
+            "1":"/images/PortadaAlba.png",
+            "2":"/images/PortadaAlba.png",
+            "3":"/images/PortadaAlba.png"
+        },
+        "smallDescription":"Nata con il Sole in Acquario, la Luna in Pesci e con Ariete come Ascendente, Alba è un’insaziabile curiosa, qualità che nel 2014 la conduce per la prima volta su un tappetino da yoga.",
+        "training":["Ottiene il suo primo certificato di idoneità all’insegnamento dello yoga [250 RYT] con Igor Cerfolli e Daniela Ramponi, per poi proseguire il suo percorso formativo in Anukalana yoga sotto la guida di Jacopo Ceccarelli a Firenze [500 RYT].","Contemporaneamente conclude il percorso formativo triennale di Energheia, la prima scuola di formazione per Terapeuti Esoterici per lo studio della Psicologia dello Yoga, percorso tanto bello quanto sfidante, che la aiuta a destrutturare antichi automatismi e limitanti condizionamenti.","Alba indaga le attività della mente umana attraverso un approccio sempre curioso ed entusiasta ai diversi metodi e stili di pratica, meticolosa ricerca che l’ha portata prima a studiare, praticare e condividere la meditazione Himalayana con Ela Mare, per poi conoscere il maestro Dario Calvaruso, con il quale conclude i moduli formativi 1 [ATC 108hr] e 2 [ATC108hr] in Navakaraṇa Vinyāsa, diventando una delle poche insegnanti in Italia abilitata all’insegnamento di questo metodo.","Nel corso degli anni approfondisce anche lo studio della filosofia dello yoga frequentando il master in “Scienze della Salute Yoga e Ayurveda” presso il Centro Studi Bhaktivedanta e, con la consapevolezza maturata con lo studio dello yoga di quanto ogni singolo individuo sia inevitabilmente e armoniosamente in connessione con tutto ciò che ci circonda, intraprende un percorso di studi presso la Yoga delle Stelle Academy in Jyotish, l’astrologia Vedica./n Il suo intento come insegnante è quello di spronare i propri allievi ad accedere con fiducia e coraggio alla più alta forma della propria potenzialità, per trasformare le proprie paure in virtù."],
+        "socialMedia": {
+            "instagram":"https://www.instagram.com/albamuzzarelli/",
+            "email": "alba.muzzarelli@gmail.com"
+        }
+    },
+    {
+        "id":2,
+        "Name":"Diletta Muzzarelli",
+        "memberName":"diletta-muzzarelli",
+        "profession":"Insegnante di yoga",
+        "fotografia":{
+            "1":"/images/PortadaDiletta.png",
+            "2":"/images/PortadaDiletta.png",
+            "3":"/images/PortadaDiletta.png"
+        },
+        "smallDescription":"Diletta incontra lo Yoga da bambina. Grazie alla pratica accede a un metaspazio amorevole e inclusivo in cui sperimenta una piena libertà di ascolto ed espressione che la guida ad approfondirne lo studio.",
+        "training":["Si diploma insegnante Yoga sotto la guida di Igor Cerfolli in YogaPlanet [+ 500 RYT].","Dottoressa in Scienze e Tecniche Psicologiche, Diletta approfondisce gli studi di psicologia e filosofia yoga frequentando la scuola triennale Energheia, la prima scuola di formazione per Terapeuti Esoterici per lo studio della Psicologia dello Yoga, e il master in Scienze Tradizionali dello Yoga presso il Centro Studi Bhaktivedanta, a cui è attualmente iscritta.","Continua la sua formazione in Italia prendendo parte al modulo di perfezionamento insegnanti Yang e Yin yoga [150h YA – CEAS] con Marco Migliavacca e Giovanna De Paulis, India e a Bali, dove approfondisce lo studio del Vinyāsa Krama con Murni Made.", "È la prima a portare a Napoli il metodo di insegnamento Navakaraṇa Vinyāsa Hrdayam conseguendo il livello 1 di insegnamento del metodo in seguito ad avere concluso i moduli formativi 1 , 2  e 3 [ATC + 324hr] sotto la guida del maestro Dario Calvaruso.", "Con YogaPlanet collabora come insegnante formatrice nelle formazioni yoga base [YA 250hr] e avanzate [YA 500 e 760 hr].", "Il suo intento come insegnante è quello di accompagnare i propri allievi in quel metaspazio amorevole da lei sperimentato per accogliere la propria vera natura e crescere in coerenza con essa."],
+        "socialMedia": {
+            "instagram":"https://www.instagram.com/dilettahamsa_/",
+            "email": "diletta.muzzarelli@gmail.com"
+        }
+    },
+    {
+        "id":3,
+        "Name":"Tiziano Sorbellini",
+        "memberName":"tiziano-sorbellini",
+        "profession":"Fondatore della pratica ANUBHŪTI",
+        "fotografia":{
+            "1":"/images/PortadaTiziano.png",
+            "2":"/images/PortadaTiziano.png",
+            "3":"/images/PortadaTiziano.png"
+        },
+        "smallDescription":"Tiziano, creatore della pratica Anubhūti e autore di libri come \"Semi del nulla\" e \"Anubhuti\".",
+        "training":["Aenean euismod porttitor dictum. Integer et ornare nisi, non vehicula felis. Nam risus elit, egestas non dui ac, pretium consectetur risus. Etiam a augue a libero auctor pellentesque. Vivamus feugiat lobortis consequat. Mauris at libero eleifend, dictum sapien eu, tempus sapien. Morbi ultricies lacus eleifend, vulputate libero blandit, tincidunt sapien.","Curabitur dui sem, elementum sit amet rhoncus id, feugiat condimentum eros. Quisque fermentum mi libero, non facilisis dui cursus et. Proin rutrum, lorem vel interdum ornare, est enim rhoncus mauris, id dapibus neque odio a orci. Nulla viverra elementum ullamcorper. Ut nec ligula id orci aliquet facilisis et sed est.","Nulla facilisi. Proin scelerisque lectus tortor, lobortis interdum massa iaculis at. Morbi volutpat luctus viverra. In finibus sed elit ut eleifend. Duis fringilla urna sit amet porta tempus. Morbi fringilla ornare turpis eget porta. Morbi elementum sapien eu purus pretium porttitor. Vivamus quis vulputate nibh. ", "Sed pharetra volutpat neque at luctus. Donec sit amet pharetra tellus, id consequat orci. Aenean venenatis finibus quam condimentum commodo. In mattis cursus dictum. Donec et lectus augue. Phasellus pretium ultrices purus, ut varius ante bibendum a."],
+        "socialMedia": {
+            "instagram":"https://www.instagram.com/tiziano.sorbellini/",
+            "email": "tiziano.sorbellini@gmail.com"
+        }
+    }
+]
