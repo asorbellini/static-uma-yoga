@@ -46,7 +46,7 @@ const Header = () => {
         {/* Logo */}
         <div>
           <NavLink to="/">
-              <UmaLogo />
+              <UmaLogo classname="w-16 h-16"/>
           </NavLink>
         </div>
 
