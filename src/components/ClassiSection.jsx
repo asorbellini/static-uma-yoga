@@ -25,7 +25,7 @@ function ClassiSection() {
         }, [])
     return(
         <div>
-            <section id="classi" className="min-h-screen w-full px-4 bg-gradient-to-tr from-marronrosa from-0% via-dorado via-50% to-marronrosa to-90% flex flex-col items-center justify-center">
+            <section id="classi" className="min-h-screen w-full px-4 bg-gradient-to-tr from-terracota from-0% via-dorado via-50% to-terracota to-90% flex flex-col items-center justify-center">
                 <div className="p-2 md:p-4 ">
                     <p className="font-quicksand text-lg text-center font-semibold text-white pt-4">
                         Pratica con noi per cominciare un percorso di autotrasformazione fisica e mentale seguendo i nostri corsi in presenza o in live streaming.
@@ -92,7 +92,7 @@ function ClassiSection() {
                     </div>
                 </div>
             </section>
-            <section ref={sectionRef} className="min-h-screen w-full px-4 flex items-center bg-gradient-to-br from-marronrosa from-0% via-dorado via-50% to-marronrosa to-90% relative overflow-hidden">
+            <section ref={sectionRef} className="min-h-screen w-full px-4 flex items-center bg-gradient-to-br from-terracota from-0% via-dorado via-50% to-terracota to-90% relative overflow-hidden">
                 <div className="flex flex-col lg:flex-row min-h-screen px-12">
                     <div className="flex-1 flex flex-col justify-center text-white py-12">
                         <h1 className="font-quicksand text-3xl md:text-4xl lg:text-5xl font-light">
@@ -103,7 +103,7 @@ function ClassiSection() {
                         yoga e in cui Tu possa riconoscerti e sentirti a casa.
                         </p>
                         <div className="flex items-start justify-start ">
-                            <div className="bg-musgo justify-center my-2 rounded-full px-6 py-3 hover:bg-hoja hover:border-musgo transition-all duration-500">
+                            <div className="bg-verdeBosque justify-center my-2 rounded-full px-6 py-3 hover:bg-verdeOliva hover:border-verdeBosque transition-all duration-500">
                                 <a href="/chi-siamo">
                                     <button className="text-white text-sm font-semibold tracking-wide">
                                         SCOPRI DI PIÙ SU CHI SIAMO

@@ -4,7 +4,7 @@ import { ArrowDown } from "../components/Icons.jsx";
 function HeroClassi() {
     return (
         <div className="relative h-[90vh] w-full flex flex-row items-center justify-center text-white">
-            <div className="absolute inset-0  bg-gradient-to-br from-marronrosa from-0% via-dorado via-50%  to-marronrosa to-90%" />
+            <div className="absolute inset-0  bg-gradient-to-br from-terracota from-0% via-dorado via-50%  to-terracota to-90%" />
             <div className="absolute top-[12.5%] z-20 p-12 text-left">
                 <h1 className="text-2xl md:text-5xl p-2 md:p-4 rounded font-quicksand font-semibold
                 ">LE CLASSI DI UMĀ</h1>

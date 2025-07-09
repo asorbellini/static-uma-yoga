@@ -50,7 +50,7 @@ function ToClasses(){
                         </p>
                         <div className={`${isMobile ? "flex justify-center" : ""}`}>
                             <a href="/classi" target="_blank">
-                                <button className="bg-musgo text-white px-6 py-3 text-sm tracking-wide hover:bg-hoja">
+                                <button className="bg-verdeBosque text-white px-6 py-3 text-sm tracking-wide hover:bg-verdeOliva">
                                     SCORPI DI PIU
                                 </button>
                             </a>

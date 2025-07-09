@@ -7,7 +7,7 @@ import ScrollToTop from "../components/ScrollToTop"
 
 function RetreateWorkshop() {
     return(
-        <div className="min-h-screen w-full bg-arena">
+        <div className="min-h-screen w-full bg-claro">
             <ScrollToTop />
             {/* HERO RETREAT E WORKSHOP */}
             <div className="relative h-[80vh] flex flex-row justify-center justify-items-center  items-end  text-white" >  

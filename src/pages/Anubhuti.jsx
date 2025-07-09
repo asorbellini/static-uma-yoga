@@ -23,7 +23,7 @@ function Anubhuti() {
       return () => observer.disconnect()
   }, [])
   return (
-    <div className="min-h-screen w-full bg-arena">
+    <div className="min-h-screen w-full bg-claro">
         <div className="relative h-[60vh] w-full flex flex-row items-center justify-center text-white bg-[#4A617A]" > 
             <img src={logoAnubhuti} alt="Logo Anubhuti" className="absolute top-[40%]"/>
             <div className="absolute top-1/2 z-20 p-12 text-center">

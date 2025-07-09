@@ -22,7 +22,7 @@ const ExpandableButton = ({ title, children}) => {
             {/* Botón expandible */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-full hover:bg-gradient-to-r hover:from-musgo hover:to-hoja transition-colors duration-300 px-6 py-4 flex items-center justify-between text-white"
+                className="w-full hover:bg-gradient-to-r hover:from-verdeBosque hover:to-verdeOliva transition-colors duration-300 px-6 py-4 flex items-center justify-between text-white"
             >
                 <span className="text-lg font-quicksand font-light tracking-wide uppercase">{title}</span>
                 {/* Icono de flecha */}
@@ -57,7 +57,7 @@ function MemberDetail(){
     if (!member) return <p>Miembro no encontrado</p>;
 
     return(
-        <div className="min-h-screen bg-gradient-to-br from-dorado via-dorado to-musgo">
+        <div className="min-h-screen bg-gradient-to-br from-dorado via-dorado to-verdeBosque">
         {/* Presentación del miembro */}
             <section className="relative w-full px-4 pt-28">
                 {/* Contenedor principal */}

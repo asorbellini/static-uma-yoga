@@ -54,7 +54,7 @@ const NavakaranaImages = [
 function NavakaranaVinyasa() {
   
   return (
-    <div className="min-h-screen w-full bg-arena">
+    <div className="min-h-screen w-full bg-claro">
         <HeroNavakarana />
         <NavakaranaSummary />
         {/* GALERÍA DE IMÁGENES */}

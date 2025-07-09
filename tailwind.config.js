@@ -26,12 +26,12 @@ export default {
       walk2: "walk2 2s ease-out forwards",
     },
     colors: {
-        arena: '#CCBE9D',
-        marronrosa: '#A66C5B',
-        dorado: '#D4AF7F',
-        musgo: '#5C7C5C',
-        hoja: '#7DA87D',
-        oscuro: '#2C2C2C',
+        claro: '#EDE8DA', /* Antes #CCBE9D */
+        terracota: '#A66C5B',/* Antes #A66C5B */
+        dorado: '#D4AF7F',/* Antes #D4AF7F */
+        verdeOliva: '#7DA87D',/* Antes #7DA87D */
+        verdeBosque: '#21524C',/* Antes #5C7C5C */
+        oscuro: '#2C2C2C',/* Antes #2C2C2C */
       },
     },
   },

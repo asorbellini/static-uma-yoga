@@ -3,7 +3,7 @@ import { ArrowDown } from "./Icons";
 
 function HeroAbout() {
   return (
-    <div className="relative w-full h-[100vh] flex flex-row items-center justify-center bg-gradient-to-br to-musgo from-dorado">
+    <div className="relative w-full h-[100vh] flex flex-row items-center justify-center bg-gradient-to-br to-verdeOliva from-dorado">
       <div className="absolute w-full px-12">
         {/* Imagen */}
                 <img

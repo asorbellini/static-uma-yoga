@@ -33,7 +33,7 @@ function NewSetter(){
     }, [])
 
     return (
-        <section ref={sectionRef} className="bg-arena overflow-hidden"> {/*py-12 md:py-10 */}
+        <section ref={sectionRef} className="bg-claro overflow-hidden"> {/*py-12 md:py-10 */}
             <div>
                 <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 px-12">
                     {/* Texto a la izquierda (o arriba en mobile) */}
@@ -47,7 +47,7 @@ function NewSetter(){
                         </h2>
                         <div className={`${isMobile ? "flex justify-center" : ""}`}>
                             <a href="https://mailchi.mp/5adff419986c/benvenut" target="_blank">
-                                <button className="bg-musgo hover:bg-hoja transition-all duration-500 text-white px-6 py-3 text-sm tracking-wide">
+                                <button className="bg-verdeBosque hover:bg-verdeOliva transition-all duration-500 text-white px-6 py-3 text-sm tracking-wide">
                                     ISCRIVITI ORA
                                 </button>
                             </a>
