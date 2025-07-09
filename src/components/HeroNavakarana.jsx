@@ -8,7 +8,7 @@ function HeroNavakarana() {
             }}> 
                 <img src={logoNavakarana} alt="Logo Navakarana" className="absolute top-[40%]"/>
                 <div className="absolute top-1/2 z-20 p-12 text-center">
-                    <h1 className="text-2xl md:text-5xl p-2 md:p-4 rounded font-quicksand font-semibold uppercase
+                    <h1 className="text-2xl md:text-5xl p-2 md:p-4 rounded font-rose font-semibold uppercase
                     ">NavakaraṆa vinyāsa</h1>
                 </div>
             </div>

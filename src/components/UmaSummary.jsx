@@ -33,7 +33,7 @@ function UmaSummary(){
             <section ref={sectionRef} id="uma-summary" className="min-h-screen w-full px-4 bg-gradient-to-t from-dorado to-terracota">
         {/* CHI SIAMMO titulo de sección */}
                 <div className="p-2 md:p-4 pt-24 md:pt-24">
-                    <h3 className="text-2xl md:text-4xl rounded font-quicksand text-white text-center font-light">
+                    <h3 className="text-2xl md:text-4xl rounded font-rose text-white text-center font-light">
                     CHI SIAMMO
                     </h3>
                 </div>
@@ -48,7 +48,7 @@ function UmaSummary(){
                                     className=" h-[45vh] object-cover shadow rounded-bl-full " />
                                 </div>
                                 <div className="p-2 md:p-4">
-                                    <h2 className="font-quicksand text-base text-right font-semibold text-oscuro hover:underline transition-all">Alba Muzzarelli</h2>
+                                    <h2 className="font-rose text-base text-right font-semibold text-oscuro hover:underline transition-all">Alba Muzzarelli</h2>
                                     <p className="font-sans text-oscuro">Nata con il Sole in Acquario, la Luna in Pesci e con Ariete come Ascendente, Alba è un’insaziabile curiosa, qualità che nel 2014 la conduce per la prima volta su un tappetino da yoga.</p>
                                 </div>
                             </a>
@@ -63,7 +63,7 @@ function UmaSummary(){
                                     className="h-[45vh] object-cover shadow" />
                                 </div>
                                 <div className="p-2 md:p-4">
-                                    <h2 className="font-quicksand text-base text-center font-semibold text-oscuro hover:underline transition-all">Diletta Muzzarelli</h2>
+                                    <h2 className="font-rose text-base text-center font-semibold text-oscuro hover:underline transition-all">Diletta Muzzarelli</h2>
                                     <p className="font-sans text-oscuro">Diletta incontra lo Yoga da bambina. Grazie alla pratica accede a un metaspazio amorevole e inclusivo in cui sperimenta una piena libertà di ascolto ed espressione che la guida ad approfondirne lo studio.</p>
                                 </div>
                             </a>
@@ -78,7 +78,7 @@ function UmaSummary(){
                                     className="h-[45vh] object-cover shadow rounded-tr-full" />
                                 </div>
                                 <div className="p-2 md:p-4">
-                                    <h2 className="font-quicksand text-base text-left font-semibold text-oscuro hover:underline transition-all">Tiziano Sorbellini</h2>
+                                    <h2 className="font-rose text-base text-left font-semibold text-oscuro hover:underline transition-all">Tiziano Sorbellini</h2>
                                     <p className="font-sans text-oscuro">Tiziano, creatore della pratica Anubhūti e autore di libri come "Semi del nulla" e "Anubhuti".</p>
                                 </div>
                             </a>
@@ -105,7 +105,7 @@ function UmaSummary(){
                     />
 
             {/* COSA FACCIAMO superpuesto en la parte superior de imágen*/}
-                    <h2 className="w-full absolute -top-6 left-1/2 -translate-x-1/2 text-3xl md:text-4xl lg:text-5xl rounded font-quicksand text-white font-light text-center drop-shadow-2xl">
+                    <h2 className="w-full absolute -top-6 left-1/2 -translate-x-1/2 text-3xl md:text-4xl lg:text-5xl rounded font-rose text-white font-light text-center drop-shadow-2xl">
                         COSA FACCIAMO
                     </h2>
                 </div>
@@ -113,17 +113,17 @@ function UmaSummary(){
                 <div className="flex flex-col sm:flex-row md:relative w-full min-h-[70vh] mt-20 px-12 text-white">          
                         <div className="flex flex-col md:absolute md:top-0 md:left-12 md:max-w-lg z-30 ">
                             <div className="p-2 md:p-4">
-                                <h3 className="font-quicksand text-xl font-semibold ">CLASSI YOGA LIVE STREAMING</h3>
+                                <h3 className="font-rose text-xl font-semibold ">CLASSI YOGA LIVE STREAMING</h3>
                                 <p className="font-sans">Pratica dove vuoi seguendo i nostri corsi in live streaming o comincia un percorso yoga personalizzato online.</p>
                             </div>
                             <div className="p-2 md:p-4">
-                                <h3 className="font-quicksand text-xl font-semibold">CLASSI YOGA LIVE</h3>
+                                <h3 className="font-rose text-xl font-semibold">CLASSI YOGA LIVE</h3>
                                 <p className="font-sans">Pratica con noi seguendo i nostri corsi live o comincia in presenza un percorso yoga personalizzato.</p>
                             </div>
                         </div>
                         <div className="flex md:absolute md:bottom-0 md:right-12 md:max-w-xl z-30">
                                 <div className="p-2 md:p-4">
-                                    <h3 className="font-quicksand text-xl text-left font-semibold">RETREATS</h3>
+                                    <h3 className="font-rose text-xl text-left font-semibold">RETREATS</h3>
                                     <p className="font-sans">Un momento di serenità in cui ogni respiro si allinea con la bellezza dell'ambiente circostante, lasciandovi connessi, ringiovaniti e pronti ad affrontare una giornata di esplorazione.</p>
                                 </div>
                         </div>
@@ -145,10 +145,10 @@ function UmaSummary(){
 
             <section id="nostre-classi" className="min-h-screen w-full pt-28 px-4 bg-terracota " > {/*bg-gradient-to-t from-claro to-terracota  */}
                 <div className="p-2 md:p-4 ">
-                    <h3 className="text-2xl md:text-4xl rounded font-quicksand text-white text-center font-light">
+                    <h3 className="text-2xl md:text-4xl rounded font-rose text-white text-center font-light">
                     LE NOSTRE CLASSI
                     </h3>
-                    <p className="font-quicksand text-base text-center font-semibold text-white pt-4">
+                    <p className="font-rose text-base text-center font-semibold text-white pt-4">
                         Pratica con noi per cominciare un percorso di autotrasformazione fisica e mentale seguendo i nostri corsi in presenza o in live streaming.
                     </p>
                 </div>
@@ -157,7 +157,7 @@ function UmaSummary(){
                     <div className="flex flex-col md:flex-row gap-3 mt-4">
                         <div className="flex-1 bg-gradient-to-r from-dorado from-40% to-claro to-90% rounded-3xl">
                             <div className="p-2 md:p-4">
-                                <h2 className="font-quicksand text-base text-center font-semibold uppercase underline underline-offset-1">Vinyāsa Yoga del Risveglio (in presenza)</h2>
+                                <h2 className="font-rose text-base text-center font-semibold uppercase underline underline-offset-1">Vinyāsa Yoga del Risveglio (in presenza)</h2>
                                 <p className="font-sans py-4">Una pratica fluida attraverso cui risvegliare corpo e mente con consapevolezza e intenzione per cominciare la giornata con energia e presenza mentale.
                                 La classe è caratterizzata da numerose variazioni e da un’attenzione particolare agli allineamenti del corpo e alla dinamica del respiro. Il corso è accessibile a tutti.</p>
                                 <div className="flex items-center justify-center ">
@@ -173,7 +173,7 @@ function UmaSummary(){
                         </div>
                         <div className="flex-1 bg-gradient-to-r from-claro from-10% via-dorado via-50% to-claro rounded-3xl">
                             <div className="p-2 md:p-4">
-                                <h2 className="font-quicksand text-base text-center font-semibold text-oscuro uppercase underline underline-offset-1">Vinyāsa krama (in presenza)</h2>
+                                <h2 className="font-rose text-base text-center font-semibold text-oscuro uppercase underline underline-offset-1">Vinyāsa krama (in presenza)</h2>
                                 <p className="font-sans py-4">Una pratica intensa, dinamica, nella quale gli asana (posture) sono intimamente connessi al respiro e si susseguono, a ritmo sostenuto, in un flusso continuo, per favorire il riequilibrio del sistema corpo-mente e facilitare uno stato di rinnovata freschezza energetica.
                                 </p>
                                 <div className="flex items-center justify-center ">
@@ -189,7 +189,7 @@ function UmaSummary(){
                         </div>
                         <div className="flex-1 bg-gradient-to-l from-dorado from-40% to-claro to-90% rounded-3xl">
                             <div className="p-2 md:p-4">
-                                <h2 className="font-quicksand text-base text-center font-semibold  text-oscuro uppercase underline underline-offset-1">Gentle Vinyāsa</h2>
+                                <h2 className="font-rose text-base text-center font-semibold  text-oscuro uppercase underline underline-offset-1">Gentle Vinyāsa</h2>
                                 <p className="font-sans py-4">Gentle Vinyāsa propone un flusso di posture morbido, gentile ma efficace, prevedendo delle semplici sequenze che variano in base alle necessità di ogni praticante.
                                 Questa dolce pratica migliora la consapevolezza e la percezione del proprio corpo, scioglie rigidità muscolari, nutre la forza e l’elasticità del movimento.
                                 </p>

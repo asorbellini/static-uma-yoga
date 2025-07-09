@@ -30,12 +30,12 @@ function AboutUmaSummary(){
         {/* CHI SIAMMO titulo de sección */}
                 <div className="px-12 pt-24 pb-12 flex flex-col sm:flex-row gap-3 items-center">
                     <div className="basis-1/3">
-                        <h3 className="text-lg md:text-2xl rounded font-quicksand text-white text-left font-light uppercase">
+                        <h3 className="text-lg md:text-2xl rounded font-rose text-white text-left font-light uppercase">
                         UMĀ è uno spazio che conduce l’una all’altra, annullando virtualmente la distanza fisica che ci separa.
                         </h3>
                     </div>
                     <div className="basis-2/3">
-                        <p className="text-sm md:text-base rounded font-quicksand text-white text-left font-light">Alba vive e insegna nel nord Italia, a Milano, Diletta nel meridione, a Napoli.
+                        <p className="text-sm md:text-base rounded font-rose text-white text-left font-light">Alba vive e insegna nel nord Italia, a Milano, Diletta nel meridione, a Napoli.
                         Per noi lo yoga è soprattutto un mezzo che promuove l’evoluzione del sistema corpo-mente per fare ritorno a casa, alla propria vera natura ontologica che è eterna (sat), cosciente (cit) e beata (ānanda). Durante la pratica sul tappetino e nei momenti di studio dei testi sacri, è così che ci sentiamo: a casa, ed è questa l’intenzione con cui è nata UMĀ, creare un metaspazio che unisca i nostri progetti e percorsi yoga e in cui tu possa sentirti a casa.
                         </p>
                     </div>
@@ -51,7 +51,7 @@ function AboutUmaSummary(){
                                         className=" h-[45vh] object-cover shadow rounded-t-full " />
                                     </div>
                                     <div className="p-2 md:p-4 basis-1/2">
-                                        <h2 className="font-quicksand text-base text-center font-semibold text-white">Alba Muzzarelli</h2>
+                                        <h2 className="font-rose text-base text-center font-semibold text-white">Alba Muzzarelli</h2>
                                         <p className="font-sans text-white">Nata con il Sole in Acquario, la Luna in Pesci e con Ariete come Ascendente, Alba è un’insaziabile curiosa, qualità che nel 2014 la conduce per la prima volta su un tappetino da yoga.</p>
                                         <div className="bg-terracota justify-center my-2 rounded-full px-6 py-3  hover:bg-dorado hover:border-[#5a66c5b]  transition-all duration-500">
                                             <a href="/chi-siamo/alba-muzzarelli">
@@ -73,7 +73,7 @@ function AboutUmaSummary(){
                                     className="h-[45vh] object-cover shadow rounded-t-full" />
                                 </div>
                                 <div className="p-2 md:p-4 basis-1/2">
-                                    <h2 className="font-quicksand text-base text-center font-semibold text-white">Diletta Muzzarelli</h2>
+                                    <h2 className="font-rose text-base text-center font-semibold text-white">Diletta Muzzarelli</h2>
                                     <p className="font-sans text-white">Diletta incontra lo Yoga da bambina. Grazie alla pratica accede a un metaspazio amorevole e inclusivo in cui sperimenta una piena libertà di ascolto ed espressione che la guida ad approfondirne lo studio.</p>
                                     <div className="bg-terracota justify-center my-2 rounded-full px-6 py-3  hover:bg-dorado hover:border-[#5a66c5b]  transition-all duration-500">
                                         <a href="/chi-siamo/diletta-muzzarelli">
@@ -95,7 +95,7 @@ function AboutUmaSummary(){
                                     className="h-[45vh] object-cover shadow rounded-t-full" />
                                 </div>
                                 <div className="p-2 md:p-4 basis-1/2">
-                                    <h2 className="font-quicksand text-base text-center font-semibold text-white">Tiziano Sorbellini</h2>
+                                    <h2 className="font-rose text-base text-center font-semibold text-white">Tiziano Sorbellini</h2>
                                     <p className="font-sans text-white">Tiziano, creatore della pratica Anubhūti e autore di libri come "Semi del nulla" e "Anubhuti".</p>
                                     <div className="bg-terracota justify-center my-2 rounded-full px-6 py-3  hover:bg-dorado hover:border-[#5a66c5b]  transition-all duration-500">
                                         <a href="/chi-siamo/tiziano-sorbellini">

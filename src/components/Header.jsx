@@ -56,7 +56,7 @@ const Header = () => {
             <li key={index}>
               <NavLink
                 to={item.url}
-                className="uppercase md:text-xs xl:text-base font-medium tracking-wide text-white transition-colors duration-300 relative group"
+                className="uppercase md:text-xs xl:text-base font-serif tracking-wide text-white transition-colors duration-300 relative group"
               >
                 {item.name}
                 <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full ${activeSecction === `${item.url}` ? "w-full": ""}`}></span>

@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        quicksand: ['Quicksand', 'sans-serif'],
+        rose: ['Rosemartin', 'cursive'],
       },
       keyframes: {
       walk1: {

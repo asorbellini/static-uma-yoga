@@ -33,10 +33,10 @@ function NavakaranaSummary() {
                         />
                     </div>
                     <div className="w-full md:basis-3/5 flex flex-col items-start">
-                        <h3 className="w-text-xl md:text-3xl rounded font-quicksand text-oscuro text-left font-semibold uppercase py-2">
+                        <h3 className="w-text-xl md:text-3xl rounded font-rose text-oscuro text-left font-semibold uppercase py-2">
                             Cos'è il Navakaraṇa vinyāsa
                         </h3>
-                        <p className="text-sm md:text-lg rounded font-quicksand text-oscuro text-left font-light pb-2">
+                        <p className="text-sm md:text-lg rounded font-rose text-oscuro text-left font-light pb-2">
                             Navakaraṇa è una pratica di vinyāsa vigorosa ed energica che consiste in coreografie dinamiche
                             caratterizzate da una combinazione armonica di movimento e staticità ottenuta attraverso la regolazione del
                             respiro e del prāṇa (energia vitale).
@@ -51,35 +51,35 @@ function NavakaranaSummary() {
                     </div>
                 </div>
                 <div className="flex flex-col items-center justify-start pt-12">
-                    <h3 className="w-text-xl md:text-3xl rounded font-quicksand text-oscuro text-center font-semibold uppercase py-2 md:w-[50vw]">
+                    <h3 className="w-text-xl md:text-3xl rounded font-rose text-oscuro text-center font-semibold uppercase py-2 md:w-[50vw]">
                         Perchè sceglierlo:
                     </h3>
-                    <p className="text-sm md:text-lg rounded font-quicksand text-oscuro text-center font-light pb-2 md:w-[50vw]">
+                    <p className="text-sm md:text-lg rounded font-rose text-oscuro text-center font-light pb-2 md:w-[50vw]">
                         Navakaraṇa vinyāsa è un metodo di auto trasformazione risultato dell’integrazione di molteplici conoscenze quali l’anatomia, la kinesiologia, la psicologia, la manipolazione del corpo, la musicoterapia, l’autoguarigione e diverse tecniche tantriche. In questo metodo troverai verità, tradizione, ricerca e innovazione per promuovere un autentico stato di benessere psico-fisico.
                     </p>
                     <div className="flex items-center justify-start">
                         <a href="#eventi">
-                            <button className="text-oscuro font-quicksand text-sm font-semibold tracking-wide underline hover:text-[#581414]">Guarda la classe</button>
+                            <button className="text-oscuro font-rose text-sm font-semibold tracking-wide underline hover:text-[#581414]">Guarda la classe</button>
                         </a>
                     </div>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 mt-4 p-12 text-center">
                     <div className="flex-1 border-2 rounded-2xl">
                         <div className="p-2 md:p-4">
-                            <h2 className="font-quicksand text-base md:text-lg font-semibold text-[#581414]">Battito delle mani</h2>
+                            <h2 className="font-rose text-base md:text-lg font-semibold text-[#581414]">Battito delle mani</h2>
                             <p className=" text-oscuro text-base">Navakaraṇa Vinyāsa è uno stile di yoga dinamico. La classe è guidata con tempo e melodia e le istruzioni essenziali e concise sono fornite con il battito delle mani.</p>
                         </div>
                     </div>
                     <div className="flex-1 border-2 rounded-2xl">
                         <div className="p-2 md:p-4">
-                            <h2 className="font-quicksand text-base md:text-lg font-semibold text-[#581414]">La voce</h2>
+                            <h2 className="font-rose text-base md:text-lg font-semibold text-[#581414]">La voce</h2>
                             <p className="f text-oscuro text-base">La voce dell’insegnante è sintonizzata su un tono sonoro che facilita il fluire armonioso, la respirazione ritmica, la concentrazione e la chiarezza mentale.</p>
                         </div>
                     </div>
 
                     <div className="flex-1 border-2 rounded-2xl">
                         <div className="p-2 md:p-4">
-                            <h2 className="font-quicksand text-base md:text-lg font-semibold text-[#581414]">Le coreografie</h2>
+                            <h2 className="font-rose text-base md:text-lg font-semibold text-[#581414]">Le coreografie</h2>
                             <p className="text-oscuro text-base">Le coreografie delle sequenze di Navakaraṇa sono disposte metodologicamente in modo da offrire più opzioni per tutti i livelli.</p>
                         </div>
                     </div>
