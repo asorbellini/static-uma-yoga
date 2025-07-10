@@ -39,7 +39,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out ${
-        isScrolled ? "bg-transparent backdrop-blur-xl shadow-lg " : "bg-transparent py-2 md:py-3"
+        isScrolled ? "bg-verdeBosque bg-opacity-40 backdrop-blur-xl shadow-lg " : "bg-transparent py-2 md:py-3"
       }`}
     >
       <nav className="w-full mx-auto px-4 sm:px-6 flex flex-row justify-between items-center">
