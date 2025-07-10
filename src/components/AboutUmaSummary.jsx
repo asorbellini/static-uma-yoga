@@ -26,7 +26,7 @@ function AboutUmaSummary(){
     }, [])
     return(
         <div>
-            <section id="about-uma-summary" className="min-h-screen w-full px-4 bg-gradient-to-b from-terracota to-dorado relative">
+            <section id="about-uma-summary" className="min-h-screen w-full px-4 bg-terracota">
                 <div className="px-12 pt-20 pb-8 flex flex-col sm:flex-row gap-3 items-center">
                     <div className="basis-1/3 p-[1rem]">
                         <h3 className="text-lg md:text-2xl font-serif text-white text-left uppercase drop-shadow-2xl">
@@ -115,8 +115,8 @@ function AboutUmaSummary(){
                     </div>
                 </div>
             </section>
-            <section ref={sectionRef} className="min-h-screen w-full py-8 px-4 flex items-center bg-gradient-to-b via-terracota from-dorado via-50% to-dorado  to-90% relative overflow-hidden">
-                <div className="flex flex-col lg:flex-row min-h-screen px-12">
+            <section ref={sectionRef} className="min-h-screen w-full py-8 px-4 flex items-center bg-gradient-to-b from-terracota via-50% to-dorado  to-90% relative overflow-hidden">
+                <div className="flex flex-col lg:flex-row h-screen px-12">
                     <div className="flex-1 flex flex-col justify-center text-white py-12">
                         <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl drop-shadow-2xl">
                         UMĀ È UNO SPAZIO PER EXPANDERSI OLTRE TE STESSO
@@ -132,7 +132,7 @@ function AboutUmaSummary(){
                             <img
                                 src={imageUrlClassi}
                                 alt="Yoga Practice"
-                                className="w-full h-screen object-contain"
+                                className="w-full h-full object-cover"
                             />
                         </div>
                     </div>
