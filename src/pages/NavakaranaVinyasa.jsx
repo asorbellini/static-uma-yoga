@@ -62,6 +62,7 @@ function NavakaranaVinyasa() {
           <h3 className="w-text-xl md:text-3xl rounded font-rose text-oscuro text-center font-semibold uppercase py-2 md:w-[50vw]">GALLERY</h3>
           <HorizontalGallery images={NavakaranaImages}/>
         </div>
+        {/* 
         <section id="eventi" className="w-[80vw] md:w-[60vw] items-center justify-items-center mx-auto scroll-mt-24">
           <h3 className="w-text-xl md:text-3xl rounded font-rose text-oscuro text-center font-semibold uppercase py-2 md:w-[50vw] ">Guarda tutti gli eventi</h3>
           <p>Guarda tutti gli eventi, retreat e masterclass in programma, questa sezione è in costante aggiornamento.</p>
@@ -85,8 +86,8 @@ function NavakaranaVinyasa() {
                         <p>Json</p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </div> 
+        </section>*/}
         <ToRetreateWorkshop />
         <Footer />
     </div>  
