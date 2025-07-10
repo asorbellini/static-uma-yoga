@@ -2,13 +2,7 @@ import { useState, useEffect, useRef } from "react"
 import imageUrlAlba from "../assets/images/PortadaAlba.png"
 import imageUrlDiletta from "../assets/images/PortadaDiletta.png"
 import imageUrlTiziano from "../assets/images/PortadaTiziano.png" 
-import cosaFacciamo from "../assets/images/CosaFacciamo.png"
 import cosaFacciamo2 from "../assets/images/Cosafacciamo2.png"
-
-import { ArrowDown } from "./Icons"
-
-
-
 
 function UmaSummary(){
     const [isVisible, setIsVisible] = useState(false)
@@ -33,7 +27,7 @@ function UmaSummary(){
             <section ref={sectionRef} id="uma-summary" className="min-h-screen w-full px-4 bg-gradient-to-t from-dorado to-terracota">
         {/* CHI SIAMMO titulo de sección */}
                 <div className="p-2 md:p-4 pt-24 md:pt-24">
-                    <h3 className="text-2xl md:text-4xl rounded font-rose text-white text-center font-light">
+                    <h3 className="text-2xl md:text-4xl rounded font-rose text-white text-center font-medium">
                     CHI SIAMMO
                     </h3>
                 </div>
@@ -48,8 +42,8 @@ function UmaSummary(){
                                     className=" h-[45vh] object-cover shadow rounded-bl-full " />
                                 </div>
                                 <div className="p-2 md:p-4">
-                                    <h2 className="font-rose text-base text-right font-semibold text-oscuro hover:underline transition-all">Alba Muzzarelli</h2>
-                                    <p className="font-sans text-oscuro">Nata con il Sole in Acquario, la Luna in Pesci e con Ariete come Ascendente, Alba è un’insaziabile curiosa, qualità che nel 2014 la conduce per la prima volta su un tappetino da yoga.</p>
+                                    <h2 className="font-rose text-2xl text-right font-semibold hover:underline transition-all text-white drop-shadow-xl tracking-wider">Alba Muzzarelli</h2>
+                                    <p className="font-sans text-base text-start text-white drop-shadow-xl font-normal">Nata con il Sole in Acquario, la Luna in Pesci e con Ariete come Ascendente, Alba è un’insaziabile curiosa, qualità che nel 2014 la conduce per la prima volta su un tappetino da yoga.</p>
                                 </div>
                             </a>
                         </div>
@@ -63,8 +57,8 @@ function UmaSummary(){
                                     className="h-[45vh] object-cover shadow" />
                                 </div>
                                 <div className="p-2 md:p-4">
-                                    <h2 className="font-rose text-base text-center font-semibold text-oscuro hover:underline transition-all">Diletta Muzzarelli</h2>
-                                    <p className="font-sans text-oscuro">Diletta incontra lo Yoga da bambina. Grazie alla pratica accede a un metaspazio amorevole e inclusivo in cui sperimenta una piena libertà di ascolto ed espressione che la guida ad approfondirne lo studio.</p>
+                                    <h2 className="font-rose text-2xl text-center font-semibold hover:underline transition-all text-white drop-shadow-xl tracking-wider">Diletta Muzzarelli</h2>
+                                    <p className="font-sans text-base text-start text-white drop-shadow-xl font-normal">Diletta incontra lo Yoga da bambina. Grazie alla pratica accede a un metaspazio amorevole e inclusivo in cui sperimenta una piena libertà di ascolto ed espressione che la guida ad approfondirne lo studio.</p>
                                 </div>
                             </a>
                         </div>
@@ -78,72 +72,63 @@ function UmaSummary(){
                                     className="h-[45vh] object-cover shadow rounded-tr-full" />
                                 </div>
                                 <div className="p-2 md:p-4">
-                                    <h2 className="font-rose text-base text-left font-semibold text-oscuro hover:underline transition-all">Tiziano Sorbellini</h2>
-                                    <p className="font-sans text-oscuro">Tiziano, creatore della pratica Anubhūti e autore di libri come "Semi del nulla" e "Anubhuti".</p>
+                                    <h2 className="font-rose text-2xl text-center font-semibold hover:underline transition-all text-white drop-shadow-xl tracking-wider">Tiziano Sorbellini</h2>
+                                    <p className="font-sans text-base text-start text-white drop-shadow-xl font-normal">Tiziano, creatore della pratica Anubhūti e autore di libri come "Semi del nulla" e "Anubhuti".</p>
                                 </div>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div className="flex items-center justify-center ">
-                    <div className="bg-verdeBosque justify-center my-2 rounded-full px-6 py-3  hover:bg-verdeOliva hover:border-verdeBosque transition-all duration-500">
+                    <div className="bg-verdeBosque hover:bg-verdeOliva transition-all duration-500 rounded-full px-6 py-3 my-2 flex justify-center items-center text-white hover:text-oscuro">
                         <a href="/chi-siamo">
-                            <button className="text-white text-sm font-semibold tracking-wide">
+                            <button className=" text-sm font-semibold tracking-wide justify-items-center">
                                 SCOPRI DI PIÙ SU CHI SIAMO
                             </button>
                         </a>
                     </div>
                 </div>
             </section>
-            <section className="min-h-screen w-full px-4 bg-gradient-to-b from-dorado to-terracota flex flex-col items-center justify-center">
-                <div className="relative w-full px-12 mt-24">
-            {/* Imagen */}
-                    <img
-                        src={cosaFacciamo}
-                        alt="Cosa Facciamo"
-                        className="w-full h-[50vh] sm:h-[70vh] object-cover md:object-contain"
-                    />
-
-            {/* COSA FACCIAMO superpuesto en la parte superior de imágen*/}
-                    <h2 className="w-full absolute -top-6 left-1/2 -translate-x-1/2 text-3xl md:text-4xl lg:text-5xl rounded font-rose text-white font-light text-center drop-shadow-2xl">
-                        COSA FACCIAMO
+            <section id="cosa-facciamo" className="min-h-screen w-full px-4 bg-gradient-to-b from-dorado to-terracota flex flex-col">
+                <div className="py-12">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-rose text-white font-medium text-center drop-shadow-2xl">
+                    COSA FACCIAMO
                     </h2>
                 </div>
-                 
-                <div className="flex flex-col sm:flex-row md:relative w-full min-h-[70vh] mt-20 px-12 text-white">          
-                        <div className="flex flex-col md:absolute md:top-0 md:left-12 md:max-w-lg z-30 ">
-                            <div className="p-2 md:p-4">
-                                <h3 className="font-rose text-xl font-semibold ">CLASSI YOGA LIVE STREAMING</h3>
-                                <p className="font-sans">Pratica dove vuoi seguendo i nostri corsi in live streaming o comincia un percorso yoga personalizzato online.</p>
-                            </div>
-                            <div className="p-2 md:p-4">
-                                <h3 className="font-rose text-xl font-semibold">CLASSI YOGA LIVE</h3>
-                                <p className="font-sans">Pratica con noi seguendo i nostri corsi live o comincia in presenza un percorso yoga personalizzato.</p>
-                            </div>
+                <div className="flex flex-col md:flex-row justify-between items-center md:px-12 gap-4 relative">
+                    <div className="md:w-1/3 text-left z-20">
+                        <h3 className="font-rose text-2xl font-medium text-white mb-2 drop-shadow-xl">RETREATS</h3>
+                        <p className="text-white font-sans text-base drop-shadow-xl font-normal">
+                            Un momento di serenità in cui ogni respiro si allinea con la bellezza dell'ambiente circostante, lasciandovi connessi, ringiovaniti e pronti ad affrontare una giornata di esplorazione.
+                        </p>
+                    </div>
+                    <div className="relative w-[40vw] h-[50vh] xl:h-[60vh] z-10">
+                        <img
+                            src={cosaFacciamo2}
+                            alt="Cosa Facciamo"
+                            className="w-full h-full object-cover rounded-br-full rounded-tl-full shadow-2xl"
+                        />
+                    </div>
+                    <div className="md:w-1/3 text-left z-20 space-y-8">
+                        <div>
+                            <h3 className="font-rose text-2xl font-medium text-white mb-2 drop-shadow-xl">CLASSI YOGA LIVE STREAMING</h3>
+                            <p className="text-white font-sans text-base drop-shadow-xl font-normal">
+                            Pratica dove vuoi seguendo i nostri corsi in live streaming o comincia un percorso yoga personalizzato online.
+                            </p>
                         </div>
-                        <div className="flex md:absolute md:bottom-0 md:right-12 md:max-w-xl z-30">
-                                <div className="p-2 md:p-4">
-                                    <h3 className="font-rose text-xl text-left font-semibold">RETREATS</h3>
-                                    <p className="font-sans">Un momento di serenità in cui ogni respiro si allinea con la bellezza dell'ambiente circostante, lasciandovi connessi, ringiovaniti e pronti ad affrontare una giornata di esplorazione.</p>
-                                </div>
+                        <div>
+                            <h3 className="font-rose text-2xl font-medium text-white mb-2 drop-shadow-xl">CLASSI YOGA LIVE</h3>
+                            <p className="text-white font-sans text-base drop-shadow-xl font-normal">
+                            Pratica con noi seguendo i nostri corsi live o comincia in presenza un percorso yoga personalizzato.
+                            </p>
                         </div>
-                        <div className="hidden sm:flex sm:flex-col md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 z-20">
-                                <img
-                                src={cosaFacciamo2}
-                                alt="`Cosa Facciamo 2"
-                                className="w-[40vw] h-[50vh] xl:h-[60vh] object-cover rounded-br-full rounded-tl-full shadow-lg" />
-                        </div>
+                    </div>
                 </div>
             </section>
 
-            {/*Flecha a siguiente sección 
-                #LE NOSTRE CLASSI SECTION SE REMOVIÓ 
-                    <div className="z-20 flex items-center justify-center hover:animate-pulse mt-8">
-                        <a href="#nostre-classi">
-                            <ArrowDown />
-                        </a>
-                    </div>
 
+
+            {/*
             <section id="nostre-classi" className="min-h-screen w-full pt-28 px-4 bg-terracota " > 
                 <div className="p-2 md:p-4 ">
                     <h3 className="text-2xl md:text-4xl rounded font-rose text-white text-center font-light">
