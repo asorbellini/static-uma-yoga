@@ -26,7 +26,7 @@ function UmaSummary(){
         <div>
             <section ref={sectionRef} id="uma-summary" className="min-h-screen w-full px-4 bg-gradient-to-t from-dorado to-terracota">
         {/* CHI SIAMMO titulo de sección */}
-                <div className="p-2 md:p-4 pt-24 md:pt-24">
+                <div className="p-4 pt-20">
                     <h3 className="text-2xl md:text-4xl rounded font-rose text-white text-center font-medium">
                     CHI SIAMMO
                     </h3>
@@ -42,7 +42,7 @@ function UmaSummary(){
                                     className=" h-[45vh] object-cover shadow rounded-bl-full " />
                                 </div>
                                 <div className="p-2 md:p-4">
-                                    <h2 className="font-rose text-2xl text-right font-semibold hover:underline transition-all text-white drop-shadow-xl tracking-wider">Alba Muzzarelli</h2>
+                                    <h2 className="font-rose text-2xl text-right font-semibold hover:underline transition-all text-white drop-shadow-xl tracking-wider mb-2 ">Alba Muzzarelli</h2>
                                     <p className="font-sans text-base text-start text-white drop-shadow-xl font-normal">Nata con il Sole in Acquario, la Luna in Pesci e con Ariete come Ascendente, Alba è un’insaziabile curiosa, qualità che nel 2014 la conduce per la prima volta su un tappetino da yoga.</p>
                                 </div>
                             </a>
@@ -57,7 +57,7 @@ function UmaSummary(){
                                     className="h-[45vh] object-cover shadow" />
                                 </div>
                                 <div className="p-2 md:p-4">
-                                    <h2 className="font-rose text-2xl text-center font-semibold hover:underline transition-all text-white drop-shadow-xl tracking-wider">Diletta Muzzarelli</h2>
+                                    <h2 className="font-rose text-2xl text-center font-semibold hover:underline transition-all text-white drop-shadow-xl tracking-wider mb-2 ">Diletta Muzzarelli</h2>
                                     <p className="font-sans text-base text-start text-white drop-shadow-xl font-normal">Diletta incontra lo Yoga da bambina. Grazie alla pratica accede a un metaspazio amorevole e inclusivo in cui sperimenta una piena libertà di ascolto ed espressione che la guida ad approfondirne lo studio.</p>
                                 </div>
                             </a>
@@ -72,7 +72,7 @@ function UmaSummary(){
                                     className="h-[45vh] object-cover shadow rounded-tr-full" />
                                 </div>
                                 <div className="p-2 md:p-4">
-                                    <h2 className="font-rose text-2xl text-center font-semibold hover:underline transition-all text-white drop-shadow-xl tracking-wider">Tiziano Sorbellini</h2>
+                                    <h2 className="font-rose text-2xl text-center font-semibold hover:underline transition-all text-white drop-shadow-xl tracking-wider mb-2 ">Tiziano Sorbellini</h2>
                                     <p className="font-sans text-base text-start text-white drop-shadow-xl font-normal">Tiziano, creatore della pratica Anubhūti e autore di libri come "Semi del nulla" e "Anubhuti".</p>
                                 </div>
                             </a>
@@ -96,11 +96,18 @@ function UmaSummary(){
                     </h2>
                 </div>
                 <div className="flex flex-col md:flex-row justify-between items-center md:px-12 gap-4 relative">
-                    <div className="md:w-1/3 text-left z-20">
-                        <h3 className="font-rose text-2xl font-medium text-white mb-2 drop-shadow-xl">RETREATS</h3>
+                    <div className="md:w-1/3 text-left z-20 items-center">
+                        <h3 className="font-rose text-2xl font-medium text-white mb-2 drop-shadow-xl">RETREAT E WORKSHOP</h3>
                         <p className="text-white font-sans text-base drop-shadow-xl font-normal">
                             Un momento di serenità in cui ogni respiro si allinea con la bellezza dell'ambiente circostante, lasciandovi connessi, ringiovaniti e pronti ad affrontare una giornata di esplorazione.
                         </p>
+                        <div className="border-2 border-verdeBosque hover:border-verdeOliva hover:bg-claro transition-all duration-500  px-6 py-3 my-2 flex justify-center items-center text-white hover:text-oscuro max-w-fit">
+                            <a href="/retreat-e-workshop">
+                                <button className=" text-sm font-semibold tracking-wide justify-items-center">
+                                    SCOPRI DI PIÙ
+                                </button>
+                            </a>
+                        </div>
                     </div>
                     <div className="relative w-[40vw] h-[50vh] xl:h-[60vh] z-10">
                         <img
