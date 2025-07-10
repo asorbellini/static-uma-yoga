@@ -134,16 +134,17 @@ function UmaSummary(){
                                 className="w-[40vw] h-[50vh] xl:h-[60vh] object-cover rounded-br-full rounded-tl-full shadow-lg" />
                         </div>
                 </div>
-        {/*Flecha a siguiente sección */}
-                <div className="z-20 flex items-center justify-center hover:animate-pulse mt-8">
-                    <a href="#nostre-classi">
-                        <ArrowDown />
-                    </a>
-                </div>
             </section>
 
+            {/*Flecha a siguiente sección 
+                #LE NOSTRE CLASSI SECTION SE REMOVIÓ 
+                    <div className="z-20 flex items-center justify-center hover:animate-pulse mt-8">
+                        <a href="#nostre-classi">
+                            <ArrowDown />
+                        </a>
+                    </div>
 
-            <section id="nostre-classi" className="min-h-screen w-full pt-28 px-4 bg-terracota " > {/*bg-gradient-to-t from-claro to-terracota  */}
+            <section id="nostre-classi" className="min-h-screen w-full pt-28 px-4 bg-terracota " > 
                 <div className="p-2 md:p-4 ">
                     <h3 className="text-2xl md:text-4xl rounded font-rose text-white text-center font-light">
                     LE NOSTRE CLASSI
@@ -206,7 +207,7 @@ function UmaSummary(){
                         </div>
                     </div>
                 </div>
-            </section>
+            </section>*/}
         </div>
     )
 }

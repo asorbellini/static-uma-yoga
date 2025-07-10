@@ -9,7 +9,7 @@ import navak5 from "../assets/images/Navakarana/navak5.png"
 import navak6 from "../assets/images/Navakarana/navak6.png"
 import navak7 from "../assets/images/Navakarana/navak7.png"
 import NavakaranaSummary from "../components/NavakaranaSummary.jsx";
-import ToClasses from "../components/ToClasses.jsx"
+import ToRetreateWorkshop from "../components/ToRetreateWorkshop.jsx";
 import Footer from "../components/Footer.jsx";
 
 
@@ -87,7 +87,7 @@ function NavakaranaVinyasa() {
                 </div>
             </div>
         </section>
-        <ToClasses />
+        <ToRetreateWorkshop />
         <Footer />
     </div>  
   );

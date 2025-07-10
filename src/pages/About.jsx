@@ -2,7 +2,8 @@
 import HeroAbout from "../components/HeroAbout";
 import ScrollToTop from "../components/ScrollToTop";
 import AboutUmaSummary from "../components/AboutUmaSummary";
-import ToClasses from "../components/ToClasses"
+
+import ToRetreateWorkshop from "../components/ToRetreateWorkshop.jsx"
 import Footer from "../components/Footer"
 
 const Members = [
@@ -17,7 +18,7 @@ function About() {
       <HeroAbout />
       <ScrollToTop />
       <AboutUmaSummary />
-      <ToClasses />
+      <ToRetreateWorkshop />
       <Footer />
     </div>
   );

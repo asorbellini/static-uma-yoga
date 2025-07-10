@@ -17,12 +17,12 @@ const useActiveSection = () => {
 
 const navItems = [{'name':'Home', 'url':"/"},
   {'name':'Chi siamo', 'url':"/chi-siamo"},
-  {'name':'Classi', 'url':"/classi"},
+  {'name':'Retreat e workshop', 'url':"/retreat-e-workshop"},
   {'name':'Navakaraṇa vinyāsa', 'url':"/navakarana-vinyasa"},
   {'name':'Anubhūti', 'url':"/anubhuti"},
-  {'name':'Retreat e workshop', 'url':"/retreat-e-workshop"},
   {'name':'Contatti', 'url':"/contatti"}
 ]
+/* {'name':'Classi', 'url':"/classi"}, */
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
