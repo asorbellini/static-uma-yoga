@@ -1,4 +1,4 @@
-import pruebaRetreat from "../assets/images/pruebaRetreat.png"
+import pruebaRetreat from "../assets/images/pruebaretreat.png"
 import Footer from "../components/Footer"
 import { ArrowDown } from "../components/Icons"
 import NewSetter from "../components/NewSetter"
