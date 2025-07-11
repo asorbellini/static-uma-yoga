@@ -9,10 +9,10 @@ function HeroAbout() {
                 <img
                     src={ChiSiamo}
                     alt="chi siamo"
-                    className="w-full h-[50vh] sm:h-[70vh] object-cover md:object-contain opacity-90 "
+                    className="w-full h-[50vh] sm:h-[70vh] object-cover md:object-contain opacity-90"
                 />
         {/* CHI SIAMO superpuesto en la parte superior de imágen*/}
-                <h2 className="w-full absolute -top-6 left-1/2 -translate-x-1/2 text-3xl md:text-4xl lg:text-5xl rounded font-rose text-white font-medium text-center drop-shadow-2xl">
+                <h2 className="w-full absolute -top-6 left-1/2 -translate-x-1/2 sectionTitle">
                     CHI SIAMO
                 </h2>
       </div>

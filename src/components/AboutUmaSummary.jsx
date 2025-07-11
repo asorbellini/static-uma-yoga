@@ -34,7 +34,7 @@ function AboutUmaSummary(){
                         </h3>
                     </div>
                     <div className="basis-2/3">
-                        <p className="text-base md:text-lg text-white text-left drop-shadow-2xl font-normal" >Alba vive e insegna nel nord Italia, a Milano, Diletta nel meridione, a Napoli.
+                        <p className="textDetail" >Alba vive e insegna nel nord Italia, a Milano, Diletta nel meridione, a Napoli.
                         Per noi lo yoga è soprattutto un mezzo che promuove l’evoluzione del sistema corpo-mente per fare ritorno a casa, alla propria vera natura ontologica che è eterna (sat), cosciente (cit) e beata (ānanda). Durante la pratica sul tappetino e nei momenti di studio dei testi sacri, è così che ci sentiamo: a casa, ed è questa l’intenzione con cui è nata UMĀ, creare un metaspazio che unisca i nostri progetti e percorsi yoga e in cui tu possa sentirti a casa.
                         </p>
                     </div>
@@ -51,12 +51,12 @@ function AboutUmaSummary(){
                                 </div>
                                 <div className="p-[1rem] basis-1/2 flex flex-col justify-between h-full">
                                     <div>
-                                        <h2 className="font-rose text-xl text-center text-white drop-shadow-xl font-semibold pb-2">Alba Muzzarelli</h2>
-                                        <p className="font-sans text-base text-start text-white drop-shadow-xl font-normal">Nata con il Sole in Acquario, la Luna in Pesci e con Ariete come Ascendente, Alba è un’insaziabile curiosa, qualità che nel 2014 la conduce per la prima volta su un tappetino da yoga.</p>
+                                        <h2 className="secondaryTitle pb-2">Alba Muzzarelli</h2>
+                                        <p className="textDetail">Nata con il Sole in Acquario, la Luna in Pesci e con Ariete come Ascendente, Alba è un’insaziabile curiosa, qualità che nel 2014 la conduce per la prima volta su un tappetino da yoga.</p>
                                     </div>
                                     <div className="bg-verdeBosque hover:bg-verdeOliva transition-all duration-500 rounded-full px-6 py-3 my-2 flex justify-center items-center text-white hover:text-oscuro">
                                         <a href="/chi-siamo/alba-muzzarelli">
-                                            <button className=" text-sm font-semibold tracking-wide justify-items-center">
+                                            <button className="textButton">
                                                 SCOPRI DI PIÙ SU ALBA
                                             </button>
                                         </a>
@@ -75,12 +75,12 @@ function AboutUmaSummary(){
                                 </div>
                                 <div className="p-[1rem] basis-1/2 flex flex-col justify-between h-full">
                                     <div>
-                                        <h2 className="font-rose text-xl text-center text-white drop-shadow-xl font-semibold pb-2">Diletta Muzzarelli</h2>
-                                        <p className="font-sans text-base text-start text-white drop-shadow-xl font-normal">Diletta incontra lo Yoga da bambina. Grazie alla pratica accede a un metaspazio amorevole e inclusivo in cui sperimenta una piena libertà di ascolto ed espressione che la guida ad approfondirne lo studio.</p>
+                                        <h2 className="secondaryTitle pb-2">Diletta Muzzarelli</h2>
+                                        <p className="textDetail">Diletta incontra lo Yoga da bambina. Grazie alla pratica accede a un metaspazio amorevole e inclusivo in cui sperimenta una piena libertà di ascolto ed espressione che la guida ad approfondirne lo studio.</p>
                                     </div>
                                     <div className="bg-verdeBosque hover:bg-verdeOliva transition-all duration-500 rounded-full px-6 py-3 my-2 flex justify-center items-center text-white hover:text-oscuro">
                                         <a href="/chi-siamo/diletta-muzzarelli">
-                                            <button className=" text-sm font-semibold tracking-wide justify-items-center">
+                                            <button className="textButton">
                                                 SCOPRI DI PIÙ SU DILETTA
                                             </button>
                                         </a>
@@ -99,12 +99,12 @@ function AboutUmaSummary(){
                                 </div>
                                 <div className="p-[1rem] basis-1/2 flex flex-col justify-between h-full">
                                     <div>
-                                        <h2 className="font-rose text-xl text-center text-white drop-shadow-xl font-semibold pb-2">Tiziano Sorbellini</h2>
-                                        <p className="font-sans text-base text-start text-white drop-shadow-xl font-normal">Tiziano, creatore della pratica Anubhūti e autore di libri come "Semi del nulla" e "Anubhuti".</p>
+                                        <h2 className="secondaryTitle pb-2">Tiziano Sorbellini</h2>
+                                        <p className="textDetail">Tiziano, creatore della pratica Anubhūti e autore di libri come "Semi del nulla" e "Anubhuti".</p>
                                     </div>
                                     <div className="bg-verdeBosque hover:bg-verdeOliva transition-all duration-500 rounded-full px-6 py-3 my-2 flex justify-center items-center text-white hover:text-oscuro">
                                         <a href="/chi-siamo/tiziano-sorbellini">
-                                            <button className=" text-sm font-semibold tracking-wide justify-items-center">
+                                            <button className="textButton">
                                                 SCOPRI DI PIÙ SU TIZIANO
                                             </button>
                                         </a>
@@ -115,16 +115,13 @@ function AboutUmaSummary(){
                     </div>
                 </div>
             </section>
-            <section ref={sectionRef} className="min-h-screen w-full py-8 px-4 flex items-center bg-gradient-to-b from-terracota via-50% to-dorado  to-90% relative overflow-hidden">
+            <section ref={sectionRef} className="min-h-screen w-full py-8 px-4 flex items-center bg-gradient-to-bl from-terracota via-terracota via-50% to-dorado relative overflow-hidden">
                 <div className="flex flex-col lg:flex-row h-screen px-12">
-                    <div className="flex-1 flex flex-col justify-center text-white py-12">
-                        <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl drop-shadow-2xl">
+                    <div className="flex-1 flex flex-col justify-center py-12">
+                        <h1 className="welcomeTitle">
                         UMĀ È UNO SPAZIO PER EXPANDERSI OLTRE TE STESSO
                         </h1>
-                        <p className="font-sans text-base md:text-lg font-normal drop-shadow-2xl my-12">
-                        Uno spazio sacro di crescita ed evoluzione personale che unisce e presenta i nostri progetti e percorsi
-                        yoga e in cui Tu possa riconoscerti e sentirti a casa.
-                        </p>
+                        
                     </div>
                     <div className="flex-1">
                         {/* Lado derecho - Imagen */}

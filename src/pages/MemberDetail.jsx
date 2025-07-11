@@ -83,7 +83,7 @@ function MemberDetail(){
                             <p>{member.smallDescription}</p>
                             <ExpandableButton title="Formazione" children={member.training} />
                             <h2 className="uppercase">Seguimi su</h2>
-                            <a href={member.socialMedia?.instagram} target="blank">
+                            <a href={member.socialMedia?.instagram} target="_blank" rel="noopener noreferrer">
                                 <div className="p-2">
                                     <InstagramIcon />
                                 </div>

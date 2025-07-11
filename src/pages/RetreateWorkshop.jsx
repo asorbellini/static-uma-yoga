@@ -1,6 +1,6 @@
 import pruebaRetreat from "../assets/images/pruebaretreat.png"
 import Footer from "../components/Footer"
-import { ArrowDown } from "../components/Icons"
+import HeroReW from "../components/HeroReW"
 import NewSetter from "../components/NewSetter"
 
 import ScrollToTop from "../components/ScrollToTop"
@@ -9,19 +9,7 @@ function RetreateWorkshop() {
     return(
         <div className="min-h-screen w-full bg-claro">
             <ScrollToTop />
-            {/* HERO RETREAT E WORKSHOP */}
-            <div className="relative h-[80vh] flex flex-row justify-center justify-items-center  items-end  text-white" >  
-                <div className="absolute inset-0 bg-[url(C:\Users\Ayelén\Desktop\uma-yoga\uma\src\assets\images\Retreat.png)] bg-center bg-cover" /> {/* IMAGEN PROVISORIA */}
-                <div className="relative z-10 p-12 text-center">
-                    <h1 className="text-2xl md:text-5xl p-2 md:p-4 rounded font-rose font-semibold uppercase
-                    ">RETREAT E WORKSHOP</h1>
-                </div>
-                <div className="absolute z-20 flex flex-row items-center justify-center hover:animate-pulse">
-                    <a href="#uma-retreat">
-                        <ArrowDown />
-                    </a>
-                </div>
-            </div>
+            <HeroReW />
 
             {/* RETREAT */}
             <section id="uma-retreat" className="min-h-screen w-full px-4">

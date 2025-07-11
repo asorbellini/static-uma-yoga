@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         rose: ['Rosemartin', 'cursive'],
+        handwriting: ['"Dancing Script"', 'cursive'],
       },
       keyframes: {
       walk1: {
@@ -32,6 +33,10 @@ export default {
         verdeOliva: '#7DA87D',/* Antes #7DA87D */
         verdeBosque: '#21524C',/* Antes #5C7C5C */
         oscuro: '#2C2C2C',/* Antes #2C2C2C */
+      },
+    dropShadow:{
+      title:'0 2px 4px rgba(0,0,0,0.6)',
+      text:'0 1px 4px rgba(0,0,0,0.4)'
       },
     },
   },

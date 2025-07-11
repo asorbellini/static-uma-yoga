@@ -65,3 +65,15 @@ export const InstagramIcon = () => {
         </svg>
     )
 }
+
+export const PlayIcon = () => (
+    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M8 5v14l11-7z" />
+    </svg>
+)
+
+export const PauseIcon = () => (
+    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M10 9h2v6h-2zM14 9h2v6h-2z" />
+    </svg>
+)
