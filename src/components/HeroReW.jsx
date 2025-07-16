@@ -19,8 +19,8 @@ function HeroReW() {
         }
     };
     return (
-        <div className="relative h-[90vh] w-full flex flex-row items-center justify-center text-white">
-            <div className="absolute inset-0  bg-gradient-to-br from-terracota from-0% via-dorado via-50%  to-terracota" />
+        <div className="relative h-screen w-full flex flex-row items-center justify-center text-white">
+            <div className="absolute inset-0 " />{/*bg-gradient-to-br from-terracota from-0% via-dorado via-50%  to-terracota */}
             <div className="absolute top-[8vh] z-20 p-12 text-left">
                 <h1 className="sectionTitle p-2 md:p-4 uppercase">Retreat e Workshop</h1>
             </div>
@@ -47,11 +47,11 @@ function HeroReW() {
                     </button>
                 </div>
             </div>
-            <div className="absolute -bottom-8 z-20 p-12 text-left">
+            <div className="absolute -bottom-4 z-20 p-12 text-left">
                 <p className="subtitle p-2 md:p-4"><span className="uppercase">expand beyond your</span><span className="text-xl md:text-2xl lg:text-3xl italic font-handwriting tracking-wider">self</span></p>
             </div>
             
-            <div className="absolute -bottom-4 z-20 flex flex-row items-center justify-center translate-x-1/4 hover:animate-pulse">
+            <div className="absolute -bottom-2 z-20 flex flex-row items-center justify-center translate-x-1/4 hover:animate-pulse">
                 <a href="#uma-retreat">
                     <ArrowDown />
                 </a>

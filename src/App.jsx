@@ -6,6 +6,7 @@ import NavakaranaVinyasa from "./pages/NavakaranaVinyasa.jsx"
 import ContactUs from "./pages/ContactUs.jsx"
 import RetreateWorkshop from "./pages/RetreateWorkshop.jsx"
 import MemberDetail from "./pages/MemberDetail.jsx"
+import ReW from "./pages/ReWDetail.jsx"
 import Anubhuti from "./pages/Anubhuti.jsx"
 import Header from "./components/Header.jsx"
 import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange.jsx"
@@ -24,6 +25,7 @@ function App() {
         <Route path="/navakarana-vinyasa" element={<NavakaranaVinyasa />} />
         <Route path="/anubhuti" element={<Anubhuti />} />
         <Route path="/retreat-e-workshop" element={<RetreateWorkshop />} />
+        <Route path="/:type/:slug" element={<ReW />} />
         <Route path="/contatti" element={<ContactUs />} />  
         {/*<Route path="/press-e-media" element={<Press />} /> */}
         {/* <Route path="/events" element={<Events />} />        */}
