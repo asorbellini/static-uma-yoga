@@ -4,6 +4,7 @@ import imageUrlDiletta from "../assets/images/AboutDiletta.png"
 import imageUrlTiziano from "../assets/images/AboutTiziano.png" 
 import imageUrlClassi from "../assets/images/Classi.png"
 import { ArrowDown } from "./Icons"
+import members from "../data/members.json"
 
 
 function AboutUmaSummary(){
@@ -26,110 +27,62 @@ function AboutUmaSummary(){
     }, [])
     return(
         <div>
-            <section id="about-uma-summary" className="min-h-screen w-full px-4 bg-terracota">
-                <div className="px-12 pt-20 pb-8 flex flex-col sm:flex-row gap-3 items-center">
-                    <div className="basis-1/3 p-[1rem]">
-                        <h3 className="text-lg md:text-2xl font-serif text-white text-left uppercase drop-shadow-2xl">
-                        UMĀ è uno spazio che conduce l’una all’altra, annullando virtualmente la distanza fisica che ci separa.
-                        </h3>
-                    </div>
-                    <div className="basis-2/3">
-                        <p className="textDetail" >Alba vive e insegna nel nord Italia, a Milano, Diletta nel meridione, a Napoli.
-                        Per noi lo yoga è soprattutto un mezzo che promuove l’evoluzione del sistema corpo-mente per fare ritorno a casa, alla propria vera natura ontologica che è eterna (sat), cosciente (cit) e beata (ānanda). Durante la pratica sul tappetino e nei momenti di studio dei testi sacri, è così che ci sentiamo: a casa, ed è questa l’intenzione con cui è nata UMĀ, creare un metaspazio che unisca i nostri progetti e percorsi yoga e in cui tu possa sentirti a casa.
-                        </p>
-                    </div>
-                </div>
+            <section id="about-uma-summary" className="min-h-screen w-full px-4 pt-20 bg-terracota">
                 <div className="px-12">
+                    <div className="pb-8 flex flex-col sm:flex-row gap-3 items-center">
+                        <div className="basis-1/3 p-[1rem]">
+                            <h3 className="text-lg md:text-2xl font-serif text-white text-left uppercase drop-shadow-2xl">
+                            UMĀ è uno spazio che conduce l’una all’altra, annullando virtualmente la distanza fisica che ci separa.
+                            </h3>
+                        </div>
+                        <div className="basis-2/3">
+                            <p className="textDetail" >Alba vive e insegna nel nord Italia, a Milano, Diletta nel meridione, a Napoli.
+                            Per noi lo yoga è soprattutto un mezzo che promuove l’evoluzione del sistema corpo-mente per fare ritorno a casa, alla propria vera natura ontologica che è eterna (sat), cosciente (cit) e beata (ānanda). Durante la pratica sul tappetino e nei momenti di studio dei testi sacri, è così che ci sentiamo: a casa, ed è questa l’intenzione con cui è nata UMĀ, creare un metaspazio che unisca i nostri progetti e percorsi yoga e in cui tu possa sentirti a casa.
+                            </p>
+                        </div>
+                    </div>
                     <div className="flex flex-col sm:flex-row gap-3 py-4">
-                        <div className="flex-1">
-                            <div className="flex flex-col md:flex-row gap-4 items-start h-full">
-                                <div className="basis-1/2 justify-items-center transition-all duration-[1000ms] ease-out">
-                                    <img
-                                    src={imageUrlAlba}
-                                    alt="`Image Alba"
-                                    className=" h-[45vh] object-cover shadow rounded-t-full " />
-                                </div>
-                                <div className="p-[1rem] basis-1/2 flex flex-col justify-between h-full">
-                                    <div>
-                                        <h2 className="secondaryTitle pb-2">Alba Muzzarelli</h2>
-                                        <p className="textDetail">Nata con il Sole in Acquario, la Luna in Pesci e con Ariete come Ascendente, Alba è un’insaziabile curiosa, qualità che nel 2014 la conduce per la prima volta su un tappetino da yoga.</p>
+                        {members.map((member, index)=> (
+                            <div className="flex-1" key={index}>
+                                <div className="flex flex-col lg:flex-row gap-3 items-center h-full">
+                                    <div className="lg:basis-1/2 justify-items-center transition-all duration-[1000ms] ease-out">
+                                        <img
+                                        src={member.images?.[2]}
+                                        alt={`Image ${member.Name}`}
+                                        className="w-full h-[45vh] object-cover shadow rounded-t-full " />
                                     </div>
-                                    <div className="bg-verdeBosque hover:bg-verdeOliva transition-all duration-500 rounded-full px-6 py-3 my-2 flex justify-center items-center text-white hover:text-oscuro">
-                                        <a href="/chi-siamo/alba-muzzarelli">
-                                            <button className="textButton">
-                                                SCOPRI DI PIÙ SU ALBA
-                                            </button>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="flex-1">
-                            <div className="flex flex-col md:flex-row gap-4 items-start h-full">
-                                <div className="basis-1/2 justify-items-center transition-all duration-[1000ms] ease-out" >
-                                    <img
-                                    src={imageUrlDiletta}
-                                    alt='Image Diletta'
-                                    className="h-[45vh] object-cover shadow rounded-t-full" />
-                                </div>
-                                <div className="p-[1rem] basis-1/2 flex flex-col justify-between h-full">
-                                    <div>
-                                        <h2 className="secondaryTitle pb-2">Diletta Muzzarelli</h2>
-                                        <p className="textDetail">Diletta incontra lo Yoga da bambina. Grazie alla pratica accede a un metaspazio amorevole e inclusivo in cui sperimenta una piena libertà di ascolto ed espressione che la guida ad approfondirne lo studio.</p>
-                                    </div>
-                                    <div className="bg-verdeBosque hover:bg-verdeOliva transition-all duration-500 rounded-full px-6 py-3 my-2 flex justify-center items-center text-white hover:text-oscuro">
-                                        <a href="/chi-siamo/diletta-muzzarelli">
-                                            <button className="textButton">
-                                                SCOPRI DI PIÙ SU DILETTA
-                                            </button>
-                                        </a>
+                                    <div className="lg:basis-1/2 flex flex-col justify-between h-full lg:px-3">
+                                        <div>
+                                            <h2 className="title pb-2 text-center md:max-w-sm">{member.Name}</h2>
+                                            <p className="textDetail">{member.smallDescription}</p>
+                                        </div>
+                                        <div className="bg-verdeBosque hover:bg-verdeOliva transition-all duration-500 rounded-full px-6 py-3 my-2 flex justify-center items-center text-white hover:text-oscuro">
+                                            <a href={`/chi-siamo/${member.memberName}`}>
+                                                <button className="textButton uppercase">
+                                                    {`SCOPRI DI PIÙ SU ${member.Name.split(" ")[0]}`}
+                                                </button>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div className="flex-1">
-                            <div className="flex flex-col md:flex-row gap-4 items-start h-full">
-                                <div className="basis-1/2 justify-items-center transition-all duration-[1000ms] ease-out">
-                                    <img
-                                    src={imageUrlTiziano}
-                                    alt='Image Tiziano'
-                                    className="h-[45vh] object-cover shadow rounded-t-full" />
-                                </div>
-                                <div className="p-[1rem] basis-1/2 flex flex-col justify-between h-full">
-                                    <div>
-                                        <h2 className="secondaryTitle pb-2">Tiziano Sorbellini</h2>
-                                        <p className="textDetail">Tiziano, creatore della pratica Anubhūti e autore di libri come "Semi del nulla" e "Anubhuti".</p>
-                                    </div>
-                                    <div className="bg-verdeBosque hover:bg-verdeOliva transition-all duration-500 rounded-full px-6 py-3 my-2 flex justify-center items-center text-white hover:text-oscuro">
-                                        <a href="/chi-siamo/tiziano-sorbellini">
-                                            <button className="textButton">
-                                                SCOPRI DI PIÙ SU TIZIANO
-                                            </button>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
             <section ref={sectionRef} className="min-h-screen w-full py-8 px-4 flex items-center bg-gradient-to-bl from-terracota via-terracota via-50% to-dorado relative overflow-hidden">
-                <div className="flex flex-col lg:flex-row h-screen px-12">
-                    <div className="flex-1 flex flex-col justify-center py-12">
-                        <h1 className="welcomeTitle">
+                <div className="flex flex-col md:flex-row px-12 md:items-center">
+                    <div className="flex-1">
+                        <h1 className="text-start textTitleSection py-6 md:py-12 md:absolute md:top-0 md:max-w-md lg:relative lg:max-w-full z-30">
                         UMĀ È UNO SPAZIO PER EXPANDERSI OLTRE TE STESSO
                         </h1>
-                        
                     </div>
-                    <div className="flex-1">
-                        {/* Lado derecho - Imagen */}
-                        <div className={`absolute right-0 top-0 overflow-hidden transition-all duration-[1000ms] ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
+                    <div className="flex-1 h-screen">
+                        <div className={`relative md:absolute right-0 md:top-8 lg:top-0 overflow-hidden transition-all duration-[1000ms] ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
                             <img
                                 src={imageUrlClassi}
                                 alt="Yoga Practice"
-                                className="w-full h-full object-cover"
+                                className="w-full rounded-3xl lg:rounded-none lg:h-full object-contain "
                             />
                         </div>
                     </div>
