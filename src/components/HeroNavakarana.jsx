@@ -7,7 +7,7 @@ function HeroNavakarana() {
                 background: "linear-gradient(45deg, #581414 0%, #921e1e 25%,  #a33c3c 50%, #b23d3d 75%, #b64c4c 100%)",
             }}> 
                 <img src={logoNavakarana} alt="Logo Navakarana" className="absolute top-[40%]"/>
-                <div className="absolute top-1/2 z-20 p-12 text-center max-w-prose">
+                <div className="absolute top-1/2 z-20 p-12 text-center max-w-pserif">
                     <h1 className="text-4xl md:text-5xl lg:text-6xl rounded font-serif text-white font-medium text-center drop-shadow-2xl uppercase
                     ">NavakaraṆa vinyāsa</h1>
                 </div>

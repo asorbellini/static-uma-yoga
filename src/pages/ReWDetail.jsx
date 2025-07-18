@@ -32,7 +32,7 @@ function ReWDetail(){
             </div>
             <section id="detail" className="min-h-screen mt-24">
                 <div className="mt-24 px-12 text-white">
-                    <h1 className="sectionTitle py-4 uppercase">{RW.title}</h1>
+                    <h1 className="textTitleSection py-4 uppercase">{RW.title}</h1>
                     <h2 className="secondaryTitle text-center py-2">“{RW.subtitle}“</h2>
                     <h3 className="subtitle text-center py-2">{RW.dateStart === RW.dateEnd ? `${getTextDate(RW.dateStart)}` : `Dal ${getTextDate(RW.dateStart)} - ${getTextDate(RW.dateEnd)}`}</h3>
                     {RW.description.map((d, index) => <p key={index} dangerouslySetInnerHTML={{ __html: d }} />)}

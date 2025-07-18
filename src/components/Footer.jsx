@@ -3,8 +3,8 @@ import UmaLogo from "./Logo";
 
 function Footer() {
   return (
-    <footer className="bg-white text-center p-4 text-sm text-oscuro">
-      <div className="flex flex-row items-center">
+    <footer className="bg-claro text-center p-4 text-sm text-oscuro">
+      <div className="flex sm:flex-row flex-col items-center space-y-2">
         <div className="basis-1/4">
           <UmaLogo colorFill='#2c2c2c'classname="w-16 h-16"/>
         </div>

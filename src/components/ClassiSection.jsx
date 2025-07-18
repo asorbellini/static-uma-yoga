@@ -27,7 +27,7 @@ function ClassiSection() {
         <div>
             <section id="classi" className="min-h-screen w-full px-4 bg-gradient-to-tr from-terracota from-0% via-dorado via-50% to-terracota to-90% flex flex-col items-center justify-center">
                 <div className="p-2 md:p-4 ">
-                    <p className="font-rose text-lg text-center font-semibold text-white pt-4">
+                    <p className="font-serif text-lg text-center font-semibold text-white pt-4">
                         Pratica con noi per cominciare un percorso di autotrasformazione fisica e mentale seguendo i nostri corsi in presenza o in live streaming.
                     </p>
                 </div>
@@ -42,7 +42,7 @@ function ClassiSection() {
                                 className="h-[310px] object-cover shadow aspect-square rounded-full" />
                             </div>
                             <div className="p-2 md:p-4 text-center ">
-                                <h2 className="font-rose text-base font-semibold uppercase">NavakaraṆa vinyāsa</h2>
+                                <h2 className="font-serif text-base font-semibold uppercase">NavakaraṆa vinyāsa</h2>
                                 <p className="font-sans">Insegnanti: Alba e Dilleta Muzzarelli</p>
                             </div>
                             </a>
@@ -56,7 +56,7 @@ function ClassiSection() {
                                 className="h-[310px] object-cover shadow aspect-square rounded-full" />
                             </div>
                             <div className="p-2 md:p-4 text-center ">
-                                <h2 className="font-rose text-base font-semibold uppercase">gentle vinyāsa</h2>
+                                <h2 className="font-serif text-base font-semibold uppercase">gentle vinyāsa</h2>
                                 <p className="font-sans">Insegnante: Alba Muzzarelli</p>
                             </div>
                             </a>
@@ -70,7 +70,7 @@ function ClassiSection() {
                                 className="h-[310px] object-cover shadow aspect-square rounded-full" />
                             </div>
                             <div className="p-2 md:p-4 text-center ">
-                                <h2 className="font-rose text-base font-semibold uppercase">vinyāsa yoga de risveglio</h2>
+                                <h2 className="font-serif text-base font-semibold uppercase">vinyāsa yoga de risveglio</h2>
                                 <p className="font-sans">Insegnante: Diletta Muzzarelli</p>
                             </div>
                             </a>
@@ -84,7 +84,7 @@ function ClassiSection() {
                                 className="h-[310px] object-cover shadow aspect-square rounded-full" />
                             </div>
                             <div className="p-2 md:p-4 text-center ">
-                                <h2 className="font-rose text-base font-semibold uppercase">vinyāsa flow</h2>
+                                <h2 className="font-serif text-base font-semibold uppercase">vinyāsa flow</h2>
                                 <p className="font-sans">Insegnante: Alba Muzzarelli</p>
                             </div>
                             </a>
@@ -95,7 +95,7 @@ function ClassiSection() {
             <section ref={sectionRef} className="min-h-screen w-full px-4 flex items-center bg-gradient-to-br from-terracota from-0% via-dorado via-50% to-terracota to-90% relative overflow-hidden">
                 <div className="flex flex-col lg:flex-row min-h-screen px-12">
                     <div className="flex-1 flex flex-col justify-center text-white py-12">
-                        <h1 className="font-rose text-3xl md:text-4xl lg:text-5xl font-light">
+                        <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-light">
                         UMĀ È UNO SPAZIO CHE CONDUCE L'UNA ALL'ALTRA
                         </h1>
                         <p className="font-sans text-base md:text-lg leading-relaxed my-12">

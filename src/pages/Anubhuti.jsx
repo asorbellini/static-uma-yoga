@@ -27,7 +27,7 @@ function Anubhuti() {
         <div className="relative h-[60vh] w-full flex flex-row items-center justify-center text-white bg-[#4A617A]" > 
             <img src={logoAnubhuti} alt="Logo Anubhuti" className="absolute top-[40%]"/>
             <div className="absolute top-1/2 z-20 p-12 text-center">
-                <h1 className="text-2xl md:text-5xl p-2 md:p-4 rounded font-rose font-semibold uppercase
+                <h1 className="text-2xl md:text-5xl p-2 md:p-4 rounded font-serif font-semibold uppercase
                 ">Anubhūti</h1>
             </div>
         </div>
@@ -43,10 +43,10 @@ function Anubhuti() {
                     />
                 </div>
                 <div className="w-full md:basis-3/5 flex flex-col items-start">
-                    <h3 className="w-text-xl md:text-3xl rounded font-rose text-oscuro text-left font-semibold uppercase py-2">
+                    <h3 className="w-text-xl md:text-3xl rounded font-serif text-oscuro text-left font-semibold uppercase py-2">
                         Cos'è il Anubhūti
                     </h3>
-                    <p className="text-sm md:text-lg rounded font-rose text-oscuro text-left font-light pb-2">
+                    <p className="text-sm md:text-lg rounded font-serif text-oscuro text-left font-light pb-2">
                         Questa pratica è un invito a scavare con curiosità nella profondità di se stessi per superare la timidezza, sviluppare l’ascolto e stimolare l’espressione creativa.
                     </p>
                     <div className="flex items-center justify-start">
@@ -59,35 +59,35 @@ function Anubhuti() {
                 </div>
             </div>
             <div className="flex flex-col items-center justify-start pt-12">
-                <h3 className="w-text-xl md:text-3xl rounded font-rose text-oscuro text-center font-semibold uppercase py-2 md:w-[50vw]">
+                <h3 className="w-text-xl md:text-3xl rounded font-serif text-oscuro text-center font-semibold uppercase py-2 md:w-[50vw]">
                     Perchè sceglierlo:
                 </h3>
-                <p className="text-sm md:text-lg rounded font-rose text-oscuro text-center font-light pb-2 md:w-[50vw]">
+                <p className="text-sm md:text-lg rounded font-serif text-oscuro text-center font-light pb-2 md:w-[50vw]">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum hic quaerat accusantium architecto distinctio commodi numquam aliquam qui minima assumenda consequuntur sequi asperiores eos harum cum iste, dolores itaque placeat.
                 </p>
                 <div className="flex items-center justify-start">
                     <a href="#eventi">
-                        <button className="text-oscuro font-rose text-sm font-semibold tracking-wide underline hover:text-[#4A617A]">Guarda la classe</button>
+                        <button className="text-oscuro font-serif text-sm font-semibold tracking-wide underline hover:text-[#4A617A]">Guarda la classe</button>
                     </a>
                 </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 mt-4 p-12 text-center">
                 <div className="flex-1 border-2 rounded-2xl">
                     <div className="p-2 md:p-4">
-                        <h2 className="font-rose text-base md:text-lg font-semibold text-[#4A617A]">Battito delle mani</h2>
+                        <h2 className="font-serif text-base md:text-lg font-semibold text-[#4A617A]">Battito delle mani</h2>
                         <p className=" text-oscuro text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam labore ad sapiente similique nobis consequatur nam itaque dolorem saepe voluptate. Reprehenderit obcaecati ducimus labore recusandae magni commodi, architecto libero totam.</p>
                     </div>
                 </div>
                 <div className="flex-1 border-2 rounded-2xl">
                     <div className="p-2 md:p-4">
-                        <h2 className="font-rose text-base md:text-lg font-semibold text-[#4A617A]">La voce</h2>
+                        <h2 className="font-serif text-base md:text-lg font-semibold text-[#4A617A]">La voce</h2>
                         <p className="f text-oscuro text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloremque quae expedita magnam ab. Sapiente aliquam hic, rem dolorem quos velit eaque tenetur nisi, iure rerum odit ab eligendi voluptatum.</p>
                     </div>
                 </div>
 
                 <div className="flex-1 border-2 rounded-2xl">
                     <div className="p-2 md:p-4">
-                        <h2 className="font-rose text-base md:text-lg font-semibold text-[#4A617A]">Le coreografie</h2>
+                        <h2 className="font-serif text-base md:text-lg font-semibold text-[#4A617A]">Le coreografie</h2>
                         <p className="text-oscuro text-base">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, dolore dolorem? Perspiciatis officiis minima velit? Impedit odit obcaecati asperiores corporis? Similique, numquam! Eum ut iure est quidem saepe iusto nesciunt.</p>
                     </div>
                 </div>

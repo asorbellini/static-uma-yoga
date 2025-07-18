@@ -42,12 +42,12 @@ function NewSetter(){
                         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                         }`}
                     >
-                        <h2 className="text-2xl md:text-4xl font-light leading-snug mb-8 text-center md:text-left">
+                        <h2 className="secondaryTitle text-oscuro font-light leading-snug mb-4 text-center md:text-left">
                             RESTA AGGIORNATO CON UMĀ YOGA – ISCRIVITI ALLA NOSTRA NEWSLETTER
                         </h2>
                         <div className={`${isMobile ? "flex justify-center" : ""}`}>
                             <a href="https://mailchi.mp/5adff419986c/benvenut" target="_blank">
-                                <button className="bg-verdeBosque hover:bg-verdeOliva transition-all duration-500 text-white px-6 py-3 text-sm tracking-wide">
+                                <button className="btn-primary">
                                     ISCRIVITI ORA
                                 </button>
                             </a>

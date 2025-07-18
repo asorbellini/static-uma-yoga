@@ -22,7 +22,7 @@ function HeroReW() {
         <div className="relative h-screen w-full flex flex-row items-center justify-center text-white">
             <div className="absolute inset-0 " />{/*bg-gradient-to-br from-terracota from-0% via-dorado via-50%  to-terracota */}
             <div className="absolute top-[8vh] z-20 p-12 text-left">
-                <h1 className="sectionTitle p-2 md:p-4 uppercase">Retreat e Workshop</h1>
+                <h1 className="textTitleSection p-2 md:p-4 uppercase">Retreat e Workshop</h1>
             </div>
             <div className="absolute top-[20vh] left-1/2 -translate-x-1/2 z-10">
                 <div className="w-[40vw] h-[60vh] aspect-video rounded-br-full rounded-bl-full relative shadow-xl">

@@ -59,30 +59,30 @@ function NavakaranaVinyasa() {
         <NavakaranaSummary />
         {/* GALERÍA DE IMÁGENES */}
         <div className="w-[80vw] md:w-[60vw] items-center justify-items-center mx-auto">.
-          <h3 className="w-text-xl md:text-3xl rounded font-rose text-oscuro text-center font-semibold uppercase py-2 md:w-[50vw]">GALLERY</h3>
+          <h3 className="w-text-xl md:text-3xl rounded font-serif text-oscuro text-center font-semibold uppercase py-2 md:w-[50vw]">GALLERY</h3>
           <HorizontalGallery images={NavakaranaImages}/>
         </div>
         {/* 
         <section id="eventi" className="w-[80vw] md:w-[60vw] items-center justify-items-center mx-auto scroll-mt-24">
-          <h3 className="w-text-xl md:text-3xl rounded font-rose text-oscuro text-center font-semibold uppercase py-2 md:w-[50vw] ">Guarda tutti gli eventi</h3>
+          <h3 className="w-text-xl md:text-3xl rounded font-serif text-oscuro text-center font-semibold uppercase py-2 md:w-[50vw] ">Guarda tutti gli eventi</h3>
           <p>Guarda tutti gli eventi, retreat e masterclass in programma, questa sezione è in costante aggiornamento.</p>
           <div className="flex flex-col sm:flex-row gap-3 mt-4 p-12 text-center h-[500px]">
                 <div className="flex-1 border-2 rounded-2xl  bg-red-500">
                     <div className="p-2 md:p-4">
-                        <h2 className="font-rose text-base md:text-lg font-semibold text-[#581414] ">INFO DE EVENTOS</h2>
+                        <h2 className="font-serif text-base md:text-lg font-semibold text-[#581414] ">INFO DE EVENTOS</h2>
                         <p>Json</p>
                     </div>
                 </div>
                 <div className="flex-1 border-2 rounded-2xl bg-red-500">
                     <div className="p-2 md:p-4">
-                        <h2 className="font-rose text-base md:text-lg font-semibold text-[#581414]">INFO DE EVENTOS</h2>
+                        <h2 className="font-serif text-base md:text-lg font-semibold text-[#581414]">INFO DE EVENTOS</h2>
                         <p>Json</p>
                     </div>
                 </div>
 
                 <div className="flex-1 border-2 rounded-2xl bg-red-500">
                     <div className="p-2 md:p-4">
-                        <h2 className="font-rose text-base md:text-lg font-semibold text-[#581414]">INFO DE EVENTOS</h2>
+                        <h2 className="font-serif text-base md:text-lg font-semibold text-[#581414]">INFO DE EVENTOS</h2>
                         <p>Json</p>
                     </div>
                 </div>

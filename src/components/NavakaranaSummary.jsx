@@ -59,26 +59,26 @@ function NavakaranaSummary() {
                     </p>
                     {/* <div className="flex items-center justify-start">
                         <a href="/classi">
-                            <button className="text-oscuro font-rose text-sm font-semibold tracking-wide underline hover:text-[#581414]">Guarda la classe</button>
+                            <button className="text-oscuro font-serif text-sm font-semibold tracking-wide underline hover:text-[#581414]">Guarda la classe</button>
                     </div> */}
                 </div>
                 <div className="flex flex-col sm:flex-row gap-8 mt-4 p-12  h-full justify-center text-center ">
                     <div className="flex-1 border-2 rounded-t-2xl border-[#a33c3c]">
                         <div className="p-2 md:p-4">
-                            <h2 className="font-rose text-lg md:text-xl font-semibold text-[#581414]">Battito delle mani</h2>
+                            <h2 className="font-serif text-lg md:text-xl font-semibold text-[#581414]">Battito delle mani</h2>
                             <p className="text-oscuro text-base font-normal font-sans">Navakaraṇa Vinyāsa è uno stile di yoga dinamico. La classe è guidata con tempo e melodia e le istruzioni essenziali e concise sono fornite con il battito delle mani.</p>
                         </div>
                     </div>
                     <div className="flex-1 border-2 rounded-t-2xl border-[#a33c3c]">
                         <div className="p-2 md:p-4">
-                            <h2 className="font-rose text-lg md:text-xl font-semibold text-[#581414]">La voce</h2>
+                            <h2 className="font-serif text-lg md:text-xl font-semibold text-[#581414]">La voce</h2>
                             <p className="text-oscuro text-base font-normal font-sans">La voce dell’insegnante è sintonizzata su un tono sonoro che facilita il fluire armonioso, la respirazione ritmica, la concentrazione e la chiarezza mentale.</p>
                         </div>
                     </div>
 
                     <div className="flex-1 border-2 rounded-t-2xl border-[#a33c3c]">
                         <div className="p-2 md:p-4">
-                            <h2 className="font-rose text-lg md:text-xl font-semibold text-[#581414]">Le coreografie</h2>
+                            <h2 className="font-serif text-lg md:text-xl font-semibold text-[#581414]">Le coreografie</h2>
                             <p className="text-oscuro text-base font-normal font-sans">Le coreografie delle sequenze di Navakaraṇa sono disposte metodologicamente in modo da offrire più opzioni per tutti i livelli.</p>
                         </div>
                     </div>

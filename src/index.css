@@ -127,19 +127,19 @@ html {
 
 @layer components {
   .welcomeTitle {
-    @apply font-serif text-white text-4xl md:text-5xl lg:text-6xl font-medium drop-shadow-title
+    @apply font-serif text-white text-4xl md:text-5xl lg:text-6xl font-semibold drop-shadow-title
   }
 
-  .sectionTitle {
-    @apply font-rose text-white text-3xl md:text-4xl lg:text-5xl font-medium drop-shadow-title text-center 
+  .textTitleSection {
+    @apply font-serif text-white text-3xl md:text-4xl lg:text-5xl font-medium drop-shadow-title text-center 
   }
 
   .title {
-    @apply font-rose text-white text-lg md:text-xl lg:text-2xl font-medium drop-shadow-title tracking-wider 
+    @apply font-serif text-white text-2xl lg:text-3xl font-medium drop-shadow-title tracking-wider 
   }
 
   .secondaryTitle {
-    @apply font-rose text-white text-base md:text-lg lg:text-xl font-medium drop-shadow-title
+    @apply font-serif text-white text-base md:text-lg lg:text-xl font-medium drop-shadow-title tracking-wider
   }
 
   .subtitle {
@@ -147,10 +147,18 @@ html {
   }
 
   .textDetail {
-    @apply font-sans text-white text-base font-normal drop-shadow-text text-start 
+    @apply font-sans text-white text-base md:text-lg font-normal drop-shadow-text text-start 
   }
 
   .textButton {
-    @apply font-sans text-sm md:text-base font-semibold tracking-wide
+    @apply font-sans text-sm md:text-base font-normal
+  }
+
+  .btn-primary {
+    @apply bg-verdeBosque border-2 border-verdeBosque hover:border-verdeBosque hover:bg-verdeOliva rounded-3xl p-3 md:p-6 md:py-3 justify-center text-white hover:text-oscuro max-w-fit transition-all duration-500 
+  }
+
+  .btn-secondary {
+    @apply bg-transparent justify-center text-white hover:text-oscuro transition-all duration-500  
   }
 }

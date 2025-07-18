@@ -6,7 +6,7 @@ function HeroClassi() {
         <div className="relative h-[90vh] w-full flex flex-row items-center justify-center text-white">
             <div className="absolute inset-0  bg-gradient-to-br from-terracota from-0% via-dorado via-50%  to-terracota to-90%" />
             <div className="absolute top-[12.5%] z-20 p-12 text-left">
-                <h1 className="text-2xl md:text-5xl p-2 md:p-4 rounded font-rose font-semibold
+                <h1 className="text-2xl md:text-5xl p-2 md:p-4 rounded font-serif font-semibold
                 ">LE CLASSI DI UMĀ</h1>
             </div>
             <div className="absolute top-1/4 left-1/3 z-10">

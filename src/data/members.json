@@ -4,7 +4,7 @@
         "Name":"Alba Muzzarelli",
         "memberName":"alba-muzzarelli",
         "profession":"Insegnante di yoga",
-        "fotografia":{
+        "images":{
             "1":"/images/PortadaAlba.png",
             "2":"/images/PortadaAlba.png",
             "3":"/images/PortadaAlba.png"
@@ -21,7 +21,7 @@
         "Name":"Diletta Muzzarelli",
         "memberName":"diletta-muzzarelli",
         "profession":"Insegnante di yoga",
-        "fotografia":{
+        "images":{
             "1":"/images/PortadaDiletta.png",
             "2":"/images/PortadaDiletta.png",
             "3":"/images/PortadaDiletta.png"
@@ -38,7 +38,7 @@
         "Name":"Tiziano Sorbellini",
         "memberName":"tiziano-sorbellini",
         "profession":"Fondatore della pratica ANUBHŪTI",
-        "fotografia":{
+        "images":{
             "1":"/images/PortadaTiziano.png",
             "2":"/images/PortadaTiziano.png",
             "3":"/images/PortadaTiziano.png"

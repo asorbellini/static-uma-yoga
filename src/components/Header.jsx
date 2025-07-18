@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import UmaLogo from "./Logo";
-
+import UmaLogo from "./Logo.jsx";
+import { MenuAndCloseIcon } from "./Icons.jsx";
 
 const useActiveSection = () => {
     const location = useLocation()
@@ -42,61 +42,51 @@ const Header = () => {
         isScrolled ? "bg-verdeBosque bg-opacity-40 backdrop-blur-xl shadow-lg " : "bg-transparent py-2 md:py-3"
       }`}
     >
-      <nav className="w-full mx-auto px-4 sm:px-6 flex flex-row justify-between items-center">
+      <nav className="w-full mx-auto px-4 sm:px-6 md:px-8 flex flex-row justify-between items-center">
         {/* Logo */}
         <div>
           <NavLink to="/">
-              <UmaLogo classname="w-16 h-16"/>
+              <UmaLogo classname="w-14 h-14 md:w-16 md:h-16"/>
           </NavLink>
         </div>
 
         {/* Desktop Navigation Menu */}
-        <ul className="hidden md:flex flex-row space-x-6 md:space-x-4 xl:space-x-8 text-center">
+        <ul className="hidden md:flex md:flex-row md:space-x-4 xl:space-x-8 md:text-center md:items-center">
           {navItems.map((item, index) => (
             <li key={index}>
               <NavLink
                 to={item.url}
-                className="uppercase md:text-xs xl:text-base font-serif tracking-wide text-white transition-colors duration-300 relative group"
+                className="text-base font-serif tracking-wide text-white uppercase transition-colors duration-300 relative group"
               >
                 {item.name}
-                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full ${activeSecction === `${item.url}` ? "w-full": ""}`}></span>
+                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full ${activeSecction === `${item.url}` ? "w-full": ""}`} />
               </NavLink>
             </li>
           ))}
         </ul>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-neutral-200 p-2" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          <svg
-            className={`w-6 h-6 transition-transform duration-300 ${isMobileMenuOpen ? "rotate-90" : ""}`}
-            fill="none"
-            stroke="white"
-            viewBox="0 0 24 24"
-          >
-            {isMobileMenuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
+        <button className="md:hidden text-white p-2" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <MenuAndCloseIcon isMobileMenuOpen={isMobileMenuOpen} />
         </button>
       </nav>
 
       {/* Mobile Menu */}
       <div
         className={`md:hidden transition-all duration-300 ease-in-out ${
-          isMobileMenuOpen ? "max-h-screen opacity-100 visible" : "max-h-0 opacity-0 invisible"
-        } bg-transparent backdrop-blur-md border-t border-stone-200/50`}
+          isMobileMenuOpen ? "min-h-screen opacity-100 visible" : "max-h-0 opacity-0 invisible"
+        } bg-transparent backdrop-blur-xl border-t border-white/50`}
       >
-        <ul className="w-full mx-auto px-4 sm:px-6 py-4 space-y-4">
+        <ul className="w-full mx-auto px-4 sm:px-6 py-4 space-y-2">
           {navItems.map((item, index) => (
             <li key={index}>
               <NavLink
                 to={item.url}
-                className="block text-base font-medium tracking-wide text-white hover:text-white transition-colors duration-300 py-2 uppercase"
+                className="relative inline-block text-base font-serif tracking-wide text-white transition-colors duration-300 py-2 uppercase"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
+                <span className={`absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 ${(isMobileMenuOpen && activeSecction === `${item.url}`) ? "w-full": ""}`} />
               </NavLink>
             </li>
           ))}

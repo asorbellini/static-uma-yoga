@@ -26,7 +26,7 @@ function RetreateWorkshop() {
             {/* RETREAT */}
             <section id="uma-retreat" className="min-h-screen w-full px-16 pt-20">
                 <div className="justify-items-center text-center">
-                    <h3 className="sectionTitle">
+                    <h3 className="textTitleSection">
                     RETREAT
                     </h3>
                     <p className="subtitle max-w-3xl p-2 text-center">
@@ -64,7 +64,7 @@ function RetreateWorkshop() {
             {/* RETREAT */}
             <section id="uma-workshop" className="min-h-screen w-full px-12 pt-20">
                 <div className="justify-items-center">
-                    <h3 className="sectionTitle">
+                    <h3 className="textTitleSection">
                     WORKSHOP
                     </h3>
                     <p className="subtitle max-w-3xl p-2 text-center">

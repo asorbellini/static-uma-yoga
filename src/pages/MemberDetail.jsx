@@ -24,10 +24,10 @@ const ExpandableButton = ({ title, children}) => {
                 onClick={() => setIsOpen(!isOpen)}
                 className="w-full hover:bg-gradient-to-r hover:from-verdeBosque hover:to-verdeOliva transition-colors duration-300 px-6 py-4 flex items-center justify-between text-white"
             >
-                <span className="text-lg font-rose font-light tracking-wide uppercase">{title}</span>
+                <span className="text-lg font-serif font-light tracking-wide uppercase">{title}</span>
                 {/* Icono de flecha */}
                 <div className={`${isOpen ? "-rotate-180" : "rotate-90" }`}>
-                    <ArrowUp />
+                    <ArrowUp className="" stroke="#ffffff" />
                 </div>
             </button>
 
@@ -68,12 +68,12 @@ function MemberDetail(){
                         <div className="flex-1">
                             <div className="relative justify-items-center">
                                 <img
-                                src={member.fotografia?.[1]}
+                                src={member.images?.[1]}
                                 alt={`${member.Name} - ${member.id}`}
                                 className="h-[50vh] md:h-[70vh] w-auto object-cover rounded-2xl shadow-2xl opacity-95"
                                 />
                                 {/* Overlay sutil */}
-                                <h2 className="w-full absolute -top-6 left-1/2 -translate-x-1/2 text-3xl md:text-4xl lg:text-5xl rounded font-rose text-white font-bold text-center drop-shadow-2xl">
+                                <h2 className="w-full absolute -top-6 left-1/2 -translate-x-1/2 text-3xl md:text-4xl lg:text-5xl rounded font-serif text-white font-bold text-center drop-shadow-2xl">
                                     {member.Name}
                                 </h2>
                             </div>
