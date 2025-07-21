@@ -29,7 +29,7 @@ function UmaSummary(){
                         {members.map((member, index) => (
                             <div className="flex-1 hover:scale-105 transition-all duration-1000">
                                 <a href={`/chi-siamo/${member.memberName}`}>
-                                    <div className={`justify-items-center transition-all duration-[1000ms] ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"}`}>
+                                    <div className={`justify-items-center items-center transition-all duration-[1000ms] ease-out ${isVisible ? "opacity-100 translate-x-0 sm:translate-y-0" : "opacity-0 -translate-x-10 sm:-translate-y-10"}`}>
                                         <img
                                         src={member.images?.[1]}
                                         alt={`Image ${member.Name}`}
