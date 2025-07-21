@@ -1,9 +1,5 @@
 import { useState, useEffect, useRef } from "react"
-import imageUrlAlba from "../assets/images/AboutAlba.png"
-import imageUrlDiletta from "../assets/images/AboutDiletta.png"
-import imageUrlTiziano from "../assets/images/AboutTiziano.png" 
 import imageUrlClassi from "../assets/images/Classi.png"
-import { ArrowDown } from "./Icons"
 import members from "../data/members.json"
 
 
@@ -30,7 +26,7 @@ function AboutUmaSummary(){
             <section id="about-uma-summary" className="min-h-screen w-full px-4 pt-20 bg-terracota">
                 <div className="px-12">
                     <div className="pb-8 flex flex-col sm:flex-row gap-3 items-center">
-                        <div className="basis-1/3 p-[1rem]">
+                        <div className="basis-1/3 italic">
                             <h3 className="text-lg md:text-2xl font-serif text-white text-left uppercase drop-shadow-2xl">
                             UMĀ è uno spazio che conduce l’una all’altra, annullando virtualmente la distanza fisica che ci separa.
                             </h3>
@@ -70,15 +66,15 @@ function AboutUmaSummary(){
                     </div>
                 </div>
             </section>
-            <section ref={sectionRef} className="min-h-screen w-full py-8 px-4 flex items-center bg-gradient-to-bl from-terracota via-terracota via-50% to-dorado relative overflow-hidden">
+            <section ref={sectionRef} className="min-h-screen w-full py-4 sm:py-8 px-4 flex items-center bg-gradient-to-bl from-terracota via-terracota via-50% to-dorado relative overflow-hidden">
                 <div className="flex flex-col md:flex-row px-12 md:items-center">
                     <div className="flex-1">
-                        <h1 className="text-start textTitleSection py-6 md:py-12 md:absolute md:top-0 md:max-w-md lg:relative lg:max-w-full z-30">
+                        <h1 className="text-start textTitleSection py-4 sm:py-6 md:py-12 md:absolute md:top-0 md:max-w-md lg:relative lg:max-w-full z-30">
                         UMĀ È UNO SPAZIO PER EXPANDERSI OLTRE TE STESSO
                         </h1>
                     </div>
                     <div className="flex-1 h-screen">
-                        <div className={`relative md:absolute right-0 md:top-8 lg:top-0 overflow-hidden transition-all duration-[1000ms] ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
+                        <div className={`relative md:absolute right-0 md:top-0 overflow-hidden transition-all duration-[1000ms] ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
                             <img
                                 src={imageUrlClassi}
                                 alt="Yoga Practice"
