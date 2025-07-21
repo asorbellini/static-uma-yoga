@@ -25,7 +25,7 @@ function HeroReW() {
                 <h1 className="textTitleSection p-2 md:p-4 uppercase">Retreat e Workshop</h1>
             </div>
             <div className="absolute top-[20vh] left-1/2 -translate-x-1/2 z-10">
-                <div className="w-[40vw] h-[60vh] aspect-video rounded-br-full rounded-bl-full relative shadow-xl">
+                <div className="w-[80vw] md:w-[50vw] h-[70vh] aspect-video rounded-br-full rounded-bl-full relative shadow-xl">
                     <video
                     ref={videoRef}
                     src={Retreat}
