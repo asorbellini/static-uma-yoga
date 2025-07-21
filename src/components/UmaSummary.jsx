@@ -22,7 +22,7 @@ function UmaSummary(){
     }, [])
     return(
         <div>
-            <section ref={sectionRef} id="uma-summary" className="min-h-screen relative w-full px-4 pt-20 bg-gradient-to-b from-terracota via-terracota via-80% to-dorado">
+            <section ref={sectionRef} id="uma-summary" className="min-h-screen relative w-full px-4 py-4 sm:pt-20 bg-gradient-to-b from-terracota via-terracota via-80% to-dorado">
                 <div className="px-12">
                     <h3 className="textTitleSection">CHI SIAMMO</h3>
                     <div className="flex flex-col sm:flex-row gap-3 py-2">
@@ -44,7 +44,7 @@ function UmaSummary(){
                         ))}
                     </div>
                 </div>
-                <div className="flex items-center justify-center px-12">
+                <div className="hidden sm:flex items-center justify-center px-12">
                     <div className="btn-secondary group">
                         <a href="#cosa-facciamo">
                             <button type="button" className="group-hover:animate-pulse">
@@ -54,7 +54,7 @@ function UmaSummary(){
                     </div>
                 </div>
             </section>
-            <section id="cosa-facciamo" className="min-h-screen w-full px-4 pt-20 bg-gradient-to-t from-terracota via-terracota via-50% to-dorado flex flex-col">
+            <section id="cosa-facciamo" className="min-h-screen w-full px-4 py-4 sm:pt-20 bg-gradient-to-t from-terracota via-terracota via-50% to-dorado flex flex-col">
                 <div className="px-12">
                     <h2 className="textTitleSection">COSA FACCIAMO</h2>
                     <div className="flex flex-col sm:flex-row justify-between items-center relative md:pt-6 pb-6 text-left">
