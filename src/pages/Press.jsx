@@ -13,7 +13,7 @@ function Press() {
             <div className="grid grid-cols-1 md:grid-cols-2 px-16 py-12 justify-center text-center gap-3 bg-gradient-to-tr from-verdeOliva to-verdeBosque">
                 <div className="flex-1 text-white group p-2 border-2 border-verdeOliva">
                     <div className="justify-items-center items-center h-20">
-                        <img src="/images/PortadaAlba.png" alt="portada revista" className="w-full h-full"/>
+                        <img src="/images/PortadaAlba.png" alt="portada revista" className="h-full"/>
                     </div>
                     <h1 className="title uppercase group-hover:text-dorado">VIVERE LO YOGA</h1>
                     <p>{getTextDate('2022-06-07')} </p>

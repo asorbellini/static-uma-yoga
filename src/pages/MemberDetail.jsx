@@ -99,7 +99,7 @@ function MemberDetail(){
             </section>
             <section className="flex w-full p-4 justify-center" >
                 <a href="/press-e-media">
-                    <button type="button" className="btn-primary uppercase">Scopri la nostra partecipazione in press</button>
+                    <button type="button" className="btn-primary uppercase font-bold">Scopri la nostra partecipazione in press</button>
                 </a>
             </section>
             <ToRetreateWorkshop />
