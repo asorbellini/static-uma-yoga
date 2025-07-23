@@ -10,6 +10,7 @@ import ReW from "./pages/ReWDetail.jsx"
 import Anubhuti from "./pages/Anubhuti.jsx"
 import Header from "./components/Header.jsx"
 import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange.jsx"
+import Press from "./pages/Press.jsx"
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
         <Route path="/retreat-e-workshop" element={<RetreateWorkshop />} />
         <Route path="/:type/:slug" element={<ReW />} />
         <Route path="/contatti" element={<ContactUs />} />  
-        {/*<Route path="/press-e-media" element={<Press />} /> */}
+        <Route path="/press-e-media" element={<Press />} /> 
         {/* <Route path="/events" element={<Events />} />        */}
       </Routes>
     </Router>
