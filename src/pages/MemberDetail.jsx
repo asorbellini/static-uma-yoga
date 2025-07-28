@@ -5,6 +5,7 @@ import members from "../data/members.json"
 import { ArrowDown, ArrowUp, InstagramIcon } from "../components/Icons"
 import Footer from "../components/Footer.jsx"
 import ToRetreateWorkshop from "../components/ToRetreateWorkshop.jsx"
+import ScrollToTop from "../components/ScrollToTop.jsx"
 
 const ExpandableButton = ({ title, children}) => {
    const [isOpen, setIsOpen] = useState(false)
@@ -22,11 +23,11 @@ const ExpandableButton = ({ title, children}) => {
             {/* Botón expandible */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-full hover:bg-gradient-to-r hover:from-verdeBosque hover:to-verdeOliva transition-colors duration-300 px-6 py-4 flex items-center justify-between text-white"
+                className="w-full hover:bg-gradient-to-r hover:from-verdeBosque hover:to-verdeOliva transition-colors duration-300 px-1 py-4 flex items-center justify-between text-white"
             >
-                <span className="text-lg font-serif font-light tracking-wide uppercase">{title}</span>
+                <span className="subtitle uppercase">{title}</span>
                 {/* Icono de flecha */}
-                <div className={`${isOpen ? "-rotate-180" : "rotate-90" }`}>
+                <div className={`w-4 h-4 transition-transform duration-[500ms] ease-out ${isOpen ? "-rotate-180" : "rotate-90" }`}>
                     <ArrowUp className="" stroke="#ffffff" />
                 </div>
             </button>
@@ -36,11 +37,11 @@ const ExpandableButton = ({ title, children}) => {
             {/* Contenido expandible */}
             <div
                 className={`overflow-hidden transition-all duration-500 ease-in-out opacity-${isOpen ? "100" : "0"}`}
-        style={{ height: isOpen ? `${contentHeight}px` : "0px" }}
-            >
-                <div ref={contentRef} className="bg-transparent px-6 py-6 text-oscuro space-y-4">
+                style={{ height: isOpen ? `${contentHeight}px` : "0px" }}
+                    >
+                <div ref={contentRef} className="bg-transparent px-1 py-6 text-oscuro space-y-4">
                     {children.map((paragraph, index) => (
-                        <p key={index} className="p-2 text-oscuro leading-relaxed">
+                        <p key={index} className="textDetail ">
                             {paragraph}
                         </p>
                     ))}
@@ -57,45 +58,47 @@ function MemberDetail(){
     if (!member) return <p>Miembro no encontrado</p>;
 
     return(
-        <div className="min-h-screen bg-gradient-to-br from-dorado via-dorado to-verdeBosque">
+        <div className="min-h-screen" 
+        style={{background:"linear-gradient(135deg, #D4AF7F 0%, #7DA87D 50%, #21524C 100%)"}}>
+        <ScrollToTop />
         {/* Presentación del miembro */}
             <section className="relative w-full px-4 pt-28">
                 {/* Contenedor principal */}
-                <div className="relative max-w-6xl mx-auto ">
+                <div className="relative px-2 md:px-12 ">
                     {/* Contenedor de imagen y título */}
                     <div className="flex flex-col md:flex-row items-start gap-3 ">
                         {/* Columna izquierda - Imagen */}
-                        <div className="flex-1">
+                        <div className="w-full md:flex-1">
                             <div className="relative justify-items-center">
                                 <img
                                 src={member.images?.[1]}
                                 alt={`${member.Name} - ${member.id}`}
                                 className="h-[50vh] md:h-[70vh] w-auto object-cover rounded-2xl shadow-2xl opacity-95"
                                 />
-                                {/* Overlay sutil */}
-                                <h2 className="w-full absolute -top-6 left-1/2 -translate-x-1/2 text-3xl md:text-4xl lg:text-5xl rounded font-serif text-white font-bold text-center drop-shadow-2xl">
+                                <h2 className="w-full absolute -top-6 left-1/2 -translate-x-1/2 textTitleSection tracking-wider">
                                     {member.Name}
                                 </h2>
                             </div>
                         </div>
-                        <div className="flex-1 text-left space-y-6">
-                            <h2 className="uppercase">{member.profession}</h2>
-                            <p>{member.smallDescription}</p>
+                        <div className="flex-1 text-left space-y-2 md:space-y-6">
+                            <h2 className="subtitle uppercase">{member.profession}</h2>
+                            <p className="textDetail">{member.smallDescription}</p>
                             <ExpandableButton title="Formazione" children={member.training} />
-                            <h2 className="uppercase">Seguimi su</h2>
+                            <h2 className="subtitle uppercase">Seguimi su</h2>
                             <a href={member.socialMedia?.instagram} target="_blank" rel="noopener noreferrer">
                                 <div className="p-2">
-                                    <InstagramIcon />
+                                    <InstagramIcon fillColor="#ffffff" />
                                 </div>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-center">
-                    <a href="#">
-                        <ArrowDown />
-                    </a>
-                </div>
+                {member?.classi && 
+                    <div className="flex justify-center">
+                        <a href="#classi">
+                            <ArrowDown />
+                        </a>
+                    </div>}
             </section>
             <section className="flex w-full p-4 justify-center" >
                 <a href="/press-e-media">
