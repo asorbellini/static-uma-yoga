@@ -4,7 +4,7 @@ import { ArrowDown } from "./Icons";
 function HeroAbout() {
   return (
     <div className="relative w-full h-screen flex flex-row items-center justify-center bg-gradient-to-b to-terracota from-dorado">
-      <div className="flex flex-col sm:absolute w-full px-12">
+      <div className="flex flex-col sm:absolute w-full px-6 md:px-16">
         <h2 className="w-full sm:absolute sm:-top-6 left-1/2 sm:-translate-x-1/2 sm:z-20 textTitleSection">
             CHI SIAMO
         </h2>

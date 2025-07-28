@@ -24,7 +24,7 @@ function AboutUmaSummary(){
     return(
         <div>
             <section id="about-uma-summary" className="min-h-screen w-full px-4 pt-20 bg-terracota">
-                <div className="px-12">
+                <div className="px-2 md:px-12">
                     <div className="pb-8 flex flex-col sm:flex-row gap-3 items-center">
                         <div className="basis-1/3 italic">
                             <h3 className="text-lg md:text-2xl font-serif text-white text-left uppercase drop-shadow-2xl">
@@ -67,7 +67,7 @@ function AboutUmaSummary(){
                 </div>
             </section>
             <section ref={sectionRef} className="min-h-screen w-full py-4 sm:py-8 px-4 flex items-center bg-gradient-to-bl from-terracota via-terracota via-50% to-dorado relative overflow-hidden">
-                <div className="flex flex-col md:flex-row px-12 md:items-center">
+                <div className="flex flex-col md:flex-row px-2 md:px-12 md:items-center">
                     <div className="flex-1">
                         <h1 className="text-start textTitleSection py-4 sm:py-6 md:py-12 md:absolute md:top-0 md:max-w-md lg:relative lg:max-w-full z-30">
                         UMĀ È UNO SPAZIO PER EXPANDERSI OLTRE TE STESSO
