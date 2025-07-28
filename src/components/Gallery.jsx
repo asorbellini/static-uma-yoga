@@ -23,7 +23,7 @@ const HorizontalGallery = ({ images = [] }) => {
         imageWidth: Math.min(280, width - 100),
         gap: 12,
         visibleCards: 1,
-        showDots: false,
+        showDots: true,
         showArrows: false,
         enableSwipe: true,
       }
@@ -201,7 +201,7 @@ const HorizontalGallery = ({ images = [] }) => {
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
-          style={{ minHeight: "280px" }}
+          style={{ minHeight: "200px" }}
         >
 
           {/* Contenedor de imágenes */}
@@ -218,7 +218,7 @@ const HorizontalGallery = ({ images = [] }) => {
               <div
                 key={index}
                 className={`flex-shrink-0 relative group cursor-pointer transition-all duration-500 ${
-                  index === currentIndex ? "opacity-100 scale-105 z-20" : "opacity-70 scale-95 z-10"
+                  index === currentIndex ? "opacity-100 sm:scale-105 z-20" : "opacity-70 scale-95 z-10"
                 }`}
                 style={{
                   width: `${config.imageWidth}px`,
@@ -283,13 +283,13 @@ const HorizontalGallery = ({ images = [] }) => {
         </div>
         {/* Indicadores de posición */}
         {config.showDots && (
-          <div className="flex justify-center mt-4 space-x-2">
+          <div className="flex justify-center mt-2 sm:mt-4 space-x-1 sm:space-x-2">
             {galleryImages.map((_, index) => (
               <button
                 key={index}
                 onClick={() => !isTransitioning && scrollToSlide(index)}
                 disabled={isTransitioning}
-                className={`h-2 rounded-full transition-all duration-300 disabled:cursor-not-allowed ${
+                className={`inset-0 h-2 rounded-full transition-all duration-300 disabled:cursor-not-allowed ${
                   index === currentIndex ? "bg-oscuro w-6" : "bg-oscuro/30 hover:bg-oscuro/60 w-2"
                 }`}
                 aria-label={`Fotografia ${index + 1}`}

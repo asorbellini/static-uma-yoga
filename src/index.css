@@ -92,12 +92,12 @@ html {
     animation-duration: 8s;
   }
 
-  /* Ensure touch targets are large enough */
+  /* Ensure touch targets are large enough 
   button,
   a {
     min-height: 44px;
     min-width: 44px;
-  }
+  }*/
 
   /* Prevent horizontal scroll */
   body {

@@ -58,7 +58,7 @@ function NavakaranaVinyasa() {
         <HeroNavakarana />
         <NavakaranaSummary />
         {/* GALERÍA DE IMÁGENES */}
-        <div className="items-center justify-items-center mx-auto px-16">
+        <div className="items-center justify-items-center mx-auto px-6 sm:px-16">
           <h3 className="w-text-xl md:text-3xl rounded font-serif text-oscuro text-center font-semibold uppercase py-2 md:w-[50vw]">GALLERY</h3>
           <HorizontalGallery images={NavakaranaImages}/>
         </div>
