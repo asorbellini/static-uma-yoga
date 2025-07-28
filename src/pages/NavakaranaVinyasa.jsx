@@ -1,6 +1,6 @@
 
 import HorizontalGallery from "../components/Gallery.jsx";
-import HeroNavakarana from "../components/HeroNavakarana.jsx";
+import HeroComponent from "../components/HeroComponent.jsx";
 import navak1 from "../assets/images/Navakarana/navak1.png"
 import navak2 from "../assets/images/Navakarana/navak2.png"
 import navak3 from "../assets/images/Navakarana/navak3.png"
@@ -8,6 +8,7 @@ import navak4 from "../assets/images/Navakarana/navak4.png"
 import navak5 from "../assets/images/Navakarana/navak5.png"
 import navak6 from "../assets/images/Navakarana/navak6.png"
 import navak7 from "../assets/images/Navakarana/navak7.png"
+import logoNavakarana from "../assets/images/LogoNavakarana.png"
 import NavakaranaSummary from "../components/NavakaranaSummary.jsx";
 import ToRetreateWorkshop from "../components/ToRetreateWorkshop.jsx";
 import Footer from "../components/Footer.jsx";
@@ -55,7 +56,7 @@ function NavakaranaVinyasa() {
   
   return (
     <div className="min-h-screen w-full bg-claro">
-        <HeroNavakarana />
+        <HeroComponent background="linear-gradient(45deg, #581414 0%, #921e1e 25%,  #a33c3c 50%, #b23d3d 75%, #b64c4c 100%)" mainColor="#581414" logo={logoNavakarana} title="navakaraṆa vinyāsa" />
         <NavakaranaSummary />
         {/* GALERÍA DE IMÁGENES */}
         <div className="items-center justify-items-center mx-auto px-6 sm:px-16">

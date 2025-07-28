@@ -161,4 +161,8 @@ html {
   .btn-secondary {
     @apply bg-transparent justify-center text-white hover:text-oscuro transition-all duration-500  
   }
+
+  .btn-scopri {
+    @apply border-2 border-white hover:border-green-950 rounded hover:bg-claro flex justify-center items-center text-white hover:text-oscuro max-w-fit transition-all duration-500 px-6 py-3 
+  }
 }
