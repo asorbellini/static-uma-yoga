@@ -42,21 +42,21 @@ const Header = () => {
         isScrolled ? "bg-verdeBosque bg-opacity-40 backdrop-blur-xl shadow-lg " : "bg-transparent py-2 md:py-3"
       }`}
     >
-      <nav className="w-full mx-auto px-4 sm:px-6 md:px-8 flex flex-row justify-between items-center">
+      <nav className="w-full mx-auto flex flex-row justify-between items-center px-2 md:px-4">
         {/* Logo */}
         <div>
           <NavLink to="/">
-              <UmaLogo classname="w-14 h-14 md:w-16 md:h-16"/>
+              <UmaLogo classname="w-12 h-12 md:w-16 md:h-16"/>
           </NavLink>
         </div>
 
         {/* Desktop Navigation Menu */}
-        <ul className="hidden md:flex md:flex-row md:space-x-4 xl:space-x-8 md:text-center md:items-center">
+        <ul className="hidden md:flex md:flex-row md:text-center md:items-center">
           {navItems.map((item, index) => (
-            <li key={index}>
+            <li key={index} className="md:px-2 lg:px-4">
               <NavLink
                 to={item.url}
-                className="text-base font-serif tracking-wide text-white uppercase transition-colors duration-300 relative group"
+                className="md:text-xs lg:text-sm font-serif tracking-wider text-white uppercase transition-colors duration-300 relative group"
               >
                 {item.name}
                 <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full ${activeSecction === `${item.url}` ? "w-full": ""}`} />
@@ -77,9 +77,9 @@ const Header = () => {
           isMobileMenuOpen ? "min-h-screen opacity-100 visible" : "max-h-0 opacity-0 invisible"
         } bg-transparent backdrop-blur-xl border-t border-white/50`}
       >
-        <ul className="w-full mx-auto px-4 sm:px-6 py-4 space-y-2">
+        <ul className="w-full px-4">
           {navItems.map((item, index) => (
-            <li key={index}>
+            <li key={index} className="py-2">
               <NavLink
                 to={item.url}
                 className="relative inline-block text-base font-serif tracking-wide text-white transition-colors duration-300 py-2 uppercase"

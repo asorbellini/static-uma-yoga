@@ -33,34 +33,32 @@ function NewSetter(){
     }, [])
 
     return (
-        <section ref={sectionRef} className="bg-claro overflow-hidden"> {/*py-12 md:py-10 */}
-            <div>
-                <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 px-12">
-                    {/* Texto a la izquierda (o arriba en mobile) */}
+        <section ref={sectionRef} className="bg-claro overflow-hidden">
+            <div className="py-4">
+                <div className="flex flex-col md:flex-row items-center justify-between space-x-3 px-6 md:px-16">
                     <div
-                        className={`w-full md:w-1/2 text-oscuro transition-all duration-1000 ease-out px-4 my-5 ${
+                        className={`w-full md:w-1/2 text-oscuro transition-all duration-1000 ease-out ${
                         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                         }`}
                     >
-                        <h2 className="secondaryTitle text-oscuro font-light leading-snug mb-4 text-center md:text-left">
+                        <h2 className="secondaryTitle text-oscuro font-light mb-2 text-center md:text-left drop-shadow-none">
                             RESTA AGGIORNATO CON UMĀ YOGA – ISCRIVITI ALLA NOSTRA NEWSLETTER
                         </h2>
                         <div className={`${isMobile ? "flex justify-center" : ""}`}>
-                            <a href="https://mailchi.mp/5adff419986c/benvenut" target="_blank">
+                            <a href="https://mailchi.mp/5adff419986c/benvenut" target="_blank" rel="noopener noreferrer" >
                                 <button className="btn-primary">
                                     ISCRIVITI ORA
                                 </button>
                             </a>
                         </div>
                     </div>
-                    {/* ✅ Imagen a la derecha (hidden en mobile) */}
                     <div
                         className={`w-full md:w-1/2 flex ${isMobile ? "justify-center" : "justify-end"} transition-all duration-1000 ease-out ${
                         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                         }`}
                     >
                         <div
-                        className={`absolute -right-12 -translate-y-1/2 ${isMobile ? "hidden" : "w-[400px]"} rounded-l-full overflow-hidden `}
+                        className={`absolute -right-16 -translate-y-1/2 ${isMobile ? "hidden" : "w-[400px]"} rounded-l-full overflow-hidden `}
                         >
                         <img
                             src={NewSetterImage}

@@ -4,6 +4,7 @@ import imgAnubhuti from "../assets/images/Anubhuti/Anubhuti.png"
 import logoAnubhuti from "../assets/images/LogoNavakarana.png"
 import ToRetreateWorkshop from "../components/ToRetreateWorkshop.jsx"
 import Footer from "../components/Footer"
+import ScrollToTop from "../components/ScrollToTop.jsx"
 
 function Anubhuti() {
   const [isVisible, setIsVisible] = useState(false)
@@ -25,6 +26,7 @@ function Anubhuti() {
   }, [])
   return (
     <div className="min-h-screen w-full bg-claro overflow-hidden">
+        <ScrollToTop />
         <HeroComponent background="linear-gradient(45deg, #4A617A 0%,  #93a4ab 50%, #4A617A 100%)" mainColor="#4A617A" logo={logoAnubhuti}  title="Anubhūti"/>
         <section ref={sectionRef} id="about-Anubhūti" className="min-h-screen w-full pt-12 md:pt-24 px-4">
             <div className={`flex flex-row px-2 sm:px-12 gap-3 items-center transition-all duration-[1000ms] ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}`}>
@@ -37,15 +39,15 @@ function Anubhuti() {
                 </div>
                 <div className="w-full md:basis-3/5 flex flex-col items-start ">
                         <div >
-                            <h3 className="w-text-xl md:text-3xl rounded font-serif text-oscuro text-left font-semibold uppercase py-2">
+                            <h3 className="w-text-xl title text-oscuro text-left drop-shadow-none font-semibold tracking-wider uppercase py-2">
                                 Cos'è il Anubhūti
                             </h3>
-                            <p className="text-sm md:text-lg rounded font-serif text-oscuro text-left font-light pb-2">
+                            <p className="textDetail drop-shadow-none text-oscuro text-left pb-2">
                                 Questa pratica è un invito a scavare con curiosità nella profondità di se stessi per superare la timidezza, sviluppare l’ascolto e stimolare l’espressione creativa.
                             </p>
                         </div>
                     <div className="flex items-center justify-start">
-                            <div className="btn-primary bg-[#4A617A] justify-center my-2 hover:bg-[#93a4ab] hover:border-[#93a4ab] transition-all duration-500  hover:text-white">
+                            <div className="btn-primary bg-[#4A617A] border-[#4A617A] justify-center my-2 hover:bg-[#93a4ab] hover:border-[#4A617A] transition-all duration-500 ">
                                 <a href="/retreat-e-workshop">
                                     <button className="textButton font-semibold tracking-wide">GUARDA GLI EVENTI</button>
                                 </a>
@@ -54,10 +56,10 @@ function Anubhuti() {
                 </div>
             </div>
             <div className="flex flex-col items-center justify-start pt-8 md:pt-12 px-2 md:px-12">
-                <h3 className="w-text-xl md:text-3xl rounded font-serif text-oscuro text-center font-semibold uppercase py-2 md:w-[50vw]">
+                <h3 className="title text-oscuro text-center drop-shadow-none font-semibold tracking-wider uppercase py-2 md:w-[50vw]">
                     Perchè sceglierlo:
                 </h3>
-                <p className="text-sm md:text-lg rounded font-sans text-oscuro text-center font-normal pb-2 lg:w-[50vw]">
+                <p className="textDetail text-oscuro text-center drop-shadow-none pb-2 lg:w-[50vw]">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum hic quaerat accusantium architecto distinctio commodi numquam aliquam qui minima assumenda consequuntur sequi asperiores eos harum cum iste, dolores itaque placeat.
                 </p>
             </div>

@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react"
 import cosaFacciamo2 from "../assets/images/Cosafacciamo2.png"
 import members from "../data/members.json"
-import {ArrowUp} from "../components/Icons.jsx"
+import { ArrowDown } from "../components/Icons.jsx"
 
 function UmaSummary(){
     const [isVisible, setIsVisible] = useState(false)
@@ -22,21 +22,21 @@ function UmaSummary(){
     }, [])
     return(
         <div>
-            <section ref={sectionRef} id="uma-summary" className="min-h-screen relative w-full px-4 py-4 pt-20 bg-gradient-to-b from-terracota via-terracota via-80% to-dorado">
-                <div className="px-2 md:px-12">
-                    <h3 className="textTitleSection">CHI SIAMMO</h3>
-                    <div className="flex flex-col sm:flex-row gap-3 py-2">
+            <section ref={sectionRef} id="uma-summary" className="min-h-screen relative w-full px-4 pt-12 md:pt-16 bg-gradient-to-b from-terracota via-terracota via-80% to-dorado">
+                <div className="px-2 md:px-12 pb-4">
+                    <h3 className="textTitleSection py-4">CHI SIAMO</h3>
+                    <div className="flex flex-col sm:flex-row gap-3">
                         {members.map((member, index) => (
                             <div className="flex-1 hover:scale-105 transition-all duration-1000">
                                 <a href={`/chi-siamo/${member.memberName}`}>
-                                    <div className={`justify-items-center items-center transition-all duration-[1000ms] ease-out ${isVisible ? "opacity-100 translate-x-0 sm:translate-x-0 sm:translate-y-0" : "opacity-0 -translate-x-10 sm:translate-x-0 sm:-translate-y-10"}`}>
+                                    <div className={` w-full justify-items-center items-center justify-center transition-all duration-300 ease-out ${isVisible ? "opacity-100 translate-x-0 sm:translate-x-0 sm:translate-y-0" : "opacity-0 -translate-x-10 sm:translate-x-0 sm:-translate-y-10"}`}>
                                         <img
                                         src={member.images?.[1]}
                                         alt={`Image ${member.Name}`}
-                                        className={`h-[45vh] sm:h-[45vh] object-contain sm:object-cover shadow ${index === 0 ? "rounded-3xl sm:rounded-bl-full" : index === 2 ? "rounded-3xl sm:rounded-tr-full" : "rounded-3xl sm:rounded-none"}`} />
+                                        className={`h-[45vh] object-contain sm:object-cover shadow ${index === 0 ? "rounded-3xl sm:rounded-bl-full" : index === 2 ? "rounded-3xl sm:rounded-tr-full" : "rounded-3xl sm:rounded-none"}`} />
                                     </div>
                                     <div className="sm:p-2">
-                                        <h2 className="title text-center underline sm:no-underline hover:underline transition-all mb-2">{member.Name}</h2>
+                                        <h2 className="title text-center underline sm:no-underline hover:underline transition-all py-2">{member.Name}</h2>
                                         <p className="textDetail">{member.smallDescription}</p>
                                     </div>
                                 </a>
@@ -44,21 +44,21 @@ function UmaSummary(){
                         ))}
                     </div>
                 </div>
-                <div className="hidden sm:flex items-center justify-center">
+                <div className="flex items-center justify-center">
                     <div className="btn-secondary group">
                         <a href="#cosa-facciamo">
-                            <button type="button" className="group-hover:animate-pulse">
-                                <ArrowUp className="w-8 h-8 rotate-180 " stroke="#ffffff"/>
+                            <button type="button" className="animate-pulse md:animate-none group-hover:animate-pulse ">
+                                <ArrowDown />
                             </button>
                         </a>
                     </div>
                 </div>
             </section>
-            <section id="cosa-facciamo" className="min-h-screen w-full px-4 py-4 sm:pt-20 bg-gradient-to-t from-terracota via-terracota via-50% to-dorado flex flex-col">
-                <div className="px-2 md:px-12">
-                    <h2 className="textTitleSection">COSA FACCIAMO</h2>
-                    <div className="flex flex-col sm:flex-row justify-between items-center relative md:pt-6 pb-6 text-left">
-                        <div className="justify-items-center sm:w-1/3 space-y-3 pt-4">
+            <section id="cosa-facciamo" className="h-auto w-full p-4 pt-12 md:pt-16 bg-gradient-to-t from-terracota via-terracota via-50% to-dorado flex flex-col">
+                <div className="px-2 md:px-12 md:pb-4">
+                    <h2 className="textTitleSection py-4">COSA FACCIAMO</h2>
+                    <div className="flex flex-col sm:flex-row items-center relative text-left">
+                        <div className="justify-items-center sm:w-1/3 space-y-1">
                             <h3 className="title">RETREAT E WORKSHOP</h3>
                             <p className="textDetail">
                                 Un momento di serenità in cui ogni respiro si allinea con la bellezza dell'ambiente circostante, lasciandovi connessi, ringiovaniti e pronti ad affrontare una giornata di esplorazione.
@@ -71,21 +71,21 @@ function UmaSummary(){
                                 </a>
                             </div>
                         </div>
-                        <div className="w-full md:p-2 sm:h-[30vh] md:relative md:w-[40vw] md:h-[50vh] lg:h-[60vh]">
+                        <div className="w-full py-2 sm:p-2 md:relative md:w-[40vw] md:h-[50vh] lg:h-[60vh]">
                             <img
                                 src={cosaFacciamo2}
                                 alt="Cosa Facciamo"
                                 className="w-full h-full object-cover rounded-br-full rounded-tl-full shadow-2xl"
                                 />
                         </div>
-                        <div className="justify-items-center sm:w-1/3 space-y-3 pt-4">
-                            <div className="space-y-3">
+                        <div className="justify-items-center sm:w-1/3 space-y-3">
+                            <div className="space-y-1">
                                 <h3 className="title text-center">CLASSI YOGA LIVE STREAMING</h3>
                                 <p className="textDetail">
                                 Pratica dove vuoi seguendo i nostri corsi in live streaming o comincia un percorso yoga personalizzato online.
                                 </p>
                             </div>
-                            <div>
+                            <div className="space-y-1">
                                 <h3 className="title text-center">CLASSI YOGA LIVE</h3>
                                 <p className="textDetail">
                                 Pratica con noi seguendo i nostri corsi live o comincia in presenza un percorso yoga personalizzato.

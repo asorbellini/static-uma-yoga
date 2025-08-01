@@ -47,8 +47,8 @@ function HeroReW() {
                     </button>
                 </div>
             </div>
-            <div className="absolute -bottom-4 z-20 p-12 text-left">
-                <p className="subtitle p-2 md:p-4"><span className="uppercase">expand beyond your</span><span className="text-xl md:text-2xl lg:text-3xl italic font-handwriting tracking-wider">self</span></p>
+            <div className="absolute -bottom-6 sm:-bottom-10 z-20 p-12 text-left">
+                <p className="subtitle p-2 md:p-8"><span className="uppercase">expand beyond your</span><span className="text-xl md:text-2xl lg:text-3xl italic font-handwriting tracking-wider">self</span></p>
             </div>
             
             <div className="absolute -bottom-2 z-20 flex flex-row items-center justify-center translate-x-1/4 hover:animate-pulse">

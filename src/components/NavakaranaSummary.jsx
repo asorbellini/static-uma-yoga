@@ -33,16 +33,16 @@ function NavakaranaSummary() {
                         />
                     </div>
                     <div className="w-full md:basis-3/5 flex flex-col items-start">
-                        <h3 className="w-text-xl md:text-3xl rounded font-serif text-oscuro text-left font-semibold uppercase py-2">
+                        <h3 className="title text-oscuro text-center drop-shadow-none font-semibold tracking-wider uppercase py-2">
                             Cos'è il Navakaraṇa vinyāsa
                         </h3>
-                        <p className="text-sm md:text-lg rounded font-sans text-oscuro text-left font-normal pb-2">
+                        <p className="textDetail drop-shadow-none text-oscuro text-left pb-2">
                             Navakaraṇa è una pratica di vinyāsa vigorosa ed energica che consiste in coreografie dinamiche
                             caratterizzate da una combinazione armonica di movimento e staticità ottenuta attraverso la regolazione del
                             respiro e del prāṇa (energia vitale).
                         </p>
                         <div className="flex items-center justify-start">
-                            <div className="btn-primary bg-[#581414] border-[#581414] hover:bg-[#a33c3c] hover:border-[#a33c3c] transition-all duration-500  hover:text-white ">
+                            <div className="btn-primary bg-[#581414] border-[#581414] hover:bg-[#a33c3c] hover:border-[#581414] transition-all duration-500 ">
                                 <a href="/retreat-e-workshop">
                                     <button className="textButton font-semibold tracking-wide">GUARDA GLI EVENTI</button>
                                 </a>
@@ -51,16 +51,12 @@ function NavakaranaSummary() {
                     </div>
                 </div>
                 <div className="flex flex-col items-center justify-start pt-12 px-2 md:px-12">
-                    <h3 className="w-text-xl md:text-3xl rounded font-serif text-oscuro text-center font-semibold uppercase py-2 md:w-[50vw]">
+                    <h3 className="title text-oscuro text-center drop-shadow-none font-semibold tracking-wider uppercase py-2 md:w-[50vw]">
                         Perchè sceglierlo:
                     </h3>
-                    <p className="text-sm md:text-lg rounded font-sans text-oscuro text-center font-normal pb-2 lg:w-[50vw]">
+                    <p className="textDetail text-oscuro text-center drop-shadow-none pb-2 lg:w-[50vw]">
                         Navakaraṇa vinyāsa è un metodo di auto trasformazione risultato dell’integrazione di molteplici conoscenze quali l’anatomia, la kinesiologia, la psicologia, la manipolazione del corpo, la musicoterapia, l’autoguarigione e diverse tecniche tantriche. In questo metodo troverai verità, tradizione, ricerca e innovazione per promuovere un autentico stato di benessere psico-fisico.
                     </p>
-                    {/* <div className="flex items-center justify-start">
-                        <a href="/classi">
-                            <button className="text-oscuro font-serif text-sm font-semibold tracking-wide underline hover:text-[#581414]">Guarda la classe</button>
-                    </div> */}
                 </div>
                 <div className="flex flex-col sm:flex-row gap-8 my-8 px-2 md:px-12 h-full justify-center text-center">
                     <div className="flex-1 border-2 rounded-t-2xl border-[#a33c3c]">

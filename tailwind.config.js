@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         rose: ['Rosemartin', 'cursive'],
         handwriting: ['"Dancing Script"', 'cursive'],
+        cormorant:['Cormorant']
       },
       keyframes: {
       walk1: {

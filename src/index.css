@@ -127,31 +127,31 @@ html {
 
 @layer components {
   .welcomeTitle {
-    @apply font-serif text-white text-4xl md:text-5xl lg:text-6xl font-semibold drop-shadow-title
+    @apply font-serif text-white text-3xl md:text-4xl lg:text-5xl drop-shadow-title tracking-wide
   }
 
   .textTitleSection {
-    @apply font-serif text-white text-3xl md:text-4xl lg:text-5xl font-medium drop-shadow-title text-center 
+    @apply font-serif text-white text-3xl lg:text-4xl drop-shadow-title text-center 
   }
 
   .title {
-    @apply font-serif text-white text-2xl lg:text-3xl font-medium drop-shadow-title tracking-wider 
+    @apply font-serif text-white text-xl lg:text-2xl font-medium drop-shadow-title tracking-wider 
   }
 
   .secondaryTitle {
-    @apply font-serif text-white text-base md:text-lg lg:text-xl font-medium drop-shadow-title tracking-wider
+    @apply font-serif text-white text-base lg:text-lg font-medium drop-shadow-title tracking-wider
   }
 
   .subtitle {
-    @apply font-sans text-white text-base md:text-lg lg:text-xl font-normal drop-shadow-text text-start 
+    @apply font-sans text-white text-base lg:text-lg font-normal drop-shadow-text text-start 
   }
 
   .textDetail {
-    @apply font-sans text-white text-base md:text-lg font-normal drop-shadow-text text-start 
+    @apply font-sans text-white text-base lg:text-lg font-light drop-shadow-title text-start 
   }
 
   .textButton {
-    @apply font-sans text-sm md:text-base font-normal
+    @apply font-sans text-sm md:text-sm/5 lg:text-base/5 font-normal
   }
 
   .btn-primary {
@@ -159,7 +159,7 @@ html {
   }
 
   .btn-secondary {
-    @apply bg-transparent justify-center text-white hover:text-oscuro transition-all duration-500  
+    @apply bg-transparent justify-center text-white hover:text-oscuro transition-all duration-300
   }
 
   .btn-scopri {
