@@ -5,16 +5,21 @@
         "memberName":"alba-muzzarelli",
         "profession":"Insegnante di yoga",
         "images":{
-            "1":"/images/PortadaAlba.png",
-            "2":"/images/PortadaAlba.png",
-            "3":"/images/PortadaAlba.png"
+            "1":"/images/Alba/Portada.png",
+            "2":"/images/Alba/Portada.png",
+            "3":"/images/Alba/Portada.png"
         },
         "smallDescription":"Nata con il Sole in Acquario, la Luna in Pesci e con Ariete come Ascendente, Alba è un’insaziabile curiosa, qualità che nel 2014 la conduce per la prima volta su un tappetino da yoga.",
         "training":["Ottiene il suo primo certificato di idoneità all’insegnamento dello yoga [250 RYT] con Igor Cerfolli e Daniela Ramponi, per poi proseguire il suo percorso formativo in Anukalana yoga sotto la guida di Jacopo Ceccarelli a Firenze [500 RYT].","Contemporaneamente conclude il percorso formativo triennale di Energheia, la prima scuola di formazione per Terapeuti Esoterici per lo studio della Psicologia dello Yoga, percorso tanto bello quanto sfidante, che la aiuta a destrutturare antichi automatismi e limitanti condizionamenti.","Alba indaga le attività della mente umana attraverso un approccio sempre curioso ed entusiasta ai diversi metodi e stili di pratica, meticolosa ricerca che l’ha portata prima a studiare, praticare e condividere la meditazione Himalayana con Ela Mare, per poi conoscere il maestro Dario Calvaruso, con il quale conclude i moduli formativi 1 [ATC 108hr] e 2 [ATC108hr] in Navakaraṇa Vinyāsa, diventando una delle poche insegnanti in Italia abilitata all’insegnamento di questo metodo.","Nel corso degli anni approfondisce anche lo studio della filosofia dello yoga frequentando il master in “Scienze della Salute Yoga e Ayurveda” presso il Centro Studi Bhaktivedanta e, con la consapevolezza maturata con lo studio dello yoga di quanto ogni singolo individuo sia inevitabilmente e armoniosamente in connessione con tutto ciò che ci circonda, intraprende un percorso di studi presso la Yoga delle Stelle Academy in Jyotish, l’astrologia Vedica./n Il suo intento come insegnante è quello di spronare i propri allievi ad accedere con fiducia e coraggio alla più alta forma della propria potenzialità, per trasformare le proprie paure in virtù."],
         "socialMedia": {
             "instagram":"https://www.instagram.com/albamuzzarelli/",
             "email": "alba.muzzarelli@gmail.com"
-        }
+        },
+        "classes":[
+            {"title":"",
+            "detail":"",
+            "urlImage":""}
+        ]
     },
     {
         "id":2,
@@ -31,23 +36,60 @@
         "socialMedia": {
             "instagram":"https://www.instagram.com/dilettahamsa_/",
             "email": "diletta.muzzarelli@gmail.com"
-        }
+        },
+        "classes":[
+            {"title":"",
+            "detail":"",
+            "urlImage":""}
+        ]
     },
     {
         "id":3,
         "Name":"Tiziano Sorbellini",
         "memberName":"tiziano-sorbellini",
-        "profession":"Fondatore della pratica ANUBHŪTI",
+        "profession":"Improvvisatore teatrale, autore e fondatore della pratica Anubhūti",
         "images":{
-            "1":"/images/PortadaTiziano.png",
-            "2":"/images/PortadaTiziano.png",
-            "3":"/images/PortadaTiziano.png"
+            "1":"/images/Tiziano/Portada.png",
+            "2":"/images/Tiziano/Portada.png",
+            "3":"/images/Tiziano/Portada.png"
         },
         "smallDescription":"Tiziano, creatore della pratica Anubhūti e autore di libri come \"Semi del nulla\" e \"Anubhuti\".",
-        "training":["Aenean euismod porttitor dictum. Integer et ornare nisi, non vehicula felis. Nam risus elit, egestas non dui ac, pretium consectetur risus. Etiam a augue a libero auctor pellentesque. Vivamus feugiat lobortis consequat. Mauris at libero eleifend, dictum sapien eu, tempus sapien. Morbi ultricies lacus eleifend, vulputate libero blandit, tincidunt sapien.","Curabitur dui sem, elementum sit amet rhoncus id, feugiat condimentum eros. Quisque fermentum mi libero, non facilisis dui cursus et. Proin rutrum, lorem vel interdum ornare, est enim rhoncus mauris, id dapibus neque odio a orci. Nulla viverra elementum ullamcorper. Ut nec ligula id orci aliquet facilisis et sed est.","Nulla facilisi. Proin scelerisque lectus tortor, lobortis interdum massa iaculis at. Morbi volutpat luctus viverra. In finibus sed elit ut eleifend. Duis fringilla urna sit amet porta tempus. Morbi fringilla ornare turpis eget porta. Morbi elementum sapien eu purus pretium porttitor. Vivamus quis vulputate nibh. ", "Sed pharetra volutpat neque at luctus. Donec sit amet pharetra tellus, id consequat orci. Aenean venenatis finibus quam condimentum commodo. In mattis cursus dictum. Donec et lectus augue. Phasellus pretium ultrices purus, ut varius ante bibendum a."],
+        "description":"Tiziano nasce nel 1987 a Rafaela, Argentina dove inizia a interessarsi a tecniche teatrali come strumento per aumentare la concentrazione, rinvigorire la memoria, coltivare la lucidità mentale, l'empatia, il non giudizio, la consapevolezza corporea attraverso esperienze sensoriali e l'immaginazione emotiva. Trasferitosi in Italia applica la sua esperienza in un lavoro di profondità e introspezione personale non solo finalizzato alla conoscenza del Sé, ma che si estende all'esplorazione delle infinite possibilità di evoluzione sia della persona che dell'essere umano.",
+        "training":[],
         "socialMedia": {
             "instagram":"https://www.instagram.com/tiziano.sorbellini/",
             "email": "tiziano.sorbellini@gmail.com"
+        },
+        "projects":{
+            "podcast":{
+                "title":"MATE e NIRVANA LOW COST",
+                "type":"Podcast",
+                "description":"“Non siamo depressi, siamo distratti.” Ecco, questo podcast cerca di evitare così spesso le visite dallo sicologo attraverso la costante ricerca dell'illuminazione nelle cose semplici che la vita ci regala a gratis tutti i giorni, e lo faremo come si fanno le cose per bene… con qualche risata e un mate in mano, in condivisione, in amicizia.",
+                "image":{"url":"/images/Tiziano/MateENirvanaLowCostCover.png", "alt":"Mate e nirvana low cost cover"},
+                "links":[
+                    {"via":"Spotify", "logo":"/images/Tiziano/SpotifyIcon.png", "url":"https://open.spotify.com/show/7zdykJf92J32xo5AWNAtLM"},
+                    {"via":"Amazon Music", "logo":"/images/Tiziano/AmazonMusicIcon.png", "url":" https://music.amazon.it/podcasts/d89b09ec-3ea3-4fb1-83ba-374f5b323b00/mate-e-nirvana-low-cost?referrer=https://www.google.com/&webplayerDetailPagePath=https://music.amazon.it/podcasts/d89b09ec-3ea3-4fb1-83ba-374f5b323b00/matenirvana-low-cost&hasSeenMusicAuthPage=true&referer=https:// music.amazon.com/"},
+                    {"via":"Radio IT", "logo":"/images/Tiziano/RadioItIcon.png", "url":" https://www.radio.it/podcast/mate-nirvana-low-cost"},
+                    {"via":"Apple Podcasts", "logo":"/images/Tiziano/ApplePodcastsIcon.png", "url":" https://podcasts.apple.com/ca/podcast/mate-e-nirvana-low-cost/id1813346191"}]
+                },
+            "books":[
+                {
+                "title":"I semi del nulla",
+                "type":"Romanzo distopico. Viaggio simbolico. Ricerca del tempo profondo.",
+                "description":[" In un mondo frammentato, dove l’umanità ha smarrito il senso, I semi del nulla si apre come un varco narrativo carico di visioni, domande e simboli. È un romanzo distopico che non si limita a descrivere un futuro possibile, ma invita a esplorare le radici invisibili dell’esistenza, là dove il tempo smette di essere lineare e diventa spazio interiore.", "Ricco di simboli profondi e significati nascosti, questo viaggio letterario semina intuizioni nel lettore, portandolo a riflettere sul vuoto, sull’origine, sulla trasformazione. Ogni elemento – personaggio, evento, luogo – è un frammento di un disegno più grande, un richiamo sottile a qualcosa che vive oltre l’apparenza.","I semi del nulla è un’esperienza narrativa che spinge a guardare dentro, a leggere tra le pieghe del tempo, a cogliere ciò che sta per nascere dal silenzio."],
+                "image":{"url":"/images/Tiziano/ISemiDelNullaCover.png", "alt":"I semi del nulla cover"},
+                "links":[
+                    {"via":"Amazon", "logo":"/images/Tiziano/AmazonIcon.png", "url":"https://www.amazon.it/Semi-del-Nulla-Tiziano-Sorbellini/dp/B0CKRKTCS5/ref=cm_cr_arp_d_bdcrb_top?ie=UTF8"}]
+                },
+                {
+                "title":"Anubhūti",
+                "type":"La filosofia vivente di un’esperienza che trasforma.",
+                "description":["Anubhūti non è solo un libro, ma una soglia.", "Un varco aperto sulla visione profonda che sostiene le pratiche di Anubhūti, un cammino che esplora l’essere umano come esperienza viva, come coscienza in evoluzione, come universo in relazione costante con l’invisibile.","Quest’opera racchiude la filosofia alla base di Anubhūti, svelando la sua natura multidimensionale: non un metodo, ma un meccanismo sottile di unioni, percezioni, simboli e trasformazioni interiori. Attraverso riflessioni, immagini archetipiche e una visione che attraversa le tradizioni spirituali e le soglie del tempo, il libro guida il lettore verso la comprensione di un’esperienza che plasma e risveglia.","Anubhūti è uno specchio e una guida.","Un invito a sentire ciò che si muove tra i mondi, a riconoscere il potere dell’unione mistica, e ad abitare consapevolmente il processo della propria trasformazione"],
+                "image":{"url":"/images/Tiziano/AnubhutiCover.png", "alt":"I semi del nulla cover"},
+                "links":[
+                    {"via":"Amazon", "logo":"/images/Tiziano/AmazonIcon.png", "url":"https://www.amazon.it/Anubhūti-consapevolezza-vivere-autentica-creativa/dp/B0DP29B2SX/ref=sr_1_1?__mk_it_IT=ÅMÅŽÕÑ&crid=33YBAQ2QAYIAW&dib=eyJ2IjoiMSJ9.ZtX8OJAD1Avqm4OyNRAqDIF5tdReu59M6PSOr42r0MXGjHj071QN20LucGBJIEps.0dGg8soenfd39N5oUe_TGkycH8vX4agSRlNnYdF_cpA&dib_tag=se&keywords=anubhūti+tiziano+sorbellini&qid=1754403346&s=books&sprefix=anubhūti+tiziano+sorbellini,stripbooks,88&sr=1-1"}]
+                }
+            ]
         }
     }
 ]
