@@ -1,25 +1,17 @@
-import { useState, useEffect, useRef } from "react"
+import { useState, useRef } from "react"
 import cosaFacciamo2 from "../assets/images/Cosafacciamo2.png"
 import members from "../data/members.json"
 import { ArrowDown } from "../components/Icons.jsx"
+import { useRevealOnScroll } from "../hooks/useRevealHook.jsx"
 
 function UmaSummary(){
     const [isVisible, setIsVisible] = useState(false)
     const sectionRef = useRef(null)
-    // Intersection Observer para animaciones
-    useEffect(() => {
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                setIsVisible(true)
-            }
-        },
-        { threshold: 0.3 },
-        )
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current)
-        }
-        return () => observer.disconnect()
-    }, [])
+    useRevealOnScroll(sectionRef, {
+            threshold: 0.3,
+            rootMargin: '0px 0px -10% 0px',
+            onReveal: () => setIsVisible(true)
+        })
     return(
         <div>
             <section ref={sectionRef} id="uma-summary" className="min-h-screen relative w-full px-4 pt-12 md:pt-16 bg-gradient-to-b from-terracota via-terracota via-80% to-dorado">

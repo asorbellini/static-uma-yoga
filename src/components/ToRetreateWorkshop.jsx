@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react"
 import ToRetreateWorkshopImage from "../assets/images/ToRWImage.png"
+import { useRevealOnScroll } from "../hooks/useRevealHook.jsx"
 
 function ToRetreateWorkshop(){
     const [isVisible, setIsVisible] = useState(false)
@@ -16,21 +17,11 @@ function ToRetreateWorkshop(){
         return () => window.removeEventListener("resize", checkMobile)
     }, [])
 
-    // Intersection Observer para animaciones
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-        ([entry]) => {
-            if (entry.isIntersecting) {
-            setIsVisible(true)
-            }
-        },
-        { threshold: 0.3 },
-        )
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current)
-        }
-        return () => observer.disconnect()
-    }, [])
+    useRevealOnScroll(sectionRef, {
+            threshold: 0.3,
+            rootMargin: '0px 0px -10% 0px',
+            onReveal: () => setIsVisible(true)
+    })
 
     return (
         <section ref={sectionRef} className="bg-gradient-to-br from-verdeBosque from-10% to-verdeOliva to-80% overflow-hidden px-4 md:px-12">

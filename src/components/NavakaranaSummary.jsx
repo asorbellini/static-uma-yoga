@@ -1,24 +1,15 @@
-import { useState , useEffect, useRef } from "react";
+import { useState , useRef } from "react";
 import Navakarana from "../assets/images/Navakarana/Navakarana.png"
+import { useRevealOnScroll } from "../hooks/useRevealHook.jsx"
 
 function NavakaranaSummary() {
     const [isVisible, setIsVisible] = useState(false)
       const sectionRef = useRef(null)
-      // Intersection Observer para animaciones
-      useEffect(() => {
-          const observer = new IntersectionObserver(
-          ([entry]) => {
-              if (entry.isIntersecting) {
-              setIsVisible(true)
-              }
-          },
-          { threshold: 0.3 },
-          )
-          if (sectionRef.current) {
-              observer.observe(sectionRef.current)
-          }
-          return () => observer.disconnect()
-      }, [])
+      useRevealOnScroll(sectionRef, {
+          threshold: 0.3,
+          rootMargin: '0px 0px -10% 0px',
+          onReveal: () => setIsVisible(true)
+          })
     return (
         <div>
             <section ref={sectionRef} id="about-navakaraṆa-vinyāsa" className="min-h-screen w-full pt-12 md:pt-24 px-4 bg-claro">

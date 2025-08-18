@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react"
 import ToClassesImage from "../assets/images/ToClassesImage.png"
+import { useRevealOnScroll } from "../hooks/useRevealHook.jsx"
 
 function ToClasses(){
     const [isVisible, setIsVisible] = useState(false)
@@ -16,21 +17,11 @@ function ToClasses(){
         return () => window.removeEventListener("resize", checkMobile)
     }, [])
 
-    // Intersection Observer para animaciones
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-        ([entry]) => {
-            if (entry.isIntersecting) {
-            setIsVisible(true)
-            }
-        },
-        { threshold: 0.3 },
-        )
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current)
-        }
-        return () => observer.disconnect()
-    }, [])
+    useRevealOnScroll(sectionRef, {
+            threshold: 0.3,
+            rootMargin: '0px 0px -10% 0px',
+            onReveal: () => setIsVisible(true)
+    })
 
     return (
         <section ref={sectionRef} className="bg-dorado overflow-hidden"> {/*py-12 md:py-10 */}
