@@ -31,14 +31,14 @@ export default {
   },
   
   // Configuración de preload
-  preload: {
+  /* preload: {
     critical: [
       '/fonts/Rosemartin.woff2',
       '/images/homebg1.png'
     ],
     fonts: true,
     images: false
-  },
+  }, */
   
   // Configuración de service worker
   serviceWorker: {

@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        rose: ['Rosemartin', 'cursive'],
+        //rose: ['Rosemartin', 'cursive'],
         handwriting: ['"Dancing Script"', 'cursive'],
         cormorant: ['Cormorant']
       },
