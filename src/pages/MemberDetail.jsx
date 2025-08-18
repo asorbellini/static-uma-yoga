@@ -130,7 +130,7 @@ function MemberDetail(){
     const member = members.find(m => m.memberName === memberName);
 
     if (!member) return <p>Miembro no encontrado</p>;
-
+    member?.classes.map((detail)=>{console.log(detail)})
     return(
         <div className="min-h-screen" 
         style={{background:"linear-gradient(135deg, #D4AF7F 0%, #7DA87D 50%, #21524C 100%)"}}>
@@ -174,7 +174,7 @@ function MemberDetail(){
                                 :
                                 <div className="flex flex-row p-4 justify-center">
                                     <a href="#progetti-e-proposte">
-                                        <button type="button" className="btn-primary uppercase font-bold">Scopri le mie progetti e proposte</button>
+                                        <button type="button" className="btn-primary uppercase font-bold">Scopri i miei progetti e proposte</button>
                                     </a>
                                 </div>
                             }
@@ -200,58 +200,24 @@ function MemberDetail(){
                         <h3 className="textTitleSection text-oscuro drop-shadow-none uppercase">Le mie classi</h3>
                         <div className="flex flex-col md:flex-row gap-3 mt-4">
                             {/* Provisorio p/indicar clases */}
-                            <div className="flex-1 text-white hover:scale-105">
-                                <a href="/navakarana-vinyasa">
+                            {member?.classes?.map((classi, index) => (
+                                <div key={index} className="flex-1 text-white hover:scale-105">
                                     <div className="items-center justify-items-center">
                                         <img
                                         src={imageUrlNavakaranaVinyasa}
                                         alt='Image Navakarana Vinyasa'
                                         className="h-[310px] object-cover shadow aspect-square rounded-full" />
+                                        <h2 className="textDetail text-center text-oscuro font-semibold drop-shadow-none uppercase p-2">{classi.title}</h2>
                                     </div>
-                                    <div className="p-2 text-center text-oscuro">
-                                        <h2 className="textDetail text-center text-oscuro font-semibold drop-shadow-none uppercase">NavakaraṆa vinyāsa</h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="flex-1 text-white hover:scale-105">
-                                <a href="/navakarana-vinyasa">
-                                    <div className="items-center justify-items-center">
-                                        <img
-                                        src={imageUrlNavakaranaVinyasa}
-                                        alt='Image Navakarana Vinyasa'
-                                        className="h-[310px] object-cover shadow aspect-square rounded-full" />
-                                    </div>
-                                    <div className="p-2 text-center text-oscuro">
-                                        <h2 className="textDetail text-center text-oscuro font-semibold drop-shadow-none uppercase">NavakaraṆa vinyāsa</h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="flex-1 text-white hover:scale-105">
-                                <a href="/navakarana-vinyasa">
-                                    <div className="items-center justify-items-center">
-                                        <img
-                                        src={imageUrlNavakaranaVinyasa}
-                                        alt='Image Navakarana Vinyasa'
-                                        className="h-[310px] object-cover shadow aspect-square rounded-full" />
-                                    </div>
-                                    <div className="p-2 text-center text-oscuro">
-                                        <h2 className="textDetail text-center text-oscuro font-semibold drop-shadow-none uppercase">NavakaraṆa vinyāsa</h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="flex-1 text-white hover:scale-105">
-                                <a href="/navakarana-vinyasa">
-                                    <div className="items-center justify-items-center">
-                                        <img
-                                        src={imageUrlNavakaranaVinyasa}
-                                        alt='Image Navakarana Vinyasa'
-                                        className="h-[310px] object-cover shadow aspect-square rounded-full" />
-                                    </div>
-                                    <div className="p-2 text-center text-oscuro">
-                                        <h2 className="textDetail text-center text-oscuro font-semibold drop-shadow-none uppercase">NavakaraṆa vinyāsa</h2>
-                                    </div>
-                                </a>
-                            </div>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="justify-self-center">
+                            <a href="/contatti">
+                                <button className="btn-primary">
+                                    <p className="textButton">RICHIEDI INFORMAZIONI</p>
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </section>

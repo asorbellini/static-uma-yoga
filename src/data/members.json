@@ -16,8 +16,14 @@
             "email": "alba.muzzarelli@gmail.com"
         },
         "classes":[
-            {"title":"",
-            "detail":"",
+            {"title":"Gentle Vinyāsa",
+            "detail":"La classe di Gentle Vinyāsa propone un flusso di posture morbido, gentile ma efficace, prevedendo delle semplici sequenze che variano in base alle necessità di ogni praticante. Questa dolce pratica migliora la consapevolezza e la percezione del proprio corpo, scioglie rigidità muscolari, nutre la forza e l’elasticità del movimento.",
+            "urlImage":""},
+            {"title":"Vinyāsa Flow",
+            "detail":"La classe di Vinyāsa Flow è una pratica intensa, dinamica, nella quale gli asana (posture) sono intimamente connessi al respiro e si susseguono, a ritmo sostenuto, in un flusso continuo, per favorire il riequilibrio del sistema corpo-mente e facilitare uno stato di rinnovata freschezza energetica.",
+            "urlImage":""},
+            {"title":"NavakaraṆa vinyāsa",
+            "detail":"Navakaraṇa Vinyāsa è uno stile di yoga dinamico, vigoroso ed energico. La classe è guidata con tempo e melodia e le istruzioni essenziali e concise sono fornite con il battito delle mani. La voce dell’insegnante è sintonizzata su un tono sonoro che facilita il fluire armonioso, la respirazione ritmica, la concentrazione e la chiarezza mentale. Le coreografie delle sequenze di Navakarana sono disposte metodologicamente in modo da offrire più opzioni per tutti i livelli.",
             "urlImage":""}
         ]
     },
@@ -38,8 +44,20 @@
             "email": "diletta.muzzarelli@gmail.com"
         },
         "classes":[
-            {"title":"",
+            {"title":"Vinyāsa del Risveglio",
             "detail":"",
+            "urlImage":""},
+            {"title":"NavakaraṆa vinyāsa",
+            "detail":"Navakaraṇa Vinyāsa è uno stile di yoga dinamico, vigoroso ed energico. La classe è guidata con tempo e melodia e le istruzioni essenziali e concise sono fornite con il battito delle mani. La voce dell’insegnante è sintonizzata su un tono sonoro che facilita il fluire armonioso, la respirazione ritmica, la concentrazione e la chiarezza mentale. Le coreografie delle sequenze di Navakarana sono disposte metodologicamente in modo da offrire più opzioni per tutti i livelli.",
+            "urlImage":""},
+            {"title":"Gentle Flow",
+            "detail":"La classe di Gentle Flow combina gli elementi del Vinyāsa yoga con un approccio pìù delicato e rilassante. In questa classe ricerchiamo transizioni lente e fluide tra le pose (āsana) con un’enfasi sulla consapevolezza del respiro e della postura. È adatta a chi cerca una pratica di yoga dolce che favorisce il rilassamento e il benessere generale, senza la stessa intensità di altre forme di vinyāsa. È una classe ideale per chi si approccia alla pratica yoga per la prima volta.",
+            "urlImage":""},
+            {"title":"Yin Yoga",
+            "detail":"La classe di Yin yoga  prevedono la permanenza in posizioni passive per un periodo di tempo lungo, da 3/5 minuti o più. Questo permette di lavorare sugli strati più profondi del corpo, stimolando la flessibilità e la salute dei tessuti connettivi come tendini, legamenti e fascia. Durante la pratica si utilizza la respirazione consapevole per favorire una maggiore consapevolezza del corpo e della mente.",
+            "urlImage":""},
+            {"title":"Vinyāsa per Crossfitters",
+            "detail":"La classe di Vinyāsa per Crossfitters aiuta a migliorare la flessibilità, la mobilità, l’equilibrio e la concentrazione mentale per aiutare i crossfitters a massimizzare le proprie prestazioni nei WOD. Includere sessioni di yoga nella tua routine di CrossFit ti aiuta ad avere un allenamento completo e bilanciato.",
             "urlImage":""}
         ]
     },
@@ -47,7 +65,7 @@
         "id":3,
         "Name":"Tiziano Sorbellini",
         "memberName":"tiziano-sorbellini",
-        "profession":"Improvvisatore teatrale, autore e fondatore della pratica Anubhūti",
+        "profession":"Attore, improvvisatore, autore e fondatore della pratica Anubhūti",
         "images":{
             "1":"/images/Tiziano/Portada.png",
             "2":"/images/Tiziano/Portada.png",

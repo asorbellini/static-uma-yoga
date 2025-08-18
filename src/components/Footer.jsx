@@ -14,8 +14,14 @@ function Footer() {
           </p>
         </div>
         <div className="basis-1/4">
-          <p className="uppercase underline text-[#21524C]">Siguici su</p>
-          <a href="https://www.instagram.com/uma.retreats/" target="_blank" rel="noopener noreferrer" className="inline-flex justify-center">
+          <p className="uppercase underline text-[#21524C]">Seguici su</p>
+          <a 
+            href="https://www.instagram.com/uma.retreats/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="inline-flex justify-center"
+            aria-label="Segui UMĀ su Instagram"
+          >
             <InstagramIcon fillColor="#21524C"/>
           </a>
         </div>

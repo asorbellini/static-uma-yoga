@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, useCallback } from "react"
 import NewSetterImage from "../assets/images/NewSetterImage.png"
 
 function NewSetter(){
@@ -7,14 +7,24 @@ function NewSetter(){
     const sectionRef = useRef(null)
 
     // Detectar si es dispositivo móvil
-    useEffect(() => {
-        const checkMobile = () => {
+    const checkMobile = useCallback(() => {
         setIsMobile(window.innerWidth < 768)
-        }
-        checkMobile()
-        window.addEventListener("resize", checkMobile)
-        return () => window.removeEventListener("resize", checkMobile)
     }, [])
+
+    useEffect(() => {
+        checkMobile()
+        let timeoutId
+        const throttledResize = () => {
+            clearTimeout(timeoutId)
+            timeoutId = setTimeout(checkMobile, 100)
+        }
+        
+        window.addEventListener("resize", throttledResize, { passive: true })
+        return () => {
+            window.removeEventListener("resize", throttledResize)
+            clearTimeout(timeoutId)
+        }
+    }, [checkMobile])
 
     // Intersection Observer para animaciones
     useEffect(() => {
@@ -45,8 +55,16 @@ function NewSetter(){
                             RESTA AGGIORNATO CON UMĀ YOGA – ISCRIVITI ALLA NOSTRA NEWSLETTER
                         </h2>
                         <div className={`${isMobile ? "flex justify-center" : ""}`}>
-                            <a href="https://mailchi.mp/5adff419986c/benvenut" target="_blank" rel="noopener noreferrer" >
-                                <button className="btn-primary">
+                            <a 
+                              href="https://mailchi.mp/5adff419986c/benvenut" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="inline-block"
+                            >
+                                <button 
+                                  className="btn-primary"
+                                  aria-label="Iscriviti alla newsletter UMĀ"
+                                >
                                     ISCRIVITI ORA
                                 </button>
                             </a>

@@ -13,10 +13,14 @@ function Hero() {
       <div className="hidden sm:block absolute inset-0 bg-[url('/images/homebg1.png')] bg-center bg-cover" />
       <div className="relative z-10 px-6 pb-12 md:p-12 items-center text-center">
           <h1 className="welcomeTitle p-2 md:p-4">BENVENUTI A UMĀ</h1>
-          <p className="font-sans text-lg lg:text-xl font-light drop-shadow-title sm:pb-4">Uno spazio sacro di crescita ed evoluzione personale che unisce e presenta i nostri progetti e percorsi yoga e in cui yu possa riconoscerti e sentirti a casa.</p>
+          <p className="font-sans text-lg lg:text-xl font-light drop-shadow-title sm:pb-4">Uno spazio sacro di crescita ed evoluzione personale che unisce e presenta i nostri progetti e percorsi yoga e in cui tu possa riconoscerti e sentirti a casa.</p>
       </div>
       <div className="absolute z-20 sm:flex flex-row items-center justify-center hover:animate-pulse animate-pulse lg:animate-none">
-          <a href="#uma-summary" aria-label="Sezione successiva">
+          <a 
+            href="#uma-summary" 
+            aria-label="Vai alla sezione successiva"
+            className="focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent rounded-full p-2"
+          >
               <ArrowDown />
           </a>
       </div>

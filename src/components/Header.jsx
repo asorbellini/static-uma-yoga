@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import UmaLogo from "./Logo.jsx";
 import { MenuAndCloseIcon } from "./Icons.jsx";
 
 const useActiveSection = () => {
     const location = useLocation()
-    const [activeSecction, setActiveSeccion] = useState(null)
+    const [activeSeccion, setActiveSeccion] = useState(null)
     useEffect(()=>{
       const path = location.pathname;
       const section = path || ''
       setActiveSeccion(section)
     }, [location])
-    return activeSecction
+    return activeSeccion
 }
 
 
@@ -27,14 +27,26 @@ const navItems = [{'name':'Home', 'url':"/"},
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const activeSecction = useActiveSection()
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 30)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
+  const activeSeccion = useActiveSection()
+  const handleScroll = useCallback(() => {
+    setIsScrolled(window.scrollY > 30)
   }, [])
+
+  useEffect(() => {
+    let ticking = false
+    const throttledScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll()
+          ticking = false
+        })
+        ticking = true
+      }
+    }
+    
+    window.addEventListener("scroll", throttledScroll, { passive: true })
+    return () => window.removeEventListener("scroll", throttledScroll)
+  }, [handleScroll])
 
   return (
     <header
@@ -59,23 +71,32 @@ const Header = () => {
                 className="md:text-xs lg:text-sm font-serif tracking-wider text-white uppercase transition-colors duration-300 relative group"
               >
                 {item.name}
-                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full ${activeSecction === `${item.url}` ? "w-full": ""}`} />
+                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full ${activeSeccion === `${item.url}` ? "w-full": ""}`} />
               </NavLink>
             </li>
           ))}
         </ul>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-white p-2" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+        <button 
+          className="md:hidden text-white p-2" 
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? "Chiudi il menu" : "Apri il menu"}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-menu"
+        >
           <MenuAndCloseIcon isMobileMenuOpen={isMobileMenuOpen} />
         </button>
       </nav>
 
       {/* Mobile Menu */}
       <div
+        id="mobile-menu"
         className={`md:hidden transition-all duration-300 ease-in-out ${
           isMobileMenuOpen ? "min-h-screen opacity-100 visible" : "max-h-0 opacity-0 invisible"
         } bg-transparent backdrop-blur-xl border-t border-white/50`}
+        role="navigation"
+        aria-label="Menu mobile"
       >
         <ul className="w-full px-4">
           {navItems.map((item, index) => (
@@ -86,7 +107,7 @@ const Header = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
-                <span className={`absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 ${(isMobileMenuOpen && activeSecction === `${item.url}`) ? "w-full": ""}`} />
+                <span className={`absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 ${(isMobileMenuOpen && activeSeccion === `${item.url}`) ? "w-full": ""}`} />
               </NavLink>
             </li>
           ))}
