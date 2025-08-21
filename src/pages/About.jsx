@@ -9,8 +9,8 @@ import Footer from "../components/Footer"
 function About() {
   return (
     <div className="min-h-screen w-full">
-      <HeroAbout />
       <ScrollToTop />
+      <HeroAbout />
       <AboutUmaSummary />
       <ToRetreateWorkshop />
       <Footer />

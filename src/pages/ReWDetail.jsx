@@ -24,7 +24,7 @@ function ReWDetail(){
                 <div className="mb-6 p-4 bg-dorado text-oscuro border-l-4 border-terracota rounded">
                 ⚠️ Questo evento è passato.
                     </div>}
-                <div className="z-20 flex flex-row items-center justify-center hover:animate-pulse">
+                <div className="z-20 flex flex-row items-center justify-center w-full hover:animate-pulse">
                     <a href="#detail">
                         <ArrowDown />
                     </a>

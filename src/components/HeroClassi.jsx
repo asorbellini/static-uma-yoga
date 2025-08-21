@@ -16,7 +16,7 @@ function HeroClassi() {
                     className="w-[40vw] h-[60vh] object-cover rounded-br-full rounded-tl-full shadow-lg" />
             </div>
             
-            <div className="absolute bottom-0 z-20 flex flex-row items-center justify-center hover:animate-pulse">
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20 flex flex-row items-center justify-center hover:animate-pulse">
                 <a href="#classi">
                     <ArrowDown />
                 </a>

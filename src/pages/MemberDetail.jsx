@@ -182,7 +182,7 @@ function MemberDetail(){
                     </div>
                 </div>
                 {member?.classes && 
-                    <div className="hidden md:flex justify-center">
+                    <div className="hidden md:flex md:justify-center md:w-full">
                         <a href="#classi">
                             <ArrowDown />
                         </a>

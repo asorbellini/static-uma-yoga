@@ -1,4 +1,4 @@
-import { InstagramIcon } from "./Icons";
+import { InstagramIcon, WhatsAppIcon } from "./Icons";
 import UmaLogo from "./Logo";
 
 function Footer() {
@@ -15,15 +15,24 @@ function Footer() {
         </div>
         <div className="basis-1/4">
           <p className="uppercase underline text-[#21524C]">Seguici su</p>
-          <a 
-            href="https://www.instagram.com/uma.retreats/" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="inline-flex justify-center"
-            aria-label="Segui UMĀ su Instagram"
-          >
-            <InstagramIcon fillColor="#21524C"/>
-          </a>
+          <div className="flex justify-center items-center space-x-2">
+              <a 
+                href="https://www.instagram.com/uma.retreats/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Segui UMĀ su Instagram"
+              >
+                <InstagramIcon fillColor="#21524C"/>
+              </a>
+              <a 
+                href="https://whatsapp.com/channel/0029Vb9vXMHBvvsZAz9TUt1u " 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Segui UMĀ sul suo canale WhatsApp"
+              >
+                <WhatsAppIcon fillColor="#21524C"/>
+              </a>
+          </div>
         </div>
       </div>
     </footer>
