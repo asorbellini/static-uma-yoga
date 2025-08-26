@@ -8,7 +8,7 @@ const LoadingFootPrints = ({
     onLoadingComplete = null,
     autoHide = false,
     autoHideDelay = 3000,
-    color = "#A66C5B"
+    color = "#A65F4A"
 }) => {
     const [isVisible, setIsVisible] = useState(true);
 
@@ -59,7 +59,7 @@ export const PageLoading = () => (
             <LoadingFootPrints 
                 message='Caricamento pagina...'
                 size="medium" 
-                color='#A66C5B'
+                color='#A65F4A'
             />
         </div>
     </div>
@@ -70,7 +70,7 @@ export const ComponentLoading = () => (
     <div className="w-full h-full flex items-center justify-center overflow-hidden bg-transparent">
         <LoadingFootPrints 
             size="small"
-            color='#EDE8DA'
+            color='#D4AF7F'
         />
     </div>
 );

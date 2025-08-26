@@ -222,7 +222,10 @@ html {
   }
 
   .btn-primary {
-    @apply bg-verdeBosque border-2 border-verdeBosque hover:border-verdeBosque hover:bg-verdeOliva rounded-3xl p-3 md:p-6 md:py-3 justify-center text-white hover:text-oscuro max-w-fit transition-all duration-500 
+    @apply bg-verdeBosque border-2 border-verdeBosque rounded-3xl p-3 md:p-6 md:py-3 justify-center text-white max-w-fit transition-all duration-500 
+  }
+  .btn-primary:hover {
+    @apply border-verdeBosque bg-verdeOliva transition-all duration-500 
   }
 
   .btn-secondary {
@@ -230,6 +233,10 @@ html {
   }
 
   .btn-scopri {
-    @apply border-2 border-white hover:border-oscuro rounded hover:bg-claro flex justify-center items-center text-white hover:text-oscuro max-w-fit transition-all duration-500 px-6 py-3 
+    @apply border-2 border-white rounded flex justify-center items-center text-white max-w-fit transition-all duration-500 px-6 py-3 
+  }
+
+    .btn-scopri:hover {
+    @apply border-oscuro bg-claro text-oscuro 
   }
 }

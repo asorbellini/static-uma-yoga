@@ -133,7 +133,7 @@ function MemberDetail(){
     member?.classes.map((detail)=>{console.log(detail)})
     return(
         <div className="min-h-screen" 
-        style={{background:"linear-gradient(135deg, #D4AF7F 0%, #7DA87D 50%, #21524C 100%)"}}>
+        style={{background:"linear-gradient(135deg, #D4AF7F 0%, #3D735C 50%, #2E5E55 100%)"}}>
         <ScrollToTop />
         {/* Presentación del miembro */}
             <section className="relative w-full px-4 pt-16 md:pt-28 pb-6 h-fit md:min-h-screen">

@@ -29,10 +29,10 @@ export default {
       },
       colors: {
         claro: '#EDE8DA',
-        terracota: '#A66C5B',
+        terracota: '#A65F4A',
         dorado: '#D4AF7F',
-        verdeOliva: '#7DA87D',
-        verdeBosque: '#21524C',
+        verdeOliva: '#3D735C',
+        verdeBosque: '#2E5E55',
         oscuro: '#2C2C2C',
       },
       dropShadow: {
