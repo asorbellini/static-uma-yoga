@@ -3,7 +3,6 @@ import HeroComponent from "../components/HeroComponent.jsx"
 import imgAnubhuti from "../assets/images/Anubhuti/Anubhuti.png"
 import logoAnubhuti from "../assets/images/LogoAnubhuti.png"
 import ToRetreateWorkshop from "../components/ToRetreateWorkshop.jsx"
-import Footer from "../components/Footer"
 import ScrollToTop from "../components/ScrollToTop.jsx"
 import { useRevealOnScroll } from "../hooks/useRevealHook.jsx"
 
@@ -79,7 +78,6 @@ function Anubhuti() {
             {/* GALERÍA DE IMÁGENES */}
             {/* SECCIÓN DE EVENTOS */}
             <ToRetreateWorkshop />
-            <Footer />
         </div>
     );
     }

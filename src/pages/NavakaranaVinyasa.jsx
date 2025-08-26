@@ -11,7 +11,6 @@ import navak7 from "../assets/images/Navakarana/navak7.png"
 import logoNavakarana from "../assets/images/LogoNavakarana.png"
 import NavakaranaSummary from "../components/NavakaranaSummary.jsx";
 import ToRetreateWorkshop from "../components/ToRetreateWorkshop.jsx";
-import Footer from "../components/Footer.jsx";
 
 
 const NavakaranaImages = [
@@ -64,7 +63,6 @@ function NavakaranaVinyasa() {
           <HorizontalGallery images={NavakaranaImages}/>
         </div>
         <ToRetreateWorkshop />
-        <Footer />
     </div>  
   );
 }

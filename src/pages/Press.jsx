@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import Footer from "../components/Footer"
 import { getTextDate } from "../constants"
 
 function LinkPreview({url}) {
@@ -89,7 +88,6 @@ function Press() {
                     </a>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

@@ -4,6 +4,7 @@ import { Suspense, lazy } from "react";
 import Header from "./components/Header.jsx"
 import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange.jsx"
 import { PageLoading } from "./components/LoadingFootPrints.jsx"
+import Footer from "./components/Footer.jsx"
 
 const Home = lazy(() => import("./pages/Home.jsx"));
 // const Classes = lazy(() => import("./pages/Classes")); 
@@ -37,6 +38,7 @@ function App() {
           {/* <Route path="/events" element={<Events />} />        */}
         </Routes>
       </Suspense>
+      <Footer />
     </Router>
   )
 }

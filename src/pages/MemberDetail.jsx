@@ -3,7 +3,6 @@ import { useState, useEffect, useRef } from "react"
 import { useParams } from "react-router-dom"
 import members from "../data/members.json"
 import { ArrowDown, ArrowUp, InstagramIcon } from "../components/Icons"
-import Footer from "../components/Footer.jsx"
 import ToRetreateWorkshop from "../components/ToRetreateWorkshop.jsx"
 import ScrollToTop from "../components/ScrollToTop.jsx"
 import imageUrlNavakaranaVinyasa from "../assets/images/NavakaranaVinyasa.png"
@@ -223,7 +222,6 @@ function MemberDetail(){
                 </section>
             }
             <ToRetreateWorkshop />
-            <Footer />
         </div>
     )
 }

@@ -1,11 +1,8 @@
 import { useState, useRef } from "react";
-
-import Footer from "../components/Footer"
 import HeroReW from "../components/HeroReW"
 import NewSetter from "../components/NewSetter"
 import ScrollToTop from "../components/ScrollToTop"
 import retreats from "../data/retreats.json"
-import { ArrowDown } from "../components/Icons.jsx"
 import { getTextDate } from "../constants/index.js"
 import {useRevealOnScroll} from "../hooks/useRevealHook.jsx"
 
@@ -163,7 +160,6 @@ function RetreateWorkshop() {
                     </div>
                 </section>
             <NewSetter />
-            <Footer />
         </div>
     )
 }

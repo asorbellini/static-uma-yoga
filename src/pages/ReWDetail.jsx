@@ -3,7 +3,6 @@ import retreats from "../data/retreats.json"
 import ReviewsCarousel from "../components/ReviewsCarrousel.jsx";
 import { ArrowDown } from "../components/Icons.jsx";
 import {getTextDate} from "../constants/index.js"
-import Footer from "../components/Footer.jsx";
 
 function ReWDetail(){
     const { type, slug } = useParams();
@@ -42,7 +41,6 @@ function ReWDetail(){
                     </section>
                 </div>
             </section>
-            <Footer />
         </div>
     )
 }
