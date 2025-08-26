@@ -3,6 +3,7 @@ import { Suspense, lazy } from "react";
 // import Classes from "./pages/Classes.jsx"
 import Header from "./components/Header.jsx"
 import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange.jsx"
+import { PageLoading } from "./components/LoadingFootPrints.jsx"
 
 const Home = lazy(() => import("./pages/Home.jsx"));
 // const Classes = lazy(() => import("./pages/Classes")); 
@@ -20,7 +21,7 @@ function App() {
     <Router>
       <ScrollToTopOnRouteChange />
       <Header />
-      <Suspense fallback={<div className="h-screen bg-terracota text-white">Loading...</div>}>
+      <Suspense fallback={<PageLoading />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/chi-siamo" element={<About />}/>

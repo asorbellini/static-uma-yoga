@@ -1,23 +1,9 @@
-import { useState, useRef } from "react";
-import { ArrowDown, PauseIcon, PlayIcon } from "../components/Icons.jsx";
-import Retreat from "../assets/video/retreat.mp4"
+import { ArrowDown } from "../components/Icons.jsx";
+import { ComponentLoading } from "./LoadingFootPrints.jsx";
+import React, { Suspense } from "react";
 
+const VideoRetreat = React.lazy(() => import("./VideoRetreat.jsx"));
 function HeroReW() {
-    const videoRef = useRef(null);
-    const [isPlaying, setIsPlaying] = useState(true);
-
-    const togglePlay = () => {
-        const video = videoRef.current;
-        if (!video) return;
-
-        if (video.paused) {
-            video.play();
-            setIsPlaying(true);
-        } else {
-            video.pause();
-            setIsPlaying(false);
-        }
-    };
     return (
         <div className="relative h-screen w-full flex flex-row items-center justify-center text-white">
             <div className="absolute inset-0 " />{/*bg-gradient-to-br from-terracota from-0% via-dorado via-50%  to-terracota */}
@@ -26,21 +12,9 @@ function HeroReW() {
             </div>
             <div className="absolute top-[15vh] sm:top-[20vh] left-1/2 -translate-x-1/2 z-10 w-full flex justify-center px-6 sm:px-0">
                 <div className="h-[70vh] w-auto sm:h-auto sm:w-[90vw] sm:max-w-3xl aspect-video rounded-3xl overflow-hidden relative shadow-xl">
-                    <video
-                        ref={videoRef}
-                        src={Retreat}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="w-full h-full object-cover"
-                    />
-                    <button
-                        onClick={togglePlay}
-                        className="absolute bottom-4 right-4 bg-white bg-opacity-70 hover:bg-opacity-90 text-oscuro rounded-full p-2 shadow-lg transition-all z-30"
-                    >
-                        {isPlaying ? <PauseIcon /> : <PlayIcon />}
-                    </button>
+                <Suspense fallback={<ComponentLoading />}>
+                    <VideoRetreat />
+                </Suspense>
                 </div>
             </div>
             <div className="absolute bottom-[1%] z-20 p-12 text-center"> {/* -bottom-6 sm:-bottom-10  */}
