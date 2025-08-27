@@ -1,9 +1,68 @@
-import { useState, useRef } from "react"
+import { useState, useRef, Suspense } from "react"
 import cosaFacciamo2 from "../assets/images/Cosafacciamo2.png"
 import members from "../data/members.json"
 import { ArrowDown } from "../components/Icons.jsx"
 import { useRevealOnScroll } from "../hooks/useRevealHook.jsx"
+import HorizontalGallery from "../components/Gallery.jsx"
+import {ComponentLoading} from "./LoadingFootPrints.jsx"
+import lr1 from "../assets/images/LastRetreats/lr1.png"
+import lr2 from "../assets/images/LastRetreats/lr2.png"
+import lr3 from "../assets/images/LastRetreats/lr3.png"
+import lr4 from "../assets/images/LastRetreats/lr4.png"
+import lr5 from "../assets/images/LastRetreats/lr5.png"
+import lr6 from "../assets/images/LastRetreats/lr6.png"
+import lr7 from "../assets/images/LastRetreats/lr7.png"
+import lr8 from "../assets/images/LastRetreats/lr8.png"
+import lr9 from "../assets/images/LastRetreats/lr9.png"
 //import  ReviewsCarousel from "../components/ReviewsCarousel.jsx" 
+
+const LastRetreatsImages = [
+    {
+      src: lr1,
+      alt: "cappadocia(1)",
+      title: "Cappadocia yoga retreat 1",
+    },
+    {
+      src: lr2,
+      alt: "yoga session",
+      title: "Yoga Session",
+    },
+    {
+      src: lr3,
+      alt: "meditation",
+      title: "Meditation",
+    },
+    {
+      src: lr4,
+      alt: "yoga pose",
+      title: "Yoga Pose",
+    },
+    {
+      src: lr5,
+      alt: "yoga class",
+      title: "Yoga Class",
+    },
+    {
+      src: lr6,
+      alt: "yoga retreat",
+      title: "Yoga Retreat",
+    },
+    {
+      src: lr7,
+      alt: "navakarana vinyasa",
+      title: "Navakarana Vinyasa",
+    },
+     {
+      src: lr8,
+      alt: "navakarana vinyasa",
+      title: "Navakarana Vinyasa",
+    },
+     {
+      src: lr9,
+      alt: "navakarana vinyasa",
+      title: "Navakarana Vinyasa",
+    },
+  ]
 
 function UmaSummary(){
     const [isVisible, setIsVisible] = useState(false)
@@ -76,8 +135,17 @@ function UmaSummary(){
                     </div>
                 </div>
             </section>
-            <section id="reviews">
-                {/* <ReviewsCarousel />*/}
+            <section className="h-auto w-full p-4 pt-12 md:pt-16 bg-terracota flex flex-col">
+                <h2 className="textTitleSection py-4 px-2 md:px-12">ULTIMI EVENTI</h2>
+                    <Suspense fallback={<ComponentLoading />}>
+                        <div className="px-2 md:px-12 pb-4">
+                            <HorizontalGallery images={LastRetreatsImages}/>
+                        </div>
+                    </Suspense>
+                <h2 className="textTitleSection py-4 px-2 md:px-12">DICONO DI NOI</h2>
+                {/* <div className="px-2 md:px-12 pb-4">
+                    <ReviewsCarousel /> 
+                </div>*/}
             </section>
         </div>
     )

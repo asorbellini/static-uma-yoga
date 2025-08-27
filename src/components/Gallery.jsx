@@ -263,7 +263,6 @@ const HorizontalGallery = ({ images = [] }) => {
             <>
               <button
                 onClick={prevSlide}
-                disabled={isTransitioning}
                 className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-oscuro rounded-full p-2 md:p-3 shadow-lg transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 z-30"
                 aria-label="Fotografia precedente"
               >
@@ -272,7 +271,6 @@ const HorizontalGallery = ({ images = [] }) => {
 
               <button
                 onClick={nextSlide}
-                disabled={isTransitioning}
                 className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-oscuro rounded-full p-2 md:p-3 shadow-lg transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 z-30"
                 aria-label="Fotografia prossima"
               >
@@ -302,7 +300,7 @@ const HorizontalGallery = ({ images = [] }) => {
       {/* Lightbox Modal */}
       {lightboxOpen && lightboxImage && (
         <div className="fixed inset-0 bg-oscuro/90 z-50 flex items-center justify-center p-4">
-          <div className="relative max-w-full max-h-full">
+          <div className="relative max-w-full max-h-full h-fit md:h-screen">
             <button
               onClick={closeLightbox}
               className="absolute top-4 right-4 bg-white/20 hover:bg-white/60 text-white rounded-full p-3 transition-all duration-300 z-10"
