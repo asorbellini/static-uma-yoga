@@ -1,0 +1,37 @@
+[
+            {
+                "author":"Giulia R.",
+                "comments":"Un'esperienza trasformativa. La guida di Diletta è stata eccezionale.",
+                "rating":2,
+                "date":"2023-10-18", 
+                "experience":"Retreat in Cappadocia"
+            },
+            {
+                "author":"Carlos A.",
+                "comments":"Un'esperienza trasformativa. La guida di Alba è stata eccezionale.",
+                "rating":4,
+                "date":"2023-10-20",
+                "experience":"Retreat in Cappadocia"
+            },
+            {
+                "author":"Daniella G.",
+                "comments":". Anubhuti è un'esperienza trasformativa",
+                "rating":5,
+                "date":"2023-10-30",
+                "experience":"Retreat in Cappadocia"
+            },
+            {
+                "author":"Daniella G.",
+                "comments":". Anubhuti è un'esperienza trasformativa",
+                "rating":5,
+                "date":"2023-10-30",
+                "experience":"Retreat in Cappadocia"
+            },
+            {
+                "author":"Daniella G.",
+                "comments":". Anubhuti è un'esperienza trasformativa",
+                "rating":5,
+                "date":"2023-10-30",
+                "experience":"Retreat in Cappadocia"
+            }
+]

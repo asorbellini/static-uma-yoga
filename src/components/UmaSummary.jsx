@@ -1,9 +1,9 @@
 import { useState, useRef, Suspense } from "react"
 import cosaFacciamo2 from "../assets/images/Cosafacciamo2.png"
 import members from "../data/members.json"
-import { ArrowDown } from "../components/Icons.jsx"
+import { ArrowDown } from "./Icons.jsx"
 import { useRevealOnScroll } from "../hooks/useRevealHook.jsx"
-import HorizontalGallery from "../components/Gallery.jsx"
+import HorizontalGallery from "./Gallery.jsx"
 import {ComponentLoading} from "./LoadingFootPrints.jsx"
 import lr1 from "../assets/images/LastRetreats/lr1.png"
 import lr2 from "../assets/images/LastRetreats/lr2.png"
@@ -14,7 +14,8 @@ import lr6 from "../assets/images/LastRetreats/lr6.png"
 import lr7 from "../assets/images/LastRetreats/lr7.png"
 import lr8 from "../assets/images/LastRetreats/lr8.png"
 import lr9 from "../assets/images/LastRetreats/lr9.png"
-//import  ReviewsCarousel from "../components/ReviewsCarousel.jsx" 
+import  ReviewsCarrousel from "./ReviewsCarrousel.jsx" 
+import reviews from "../data/lastreviews.json"
 
 const LastRetreatsImages = [
     {
@@ -135,17 +136,17 @@ function UmaSummary(){
                     </div>
                 </div>
             </section>
-            <section className="h-auto w-full p-4 pt-12 md:pt-16 bg-terracota flex flex-col">
+            <section className="h-auto w-full p-4 bg-terracota flex flex-col">
                 <h2 className="textTitleSection py-4 px-2 md:px-12">ULTIMI EVENTI</h2>
                     <Suspense fallback={<ComponentLoading />}>
-                        <div className="px-2 md:px-12 pb-4">
+                        <div className="px-2 md:px-12">
                             <HorizontalGallery images={LastRetreatsImages}/>
                         </div>
                     </Suspense>
                 <h2 className="textTitleSection py-4 px-2 md:px-12">DICONO DI NOI</h2>
-                {/* <div className="px-2 md:px-12 pb-4">
-                    <ReviewsCarousel /> 
-                </div>*/}
+                <div className="px-2 md:px-12">
+                    <ReviewsCarrousel reviews={reviews}/> 
+                </div>
             </section>
         </div>
     )

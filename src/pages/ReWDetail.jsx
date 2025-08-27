@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import retreats from "../data/retreats.json"
-import ReviewsCarousel from "../components/ReviewsCarrousel.jsx";
+import ReviewsCarrousel from "../components/ReviewsCarrousel.jsx";
 import { ArrowDown } from "../components/Icons.jsx";
 import {getTextDate} from "../constants/index.js"
 
@@ -35,10 +35,17 @@ function ReWDetail(){
                     <h2 className="secondaryTitle text-center py-2">“{RW.subtitle}“</h2>
                     <h3 className="subtitle text-center py-2">{RW.dateStart === RW.dateEnd ? `${getTextDate(RW.dateStart)}` : `Dal ${getTextDate(RW.dateStart)} - ${getTextDate(RW.dateEnd)}`}</h3>
                     {RW.description.map((d, index) => <p key={index} dangerouslySetInnerHTML={{ __html: d }} />)}
-                    <section className="my-16 px-4">
-                        <h2 className="text-3xl font-bold text-center mb-6 underline">Recensioni dei partecipanti</h2>
-                        {RW.reviews?.length > 0 && (<ReviewsCarousel reviews={RW.reviews} />)}
-                    </section>
+                    {RW.imageGallery &&
+                    <div>
+
+                    </div>
+
+                    }
+                    {RW.reviews?.length > 0 &&
+                    <section className="py-16 px-4">
+                        <h2 className="title font-bold text-center py-2">Recensioni dei partecipanti</h2>
+                        <ReviewsCarrousel reviews={RW.reviews} />
+                    </section>}
                 </div>
             </section>
         </div>

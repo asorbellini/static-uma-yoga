@@ -233,10 +233,10 @@ html {
   }
 
   .btn-scopri {
-    @apply border-2 border-white rounded flex justify-center items-center text-white max-w-fit transition-all duration-500 px-6 py-3 
+    @apply border-2 border-claro rounded flex justify-center items-center text-white max-w-fit transition-all duration-500 px-6 py-3 
   }
 
     .btn-scopri:hover {
-    @apply border-oscuro bg-claro text-oscuro 
+    @apply bg-claro text-oscuro 
   }
 }
