@@ -112,14 +112,15 @@
             "city":"Assisi",
             "region":"Umbría",
             "country":"Italy",
-            "url":"https://www.basalettoagriturismoassisi.it/"
+            "url":"https://www.basalettoagriturismoassisi.it/",
+            "maps":"https://maps.app.goo.gl/QaNdHNMny2EumLeR9"
         },
         "cost":"€530",
         "image":"/images/eventsCover/IndomitoRetreat.png",
         "subtitle":"Nel risveglio silenzioso della primavera, la natura intreccia una danza di rinascita, trasformazione, evoluzione, mostrandoci saggiamente che tutto ciò che finisce è destinato a un nuovo inizio. In questo periodo di trasformazione, il corpo umano sente il bisogno di muoversi, di purificarsi, di coltivare nuove relazioni e interessi.",
         "smallDescription":"Nel risveglio silenzioso della primavera, la natura intreccia una danza di rinascita, trasformazione, evoluzione, mostrandoci saggiamente che tutto ciò che finisce è destinato a un nuovo inizio. In questo periodo di trasformazione, il corpo umano sente il bisogno di muoversi, di purificarsi, di coltivare nuove relazioni e interessi.",
         "description":[
-            "Dal 31 maggio al 2 giugno passeremo insieme tre giorni e due notti nella natura incontaminata dell’Umbria con pratiche di:  ᴍᴇᴅɪᴛᴀᴢɪᴏɴᴇ ʜɪᴍᴀʟᴀʏᴀɴᴀ, ɴᴀᴠᴀᴋᴀʀᴀṇᴀ ʏᴏɢᴀ, ᴀɴᴜʙʜūᴛɪ.",
+            "Dal 31 maggio al 2 giugno passeremo insieme tre giorni e due notti nella natura incontaminata dell’Umbria con pratiche di: ᴍᴇᴅɪᴛᴀᴢɪᴏɴᴇ ʜɪᴍᴀʟᴀʏᴀɴᴀ, ɴᴀᴠᴀᴋᴀʀᴀṇᴀ ʏᴏɢᴀ, ᴀɴᴜʙʜūᴛɪ.",
             "C’è una forza che guida ogni cosa in questo universo, quando senti questa forza intorno a te, dentro di te, hai il potere di fare qualsiasi cosa. Diventi INDOMITA.",
             "Durante questo ritiro coltiveremo questa qualità attraverso pratiche di:",
             "MEDITAZIONE HIMALAYANA, che incorpora una combinazione di tecniche meditative, che possono includere la concentrazione sul respiro, la ripetizione di mantra e la visualizzazione. Queste pratiche sono progettate per calmare la mente e liberarla dalle distrazioni esterne, consentendo al praticante di immergersi nell’esperienza del momento presente.",
@@ -136,10 +137,10 @@
             "Quando tutto va bene, la materia (corpo e mente) si crede padrona dell’anima. Nei momenti bui, la materia diventa vulnerabile e il suo credersi padrona dell’anima si svela essere solo un’ illusione. Ci sono tempi che ti scaraventano fuori dal corpo, dalla mente, dal mondo, dall’universo. Poi arriva una forza. Non sai da dove, ma arriva, e ti risolleva. E’ la forza indomita dell’anima che cresce ed accresce l’energia del tuo corpo e della tua mente, muovendoli, trasformandoli, facendoli vivere.",
             "In questo ritiro coltiveremo quella forza indomita che ci permette di trasformare le nostre potenzialità in talenti per manifestare con entusiasmo i nostri obiettivi e renderli realtà solide e concrete."
             ],
-        "quote":{
+        "quote":[{
             "text":["La forza non deriva dalle capacità fisiche, ma da una volontà INDOMITA."],
             "author":"Mahatma Gandhi"
-            },
+            }],
         "hosts":["Alba Muzzarelli", "Diletta Muzzarelli", "Tiziano Sorbellini"],
         "soldout":true,
         "reviews":[
@@ -227,7 +228,8 @@
             "city":"Göreme",
             "region":"Cappadocia",
             "country":"Turkey",
-            "url":""
+            "url":"",
+            "maps":"https://maps.app.goo.gl/2uiDZY6r4r6z47xf6"
         },
         "cost":"€1200",
         "image":"/images/eventsCover/CapadocciaRetreat.png",
@@ -259,19 +261,22 @@
                 "author":"Giulia R.",
                 "comments":"Un'esperienza trasformativa. La guida di Diletta è stata eccezionale.",
                 "rating":2,
-                "date":"2023-10-18"
+                "date":"2023-10-18",
+                "experience":"Retreat in Cappadocia"
             },
             {
                 "author":"Carlos A.",
                 "comments":"Un'esperienza trasformativa. La guida di Alba è stata eccezionale.",
                 "rating":4,
-                "date":"2023-10-20"
+                "date":"2023-10-20",
+                "experience":"Retreat in Cappadocia"
             },
             {
                 "author":"Daniella G.",
                 "comments":". Anubhuti è un'esperienza trasformativa",
                 "rating":5,
-                "date":"2023-10-30"
+                "date":"2023-10-30",
+                "experience":"Retreat in Cappadocia"
             }
         ]
     },
@@ -289,34 +294,64 @@
             "city":"Gubbio",
             "region":"Umbria",
             "country":"Italia",
-            "url":"https://www.casasangam.com/"
+            "url":"https://www.casasangam.com/",
+            "maps":"https://maps.app.goo.gl/2uiDZY6r4r6z47xf6"
         },
-        "cost":"€1200",
-        "image":"/images/eventsCover/CapadocciaRetreat.png",
+        "cost":"€700",
+        "image":"/images/eventsCover/TapasRetreat.png",
         "subtitle":"Ritiro di tecniche avanzate del vinyāsa dinamico e pratiche di liberazione emotiva",
         "smallDescription":"TAPAS è un ritiro intensivo e formativo pensato per chi desidera portare la propria pratica a un livello superiore, combinando il rigore tecnico del vinyāsa dinamico con un profondo lavoro di liberazione emotiva.",
         "description":[
-            "Dal <strong>30 maggio al 2 giugno 2025</strong>, unisciti a noi per un viaggio unico tra paesaggi fiabeschi e pratiche di yoga transformative ",
-            "⚠️Preparati a immergerti in un’esperienza unica, dove il misticismo della Cappadocia incontra la profondità delle pratiche di Navakaraṇa Vinyāsa e Anubhūti.",
-            "Tra paesaggi scolpiti dal vento e cieli colorati di mongolfiere, risveglierai i tuoi sensi e la tua consapevolezza in un viaggio che trascende il tempo.",
-            "Ogni giornata sarà un intreccio di esplorazioni interiori e scoperte esteriori.",
-            "Non solo un ritiro, ma un’avventura spirituale nel cuore dell’Anatolia: tour guidati tra antiche città sotterranee, tramonti infuocati e momenti di silenzio rigenerante.",
-            "<em>Cosa ti aspetta:</em>", 
-            "Tour nella città sotterranea di Kaimakli e nella Valle di Ihlara.", 
-            "Visita a Pigeon Valley, il Monastero di Selime e la fabbrica dell’Onice.", 
-            "Alba in mongolfiera, trekking, pratiche yoga e meditazioni tra i panorami mozzafiato della Green Valley.", 
-            "Pratiche di Navakaraṇa vinyāsa e Anubhūti per rigenerare corpo e mente.", 
-            "Alloggeremo presso un grazioso hotel&spa con sistemazioni in stanze doppie con bagno in camera, nel cuore di Göreme , a circa 30km dall’aeroporto di Nevsehir (NAV) e a 56.8km dall’aeroporto di Kayseri (ASR).", 
-            "Un’esperienza immersiva tra natura, spiritualità e scoperta.", 
-            "Un programma pensato per vivere un’esperienza trasformativa tra pratiche yoga, paesaggi mozzafiato e cultura millenaria della Cappadocia.", 
-            "Non mancheranno sorprese, momenti di stupore e di contemplazione durante le tante attività di questo viaggio UNICO"],
+            {"type":"subtitle","text":"Cos’è TAPAS:"},
+            {"type":"p","text":["TAPAS è un ritiro intensivo e formativo pensato per chi desidera portare la propria pratica a un livello superiore, combinando il rigore tecnico del vinyāsa dinamico con un profondo lavoro di liberazione emotiva.", "Durante i giorni di ritiro, alterneremo workshop tecnici, sessioni di conditioning mirato e momenti di introspezione guidata, per fondere precisione fisica e consapevolezza interiore."]},
+            {"type":"br"},
+            {"type":"subtitle","text":"Cosa faremo:"},
+            {"type":"ul","items":[
+                "Approfondiremo transizioni complesse come jump through, press through",
+                "Studieremo in dettaglio l’inversione sugli avambracci pincha mayūrā, con esercizi progressivi per sviluppare forza, equilibrio e allineamento","Lavoreremo su conditioning specifici per spalle, core, polsi, forza e mobilità",
+                "Con Anubhūti, intraprenderemo un viaggio di conoscenza interiore attraverso pratiche somatiche, teoria del movimento e tecniche di rilascio emotivo, coltivando un’autentica connessione con noi stessi"]},
+            {"type":"br"},
+            {"type":"subtitle","text":"Perché partecipare:"},
+            {"type":"ul","items":[
+                "Per vivere un ritiro intensivo, tecnico e totalizzante",
+                "Per affinare la tua tecnica e acquisire strumenti concreti per rendere la pratica più potente e consapevole",
+                "Per integrare forza, mobilità e precisione in un approccio strutturato e sicuro",
+                "Per affrontare sfide fisiche e interiori, sviluppando fiducia e controllo",
+                "Per trasformare il tuo modo di praticare, portandolo a un livello più profondo e personale"
+                ]},
+            {"type":"br"},
+            {"type":"subtitle","text":"L’ESPERIENZA INCLUDE:"},
+            {"type":"ul","items":[
+                "Soggiorno: pernottamento e pensione completa presso Casa Sangam, Via S. M. Maddalena 06024, Gubbio (Perugia)",
+                "Utilizzo della śālā “Spazio Luce”",
+                "Tè e tisane",
+                "Tutte le pratiche e attività sotto la guida degli insegnanti",
+                "Gadget omaggio",
+                "Certificato di partecipazione"
+                ]},
+            {"type":"br"},
+            {"type":"subtitle","text":"FAQ – Domande Frequenti:"},
+            {"type":"ol", "items":[
+                {"question":"È adatto a principianti?", "answer":"No, il ritiro è indicato a praticanti con un minimo di esperienza nello yoga dinamico e in buono stato di salute."},
+                {"question":"Posso partecipare se non pratico regolarmente inversioni?", "answer":"Sì, le tecniche saranno spiegate con varianti e progressioni adatte a diversi livelli, purché tu sia in buona salute."},
+                {"question":"Quanto è intensa la pratica?", "answer":"Molto intensa. È previsto un lavoro quotidiano che alterna sessioni tecniche, conditioning e pratiche somatiche."},
+                {"question":"Cosa devo portare?", "answer":"Il tuo tappetino, eventuali supporti personali e abbigliamento comodo per la pratica."},
+                {"question":"Riceverò un attestato?", "answer":"Sì, tutti i partecipanti riceveranno un Certificato di Partecipazione."}
+                ]},
+            {"type":"br"},
+            {"type":"subtitle","text":["⚠️Non è incluso:"]},
+            {"type":"ul","items":[
+                "Trasporto da e per Gubbio.",
+                "Pasti extra non specificati nel programma.",
+                "Caffè (costo aggiuntivo in loco di €1 a cialda)."]}
+        ],
         "quote":{
             "text":[""],
             "author":""
             },
         "hosts":["Alba Muzzarelli", "Diletta Muzzarelli", "Tiziano Sorbellini"],
         "soldout":false,
+        "imagesGallery":[],
         "reviews":[]
     }
-    
 ]
