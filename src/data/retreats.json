@@ -12,41 +12,21 @@
             "place":"Flow Move Studio",
             "city":"Metropolitan City of Reggio Calabria",
             "region":"Reggio Calabria",
-            "country":"Italy",
-            "url":"https://www.instagram.com/flowmovestudio_2017?igshid=MzRlODBiNWFlZA%3D%3D"
+            "country":"Italia",
+            "url":"",
+            "maps":"https://maps.app.goo.gl/tocs5sFkdAEUzoUX8"
         },
         "cost":"€50",
         "image":"/images/eventsCover/NavakaranaWorkshop.png",
         "subtitle":"",
         "smallDescription":"",
-        "description":["I praticanti verranno introdotti agli aspetti più importanti della pratica fino alla scoperta dei principi essenziali della metodologia Navakaraṇa e verranno guidati dalle basi del vinyāsa allo sviluppo della cinestesia e del controllo su movimenti e posture più complesse.", "Questo workshop e aperto a tutti, dai principianti ai praticanti piu avanzati."
-            ],
-        "quote":{
-            "text":[],
-            "author":""
-            },
+        "description":[
+            {"type":"p","text":["Questo workshop tratterà gli elementi essenziali per iniziare lo studio e la pratica di Navakaraṇa vinyāsa.","I praticanti verranno introdotti agli aspetti più importanti della pratica fino alla scoperta dei principi essenziali della metodologia Navakaraṇa e verranno guidati dalle basi del vinyāsa allo sviluppo della cinestesia e del controllo su movimenti e posture più complesse.", "Questo workshop e aperto a tutti, dai principianti ai praticanti piu avanzati."]}
+        ],
+        "quote":[],
         "hosts":["Flow Move Studio","Diletta Muzzarelli"],
         "soldout":false,
-        "reviews":[
-            {
-                "author":"Giulia R.",
-                "comments":"Un'esperienza trasformativa. La guida di Diletta è stata eccezionale.",
-                "rating":5,
-                "date":"2023-10-18"
-            },
-            {
-                "author":"Carlos A.",
-                "comments":"Un'esperienza trasformativa. La guida di Alba è stata eccezionale.",
-                "rating":5,
-                "date":"2023-10-20"
-            },
-            {
-                "author":"Daniella G.",
-                "comments":". Anubhuti è un'esperienza trasformativa",
-                "rating":5,
-                "date":"2023-10-30"
-            }
-        ]
+        "reviews":[]
     },
     {
         "id":2,
@@ -58,25 +38,34 @@
         "dateEnd":"2023-11-18",
         "timeEnd":"13:00",
         "location":{
-            "place":"RAJAWARA DANCE SCHOOL",
+            "place":"Rajawara dance school",
             "city":" Viale Aretusa 30, Milano",
-            "region":"",
-            "country":"Italy",
-            "url":""
+            "region":"Lombardia",
+            "country":"Italia",
+            "url":"",
+            "maps":"https://maps.app.goo.gl/h6G9eYxdd9drMpHw9"
         },
         "cost":"€99",
         "image":"/images/eventsCover/IlCoragiodiEssereWorkshop.png",
         "subtitle":"Riti per ritrovare la via del cuore e risvegliare il tuo sole interiore.",
         "smallDescription":"Riti per ritrovare la via del cuore e risvegliare il tuo sole interiore.",
-        "description":["Navakaraṇa e Anubhūti Morning Escape. Una mattinata di pratica yoga (e non solo) insieme!",
-            "Cosa faremo in questo evento?","Un’esperienza unica e trasformativa ti attende a “Il Coraggio di Essere: Riti per Risvegliare il Sole Interiore e Ritrovare la Via del Cuore.” Questo seminario intensivo di sei ore ti guiderà in un viaggio di profonda guarigione interiore per riscoprire la tua autenticità e tornare a brillare.","Questo evento sarà guidato da ben quattro professionisti del mondo olistico che hanno creato un programma completo combinando per te diverse pratiche di yoga, pranayama, meditazioni, esperienze di gruppo sensoriali ed emotive, e terapie sonore. Tutto è stato progettato per aiutarti a superare i tuoi limiti fisici e mentali, eliminare blocchi energetici e connettere con la parte più vera di te. Farai un vero e proprio viaggio di esplorazione della tua anima, partendo dal ritrovare il tuo sole interiore e il tuo coraggio, per poi trasformarlo in un’esperienza intima di gruppo dove insieme riscopriremo la via del cuore.", "Partecipando all’evento, avrai l’opportunità di:","Sperimentare pratiche di yoga che ti condurranno a una comprensione più profonda del tuo corpo e della tua mente, portandoti oltre i tuoi limiti.","Esplorare tecniche di respirazione e kriyā che ti aiuteranno a liberare il potere interiore e a connettere con il tuo essere luminoso e coraggioso.","Partecipare a esperienze di esplorazione interiore di gruppo per riconnetterti con le tue emozioni e sensazioni più autentiche.","Vivere viaggi sonori unici e sentirti avvolto dalle vibrazioni curative e rilassanti di vari strumenti musicali che accompagneranno le varie pratiche.","Riscoprire la tua autenticità e il tuo coraggio interiore per esprimere la tua vera essenza nel mondo e iniziare a vivere dal cuore.","• BE BRAVE! •","“Il Coraggio di Essere” è dedicato a coloro che cercano una crescita personale tangibile, il superamento dei limiti e un’autentica connessione con se stessi e con gli altri. Non importa il tuo livello di esperienza, “Il Coraggio di Essere” ti aiuterà a riscoprire il tuo sole interiore e a seguire la via del cuore, portandoti al prossimo livello di esplorazione interiore e di evoluzione personale.","Programma:","9.00 – 9.30 Cerimonia di apertura","9.30 – 10.30 “Trova il Coraggio” Navakaraṇa Vinyasa con Alba","10.45 – 11.45 “Illumina il Coraggio” Kundalini Yoga con Pam","11.45 – 12.30 Pranzo","12.30 – 13.30 “Esplorazione dell’anima” Anubhūti con Tiziano","13.30 – 14.30 “Integrazione dell’anima” Pratiche e Bagno di Suono con Vibrant Kundalini","14.30 – 15.00 Cerimonia di chiusura","COSA PORTARE:","Materassino Yoga","Coperta","Acqua","Pranzo al sacco","Oggetti di potere (come cristalli, amuleti o altri totem)"
+        "description":[
+            {"type":"subtitle", "text":"Cosa faremo:"},
+            {"type":"p", "text":["Un’esperienza unica e trasformativa ti attende a “Il Coraggio di Essere: Riti per Risvegliare il Sole Interiore e Ritrovare la Via del Cuore.” Questo seminario intensivo di sei ore ti guiderà in un viaggio di profonda guarigione interiore per riscoprire la tua autenticità e tornare a brillare.","Questo evento sarà guidato da ben quattro professionisti del mondo olistico che hanno creato un programma completo combinando per te diverse pratiche di yoga, pranayama, meditazioni, esperienze di gruppo sensoriali ed emotive, e terapie sonore. Tutto è stato progettato per aiutarti a superare i tuoi limiti fisici e mentali, eliminare blocchi energetici e connettere con la parte più vera di te. Farai un vero e proprio viaggio di esplorazione della tua anima, partendo dal ritrovare il tuo sole interiore e il tuo coraggio, per poi trasformarlo in un’esperienza intima di gruppo dove insieme riscopriremo la via del cuore."]},
+            {"type":"subtitle", "text":"Partecipando all’evento, avrai l’opportunità di:"},
+            {"type":"ul", "items":["Sperimentare pratiche di yoga che ti condurranno a una comprensione più profonda del tuo corpo e della tua mente, portandoti oltre i tuoi limiti.","Esplorare tecniche di respirazione e kriyā che ti aiuteranno a liberare il potere interiore e a connettere con il tuo essere luminoso e coraggioso.","Partecipare a esperienze di esplorazione interiore di gruppo per riconnetterti con le tue emozioni e sensazioni più autentiche.","Vivere viaggi sonori unici e sentirti avvolto dalle vibrazioni curative e rilassanti di vari strumenti musicali che accompagneranno le varie pratiche.","Riscoprire la tua autenticità e il tuo coraggio interiore per esprimere la tua vera essenza nel mondo e iniziare a vivere dal cuore.","BE BRAVE!"]},
+            {"type":"p", "text":["“Il Coraggio di Essere” è dedicato a coloro che cercano una crescita personale tangibile, il superamento dei limiti e un’autentica connessione con se stessi e con gli altri. Non importa il tuo livello di esperienza, “Il Coraggio di Essere” ti aiuterà a riscoprire il tuo sole interiore e a seguire la via del cuore, portandoti al prossimo livello di esplorazione interiore e di evoluzione personale."]},
+            {"type":"subtitle", "text":"Programma:"},
+            {"type":"ul", "items":["9.00 - 9.30 Cerimonia di apertura","9.00 - 9.30 Cerimonia di apertura", "10.45 - 11.45 “Illumina il Coraggio” Kundalini Yoga con Pam", "11.45 - 12.30 Pranzo", "12.30 - 13.30 “Esplorazione dell’anima” Anubhūti con Tiziano", "13.30 - 14.30 “Integrazione dell’anima” Pratiche e Bagno di Suono con Vibrant Kundalini", "14.30 - 15.00 Cerimonia di chiusura"]},
+            {"type":"subtitle", "text":"COSA PORTARE:"},
+            {"type":"ol", "items":[{"question":"Materassino Yoga"},{"question":"Coperta"},{"question":"Acqua"},{"question":"Pranzo al sacco"},{"question":"Oggetti di potere (come cristalli, amuleti o altri totem)"}]}
             ],
-        "quote":{
-            "text":["Lloyd, vorrei tanto eliminare le mie paure…","“Sir, le paure non si eliminano. Si conoscono”","“Come può la conoscenza darmi coraggio?”", "“Perché un vero coraggioso è chi ha delle paure, ma non ne è spaventato, sir”", "“Una paura che non spaventa cosa diventa, Lloyd?”","“Credo una vita che vale la pena di essere vissuta, sir”"],
+        "quote":[{
+            "text":["Lloyd, vorrei tanto eliminare le mie paure…"," “Sir, le paure non si eliminano. Si conoscono”"," “Come può la conoscenza darmi coraggio?”", " “Perché un vero coraggioso è chi ha delle paure, ma non ne è spaventato, sir”", " “Una paura che non spaventa cosa diventa, Lloyd?”","“Credo una vita che vale la pena di essere vissuta, sir”"],
             "author":""
-            },
+        }],
         "hosts":["Alba Muzzarelli", "Tiziano Sorbellini", "Vibrant Kundalini"],
-        "soldout":true,
+        "soldout":false,
         "reviews":[
             {
                 "author":"Giulia R.",
@@ -102,7 +91,7 @@
         "id":3,
         "type":"retreat",
         "slug":"indomito-ritiro-di-navakarana-yoga",
-        "title":"“INDOMITO” ritiro di navakaraṆa yoga",
+        "title":"INDOMITO",
         "dateStart":"2024-05-31",
         "timeStart":"18:00",
         "dateEnd":"2024-06-02",
@@ -110,39 +99,38 @@
         "location":{
             "place":"Agriturismo Basaletto",
             "city":"Assisi",
-            "region":"Umbría",
-            "country":"Italy",
+            "region":"Umbria",
+            "country":"Italia",
             "url":"https://www.basalettoagriturismoassisi.it/",
             "maps":"https://maps.app.goo.gl/QaNdHNMny2EumLeR9"
         },
         "cost":"€530",
         "image":"/images/eventsCover/IndomitoRetreat.png",
         "subtitle":"Nel risveglio silenzioso della primavera, la natura intreccia una danza di rinascita, trasformazione, evoluzione, mostrandoci saggiamente che tutto ciò che finisce è destinato a un nuovo inizio. In questo periodo di trasformazione, il corpo umano sente il bisogno di muoversi, di purificarsi, di coltivare nuove relazioni e interessi.",
-        "smallDescription":"Nel risveglio silenzioso della primavera, la natura intreccia una danza di rinascita, trasformazione, evoluzione, mostrandoci saggiamente che tutto ciò che finisce è destinato a un nuovo inizio. In questo periodo di trasformazione, il corpo umano sente il bisogno di muoversi, di purificarsi, di coltivare nuove relazioni e interessi.",
+        "smallDescription":"Dal 31 maggio al 2 giugno passeremo insieme tre giorni e due notti nella natura incontaminata dell’Umbria con pratiche di: ᴍᴇᴅɪᴛᴀᴢɪᴏɴᴇ ʜɪᴍᴀʟᴀʏᴀɴᴀ, ɴᴀᴠᴀᴋᴀʀᴀṇᴀ ʏᴏɢᴀ, ᴀɴᴜʙʜūᴛɪ.",
         "description":[
-            "Dal 31 maggio al 2 giugno passeremo insieme tre giorni e due notti nella natura incontaminata dell’Umbria con pratiche di: ᴍᴇᴅɪᴛᴀᴢɪᴏɴᴇ ʜɪᴍᴀʟᴀʏᴀɴᴀ, ɴᴀᴠᴀᴋᴀʀᴀṇᴀ ʏᴏɢᴀ, ᴀɴᴜʙʜūᴛɪ.",
-            "C’è una forza che guida ogni cosa in questo universo, quando senti questa forza intorno a te, dentro di te, hai il potere di fare qualsiasi cosa. Diventi INDOMITA.",
-            "Durante questo ritiro coltiveremo questa qualità attraverso pratiche di:",
-            "MEDITAZIONE HIMALAYANA, che incorpora una combinazione di tecniche meditative, che possono includere la concentrazione sul respiro, la ripetizione di mantra e la visualizzazione. Queste pratiche sono progettate per calmare la mente e liberarla dalle distrazioni esterne, consentendo al praticante di immergersi nell’esperienza del momento presente.",
-            "NAVAKARAṆA YOGA, per creare flessibilità, adattabilità e forza del corpo, combinate con purezza e calma della mente",
-            "ANUBHŪTI, un’esperienza liberatoria, divertente e somatica che favorisce la creazione di un terreno fertile in cui l’espressione sensoriale, corporea, emotiva e la consapevolezza interiore possono crescere e fiorire.",
-            "DOVE?",
-            "Presso il casale agriturismo Basaletto, un antico podere nel parco del Subasio, che ti accoglie con la sua pietra antica per farti sentire a casa e renderti parte della sua storia.",
-            "LE CAMERE",
-            "Verrete ospitati in 6 appartamenti indipendenti da 3/4 persone con ingresso dal giardino, ognuno con una camera da letto, soggiorno con divano o poltrona letto, angolo cottura completamente attrezzato ed un bagno con doccia.",
-            "La cucina è vegetariana. l’agriturismo utilizza prodotti locali di stagione, biologici e di loro produzione 100% naturale.",
-            "L’ESPERIENZA INCLUDE",
-            "alloggio di 3 giorni e 2 notti","biancheria","pensione completa (vino incluso)","caffè e tisane sempre a disposizione","uso della piscina","pratiche di Meditazione Himalayana","pratiche di Navakaraṇa Vinyāsa","2 workshops di navakaraṇa","pratiche di Anubhūti",
-            "NON E’ INCLUSO: trasporto da e per l’agriturismo",
-            "Quando tutto va bene, la materia (corpo e mente) si crede padrona dell’anima. Nei momenti bui, la materia diventa vulnerabile e il suo credersi padrona dell’anima si svela essere solo un’ illusione. Ci sono tempi che ti scaraventano fuori dal corpo, dalla mente, dal mondo, dall’universo. Poi arriva una forza. Non sai da dove, ma arriva, e ti risolleva. E’ la forza indomita dell’anima che cresce ed accresce l’energia del tuo corpo e della tua mente, muovendoli, trasformandoli, facendoli vivere.",
-            "In questo ritiro coltiveremo quella forza indomita che ci permette di trasformare le nostre potenzialità in talenti per manifestare con entusiasmo i nostri obiettivi e renderli realtà solide e concrete."
+            {"type":"p","text":["C’è una forza che guida ogni cosa in questo universo, quando senti questa forza intorno a te, dentro di te, hai il potere di fare qualsiasi cosa. Diventi INDOMITA."]},
+            {"type":"subtitle","text":"Cosa ti aspetta:"},
+            {"type":"p","text":["Durante questo ritiro coltiveremo questa qualità attraverso pratiche di:"]},
+            {"type":"ul", "items":["MEDITAZIONE HIMALAYANA, che incorpora una combinazione di tecniche meditative, che possono includere la concentrazione sul respiro, la ripetizione di mantra e la visualizzazione. Queste pratiche sono progettate per calmare la mente e liberarla dalle distrazioni esterne, consentendo al praticante di immergersi nell’esperienza del momento presente.", "NAVAKARAṆA YOGA, per creare flessibilità, adattabilità e forza del corpo, combinate con purezza e calma della mente", "ANUBHŪTI, un’esperienza liberatoria, divertente e somatica che favorisce la creazione di un terreno fertile in cui l’espressione sensoriale, corporea, emotiva e la consapevolezza interiore possono crescere e fiorire."]},
+            {"type":"subtitle","text":"DOVE:"},
+            {"type":"p","text":["Presso il casale agriturismo Basaletto, un antico podere nel parco del Subasio, che ti accoglie con la sua pietra antica per farti sentire a casa e renderti parte della sua storia."]},
+            {"type":"subtitle","text":"LE CAMERE:"},
+            {"type":"p","text":["Verrete ospitati in 6 appartamenti indipendenti da 3/4 persone con ingresso dal giardino, ognuno con una camera da letto, soggiorno con divano o poltrona letto, angolo cottura completamente attrezzato ed un bagno con doccia.", "La cucina è vegetariana. l’agriturismo utilizza prodotti locali di stagione, biologici e di loro produzione 100% naturale."]},
+            {"type":"subtitle","text":"L’ESPERIENZA INCLUDE:"},
+            {"type":"ul", "items":["Alloggio di 3 giorni e 2 notti","Biancheria","Pensione completa (vino incluso)","Caffè e tisane sempre a disposizione","Uso della piscina","Pratiche di Meditazione Himalayana","Pratiche di Navakaraṇa Vinyāsa","2 workshops di navakaraṇa","Pratiche di Anubhūti"]},
+            {"type":"subtitle","text":"⚠️NON E’ INCLUSO:"},
+            {"type":"ul", "items":["Trasporto da e per l’agriturismo"]},
+            {"type":"p","text":["Quando tutto va bene, la materia (corpo e mente) si crede padrona dell’anima. Nei momenti bui, la materia diventa vulnerabile e il suo credersi padrona dell’anima si svela essere solo un’ illusione. Ci sono tempi che ti scaraventano fuori dal corpo, dalla mente, dal mondo, dall’universo. Poi arriva una forza. Non sai da dove, ma arriva, e ti risolleva. E’ la forza indomita dell’anima che cresce ed accresce l’energia del tuo corpo e della tua mente, muovendoli, trasformandoli, facendoli vivere.",
+            "In questo ritiro coltiveremo quella forza indomita che ci permette di trasformare le nostre potenzialità in talenti per manifestare con entusiasmo i nostri obiettivi e renderli realtà solide e concrete."]}         
             ],
         "quote":[{
-            "text":["La forza non deriva dalle capacità fisiche, ma da una volontà INDOMITA."],
+            "text":["“La forza non deriva dalle capacità fisiche, ma da una volontà INDOMITA.“"],
             "author":"Mahatma Gandhi"
             }],
         "hosts":["Alba Muzzarelli", "Diletta Muzzarelli", "Tiziano Sorbellini"],
-        "soldout":true,
+        "soldout":false,
+        "imagesGallery":[],
         "reviews":[
             {
                 "author":"Giulia R.",
@@ -178,21 +166,25 @@
             "city":" Casalecchio di Reno, Bolonia",
             "region":"Emilia-Romagna",
             "country":"Italia",
-            "url":""
+            "url":"",
+            "maps":"https://maps.app.goo.gl/imJzcD2uiUovYecT8"
         },
         "cost":"€70",
         "image":"/images/eventsCover/MorningEscapeWorkshop.png",
         "subtitle":"Navakaraṇa e Anubhūti Morning Escape. Una mattinata di pratica yoga (e non solo) insieme!",
         "smallDescription":"Navakaraṇa e Anubhūti Morning Escape. Una mattinata di pratica yoga (e non solo) insieme!",
         "description":[
-            "Di cosa si tratta:","Unisciti a noi per una fuga insieme dai ritmi frenetici della quotidianità e fare un’esperienza immersiva nel mondo di Navakaraṇa Vinyāsa e Anubhūti!","Programma","9.00/10.30","-Pratica di una serie completa di Navakaraṇa Vinyāsa.","10.30/11.30","-Ws di Navakaraṇa","Sessione di conditioning ed esercizi mirati per costruire una base stabile e sicura per la verticale sulla testa, sugli avambracci e sulle mani","11.30/12.00 pausa colazione con tisane e biscotti","12.00/13.00","-Pratica di Anubhūti","Anubhūti è una pratica esperenziale che trova origine nel connubio tra teatro, danza, meditazione e movimento somatico.","Questa pratica è un invito a scavare con curiosità nella profondità di se stessi per superare la timidezza, sviluppare l’ascolto e stimolare l’espressione creativa.","COSA PORTARE?","il proprio tappetino", "un asciugamano per il sudore","vestiti comodi","maglione o coperta per mantenere il corpo al caldo durante il rilassamento"
+            {"type":"subtitle","text":"Di cosa si tratta:"},
+            {"type":"p","text":["Unisciti a noi per una fuga insieme dai ritmi frenetici della quotidianità e fare un’esperienza immersiva nel mondo di Navakaraṇa Vinyāsa e Anubhūti!"]},
+            {"type":"subtitle","text":"Programma:"},
+            {"type":"ul","items":["9.00/10.30 - Pratica di una serie completa di Navakaraṇa Vinyāsa.", "10.30/11.30 - Ws di Navakaraṇa. Sessione di conditioning ed esercizi mirati per costruire una base stabile e sicura per la verticale sulla testa, sugli avambracci e sulle mani.", "11.30/12.00 - Pausa colazione con tisane e biscotti.", "12.00/13.00 - Pratica di Anubhūti. Anubhūti è un invito a scavare con curiosità nella profondità di se stessi per superare la timidezza, sviluppare l’ascolto e stimolare l’espressione creativa."]},
+            {"type":"subtitle","text":"COSA PORTARE:"},
+            {"type":"ul","items":["Il proprio tappetino", "Un asciugamano per il sudore","Vestiti comodi","Maglione o coperta per mantenere il corpo al caldo durante il rilassamento"]}
             ],
-        "quote":{
-            "text":[],
-            "author":""
-            },
+        "quote":[],
         "hosts":["Alba Muzzarelli", "Diletta Muzzarelli", "Tiziano Sorbellini"],
-        "soldout":true,
+        "soldout":false,
+        "imagesGallery":[],
         "reviews":[
             {
                 "author":"Giulia R.",
@@ -236,47 +228,41 @@
         "subtitle":"Vivi la magia della Cappadocia",
         "smallDescription":"Unisciti a noi per un viaggio unico tra paesaggi fiabeschi e pratiche di yoga transformative",
         "description":[
-            "Dal <strong>30 maggio al 2 giugno 2025</strong>, unisciti a noi per un viaggio unico tra paesaggi fiabeschi e pratiche di yoga transformative ",
-            "⚠️Preparati a immergerti in un’esperienza unica, dove il misticismo della Cappadocia incontra la profondità delle pratiche di Navakaraṇa Vinyāsa e Anubhūti.",
-            "Tra paesaggi scolpiti dal vento e cieli colorati di mongolfiere, risveglierai i tuoi sensi e la tua consapevolezza in un viaggio che trascende il tempo.",
-            "Ogni giornata sarà un intreccio di esplorazioni interiori e scoperte esteriori.",
-            "Non solo un ritiro, ma un’avventura spirituale nel cuore dell’Anatolia: tour guidati tra antiche città sotterranee, tramonti infuocati e momenti di silenzio rigenerante.",
-            "<em>Cosa ti aspetta:</em>", 
-            "Tour nella città sotterranea di Kaimakli e nella Valle di Ihlara.", 
+            {"type":"p","text":["Dal 30 maggio al 2 giugno 2025, unisciti a noi per un viaggio unico tra paesaggi fiabeschi e pratiche di yoga transformative. Preparati a immergerti in un’esperienza unica, dove il misticismo della Cappadocia incontra la profondità delle pratiche di Navakaraṇa Vinyāsa e Anubhūti.", "Tra paesaggi scolpiti dal vento e cieli colorati di mongolfiere, risveglierai i tuoi sensi e la tua consapevolezza in un viaggio che trascende il tempo.", "Ogni giornata sarà un intreccio di esplorazioni interiori e scoperte esteriori.","Non solo un ritiro, ma un’avventura spirituale nel cuore dell’Anatolia: tour guidati tra antiche città sotterranee, tramonti infuocati e momenti di silenzio rigenerante." ]},
+            {"type":"subtitle","text":"Cosa ti aspetta:"},
+            {"type":"ul","items":["Tour nella città sotterranea di Kaimakli e nella Valle di Ihlara.", 
             "Visita a Pigeon Valley, il Monastero di Selime e la fabbrica dell’Onice.", 
             "Alba in mongolfiera, trekking, pratiche yoga e meditazioni tra i panorami mozzafiato della Green Valley.", 
-            "Pratiche di Navakaraṇa vinyāsa e Anubhūti per rigenerare corpo e mente.", 
-            "Alloggeremo presso un grazioso hotel&spa con sistemazioni in stanze doppie con bagno in camera, nel cuore di Göreme , a circa 30km dall’aeroporto di Nevsehir (NAV) e a 56.8km dall’aeroporto di Kayseri (ASR).", 
+            "Pratiche di Navakaraṇa vinyāsa e Anubhūti per rigenerare corpo e mente."]},
+             {"type":"p","text":["Alloggeremo presso un grazioso hotel&spa con sistemazioni in stanze doppie con bagno in camera, nel cuore di Göreme , a circa 30km dall’aeroporto di Nevsehir (NAV) e a 56.8km dall’aeroporto di Kayseri (ASR).", 
             "Un’esperienza immersiva tra natura, spiritualità e scoperta.", 
             "Un programma pensato per vivere un’esperienza trasformativa tra pratiche yoga, paesaggi mozzafiato e cultura millenaria della Cappadocia.", 
-            "Non mancheranno sorprese, momenti di stupore e di contemplazione durante le tante attività di questo viaggio UNICO"],
-        "quote":{
-            "text":["Qui la terra si fonde col cielo d’ambra un respiro che tutto abbraccia e accoglie, e l’anima vaga, leggera, nel vento, tra i tuoi abissi e le tue meraviglie."],
+            "Non mancheranno sorprese, momenti di stupore e di contemplazione durante le tante attività di questo viaggio UNICO"]}],
+        "quote":[{
+            "text":["“Qui la terra si fonde col cielo d’ambra un respiro che tutto abbraccia e accoglie, e l’anima vaga, leggera, nel vento, tra i tuoi abissi e le tue meraviglie.“"],
             "author":""
-            },
+            }],
         "hosts":["Alba Muzzarelli", "Diletta Muzzarelli", "Tiziano Sorbellini"],
         "soldout":true,
+        "imagesGallery":[],
         "reviews":[
             {
                 "author":"Giulia R.",
                 "comments":"Un'esperienza trasformativa. La guida di Diletta è stata eccezionale.",
                 "rating":2,
-                "date":"2023-10-18",
-                "experience":"Retreat in Cappadocia"
+                "date":"2023-10-18"
             },
             {
                 "author":"Carlos A.",
                 "comments":"Un'esperienza trasformativa. La guida di Alba è stata eccezionale.",
                 "rating":4,
-                "date":"2023-10-20",
-                "experience":"Retreat in Cappadocia"
+                "date":"2023-10-20"
             },
             {
                 "author":"Daniella G.",
                 "comments":". Anubhuti è un'esperienza trasformativa",
                 "rating":5,
-                "date":"2023-10-30",
-                "experience":"Retreat in Cappadocia"
+                "date":"2023-10-30"
             }
         ]
     },
@@ -345,10 +331,7 @@
                 "Pasti extra non specificati nel programma.",
                 "Caffè (costo aggiuntivo in loco di €1 a cialda)."]}
         ],
-        "quote":{
-            "text":[""],
-            "author":""
-            },
+        "quote":[],
         "hosts":["Alba Muzzarelli", "Diletta Muzzarelli", "Tiziano Sorbellini"],
         "soldout":false,
         "imagesGallery":[],
