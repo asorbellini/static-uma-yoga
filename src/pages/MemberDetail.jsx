@@ -131,6 +131,7 @@ function MemberDetail(){
     if (!member) return <p>Miembro no encontrado</p>;
     member?.classes.map((detail)=>{console.log(detail)})
     return(
+        <>
         <div className="min-h-screen" 
         style={{background:"linear-gradient(135deg, #D4AF7F 0%, #3D735C 50%, #2E5E55 100%)"}}>
         <ScrollToTop />
@@ -221,8 +222,9 @@ function MemberDetail(){
                     </div>
                 </section>
             }
-            <ToRetreateWorkshop />
         </div>
+        <ToRetreateWorkshop />
+        </>
     )
 }
 

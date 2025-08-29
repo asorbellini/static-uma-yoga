@@ -127,6 +127,7 @@ function RetreateWorkshop() {
     
 
     return(
+        <>
         <div className="min-h-screen w-full bg-gradient-to-br from-dorado via-terracota via-60% to-terracota">
             <ScrollToTop />
             <HeroReW />
@@ -159,8 +160,9 @@ function RetreateWorkshop() {
                         </div>))}
                 </div>
             </section>
-            <NewSetter />
         </div>
+        <NewSetter />
+        </>
     )
 }
 
