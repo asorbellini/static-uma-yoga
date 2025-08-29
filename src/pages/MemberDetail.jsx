@@ -129,7 +129,6 @@ function MemberDetail(){
     const member = members.find(m => m.memberName === memberName);
 
     if (!member) return <p>Miembro no encontrado</p>;
-    member?.classes.map((detail)=>{console.log(detail)})
     return(
         <>
         <div className="min-h-screen" 
