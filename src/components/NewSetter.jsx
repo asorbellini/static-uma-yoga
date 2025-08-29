@@ -34,7 +34,7 @@ function NewSetter(){
     })
 
     return (
-        <section ref={sectionRef} className="bg-claro overflow-hidden">
+        <section ref={sectionRef} className="bg-dorado/60 overflow-hidden">
             <div className="py-4">
                 <div className="flex flex-col md:flex-row items-center justify-between space-x-3 px-6 md:px-16">
                     <div

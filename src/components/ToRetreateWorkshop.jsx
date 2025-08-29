@@ -24,19 +24,19 @@ function ToRetreateWorkshop(){
     })
 
     return (
-        <section ref={sectionRef} className="bg-gradient-to-br from-verdeBosque from-10% to-verdeOliva to-80% overflow-hidden px-4 md:px-12">
+        <section ref={sectionRef} className="bg-dorado/60 overflow-hidden px-4 md:px-12">
             <div>
                 <div className="flex flex-col md:flex-row items-center gap-3">
                     {/* Texto a la izquierda */}
                     <div
-                        className={`w-full md:w-1/2 text-[#ffffff] transition-all duration-1000 ease-out px-2 md:px-12 my-5 ${
+                        className={`w-full md:w-1/2  transition-all duration-1000 ease-out px-2 md:px-12 my-5 ${
                         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                         }`}
                     >
-                        <h2 className="title text-center md:text-left uppercase py-1">
+                        <h2 className="title text-center md:text-left uppercase py-1 text-oscuro drop-shadow-none">
                             Guarda tutti gli eventi 
                         </h2>
-                        <p className="textDetail text-center md:text-left pb-4"> {/* */}
+                        <p className="textDetail text-center md:text-left pb-4 text-oscuro drop-shadow-none"> {/* */}
                             Guarda tutti gli eventi, retreat e masterclass in programma, questa sezione è in costante aggiornamento.
                         </p>
                         <div className={`${isMobile ? "flex justify-center" : ""}`}>

@@ -54,6 +54,7 @@ const NavakaranaImages = [
 function NavakaranaVinyasa() {
   
   return (
+    <>
     <div className="min-h-screen w-full bg-claro">
         <HeroComponent background="linear-gradient(45deg, #581414 0%, #921e1e 25%,  #a33c3c 50%, #b23d3d 75%, #b64c4c 100%)" mainColor="#581414" logo={logoNavakarana} title="navakaraṆa vinyāsa" />
         <NavakaranaSummary />
@@ -62,8 +63,9 @@ function NavakaranaVinyasa() {
           <h3 className="w-text-xl md:text-3xl rounded font-serif text-oscuro text-center font-semibold uppercase py-2 md:w-[50vw]">GALLERY</h3>
           <HorizontalGallery images={NavakaranaImages}/>
         </div>
-        <ToRetreateWorkshop />
     </div>  
+    <ToRetreateWorkshop />
+    </>
   );
 }
 

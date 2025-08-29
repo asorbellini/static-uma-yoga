@@ -15,6 +15,7 @@ function Anubhuti() {
           onReveal: () => setIsVisible(true)
     })
     return (
+        <>
         <div className="min-h-screen w-full bg-claro overflow-hidden">
             <ScrollToTop />
             <HeroComponent background="linear-gradient(45deg, #4A617A 0%, #93a4ab 50%, #4A617A 100%)" mainColor="#4A617A" logo={logoAnubhuti}  title="Anubhūti"/>
@@ -76,9 +77,9 @@ function Anubhuti() {
                 </div>
             </section>
             {/* GALERÍA DE IMÁGENES */}
-            {/* SECCIÓN DE EVENTOS */}
-            <ToRetreateWorkshop />
         </div>
+        <ToRetreateWorkshop />
+        </>
     );
     }
 
