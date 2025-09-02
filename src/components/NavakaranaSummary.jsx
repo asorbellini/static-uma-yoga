@@ -11,7 +11,7 @@ function NavakaranaSummary() {
           onReveal: () => setIsVisible(true)
           })
     return (
-        <div>
+        <div className="bg-claro">
             <section ref={sectionRef} id="about-navakaraṆa-vinyāsa" className="min-h-screen w-full pt-12 md:pt-24 px-4 bg-claro">
                 <div className={`flex flex-row px-2 md:px-12 gap-3 items-center transition-all duration-[1000ms] ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}`}>
                     <div className="w-full md:basis-2/5 md:relative md:h-[60vh]">

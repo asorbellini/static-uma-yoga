@@ -1,4 +1,4 @@
-import CircularButton from "./CircularButton";
+
 import { BodyHeart, LeftFootPrint, RightFootPrint, Road, Spiral, Wave } from "./Icons";
 
 function Hero() {
@@ -40,12 +40,12 @@ function Hero() {
       </div>
       <div className="flex-shrink-0 pb-8 sm:pb-12 md:pb-16">
         <div className="max-w-4xl mx-auto px-4">
-          <h1 className="welcomeTitle mb-4 sm:mb-6 text-center ">BENVENUTI A UMĀ</h1>
+          <h1 className="welcomeTitle text-white mb-4 sm:mb-6 text-center">BENVENUTI A UMĀ</h1>
           <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
-            <p className="subtitle font-light leading-relaxed text-center ">
+            <p className="subtitle text-white font-light leading-relaxed text-center">
               Umā è un movimento. Uno spazio in cui il <span className="italic">corpo</span> diventa un <span className="italic">percorso</span>, il respiro si trasforma in saggezza e la comunità si crea attraverso l' <span className="italic">esperienza condivisa</span>.
             </p>
-            <p className="subtitle font-light drop-shadow-title leading-relaxed text-center ">
+            <p className="subtitle text-white font-light drop-shadow-title leading-relaxed text-center ">
               Esploriamo, ci trasformiamo, ci <span className="font-bold">expandiamo</span> - oltre i limiti, oltre le storie, <span className="font-bold">oltre il sé</span>.
             </p>
           </div>
@@ -55,7 +55,7 @@ function Hero() {
               aria-label="Vai alla sezione successiva"
               className="btn-scopri"
             >
-              <button className="textButton">
+              <button className="textButton text-white">
                 SCOPRI
               </button>
             </a>

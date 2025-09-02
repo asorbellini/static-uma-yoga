@@ -198,23 +198,23 @@ html {
   }
 
   .textTitleSection {
-    @apply font-serif text-white text-3xl lg:text-4xl drop-shadow-title text-center 
+    @apply font-serif text-oscuro text-3xl lg:text-4xl text-center 
   }
 
   .title {
-    @apply font-serif text-white text-xl lg:text-2xl font-medium drop-shadow-title tracking-wider 
+    @apply font-serif text-oscuro text-xl lg:text-2xl font-medium tracking-wider 
   }
 
   .secondaryTitle {
-    @apply font-serif text-white text-base lg:text-lg font-medium drop-shadow-title tracking-wider
+    @apply font-serif text-oscuro text-base lg:text-lg font-medium drop-shadow-title tracking-wider
   }
 
   .subtitle {
-    @apply font-sans text-white text-base lg:text-lg font-normal drop-shadow-text text-start 
+    @apply font-sans text-oscuro text-base lg:text-lg font-normal drop-shadow-text text-start 
   }
 
   .textDetail {
-    @apply font-sans text-white text-base lg:text-lg font-light drop-shadow-title text-start 
+    @apply font-sans text-oscuro text-base lg:text-lg font-light text-start 
   }
 
   .textButton {
@@ -222,14 +222,14 @@ html {
   }
 
   .btn-primary {
-    @apply bg-verdeBosque border-2 border-verdeBosque rounded-3xl p-3 md:p-6 md:py-3 justify-center text-white max-w-fit transition-all duration-500 
+    @apply bg-verdeBosque border-2 border-verdeBosque rounded-3xl p-3 md:p-6 md:py-3 justify-center text-oscuro max-w-fit transition-all duration-500 
   }
   .btn-primary:hover {
     @apply border-verdeBosque bg-verdeOliva transition-all duration-500 
   }
 
   .btn-secondary {
-    @apply bg-transparent justify-center text-white hover:text-oscuro transition-all duration-300
+    @apply bg-transparent justify-center text-oscuro hover:text-white transition-all duration-300
   }
 
   .btn-scopri {

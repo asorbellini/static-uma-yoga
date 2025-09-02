@@ -25,7 +25,7 @@ function HeroAbout() {
   return (
     <div className="relative w-full h-screen max-h-dvh flex flex-col items-center justify-evenly bg-gradient-to-t from-terracota to-dorado text-white"> 
       <div className="flex items-center justify-center z-20 pt-16 md:pt-20">
-        <h1 className="textTitleSection uppercase text-center">
+        <h1 className="textTitleSection uppercase text-center text-white drop-shadow-title">
           CHI SIAMO
         </h1>
       </div>

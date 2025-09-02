@@ -19,10 +19,10 @@ function AboutUmaSummary(){
                 <div className="px-2 md:px-12 pb-4">
                     <div className="flex flex-col justify-center items-center py-8">
                         <div>
-                            <h3 className="subtitle text-lg md:text-2xl text-white text-center italic">
+                            <h3 className="subtitle text-lg md:text-2xl text-oscuro text-center italic">
                             Tre percorsi, tre personalità, tre modi di guardare il mondo che si incontrano in un’unica direzione: <strong className="uppercase">l’espansione.</strong>
                             </h3>
-                            <h3 className="subtitle text-lg md:text-2xl text-white text-center italic">
+                            <h3 className="subtitle text-lg md:text-2xl text-oscuro text-center italic">
                             Dall’intreccio dei nostri vissuti nasce un approccio che unisce corpo, emozioni e 
                             consapevolezza in un’esperienza viva e trasformativa.
                             </h3>

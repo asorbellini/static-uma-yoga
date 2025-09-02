@@ -75,18 +75,18 @@ function UmaSummary(){
         })
     return(
         <div>
-            <section ref={sectionRef} id="uma-summary" className="min-h-screen relative w-full px-4 pt-12 md:pt-16 bg-gradient-to-b from-terracota via-terracota via-80% to-dorado">
+            <section ref={sectionRef} id="uma-summary" className="min-h-screen relative w-full px-4 pt-12 md:pt-16 bg-claro">
                 <div className="px-2 md:px-12 pb-4">
                     <h3 className="textTitleSection py-4">CHI SIAMO</h3>
                     <div className="flex flex-col sm:flex-row gap-3">
                         {members.map((member, index) => (
                             <div className="flex-1 hover:scale-105 transition-all duration-1000">
                                 <a href={`/chi-siamo/${member.memberName}`}>
-                                    <div className={` w-full justify-items-center items-center justify-center transition-all duration-300 ease-out ${isVisible ? "opacity-100 translate-x-0 sm:translate-x-0 sm:translate-y-0" : "opacity-0 -translate-x-10 sm:translate-x-0 sm:-translate-y-10"}`}>
+                                    <div className={` w-full justify-items-center items-center justify-center transition-all duration-500 ease-out ${isVisible ? "opacity-100 translate-x-0 " : "opacity-0 -translate-x-10 "}`}>
                                         <img
                                         src={member.images?.[1]}
                                         alt={`Image ${member.Name}`}
-                                        className={`h-[45vh] object-contain sm:object-cover shadow ${index === 0 ? "rounded-3xl sm:rounded-bl-full" : index === 2 ? "rounded-3xl sm:rounded-tr-full" : "rounded-3xl sm:rounded-none"}`} />
+                                        className={`h-[45vh] object-contain sm:object-cover shadow-lg ${index === 0 ? "rounded-3xl sm:rounded-bl-full" : index === 2 ? "rounded-3xl sm:rounded-tr-full" : "rounded-3xl sm:rounded-none"}`} />
                                     </div>
                                     <div className="sm:p-2">
                                         <h2 className="title text-center underline sm:no-underline hover:underline transition-all py-2">{member.Name}</h2>
@@ -107,7 +107,7 @@ function UmaSummary(){
                     </div>
                 </div>
             </section>
-            <section id="cosa-facciamo" className="h-auto w-full p-4 pt-12 md:pt-16 bg-gradient-to-t from-terracota via-terracota via-50% to-dorado flex flex-col">
+            <section id="cosa-facciamo" className="h-auto w-full p-4 pt-12 md:pt-16 bg-claro flex flex-col">
                 <div className="px-2 md:px-12 md:pb-4">
                     <h2 className="textTitleSection py-4">COSA FACCIAMO</h2>
                     <div className="flex flex-col sm:flex-row items-center relative text-center">
@@ -136,7 +136,7 @@ function UmaSummary(){
                     </div>
                 </div>
             </section>
-            <section className="h-auto w-full p-4 bg-terracota flex flex-col">
+            <section className="h-auto w-full p-4 bg-claro flex flex-col">
                 <h2 className="textTitleSection py-4 px-2 md:px-12">ULTIMI EVENTI</h2>
                     <Suspense fallback={<ComponentLoading />}>
                         <div className="px-2 md:px-12">
