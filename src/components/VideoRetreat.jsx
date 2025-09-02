@@ -17,7 +17,7 @@ export default function VideoRetreat() {
         loop
         muted
         playsInline
-        className={`w-full h-full object-cover ${isLoading ? "hidden" : "block"}`}
+        className={`w-full h-full object-cover ${isLoading ? "opacity-0" : "opacity-100"}`}
         onLoadedData={() => setIsLoading(false)}
       />
     </>

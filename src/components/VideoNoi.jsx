@@ -17,7 +17,7 @@ export default function VideoNoi() {
         loop
         muted
         playsInline
-        className={`w-auto h-full object-cover ${isLoading ? "hidden" : "block"}`}
+        className={`w-auto h-full object-cover ${isLoading ? "opacity-0" : "opacity-100"}`}
         onLoadedData={() => setIsLoading(false)}
       />
     </>
