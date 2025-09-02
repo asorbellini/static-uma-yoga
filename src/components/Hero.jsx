@@ -1,52 +1,70 @@
 import CircularButton from "./CircularButton";
-import { ArrowDown, BodyHeart, LeftFootPrint, RightFootPrint, Road, Spiral } from "./Icons";
+import { BodyHeart, LeftFootPrint, RightFootPrint, Road, Spiral, Wave } from "./Icons";
 
 function Hero() {
   return (
-    <div className="h-[100dvh] max-h-dvh w-full flex flex-col items-center justify-evenly text-white bg-gradient-to-tl from-terracota via-terracota to-dorado px-6 md:px-16">
-{/*       <div className="relative inset-0 items-center justify-center pt-10 md:pt-20"> */}
-        <div className="grid grid-cols-4 gap-3 md:gap-6 items-center justify-items-center overflow-hidden">
-          <div className="flex items-center">
-            <LeftFootPrint className="w-16 h-16 md:w-32 md:h-32 translate-x-2 md:translate-x-6 translate-y-2 rotate-12" fillColor="#ffffff" />
-            <RightFootPrint className="w-16 h-16 md:w-32 md:h-32 md:-translate-x-6 -translate-y-2 -rotate-12" fillColor="#ffffff" />
+    <div className="min-h-screen max-h-dvh flex flex-col bg-gradient-to-tl from-terracota via-terracota to-dorado px-6 md:px-16 relative">
+      <div className="flex-1 flex items-center justify-center">
+        <div className="grid grid-cols-4 gap-2 md:gap-4 lg:gap-8 items-center justify-items-center max-w-6xl mx-auto">
+          <div className="flex items-center justify-center relative ">
+            <div className="flex items-center relative">
+              <LeftFootPrint 
+                className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28 translate-x-2 md:translate-x-3 translate-y-2 rotate-12 transition-all duration-300" 
+                fillColor="#ffffff" 
+              />
+              <RightFootPrint 
+                className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28 -translate-x-2 md:-translate-x-3 -translate-y-2 -rotate-12 transition-all duration-300" 
+                fillColor="#ffffff" 
+              />
+            </div>
           </div>
           <div className="flex items-center justify-center">
-            <Spiral className="w-32 h-32 md:w-64 md:h-64" fillColor="#ffffff"/>
+            <Spiral 
+              className="w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 transition-all duration-300" 
+              fillColor="#ffffff"
+            />
           </div>
           <div className="flex items-center justify-center">
-            <BodyHeart className="w-32 h-32 md:w-64 md:h-64 z-50" fillColor="#ffffff" />
+            <BodyHeart 
+              className="w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 transition-all duration-300" 
+              fillColor="#ffffff"
+            />
           </div>
           <div className="flex items-center justify-center">
-            <Road className="w-32 h-32 md:w-64 md:h-64" fillColor="#ffffff" />
+            <Road 
+              className="w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 transition-all duration-300" 
+              fillColor="#ffffff" 
+            />
           </div>
         </div>
-        <div className="flex justify-around">
-          <div className="z-10 text-center">
-              <h1 className="welcomeTitle p-2 md:p-4">BENVENUTI A UMĀ</h1>
-              <p className="subtitle text-lg lg:text-xl font-light text-center sm:pb-2">Umā è un movimento. Uno spazio in cui il <span className="italic">corpo</span> diventa un <span className="italic">percorso</span>, il respiro si trasforma in saggezza e la comunità si crea attraverso l’ <span className="italic">esperienza condivisa</span>.</p>
-              <p className="font-sans text-lg lg:text-xl font-light drop-shadow-title sm:pb-4">Esploriamo, ci trasformiamo, ci <span className="font-bold">expandiamo</span> - oltre i limiti, oltre le storie, <span className="font-bold">oltre il sé</span>.</p>
+      </div>
+      <div className="flex-shrink-0 pb-8 sm:pb-12 md:pb-16">
+        <div className="max-w-4xl mx-auto px-4">
+          <h1 className="welcomeTitle mb-4 sm:mb-6 text-center ">BENVENUTI A UMĀ</h1>
+          <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+            <p className="subtitle font-light leading-relaxed text-center ">
+              Umā è un movimento. Uno spazio in cui il <span className="italic">corpo</span> diventa un <span className="italic">percorso</span>, il respiro si trasforma in saggezza e la comunità si crea attraverso l' <span className="italic">esperienza condivisa</span>.
+            </p>
+            <p className="subtitle font-light drop-shadow-title leading-relaxed text-center ">
+              Esploriamo, ci trasformiamo, ci <span className="font-bold">expandiamo</span> - oltre i limiti, oltre le storie, <span className="font-bold">oltre il sé</span>.
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <a 
+              href="#uma-summary" 
+              aria-label="Vai alla sezione successiva"
+              className="btn-scopri hover:animate-pulse transition-transform duration-300"
+            >
+              <button className="textButton">
+                SCOPRI
+              </button>
+            </a>
           </div>
         </div>
-          <div className="justify-self-center">
-              <a 
-                href="#uma-summary" 
-                aria-label="Vai alla sezione successiva"
-                className="btn-scopri"
-              >
-                <button className="textButton">
-                    SCOPRI
-                </button>
-              </a>
-          </div>
-      {/* <div className="absolute left-1/2 -translate-x-1/2 z-20 sm:flex sm:w-full flex-row items-center justify-center hover:animate-pulse animate-pulse lg:animate-none">
-          <a 
-            href="#uma-summary" 
-            aria-label="Vai alla sezione successiva"
-            className="focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent rounded-full"
-          >
-              <ArrowDown />
-          </a>
-      </div> */}
+      </div>
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+         <Wave />
+      </div>
     </div>
   );
 }
