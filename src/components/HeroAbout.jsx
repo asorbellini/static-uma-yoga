@@ -1,26 +1,62 @@
-import React, { Suspense } from "react";
-import { ArrowDown } from "./Icons.jsx";
+import React, { useState, useEffect, Suspense } from "react";
+import { ArrowDown, Wave } from "./Icons.jsx";
 import { ComponentLoading } from "./LoadingFootPrints.jsx";
 
 const VideoNoi = React.lazy(() => import("./VideoNoi.jsx"));
+const VideoNoiMobile = React.lazy(() => import("./VideoNoiMobile.jsx"));
 
 function HeroAbout() {
+  const [mobile, setMobile] = useState(false)
+  const [tablet, setTablet] = useState(false)
+  
+  useEffect(() => {
+    const checkDevice = () => {
+      const width = window.innerWidth
+      setMobile(width < 768)
+      setTablet(width >= 768 && width < 1024)
+    }
+    
+    checkDevice()
+    window.addEventListener('resize', checkDevice)
+    
+    return () => window.removeEventListener('resize', checkDevice)
+  }, [])
+  
   return (
-    <div className="relative w-full h-screen flex flex-row items-center justify-center bg-gradient-to-b to-terracota from-dorado text-white"> 
-      <div className="absolute top-0 sm:top-[8vh] z-20 p-12">
-        <h1 className="textTitleSection p-2 md:p-4 uppercase">CHI SIAMO</h1>
+    <div className="relative w-full h-screen max-h-dvh flex flex-col items-center justify-evenly bg-gradient-to-t from-terracota to-dorado text-white"> 
+      <div className="flex items-center justify-center z-20 pt-12 md:pt-20">
+        <h1 className="textTitleSection uppercase text-center">
+          CHI SIAMO
+        </h1>
       </div>
-      <div className="absolute z-10 w-full flex justify-center h-screen px-6">
-        <div className="h-[80vh] max-w-3xl top-[10vh] aspect-video rounded-3xl overflow-hidden relative flex items-center justify-center">
+      <div className="flex-1 flex items-center justify-center px-6 md:px-16 w-full">
+        <div className={`
+          relative flex items-center justify-center rounded-3xl sm:rounded-4xl overflow-hidden shadow-xl sm:shadow-2xl
+          ${mobile 
+            ? 'w-auto max-w-sm aspect-[9/16] max-h-[70vh]' 
+            : tablet
+              ? 'w-full max-w-2xl sm:max-w-3xl aspect-video max-h-[50vh]'
+              : 'w-auto max-w-3xl md:max-w-4xl lg:max-w-5xl aspect-video max-h-[60vh]'
+          }
+        `}>
           <Suspense fallback={<ComponentLoading />}>
-              <VideoNoi />
+            {mobile ? <VideoNoiMobile /> : <VideoNoi />}
           </Suspense>
         </div>
       </div>
-      <div className="py-2 z-20 absolute -bottom-2 left-1/2 -translate-x-1/2 items-center justify-center hover:animate-pulse animate-pulse md:animate-none flex flex-row">
-          <a href="#about-uma-summary">
-              <ArrowDown />
-          </a>
+      <div className="flex items-center justify-center z-20 w-full pb-10 md:pb-12 lg:pb-18">
+        <a 
+          href="#about-uma-summary" 
+          aria-label="Vai alla sezione successiva"
+          className="btn-scopri hover:animate-pulse transition-transform duration-300"
+        >
+          <button className="textButton">
+            SCOPRI
+          </button>
+        </a>
+      </div>
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0">
+        <Wave />
       </div>
     </div>
   );
