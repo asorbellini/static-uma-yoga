@@ -53,7 +53,7 @@ function Hero() {
             <a 
               href="#uma-summary" 
               aria-label="Vai alla sezione successiva"
-              className="btn-scopri hover:animate-pulse transition-transform duration-300"
+              className="btn-scopri"
             >
               <button className="textButton">
                 SCOPRI

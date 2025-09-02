@@ -1,30 +1,59 @@
-import { ArrowDown } from "../components/Icons.jsx";
+import React, { Suspense, useState, useEffect } from "react";
 import { ComponentLoading } from "./LoadingFootPrints.jsx";
-import React, { Suspense } from "react";
+import { ArrowDown, Wave } from "../components/Icons.jsx";
 
 const VideoRetreat = React.lazy(() => import("./VideoRetreat.jsx"));
+
 function HeroReW() {
+    const [mobile, setMobile] = useState(false)
+    const [tablet, setTablet] = useState(false)
+    
+    useEffect(() => {
+      const checkDevice = () => {
+        const width = window.innerWidth
+        setMobile(width < 768)
+        setTablet(width >= 768 && width < 1024)
+      }
+      
+      checkDevice()
+      window.addEventListener('resize', checkDevice)
+      
+      return () => window.removeEventListener('resize', checkDevice)
+    }, [])
     return (
-        <div className="relative h-screen w-full flex flex-row items-center justify-center text-white">
-            <div className="absolute inset-0 " />{/*bg-gradient-to-br from-terracota from-0% via-dorado via-50%  to-terracota */}
-            <div className="absolute top-0 sm:top-[8vh] z-20 p-12 text-left">
-                <h1 className="textTitleSection p-2 md:p-4 uppercase">Retreat e Workshop</h1>
+        <div className="relative h-screen w-full max-h-dvh flex flex-col items-center justify-evenly text-white bg-gradient-to-tr from-terracota to-dorado">
+            <div className="flex items-center justify-center z-20 pt-16 md:pt-20">
+                <h1 className="textTitleSection uppercase text-center">
+                    RETREAT & WORKSHOP
+                </h1>
             </div>
-            <div className="absolute top-[15vh] sm:top-[20vh] left-1/2 -translate-x-1/2 z-10 w-full flex justify-center px-6 sm:px-0">
-                <div className="h-[70vh] w-auto sm:h-auto sm:w-[90vw] sm:max-w-3xl aspect-video rounded-3xl overflow-hidden relative shadow-xl">
+            <div className="flex-1 flex items-center justify-center px-6 md:px-16 w-full">
+                <div className={`
+                relative flex items-center justify-center rounded-3xl sm:rounded-4xl overflow-hidden shadow-xl sm:shadow-2xl
+                ${mobile 
+                ? 'w-auto max-w-sm aspect-[9/16] max-h-[70vh]' 
+                : tablet
+                    ? 'w-full max-w-2xl sm:max-w-3xl aspect-video max-h-[50vh]'
+                    : 'w-auto max-w-3xl md:max-w-4xl lg:max-w-5xl aspect-video max-h-[60vh]'
+                }
+            `}>
                 <Suspense fallback={<ComponentLoading />}>
                     <VideoRetreat />
                 </Suspense>
                 </div>
             </div>
-            <div className="absolute bottom-[1%] z-20 p-12 text-center"> {/* -bottom-6 sm:-bottom-10  */}
-                <p className="title p-2"><span className="uppercase">expand beyond your</span><span className="text-3xl lg:text-4xl italic font-handwriting tracking-wider items-center">self</span></p>
-            </div>
-            
-            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 z-20 flex flex-row items-center justify-center hover:animate-pulse">
-                <a href="#uma-retreat">
+            <div className="flex flex-col items-center justify-center z-20 w-full pb-10 md:pb-12 lg:pb-18">
+                <h2 className="title p-2"><span className="uppercase">expand beyond your</span><span className="text-3xl lg:text-4xl italic font-handwriting tracking-wider items-center">self</span></h2>
+                <a 
+                    href="#uma-retreat" 
+                    aria-label="Vai alla sezione successiva"
+                    className="translate-x-1/4"
+                    >
                     <ArrowDown />
                 </a>
+            </div>
+            <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0">
+                <Wave />
             </div>
         </div>
   )

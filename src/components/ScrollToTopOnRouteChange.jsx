@@ -7,7 +7,13 @@ function ScrollToTopOnRouteChange() {
 
   useEffect(() => {
     if (!hash) {
-      window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+      // Forzar scroll inmediato sin animación
+      document.documentElement.style.scrollBehavior = 'auto';
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      // Restaurar smooth scrolling después de un breve delay
+      setTimeout(() => {
+        document.documentElement.style.scrollBehavior = 'smooth';
+      }, 100);
     }
   }, [pathname, hash])
 

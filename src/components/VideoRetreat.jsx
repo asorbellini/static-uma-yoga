@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ComponentLoading } from "./LoadingFootPrints.jsx";
 import Retreat from "../assets/video/retreat.mp4"
 
-export default function VideoNoi() {
+export default function VideoRetreat() {
   const [isLoading, setIsLoading] = useState(true);
   return (
     <>
@@ -17,7 +17,7 @@ export default function VideoNoi() {
         loop
         muted
         playsInline
-        className={`w-full h-full object-cover transition-opacity duration-500 ${isLoading ? "opacity-0" : "opacity-100"}`}
+        className={`w-full h-full object-cover ${isLoading ? "hidden" : "block"}`}
         onLoadedData={() => setIsLoading(false)}
       />
     </>

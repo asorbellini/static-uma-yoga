@@ -128,10 +128,10 @@ function RetreateWorkshop() {
 
     return(
         <>
-        <div className="min-h-screen w-full bg-gradient-to-br from-dorado via-terracota via-60% to-terracota">
+        <div className="min-h-screen w-full">
             <ScrollToTop />
             <HeroReW />
-            <section id="uma-retreat" className="h-fit w-full px-6 flex flex-col items-center md:px-16 pt-16 md:pt-20">
+            <section id="uma-retreat" className="h-fit w-full px-6 flex flex-col items-center md:px-16 pt-16 md:pt-20 bg-claro">
                 <div className="flex flex-col justify-center items-center space-y-2 max-w-7xl pb-6 relative">
                         <span className="absolute -top-6 left-0 h-0.5 bg-claro/70 w-full" />
                         <h3 className="subtitle text-lg lg:text-xl text-white text-center italic">Uniamo l’arte del movimento alla profondità della ricerca interiore: attraverso il corpo liberiamo emozioni, attraverso la presenza superiamo i limiti.
