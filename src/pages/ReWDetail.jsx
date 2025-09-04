@@ -52,8 +52,8 @@ function ReWDetail(){
             style={{background:"linear-gradient(135deg, #D4AF7F 0%, #3D735C 50%, #2E5E55 100%)"}}>
                 <div className="flex flex-col items-center justify-between text-white h-screen max-h-screen pt-12 md:pt-20">
                     {eventoPasado && 
-                    <div className="p-4 bg-terracota text-white rounded w-full max-w-2xl">
-                    ⚠️ Questo evento è passato.
+                    <div className="p-4 bg-terracota text-white text-center rounded w-full max-w-2xl">
+                    Questo evento è passato.
                     </div>}
                     <div className="relative h-full w-full max-w-4xl aspect-auto justify-items-center rounded-2xl flex items-center justify-center ">
                         <div className="relative w-full aspect-[auto] md:aspect-[16/10] max-h-[70vh] rounded-2xl overflow-hidden shadow-2xl">
@@ -69,13 +69,12 @@ function ReWDetail(){
                         </div>
                     </div>
                     <div className="flex items-center justify-center w-full py-2">
-                        <div className="btn-secondary group">
-                            <a href="#detail">
-                                <button type="button" className="animate-pulse md:animate-none group-hover:animate-pulse">
-                                    <ArrowDown />
-                                </button>
-                            </a>
-                        </div>
+                        <a href="#detail" 
+                        className="btn-scopri group group-hover:*">
+                            <button type="button" className="textButton">
+                                SCOPRI
+                            </button>
+                        </a>
                     </div>
                 </div>
                 <section id="detail" className="max-w-6xl mx-auto pt-12 md:pt-20 ">
@@ -123,7 +122,7 @@ function ReWDetail(){
                         {!eventoPasado && 
                             <div className="flex justify-self-center py-2">
                                 <a href="/contatti">
-                                    <button className="btn-primary bg-terracota hover:bg-terracota/60 border-terracota hover:border-terracota transition-all duration-500 ">
+                                    <button className="btn-primary bg-terracota hover:opacity-80 border-terracota hover:border-terracota transition-all duration-500 ">
                                         <p className="textButton">RICHIEDI INFORMAZIONI</p>
                                     </button>
                                 </a>

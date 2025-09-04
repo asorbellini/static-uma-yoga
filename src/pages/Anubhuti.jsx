@@ -19,7 +19,7 @@ function Anubhuti() {
         <div className="min-h-screen w-full bg-claro overflow-hidden">
             <ScrollToTop />
             <HeroComponent background="linear-gradient(45deg, #4A617A 0%, #93a4ab 50%, #4A617A 100%)" mainColor="#4A617A" logo={logoAnubhuti}  title="Anubhūti"/>
-            <section ref={sectionRef} id="about-Anubhūti" className="min-h-screen w-full pt-12 md:pt-24 px-4">
+            <section ref={sectionRef} id="about-anubhuti" className="min-h-screen w-full pt-12 md:pt-24 px-4">
                 <div className={`flex flex-row px-2 sm:px-12 gap-3 items-center transition-all duration-[1000ms] ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}`}>
                     <div className="w-full md:basis-2/5 md:relative md:h-[60vh]">
                         <img
@@ -38,7 +38,7 @@ function Anubhuti() {
                                 </p>
                             </div>
                         <div className="flex items-center justify-start">
-                                <div className="btn-primary bg-[#4A617A] border-[#4A617A] justify-center my-2 hover:bg-[#93a4ab] hover:border-[#4A617A] transition-all duration-500 ">
+                                <div className="btn-primary bg-[#4A617A] border-[#4A617A] justify-center my-2 hover:opacity-80 hover:border-[#4A617A] transition-all duration-500 ">
                                     <a href="/retreat-e-workshop">
                                         <button className="textButton font-semibold tracking-wide">GUARDA GLI EVENTI</button>
                                     </a>
@@ -48,7 +48,7 @@ function Anubhuti() {
                 </div>
                 <div className="flex flex-col items-center justify-start pt-8 md:pt-12 px-2 md:px-12">
                     <h3 className="title text-oscuro text-center drop-shadow-none font-semibold tracking-wider uppercase py-2 md:w-[50vw]">
-                        Perchè sceglierlo:
+                        Perché sceglierlo:
                     </h3>
                     <p className="textDetail text-oscuro text-center drop-shadow-none pb-2 lg:w-[50vw]">
                         Anubhūti è una pratica che invita a ritornare a sé attraverso il corpo, il movimento libero, l’approccio giocoso e l’ascolto profondo. Non si tratta di imitare forme esterne, ma di esplorare in modo autentico e guidato il proprio universo sensoriale, riconnettendosi alle emozioni, agli altri e a tutto ciò che ci circonda. È un viaggio che parte dal corpo e si espande, trasformando ogni gesto in consapevolezza e ogni esperienza in un’opportunità di presenza. Anubhūti apre uno spazio in cui riscoprire la propria verità interiore, attraverso un linguaggio fatto di sensazioni, connessioni e libertà espressiva.

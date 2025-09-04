@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { NextSlideArrow, PrevSlideArrow } from "./Icons"
 
 function ReviewsCarrousel({ reviews }) {
   const [index, setIndex] = useState(0)
@@ -21,10 +22,10 @@ function ReviewsCarrousel({ reviews }) {
   const { author, comments, rating = 0, date, experience = null} = reviews[index]
 
   return (
-    <div className="h-56 md:h-64 lg:h-72 w-full max-w-xl mx-auto p-3 md:p-6 rounded-xl bg-verdeBosque shadow-md transition-all duration-500 ease-in-out flex flex-col justify-between">
+    <div className="h-56 md:h-64 lg:h-72 w-full max-w-xl mx-auto p-3 md:p-6 rounded-xl bg-terracota transition-all duration-500 ease-in-out flex flex-col justify-between">
       <div className="flex-1 flex flex-col justify-evenly">
-        <p className="text-base md:text-lg lg:text-xl italic text-white text-center min-h-16 md:min-h-20">“{comments}”</p>
-        {experience&& <p className="text-sm lg:text-base italic text-white text-center">~ {experience} ~</p>}
+        <p className="text-base md:text-lg lg:text-xl italic text-white text-center min-h-16 md:min-h-20 drop-shadow-title">“{comments}”</p>
+        {experience&& <p className="text-sm lg:text-base italic text-white text-center drop-shadow-title">~ {experience} ~</p>}
         <div className="text-sm text-white text-center">
           {author} {date && <span className="text-gray-200">({date})</span>}
         </div>
@@ -43,12 +44,14 @@ function ReviewsCarrousel({ reviews }) {
         <button
           onClick={handlePrev}
           className="btn-scopri px-3 py-1"
-        >← Precedente
+        >
+          <PrevSlideArrow />
         </button>
         <button
           onClick={handleNext}
           className="btn-scopri px-3 py-1 "
-        >Prossimo →
+        >
+          <NextSlideArrow />
         </button>
       </div>
     </div>

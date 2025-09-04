@@ -2,7 +2,7 @@ import { useState, useRef } from "react"
 import imageUrlClassi from "../assets/images/Classi.png"
 import members from "../data/members.json"
 import { useRevealOnScroll } from "../hooks/useRevealHook.jsx"
-import { ArrowDown } from "./Icons.jsx"
+import { ArrowDown, BodyHeart, Road, Spiral } from "./Icons.jsx"
 
 function AboutUmaSummary(){
     const [isVisible, setIsVisible] = useState(false)
@@ -15,39 +15,44 @@ function AboutUmaSummary(){
 
     return(
         <>
-            <section id="about-uma-summary" className="min-h-screen w-full px-4 pt-16 bg-terracota">
-                <div className="px-2 md:px-12 pb-4">
-                    <div className="flex flex-col justify-center items-center py-8">
+            <section id="about-uma" className="h-fit md:min-h-dvh flex items-center justify-center sm:justify-evenly w-full p-4 pt-4 md:pt-16 bg-claro">
+                <div className="relative px-2 md:px-12">
+                    <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2">
+                        <Spiral className="w-16 h-16" fillColor="#A66C5B"/>
+                    </div>
+                    <div className="flex flex-col justify-center items-center py-4">
                         <div>
-                            <h3 className="subtitle text-lg md:text-2xl text-oscuro text-center italic">
-                            Tre percorsi, tre personalità, tre modi di guardare il mondo che si incontrano in un’unica direzione: <strong className="uppercase">l’espansione.</strong>
+                            <h3 className="subtitle text-lg md:text-2xl text-oscuro text-center italic max-w-xs sm:max-w-full">
+                            Tre percorsi, tre personalità, tre modi di guardare il mondo che si incontrano in un’unica direzione: <strong className="uppercase text-terracota">l’espansione.</strong>
                             </h3>
-                            <h3 className="subtitle text-lg md:text-2xl text-oscuro text-center italic">
+                            <h3 className="subtitle text-lg md:text-2xl text-oscuro text-center italic max-w-xs sm:max-w-full">
                             Dall’intreccio dei nostri vissuti nasce un approccio che unisce corpo, emozioni e 
                             consapevolezza in un’esperienza viva e trasformativa.
                             </h3>
                         </div>
                     </div>
-                    <div className="flex flex-col sm:flex-row gap-6 sm:gap-3 py-8">
+                    <div className="flex flex-col sm:flex-row gap-6 sm:gap-3 py-4">
                         {members.map((member, index)=> (
                             <div className="flex-1" key={index}>
-                                <div className="flex flex-col lg:flex-row gap-3 items-center h-full">
-                                    <div className="lg:basis-1/2 justify-items-center transition-all duration-[1000ms] ease-out">
-                                        <img
-                                        src={member.images?.[2]}
-                                        alt={`Image ${member.Name}`}
-                                        className="w-full h-[45vh] object-cover shadow rounded-t-full " />
+                                <div className="flex flex-col gap-3 items-center h-full">
+                                    <div className="flex items-center justify-center">
+                                        <div className="w-full h-[40vh]">
+                                            <img
+                                            src={member.images?.src}
+                                            alt={`Image ${member.Name}`}
+                                            className="w-fit h-full object-cover shadow rounded-t-full " />
+                                        </div>    
                                     </div>
-                                    <div className="lg:basis-1/2 flex flex-col justify-between h-full lg:px-3 ">
-                                        <div>
-                                            <h2 className="title pb-2 text-center lg:max-w-[180px]">{member.Name}</h2>
+                                    <div className="flex flex-col items-center justify-between flex-1 w-full lg:px-3 ">
+                                        <div className="flex flex-col items-center justify-center">
+                                            <h2 className="title text-center">{member.Name}</h2>
                                             <p className="textDetail">{member.smallDescription}</p>
                                         </div>
-                                        <div className="btn-secondary flex justify-center items-center group pt-2">
-                                            <a href={`/chi-siamo/${member.memberName}`} className="relative">
-                                                <button className="text-claro font-normal drop-shadow-text tracking-wide uppercase group-hover:text-oscuro transition-colors duration-500 ease-out">
+                                        <div className="flex justify-center items-end btn-secondary group">
+                                            <a href={`/chi-siamo/${member.memberName}`}>
+                                                <button className="relative text-oscuro font-normal tracking-wide uppercase group-hover:text-terracota transition-colors duration-500 ease-out">
                                                     {`SCOPRI DI PIÙ SU ${member.Name.split(" ")[0]}`}
-                                                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-claro group-hover:bg-oscuro transition-all duration-300" />
+                                                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-oscuro group-hover:bg-terracota transition-all duration-300" />
                                                 </button>
                                             </a>
                                         </div>
@@ -56,17 +61,22 @@ function AboutUmaSummary(){
                             </div>
                         ))}
                     </div>
-                    <div className="flex flex-row items-center justify-center w-full hover:animate-pulse animate-pulse md:animate-none p-12">
-                              <a href="#perche-uma">
-                                  <ArrowDown />
-                              </a>
+                    <div className="hidden md:flex flex-row items-center justify-center w-full hover:animate-pulse animate-pulse md:animate-none">
+                        <a href="#perche-uma" className="translate-x-1/4">
+                            <ArrowDown />
+                        </a>
                     </div>
                 </div>
             </section>
-            <section id="perche-uma" className="h-fit w-full pt-16 pb-8 px-4 bg-gradient-to-bl from-terracota via-terracota via-50% to-dorado justify-items-center overflow-hidden">
-                <div className="flex flex-col items-center justify-center px-2 md:px-12 py-8  md:w-full lg:max-w-3xl xl:max-w-5xl">
-                    <h3 className="textTitleSection drop-shadow-none font-semibold tracking-wider uppercase pb-8">
-                        Perchè UMĀ 
+            <section id="perche-uma" className="min-h-dvh w-full p-4 pt-4 md:pt-16 justify-items-center bg-claro overflow-hidden">
+                <div className="relative">
+                        <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2">
+                            <BodyHeart className="w-16 h-16" fillColor="#A66C5B" />
+                        </div>
+                </div>
+                <div className="flex flex-col items-center justify-center px-2 md:px-12 pb-4 md:w-full lg:max-w-4xl xl:max-w-6xl">
+                    <h3 className="textTitleSection drop-shadow-none font-semibold tracking-wider uppercase py-4 text-terracota">
+                        Perché UMĀ 
                     </h3>
                     <div className="space-y-2">
                         <p className="subtitle text-center">In sanscrito, UMĀ è la luce della saggezza e della trasformazione, che guida con forza e dolcezza oltre l’illusione.</p>
@@ -79,21 +89,33 @@ function AboutUmaSummary(){
                         <p className="subtitle text-center">Un promemoria che siamo in continua evoluzione, in espansione. UMĀ è il luogo in cui prospettive diverse si intrecciano per aprire nuovi orizzonti interiori, per chi desidera andare oltre, oltre la mente, oltre i condizionamenti, oltre il conosciuto.
                         </p>
                         <p className="subtitle text-center pb-4"> Scegliere il nome UMĀ significa tornare lì dove tutto comincia: nel grembo del suono, del corpo, del cuore.</p>
-                        <p className="subtitle text-center font-bold uppercase">Il viaggio è dentro. L’espansione è infinita.</p>
+                        <p className="subtitle text-center font-bold uppercase text-terracota">Il viaggio è dentro. L’espansione è infinita.</p>
+                    </div>
+                    <div className="relative">
+                        <div className="hidden lg:block absolute -bottom-16 left-1/2 -translate-x-1/2">
+                            <Road className="w-16 h-16" fillColor="#A66C5B" />
+                        </div>
                     </div>
                 </div>
                 <section ref={sectionRef} className="min-h-screen w-full relative ">
-                    <div className="flex flex-col md:flex-row-reverse px-2 md:px-12 items-center justify-center">
-                        <div className="flex-1 flex flex-col md:flex-col">
-                            <h1 className="text-center lg:text-start textTitleSection py-4 sm:py-6 md:py-12 relative z-30">
-                                <span className="uppercase">expand beyond your</span><span className="text-5xl lg:text-6xl italic font-handwriting tracking-wider items-center">self</span>
+                    <div className="flex flex-col lg:flex-row-reverse px-2 md:px-12 items-center justify-center">
+                        <div className="flex-1 flex flex-col items-center justify-center">
+                            <h1 className="textTitleSection py-4 z-30">
+                                <span className="uppercase">expand beyond your</span><span className="text-5xl lg:text-6xl italic font-handwriting tracking-wider">self</span>
                             </h1>
-                            <h3 className="text-center md:text-start  title font-sans font-normal italic relative z-30 pb-8">
+                            <h3 className="title font-sans text-center font-normal italic z-30 pb-4 sm:max-w-sm lg:max-w-lg">
                                 Torna a UMĀ, e da lì lascia che ogni tua vibrazione prenda forma.
                             </h3>
+                            <div className="btn-primary z-30 mb-4">
+                                <a href="/retreat-e-workshop">
+                                    <button className="textButton">
+                                        SCOPRI TUTTI GLI EVENTI
+                                    </button>
+                                </a>
+                            </div>
                         </div>
-                        <div className="flex-1 h-screen">
-                            <div className={`relative md:absolute md:top-0 transition-all duration-[1000ms] ease-out h-screen rounded-3xl ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
+                        <div className="flex-1 h-dvh">
+                            <div className={`relative lg:absolute lg:top-0 transition-all duration-[1000ms] ease-out h-dvh rounded-3xl ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
                                 <img
                                     src={imageUrlClassi}
                                     alt="Yoga Practice"
@@ -102,6 +124,7 @@ function AboutUmaSummary(){
                             </div>
                         </div>
                     </div>
+                    
                 </section>
             </section>
         </>

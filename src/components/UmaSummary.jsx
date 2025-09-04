@@ -1,7 +1,7 @@
 import { useState, useRef, Suspense } from "react"
 import cosaFacciamo2 from "../assets/images/Cosafacciamo2.png"
 import members from "../data/members.json"
-import { ArrowDown } from "./Icons.jsx"
+import { ArrowDown, BodyHeart, Road, Spiral } from "./Icons.jsx"
 import { useRevealOnScroll } from "../hooks/useRevealHook.jsx"
 import HorizontalGallery from "./Gallery.jsx"
 import {ComponentLoading} from "./LoadingFootPrints.jsx"
@@ -75,50 +75,56 @@ function UmaSummary(){
         })
     return(
         <div>
-            <section ref={sectionRef} id="uma-summary" className="min-h-screen relative w-full px-4 pt-12 md:pt-16 bg-claro">
-                <div className="px-2 md:px-12 pb-4">
+            <section ref={sectionRef} id="uma-summary" className="h-auto md:min-h-dvh flex items-center justify-center sm:justify-evenly w-full px-4 pt-4 sm:pt-16 bg-claro">
+                <div className="px-2 md:px-12 relative">
+                    <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2">
+                        <Spiral className="w-16 h-16" fillColor="#A66C5B"/>
+                    </div>
                     <h3 className="textTitleSection py-4">CHI SIAMO</h3>
-                    <div className="flex flex-col sm:flex-row gap-3">
+                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-6">
                         {members.map((member, index) => (
-                            <div className="flex-1 hover:scale-105 transition-all duration-1000">
+                            <div className="flex-1 items-center justify-center transition-all duration-500 group">
                                 <a href={`/chi-siamo/${member.memberName}`}>
-                                    <div className={` w-full justify-items-center items-center justify-center transition-all duration-500 ease-out ${isVisible ? "opacity-100 translate-x-0 " : "opacity-0 -translate-x-10 "}`}>
+                                    <div className={`flex items-center justify-center transition-all duration-500 ease-out group-hover:scale-105  ${isVisible ? "opacity-100 translate-x-0 " : "opacity-0 -translate-x-10 "}`}>
                                         <img
-                                        src={member.images?.[1]}
+                                        src={member.images?.src}
                                         alt={`Image ${member.Name}`}
-                                        className={`h-[45vh] object-contain sm:object-cover shadow-lg ${index === 0 ? "rounded-3xl sm:rounded-bl-full" : index === 2 ? "rounded-3xl sm:rounded-tr-full" : "rounded-3xl sm:rounded-none"}`} />
+                                        className={`h-[45vh] w-[60vw] sm:w-fit aspect-[9/16] object-cover shadow-lg shadow-terracota ${index === 0 ? "rounded-3xl sm:rounded-bl-full" : index === 2 ? "rounded-3xl sm:rounded-tr-full" : "rounded-3xl sm:rounded-none"}`} />
                                     </div>
                                     <div className="sm:p-2">
-                                        <h2 className="title text-center underline sm:no-underline hover:underline transition-all py-2">{member.Name}</h2>
+                                        <h2 className="title text-center underline sm:no-underline group-hover:text-terracota transition-all py-2">{member.Name}</h2>
                                         <p className="textDetail">{member.smallDescription}</p>
                                     </div>
                                 </a>
                             </div>
                         ))}
                     </div>
-                </div>
-                <div className="flex items-center justify-center w-full">
-                    <div className="btn-secondary group">
-                        <a href="#cosa-facciamo">
-                            <button type="button" className="animate-pulse md:animate-none group-hover:animate-pulse ">
-                                <ArrowDown />
-                            </button>
-                        </a>
+                    <div className="hidden sm:flex items-center justify-center w-full sm:p-2">
+                        <div className="btn-secondary group">
+                            <a href="#cosa-facciamo">
+                                <button type="button" className="translate-x-1/4 animate-pulse md:animate-none group-hover:animate-pulse ">
+                                    <ArrowDown />
+                                </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section id="cosa-facciamo" className="h-auto w-full p-4 pt-12 md:pt-16 bg-claro flex flex-col">
-                <div className="px-2 md:px-12 md:pb-4">
+            <section id="cosa-facciamo" className="h-auto lg:min-h-dvh w-full items-center justify-center lg:justify-evenly p-4 pt-4 md:pt-16 bg-claro flex flex-col">
+                <div className="px-2 md:px-12 md:pb-4 relative">
+                    <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2">
+                        <BodyHeart className="w-16 h-16" fillColor="#A66C5B"/>
+                    </div>
                     <h2 className="textTitleSection py-4">COSA FACCIAMO</h2>
                     <div className="flex flex-col sm:flex-row items-center relative text-center">
-                        <div className="justify-items-center space-y-3">
+                        <div className="flex flex-col items-center justify-center space-y-3">
                             <div className="space-y-1">
                                 <h3 className="title">RETREAT E WORKSHOP</h3>
                                 <p className="textDetail center max-w-2xl">
                                     Creiamo esperienze che nutrono corpo e coscienza: retreat immersivi, workshop tematici e percorsi che intrecciano filosofia, pratica fisica e introspezione.
                                 </p>
                             </div>
-                            <div className="btn-primary">
+                            <div className="btn-primary justify-center">
                                 <a href="/retreat-e-workshop">
                                     <button className="textButton">
                                         SCOPRI TUTTI GLI EVENTI
@@ -126,25 +132,35 @@ function UmaSummary(){
                                 </a>
                             </div>
                         </div>
-                        <div className="w-full py-2 sm:p-2 md:relative md:w-[40vw] md:h-[50vh] lg:h-[60vh]">
+                        <div className="w-full py-2 sm:p-2 lg:relative lg:w-[40vw] lg:h-[50vh] xl:h-[60vh]">
                             <img
                                 src={cosaFacciamo2}
                                 alt="Cosa Facciamo"
-                                className="w-full h-full object-cover rounded-br-full rounded-tl-full shadow-2xl"
+                                className="w-full h-full object-cover rounded-br-full rounded-tl-full shadow-terracota shadow-lg"
                                 />
                         </div>
                     </div>
+                    <div className="hidden lg:flex items-center justify-center w-full sm:p-4">
+                        <div className="btn-secondary group">
+                            <a href="#eventi-passati">
+                                <button type="button" className="translate-x-1/4 animate-pulse md:animate-none group-hover:animate-pulse ">
+                                    <ArrowDown />
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="hidden sm:block absolute -bottom-16 left-1/2 -translate-x-1/2">
+                        <Road className="w-16 h-16" fillColor="#A66C5B"/>
+                    </div>
                 </div>
             </section>
-            <section className="h-auto w-full p-4 bg-claro flex flex-col">
-                <h2 className="textTitleSection py-4 px-2 md:px-12">ULTIMI EVENTI</h2>
-                    <Suspense fallback={<ComponentLoading />}>
-                        <div className="px-2 md:px-12">
-                            <HorizontalGallery images={LastRetreatsImages}/>
-                        </div>
-                    </Suspense>
-                <h2 className="textTitleSection py-4 px-2 md:px-12">DICONO DI NOI</h2>
-                <div className="px-2 md:px-12">
+            <section id="eventi-passati" className="h-auto lg:min-h-dvh w-full items-center justify-center lg:justify-evenly bg-claro flex flex-row p-4 pt-0 sm:pt-16">
+                <div className="px-2 md:px-12 pb-4 overflow-hidden">
+                    <h2 className="textTitleSection py-4">ULTIMI EVENTI</h2>
+                        <Suspense fallback={<ComponentLoading />}>
+                                <HorizontalGallery images={LastRetreatsImages}/>
+                        </Suspense>
+                    <h2 className="textTitleSection py-4">DICONO DI NOI</h2>
                     <ReviewsCarrousel reviews={reviews}/> 
                 </div>
             </section>

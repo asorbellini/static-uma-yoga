@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react"
+import { Suspense, useEffect, useState } from "react"
 import { getTextDate } from "../constants"
+import { ComponentLoading } from "../components/LoadingFootPrints";
 
 function LinkPreview({url}) {
   const [data, setData] = useState(null);
@@ -31,7 +32,9 @@ function Press() {
             <div className="grid grid-cols-1 md:grid-cols-2 px-16 py-12 justify-center text-center gap-3 bg-gradient-to-tr from-verdeOliva to-verdeBosque">
                 <div className="flex-1 text-white group p-2 border-2 border-verdeOliva rounded-3xl">
                     <div className="justify-items-center items-center mb-2">
-                        <img src="https://i.ytimg.com/pl_c/PLtDlpMIfDcOH4dt8BzlCKE-cFeC4WomAF/studio_square_thumbnail.jpg?sqp=CKzjksUG-oaymwEICOADEOADSFqi85f_AwYIlcP3sgY=&rs=AOn4CLA9GFR3q7ewLggwcs33i96VDm6TAQ" alt="IL PODCAST DI DENISE" className="w-28 h-28 rounded-3xl aspect-square object-fill"/>    
+                        <Suspense fallback={<ComponentLoading />}>
+                            <img src="https://i.ytimg.com/pl_c/PLtDlpMIfDcOH4dt8BzlCKE-cFeC4WomAF/studio_square_thumbnail.jpg?sqp=CKzjksUG-oaymwEICOADEOADSFqi85f_AwYIlcP3sgY=&rs=AOn4CLA9GFR3q7ewLggwcs33i96VDm6TAQ" alt="IL PODCAST DI DENISE" className="w-28 h-28 rounded-3xl aspect-square object-fill"/>    
+                        </Suspense>
                     </div>
                     <h1 className="title uppercase group-hover:text-dorado">IL PODCAST DI DENISE</h1>
                     <p>{getTextDate('2025-07-01')} </p>

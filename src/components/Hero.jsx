@@ -3,8 +3,9 @@ import { BodyHeart, LeftFootPrint, RightFootPrint, Road, Spiral, Wave } from "./
 
 function Hero() {
   return (
-    <div className="min-h-screen max-h-dvh flex flex-col bg-gradient-to-tl from-terracota via-terracota to-dorado px-6 md:px-16 relative">
-      <div className="flex-1 flex items-center justify-center">
+    <div className="min-h-dvh max-h-dvh flex flex-col bg-gradient-to-tl from-terracota via-terracota to-dorado px-6 md:px-16 relative">
+      <div className="absolute top-0 right-0 w-full h-full bg-black/30 z-10"/>
+      <div className="flex-1 flex items-center justify-center z-20">
         <div className="grid grid-cols-4 gap-2 md:gap-4 lg:gap-8 items-center justify-items-center max-w-6xl mx-auto">
           <div className="flex items-center justify-center relative ">
             <div className="flex items-center relative">
@@ -38,7 +39,7 @@ function Hero() {
           </div>
         </div>
       </div>
-      <div className="flex-shrink-0 pb-8 sm:pb-12 md:pb-16">
+      <div className="flex-shrink-0 pb-8 sm:pb-12 md:pb-16 z-20">
         <div className="max-w-4xl mx-auto px-4">
           <h1 className="welcomeTitle text-white mb-4 sm:mb-6 text-center">BENVENUTI A UMĀ</h1>
           <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
@@ -49,20 +50,20 @@ function Hero() {
               Esploriamo, ci trasformiamo, ci <span className="font-bold">expandiamo</span> - oltre i limiti, oltre le storie, <span className="font-bold">oltre il sé</span>.
             </p>
           </div>
-          <div className="flex justify-center">
+          <div className="hidden sm:flex justify-center">
             <a 
               href="#uma-summary" 
               aria-label="Vai alla sezione successiva"
-              className="btn-scopri"
+              className="btn-scopri z-30 group group-hover:*"
             >
-              <button className="textButton text-white">
+              <button className="textButton">
                 SCOPRI
               </button>
             </a>
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20">
          <Wave />
       </div>
     </div>

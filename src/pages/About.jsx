@@ -11,7 +11,6 @@ function About() {
       <ScrollToTop />
       <HeroAbout />
       <AboutUmaSummary />
-      <ToRetreateWorkshop />
     </div>
   );
 }

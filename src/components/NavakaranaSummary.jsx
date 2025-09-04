@@ -12,7 +12,7 @@ function NavakaranaSummary() {
           })
     return (
         <div className="bg-claro">
-            <section ref={sectionRef} id="about-navakaraṆa-vinyāsa" className="min-h-screen w-full pt-12 md:pt-24 px-4 bg-claro">
+            <section ref={sectionRef} id="about-navakarana-vinyasa" className="min-h-screen w-full pt-12 md:pt-24 px-4 bg-claro">
                 <div className={`flex flex-row px-2 md:px-12 gap-3 items-center transition-all duration-[1000ms] ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}`}>
                     <div className="w-full md:basis-2/5 md:relative md:h-[60vh]">
                         <img
@@ -33,7 +33,7 @@ function NavakaranaSummary() {
                             respiro e del prāṇa (energia vitale).
                         </p>
                         <div className="flex items-center justify-start">
-                            <div className="btn-primary bg-[#581414] border-[#581414] hover:bg-[#a33c3c] hover:border-[#581414] transition-all duration-500 ">
+                            <div className="btn-primary bg-[#581414] border-[#581414] hover:opacity-80 hover:border-[#581414] transition-all duration-500 ">
                                 <a href="/retreat-e-workshop">
                                     <button className="textButton font-semibold tracking-wide">GUARDA GLI EVENTI</button>
                                 </a>
@@ -43,7 +43,7 @@ function NavakaranaSummary() {
                 </div>
                 <div className="flex flex-col items-center justify-start pt-12 px-2 md:px-12">
                     <h3 className="title text-oscuro text-center drop-shadow-none font-semibold tracking-wider uppercase py-2 md:w-[50vw]">
-                        Perchè sceglierlo:
+                        Perché sceglierlo:
                     </h3>
                     <p className="textDetail text-oscuro text-center drop-shadow-none pb-2 lg:w-[50vw]">
                         Navakaraṇa vinyāsa è un metodo di auto trasformazione risultato dell’integrazione di molteplici conoscenze quali l’anatomia, la kinesiologia, la psicologia, la manipolazione del corpo, la musicoterapia, l’autoguarigione e diverse tecniche tantriche. In questo metodo troverai verità, tradizione, ricerca e innovazione per promuovere un autentico stato di benessere psico-fisico.

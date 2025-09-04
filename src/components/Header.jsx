@@ -50,20 +50,21 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out ${
-        isScrolled ? "bg-verdeBosque bg-opacity-40 backdrop-blur-xl shadow-lg " : "bg-transparent py-2 md:py-3"
+      className={`fixed top-0 w-full z-40 transition-all duration-500 ease-in-out ${
+        isScrolled ? "bg-terracota bg-opacity-70 backdrop-blur-xl" : "bg-transparent py-2 md:py-3"
       }`}
     >
+      <div className={`${isScrolled ? "absolute top-0 left-0 w-full h-full bg-black/10 z-40": ""}`}/>
       <nav className="w-full mx-auto flex flex-row justify-between items-center px-2 md:px-4">
         {/* Logo */}
-        <div>
+        <div className="z-50">
           <NavLink to="/">
               <UmaLogo classname="w-12 h-12 md:w-16 md:h-16"/>
           </NavLink>
         </div>
 
         {/* Desktop Navigation Menu */}
-        <ul className="hidden md:flex md:flex-row md:text-center md:items-center">
+        <ul className="hidden md:flex md:flex-row md:text-center md:items-center z-50">
           {navItems.map((item, index) => (
             <li key={index} className="md:px-2 lg:px-4">
               <NavLink

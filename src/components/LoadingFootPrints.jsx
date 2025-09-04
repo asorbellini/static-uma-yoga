@@ -8,7 +8,7 @@ const LoadingFootPrints = ({
     onLoadingComplete = null,
     autoHide = false,
     autoHideDelay = 3000,
-    color = "#A65F4A"
+    color = "#A66C5B"
 }) => {
     const [isVisible, setIsVisible] = useState(true);
 
@@ -59,7 +59,7 @@ export const PageLoading = () => (
             <LoadingFootPrints 
                 message='Caricamento pagina...'
                 size="medium" 
-                color='#A65F4A'
+                color='#A66C5B'
             />
         </div>
     </div>

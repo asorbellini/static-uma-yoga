@@ -73,7 +73,7 @@ uma/
 
 ### Colores
 - `claro`: #EDE8DA (Beige claro)
-- `terracota`: #A65F4A (Terracota)
+- `terracota`: #A66C5B (Terracota)
 - `dorado`: #D4AF7F (Dorado)
 - `verdeOliva`: #3D735C (Verde oliva)
 - `verdeBosque`: #2E5E55 (Verde bosque)

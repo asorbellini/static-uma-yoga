@@ -29,7 +29,7 @@ export default {
       },
       colors: {
         claro: '#EDE8DA',
-        terracota: '#A65F4A',
+        terracota: '#A66C5B',
         dorado: '#D4AF7F',
         verdeOliva: '#3D735C',
         verdeBosque: '#2E5E55',
