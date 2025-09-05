@@ -1,10 +1,8 @@
-import { useState, useRef } from "react";
 import HeroReW from "../components/HeroReW"
 import NewSetter from "../components/NewSetter"
 import ScrollToTop from "../components/ScrollToTop"
 import retreats from "../data/retreats.json"
 import { getTextDate } from "../constants/index.js"
-import {useRevealOnScroll} from "../hooks/useRevealHook.jsx"
 import { BodyHeart, Road, Spiral } from "../components/Icons.jsx";
 
 function ImageCardGlass({event}) {
@@ -122,15 +120,6 @@ function RetreateWorkshop() {
     const pastEvents = orderedEvents.filter(
         (event) => new Date(event.dateStart) < currentDate
     );
-    const [isVisible, setIsVisible] = useState(false)
-    const sectionRef = useRef(null)
-    useRevealOnScroll(sectionRef, {
-        threshold: 0.5,
-        rootMargin: '0px 0px -10% 0px',
-        onReveal: () => setIsVisible(true)
-        })
-    
-
     return(
         <>
         <div className="min-h-screen w-full">
@@ -150,7 +139,7 @@ function RetreateWorkshop() {
                             </h3>
                             <span className="absolute bottom-0 left-0 h-0.5 bg-terracota/50 w-full" />
                     </div>
-                    <div ref={sectionRef} className="w-full relative">
+                    <div className="w-full relative">
                             <h3 className="textTitleSection p-2 md:p-4">PROSSIMI EVENTI</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-7xl mx-auto">
                             {upcomingEvents.map(event => (
@@ -161,7 +150,7 @@ function RetreateWorkshop() {
                     </div>
                 </div>
             </section>
-            <section ref={sectionRef} id="eventi-passati" className="w-full p-4 bg-claro py-4 md:py-16 ">
+            <section id="eventi-passati" className="w-full p-4 bg-claro py-4 md:py-16 ">
                 <div className="px-2 md:px-16 relative">
                     <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2 pb-1">
                         <BodyHeart className="w-16 h-16" fillColor="#A66C5B"/>

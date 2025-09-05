@@ -128,7 +128,7 @@ function MemberDetail(){
                                 <div key={index} className="flex-1 sm:basis-1/4 lg:flex-1 text-white hover:scale-105 relative group ">
                                     <div className="items-center justify-items-center">
                                         <img
-                                        src={classi?.urlImage}
+                                        src={classi?.urlImage || imageUrlNavakaranaVinyasa}
                                         alt={classi?.title}  
                                         className="h-[310px] object-cover shadow aspect-square rounded-full" />
                                         <h2 className="textDetail text-center font-semibold drop-shadow-none uppercase p-2">{classi.title}</h2>
