@@ -1,6 +1,5 @@
 
 import { useState } from "react"
-import { getSlug } from "../constants"
 
 function HeroComponent({background, mainColor, logo, title}) {
     const [hovered, setHovered] = useState(false)
