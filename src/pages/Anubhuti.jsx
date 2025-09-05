@@ -1,10 +1,125 @@
-import { useState, useRef } from "react"
+import { useState, useRef, lazy, Suspense } from "react"
 import HeroComponent from "../components/HeroComponent.jsx"
 import imgAnubhuti from "../assets/images/Anubhuti/Anubhuti.png"
 import logoAnubhuti from "../assets/images/LogoAnubhuti.png"
 import ToRetreateWorkshop from "../components/ToRetreateWorkshop.jsx"
 import ScrollToTop from "../components/ScrollToTop.jsx"
 import { useRevealOnScroll } from "../hooks/useRevealHook.jsx"
+import members from "../data/members.json"
+import HorizontalGallery from "../components/Gallery.jsx"
+import { ComponentLoading } from "../components/LoadingFootPrints.jsx"
+import anub1 from "../assets/images/Anubhuti/anub1.png"
+import anub2 from "../assets/images/Anubhuti/anub2.png"
+import anub3 from "../assets/images/Anubhuti/anub3.png"
+import anub4 from "../assets/images/Anubhuti/anub4.png"
+import anub5 from "../assets/images/Anubhuti/anub5.png"
+import anub6 from "../assets/images/Anubhuti/anub6.png"
+import anub7 from "../assets/images/Anubhuti/anub7.png"
+
+
+const AnubhutiImages = [
+    {
+        src: anub1,
+        alt: "anubhuti practice",
+        title: "Yoga Practice",
+    },
+    {
+        src: anub2,
+        alt: "yoga session",
+        title: "Yoga Session",
+    },
+    {
+        src: anub3,
+        alt: "meditation",
+        title: "Meditation",
+    },
+    {
+        src: anub4,
+        alt: "yoga pose",
+        title: "Yoga Pose",
+    },
+    {
+        src: anub5,
+        alt: "yoga class",
+        title: "Yoga Class",
+    },
+    {
+        src: anub6,
+        alt: "yoga retreat",
+        title: "Yoga Retreat",
+    },
+    {
+        src: anub7,
+        alt: "navakarana vinyasa",
+        title: "Navakarana Vinyasa",
+    }
+]
+
+const Proposte = ({info}) => {
+    return (
+        <div className="w-full flex flex-col items-center justify-center text-oscuro">
+            <h3 className="textTitleSection text-oscuro drop-shadow-none uppercase">Proposte</h3>
+            <div
+                className="overflow-hidden transition-all duration-500 ease-in-out opacity-100" >
+                <div className="bg-transparent py-6 text-oscuro space-y-4">
+                    <div className="flex flex-col lg:flex-col space-y-3">
+                        {info?.books?.map((book) => (
+                            <div className="pt-2 md:pt-4">
+                                <div className="flex flex-col sm:flex-row justify-center items-center sm:items-start space-x-3">
+                                    <div className="basis-1/4 justify-items-center">
+                                        <div className="w-fit h-[40vh] overflow-hidden">
+                                            <img src={`${book?.image?.url}`} alt={`${book?.image?.alt}`} className="h-full md:h-auto lg:h-full aspect-auto rounded-3xl"/>
+                                        </div>
+                                    </div>
+                                    <div className="basis-3/4">
+                                        <h1 className="title uppercase text-oscuro pt-2 md:pt-0">{book?.title}</h1>
+                                        <p className="textButton italic text-oscuro pt-1">LIBRO: {book?.type}</p>
+                                        {book?.description?.map((p,index)=>(
+                                            <p className="textDetail text-oscuro font-normal pt-1" key={index}>{p}</p>
+                                        ))}
+                                        <p className="textButton italic text-oscuro pt-1">Puoi ottenerlo su:</p>
+                                        <div className="flex flex-row justify-between w-fit space-x-2">
+                                            {book?.links?.map((link, index)=> (
+                                                <a key={index} href={`${link.url}`} alt= {`Ottenerlo su ${link.via}`} target="_blank" rel="noopener noreferrer">
+                                                    <img src={`${link.logo}`} alt= {`Logo ${link.via}`} className="w-10 h-10 rounded-full transition-all duration-300 hover:scale-110"/>
+                                                </a>
+                                            ))
+                                        }
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                        ))}
+                        {info?.podcast &&
+                            <div>
+                                <div className="flex flex-col sm:flex-row justify-center  items-center sm:items-start space-x-3">
+                                    <div className="basis-1/4 justify-items-center">
+                                        <div className="w-fit h-[40vh] sm:h-fit lg:h-[40vh]">
+                                            <img src={`${info?.podcast?.image?.url}`} alt={`${info?.podcast?.images?.alt}`} className="h-full aspect-auto rounded-3xl"/>
+                                        </div>
+                                    </div>
+                                    <div className="basis-3/4">
+                                        <h1 className="title uppercase text-oscuro pt-2 md:pt-0">{info?.podcast?.title}</h1>
+                                        <p className="textButton italic text-oscuro uppercase pt-1">{info?.podcast?.type}</p>
+                                        <p className="textDetail text-oscuro drop-shadow-none font-normal pt-1">{info?.podcast?.description}</p>
+                                        <p className="textButton italic text-oscuro drop-shadow-none pt-1">Puoi ascoltarlo su:</p>
+                                        <div className="flex flex-row justify-between w-fit space-x-2">
+                                            {info?.podcast?.links.map((link)=> (
+                                                <a href={`${link?.url}`} alt= {`Ascoltarlo su ${link?.via}`} target="_blank" rel="noopener noreferrer">
+                                                    <img src={`${link?.logo}`} alt= {`Logo ${link?.via}`} className="w-10 h-10 rounded-full transition-all duration-300 hover:scale-110"/>
+                                                </a>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
 
 function Anubhuti() {
   const [isVisible, setIsVisible] = useState(false)
@@ -76,7 +191,14 @@ function Anubhuti() {
                     </div>
                 </div>
             </section>
+            <section className="bg-claro px-6 md:px-16 pt-12 md:pt-20 md:pb-4" id="proposte">
+                <Proposte info={members[2]?.projects} />
+            </section>
             {/* GALERÍA DE IMÁGENES */}
+            <div className="items-center justify-items-center mx-auto px-6 sm:px-16">
+                <h3 className="w-text-xl md:text-3xl rounded font-serif text-oscuro text-center font-semibold uppercase py-2 md:w-[50vw]">GALLERY</h3>
+                    <HorizontalGallery images={AnubhutiImages}/>
+            </div>
         </div>
         <ToRetreateWorkshop />
         </>

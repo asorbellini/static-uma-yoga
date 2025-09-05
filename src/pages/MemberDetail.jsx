@@ -58,72 +58,6 @@ const ExpandableButton = ({ title, children}) => {
 }
 
 
-const ProgettiTiziano = ({info}) => {
-    return (
-        <div className="w-full flex flex-col items-center justify-center text-oscuro">
-            <h3 className="textTitleSection text-oscuro drop-shadow-none uppercase">Progetti e proposte</h3>
-            <div
-                className="overflow-hidden transition-all duration-500 ease-in-out opacity-100" >
-                <div className="bg-transparent py-6 text-oscuro space-y-4">
-                    <div className="flex flex-col lg:flex-col space-y-3">
-                        {info?.podcast &&
-                            <div>
-                                <div className="flex flex-col sm:flex-row justify-center  items-center sm:items-start space-x-3">
-                                    <div className="basis-1/4 justify-items-center">
-                                        <div className="w-fit h-[40vh] sm:h-fit lg:h-[40vh]">
-                                            <img src={`${info?.podcast?.image?.url}`} alt={`${info?.podcast?.images?.alt}`} className="h-full aspect-auto rounded-3xl"/>
-                                        </div>
-                                    </div>
-                                    <div className="basis-3/4">
-                                        <h1 className="title uppercase text-oscuro pt-2 md:pt-0">{info?.podcast?.title}</h1>
-                                        <p className="textButton italic text-oscuro uppercase pt-1">{info?.podcast?.type}</p>
-                                        <p className="textDetail text-oscuro drop-shadow-none font-normal pt-1">{info?.podcast?.description}</p>
-                                        <p className="textButton italic text-oscuro drop-shadow-none pt-1">Puoi ascoltarlo su:</p>
-                                        <div className="flex flex-row justify-between w-fit space-x-2">
-                                            {info?.podcast?.links.map((link)=> (
-                                                <a href={`${link?.url}`} alt= {`Ascoltarlo su ${link?.via}`} target="_blank" rel="noopener noreferrer">
-                                                    <img src={`${link?.logo}`} alt= {`Logo ${link?.via}`} className="w-10 h-10 rounded-full transition-all duration-300 hover:scale-110"/>
-                                                </a>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>    
-                            </div>
-                        }
-                        {info?.books?.map((book) => (
-                            <div className="pt-2 md:pt-4">
-                                <div className="flex flex-col sm:flex-row justify-center items-center sm:items-start space-x-3">
-                                    <div className="basis-1/4 justify-items-center">
-                                        <div className="w-fit h-[40vh] overflow-hidden">
-                                            <img src={`${book?.image?.url}`} alt={`${book?.image?.alt}`} className="h-full md:h-auto lg:h-full aspect-auto rounded-3xl"/>
-                                        </div>
-                                    </div>
-                                    <div className="basis-3/4">
-                                        <h1 className="title uppercase text-oscuro pt-2 md:pt-0">{book?.title}</h1>
-                                        <p className="textButton italic text-oscuro pt-1">LIBRO: {book?.type}</p>
-                                        {book?.description?.map((p,index)=>(
-                                            <p className="textDetail text-oscuro font-normal pt-1" key={index}>{p}</p>
-                                        ))}
-                                        <p className="textButton italic text-oscuro pt-1">Puoi ottenerlo su:</p>
-                                        <div className="flex flex-row justify-between w-fit space-x-2">
-                                            {book?.links?.map((link, index)=> (
-                                                <a key={index} href={`${link.url}`} alt= {`Ottenerlo su ${link.via}`} target="_blank" rel="noopener noreferrer">
-                                                    <img src={`${link.logo}`} alt= {`Logo ${link.via}`} className="w-10 h-10 rounded-full transition-all duration-300 hover:scale-110"/>
-                                                </a>
-                                            ))
-                                            }
-                                        </div>
-                                    </div>
-                                </div>    
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
-
 function MemberDetail(){
     const { memberName } = useParams();
     const member = members.find(m => m.memberName === memberName);
@@ -164,7 +98,7 @@ function MemberDetail(){
                             </button>
                             {memberName === "tiziano-sorbellini" &&
                                 <div className="flex flex-row p-4 justify-center">
-                                    <a href="#progetti-e-proposte">
+                                    <a href="/anubhuti#proposte">
                                         <button type="button" className="btn-scopri text-white textButton uppercase font-semibold">Scopri i miei progetti e proposte</button>
                                     </a>
                                 </div>
@@ -191,19 +125,12 @@ function MemberDetail(){
                     <Wave />
                 </div> 
             </section>
-            {memberName == "tiziano-sorbellini" 
-                ?
-                <section className="bg-claro px-6 md:px-16 pt-12 md:pt-20 md:pb-4" id="progetti-e-proposte">
-                    <ProgettiTiziano info={member.projects}/>
-                </section>
-                :
-                member?.classes && 
-                <section className="bg-claro px-6 md:px-16 pt-12  md:pt-20 md:pb-4" id="classi">
+            {memberName != "tiziano-sorbellini" && member?.classes 
+                ? <section className="bg-claro px-6 md:px-16 pt-12  md:pt-20 md:pb-4" id="classi">
                     <div className="w-full items-center justify-between">
                         <h3 className="title drop-shadow-none uppercase text-center">Le mie classi</h3>
                         <p className="textDetail"></p>
                         <div className="flex flex-col md:flex-row gap-3 mt-4">
-                            {/* Provisorio p/indicar clases */}
                             {member?.classes?.map((classi, index) => (
                                 <div key={index} className="flex-1 text-white hover:scale-105">
                                     <div className="items-center justify-items-center">
@@ -225,6 +152,7 @@ function MemberDetail(){
                         </div>
                     </div>
                 </section>
+                : <></>
             }
         </div>
         <ToRetreateWorkshop />

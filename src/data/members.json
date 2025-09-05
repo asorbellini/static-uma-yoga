@@ -86,20 +86,20 @@
                 },
             "books":[
                 {
-                "title":"I semi del nulla",
-                "type":"Romanzo distopico. Viaggio simbolico. Ricerca del tempo profondo.",
-                "description":[" In un mondo frammentato, dove l’umanità ha smarrito il senso, I semi del nulla si apre come un varco narrativo carico di visioni, domande e simboli. È un romanzo distopico che non si limita a descrivere un futuro possibile, ma invita a esplorare le radici invisibili dell’esistenza, là dove il tempo smette di essere lineare e diventa spazio interiore.", "Ricco di simboli profondi e significati nascosti, questo viaggio letterario semina intuizioni nel lettore, portandolo a riflettere sul vuoto, sull’origine, sulla trasformazione. Ogni elemento – personaggio, evento, luogo – è un frammento di un disegno più grande, un richiamo sottile a qualcosa che vive oltre l’apparenza.","I semi del nulla è un’esperienza narrativa che spinge a guardare dentro, a leggere tra le pieghe del tempo, a cogliere ciò che sta per nascere dal silenzio."],
-                "image":{"url":"/images/Tiziano/ISemiDelNullaCover.png", "alt":"I semi del nulla cover"},
-                "links":[
-                    {"via":"Amazon", "logo":"/images/Tiziano/AmazonIcon.png", "url":"https://www.amazon.it/Semi-del-Nulla-Tiziano-Sorbellini/dp/B0CKRKTCS5/ref=cm_cr_arp_d_bdcrb_top?ie=UTF8"}]
-                },
-                {
                 "title":"Anubhūti",
                 "type":"La filosofia vivente di un’esperienza che trasforma.",
                 "description":["Anubhūti non è solo un libro, ma una soglia.", "Un varco aperto sulla visione profonda che sostiene le pratiche di Anubhūti, un cammino che esplora l’essere umano come esperienza viva, come coscienza in evoluzione, come universo in relazione costante con l’invisibile.","Quest’opera racchiude la filosofia alla base di Anubhūti, svelando la sua natura multidimensionale: non un metodo, ma un meccanismo sottile di unioni, percezioni, simboli e trasformazioni interiori. Attraverso riflessioni, immagini archetipiche e una visione che attraversa le tradizioni spirituali e le soglie del tempo, il libro guida il lettore verso la comprensione di un’esperienza che plasma e risveglia.","Anubhūti è uno specchio e una guida.","Un invito a sentire ciò che si muove tra i mondi, a riconoscere il potere dell’unione mistica, e ad abitare consapevolmente il processo della propria trasformazione"],
                 "image":{"url":"/images/Tiziano/AnubhutiCover.png", "alt":"I semi del nulla cover"},
                 "links":[
                     {"via":"Amazon", "logo":"/images/Tiziano/AmazonIcon.png", "url":"https://www.amazon.it/Anubhūti-consapevolezza-vivere-autentica-creativa/dp/B0DP29B2SX/ref=sr_1_1?__mk_it_IT=ÅMÅŽÕÑ&crid=33YBAQ2QAYIAW&dib=eyJ2IjoiMSJ9.ZtX8OJAD1Avqm4OyNRAqDIF5tdReu59M6PSOr42r0MXGjHj071QN20LucGBJIEps.0dGg8soenfd39N5oUe_TGkycH8vX4agSRlNnYdF_cpA&dib_tag=se&keywords=anubhūti+tiziano+sorbellini&qid=1754403346&s=books&sprefix=anubhūti+tiziano+sorbellini,stripbooks,88&sr=1-1"}]
+                },
+                {
+                "title":"I semi del nulla",
+                "type":"Romanzo distopico. Viaggio simbolico. Ricerca del tempo profondo.",
+                "description":[" In un mondo frammentato, dove l’umanità ha smarrito il senso, I semi del nulla si apre come un varco narrativo carico di visioni, domande e simboli. È un romanzo distopico che non si limita a descrivere un futuro possibile, ma invita a esplorare le radici invisibili dell’esistenza, là dove il tempo smette di essere lineare e diventa spazio interiore.", "Ricco di simboli profondi e significati nascosti, questo viaggio letterario semina intuizioni nel lettore, portandolo a riflettere sul vuoto, sull’origine, sulla trasformazione. Ogni elemento – personaggio, evento, luogo – è un frammento di un disegno più grande, un richiamo sottile a qualcosa che vive oltre l’apparenza.","I semi del nulla è un’esperienza narrativa che spinge a guardare dentro, a leggere tra le pieghe del tempo, a cogliere ciò che sta per nascere dal silenzio."],
+                "image":{"url":"/images/Tiziano/ISemiDelNullaCover.png", "alt":"I semi del nulla cover"},
+                "links":[
+                    {"via":"Amazon", "logo":"/images/Tiziano/AmazonIcon.png", "url":"https://www.amazon.it/Semi-del-Nulla-Tiziano-Sorbellini/dp/B0CKRKTCS5/ref=cm_cr_arp_d_bdcrb_top?ie=UTF8"}]
                 }
             ]
         }
