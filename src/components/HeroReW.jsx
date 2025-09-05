@@ -1,8 +1,9 @@
 import React, { Suspense, useState, useEffect } from "react";
 import { ComponentLoading } from "./LoadingFootPrints.jsx";
-import { ArrowDown, Wave } from "../components/Icons.jsx";
+import { Wave } from "../components/Icons.jsx";
 
 const VideoRetreat = React.lazy(() => import("./VideoRetreat.jsx"));
+const VideoRetreatMobile = React.lazy(() => import("./VideoRetreatMobile.jsx"))
 
 function HeroReW() {
     const [mobile, setMobile] = useState(false)
@@ -39,7 +40,7 @@ function HeroReW() {
                 }
             `}>
                 <Suspense fallback={<ComponentLoading />}>
-                    <VideoRetreat />
+                    {mobile ? <VideoRetreatMobile /> : <VideoRetreat />}
                 </Suspense>
                 </div>
             </div>
