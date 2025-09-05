@@ -76,15 +76,15 @@ function ImageCardGlass({event}) {
         {/* Desktop: imagen de fondo y card superpuesta */}
         <div className="hidden lg:block relative w-full min-h-[400px] max-h-[550px] aspect-video rounded-2xl shadow-lg group overflow-hidden">
             <div
-                className="absolute inset-0 bg-center bg-contain bg-repeat opacity-30 z-20"
+                className="absolute inset-0 bg-center bg-contain bg-repeat opacity-30 z-10"
                 style={{ backgroundImage: `url(${event?.image})`}}
             />
             {/* Fondo principal en cover */}
             <div
-                className="absolute inset-0 bg-center bg-contain bg-no-repeat transition-transform duration-300 group-hover:scale-105 z-30"
+                className="absolute inset-0 bg-center bg-contain bg-no-repeat transition-transform duration-300 group-hover:scale-105 z-20"
                 style={{ backgroundImage: `url(${event?.image})`}}
             />
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center h-full p-4 z-40">
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center h-full p-4 z-30">
                 <div className="bg-verdeOliva bg-opacity-80 backdrop-blur-xl rounded-2xl p-6 lg:border shadow-2xl  max-w-2xl w-full mx-4">
                     <div className="flex flex-col gap-2 justify-start items-center text-start">
                         <h2 className="title uppercase text-lg leading-tight font-semibold text-white text-center">{event?.title}</h2>
