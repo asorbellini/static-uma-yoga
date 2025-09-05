@@ -8,10 +8,10 @@ function AboutUmaSummary(){
     const [isVisible, setIsVisible] = useState(false)
     const sectionRef = useRef(null)
     useRevealOnScroll(sectionRef, {
-    threshold: 0.3,
-    rootMargin: '0px 0px -10% 0px',
-    onReveal: () => setIsVisible(true)
-    })
+        threshold: 0.3,
+        rootMargin: '0px 0px -10% 0px',
+        onReveal: () => setIsVisible(true)
+        })
 
     return(
         <>
@@ -33,31 +33,19 @@ function AboutUmaSummary(){
                     </div>
                     <div className="flex flex-col sm:flex-row gap-6 sm:gap-3 py-4">
                         {members.map((member, index)=> (
-                            <div className="flex-1" key={index}>
-                                <div className="flex flex-col gap-3 items-center h-full">
-                                    <div className="flex items-center justify-center">
-                                        <div className="w-full h-[40vh]">
-                                            <img
-                                            src={member.images?.src}
-                                            alt={`Image ${member.Name}`}
-                                            className="w-fit h-full object-cover shadow rounded-t-full " />
-                                        </div>    
+                            <div className="flex-1 items-center justify-center transition-all duration-500 group" key={index}>
+                                <a href={`/chi-siamo/${member.memberName}`}>
+                                    <div className="flex items-center justify-center transition-all duration-500 ease-out group-hover:scale-105">
+                                        <img
+                                        src={member.images?.src}
+                                        alt={`Image ${member.Name}`}
+                                        className="h-[40vh] w-[60vw] sm:w-fit aspect-[9/16] object-cover shadow-lg shadow-terracota rounded-t-full" />
                                     </div>
-                                    <div className="flex flex-col items-center justify-between flex-1 w-full lg:px-3 ">
-                                        <div className="flex flex-col items-center justify-center">
-                                            <h2 className="title text-center">{member.Name}</h2>
-                                            <p className="textDetail">{member.smallDescription}</p>
-                                        </div>
-                                        <div className="flex justify-center items-end btn-secondary group">
-                                            <a href={`/chi-siamo/${member.memberName}`}>
-                                                <button className="relative text-oscuro font-normal tracking-wide uppercase group-hover:text-terracota transition-colors duration-500 ease-out">
-                                                    {`SCOPRI DI PIÙ SU ${member.Name.split(" ")[0]}`}
-                                                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-oscuro group-hover:bg-terracota transition-all duration-300" />
-                                                </button>
-                                            </a>
-                                        </div>
+                                    <div className="sm:p-2">
+                                        <h2 className="title text-center underline sm:no-underline group-hover:text-terracota transition-all py-2">{member.Name}</h2>
+                                        <p className="textDetail">{member.smallDescription}</p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         ))}
                     </div>

@@ -75,7 +75,7 @@ function UmaSummary(){
         })
     return(
         <div>
-            <section ref={sectionRef} id="uma-summary" className="h-auto md:min-h-dvh flex items-center justify-center sm:justify-evenly w-full px-4 pt-4 sm:pt-16 bg-claro">
+            <section ref={sectionRef} id="uma-summary" className="h-auto sm:h-screen md:min-h-dvh flex items-center justify-center sm:justify-evenly w-full px-4 pt-4 sm:pt-16 bg-claro">
                 <div className="px-2 md:px-12 relative">
                     <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2">
                         <Spiral className="w-16 h-16" fillColor="#A66C5B"/>
@@ -89,11 +89,10 @@ function UmaSummary(){
                                         <img
                                         src={member.images?.src}
                                         alt={`Image ${member.Name}`}
-                                        className={`h-[45vh] w-[60vw] sm:w-fit aspect-[9/16] object-cover shadow-lg shadow-terracota ${index === 0 ? "rounded-3xl sm:rounded-bl-full" : index === 2 ? "rounded-3xl sm:rounded-tr-full" : "rounded-3xl sm:rounded-none"}`} />
+                                        className={`h-[250px] sm:h-[60vh] w-[60vw] sm:w-fit aspect-[9/16] object-cover shadow-lg shadow-terracota rounded-full sm:rounded-none ${index === 0 ? "sm:rounded-bl-full" : index === 2 ? "sm:rounded-tr-full" : "sm:rounded-none"}`} />
                                     </div>
                                     <div className="sm:p-2">
-                                        <h2 className="title text-center underline sm:no-underline group-hover:text-terracota transition-all py-2">{member.Name}</h2>
-                                        <p className="textDetail">{member.smallDescription}</p>
+                                        <h2 className="title text-center underline sm:no-underline group-hover:text-terracota transition-all py-2">{member.Name.split(" ")[0]}</h2>
                                     </div>
                                 </a>
                             </div>
