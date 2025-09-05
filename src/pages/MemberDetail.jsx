@@ -69,7 +69,7 @@ function MemberDetail(){
         style={{background:"linear-gradient(135deg, #D4AF7F 0%, #3D735C 50%, #2E5E55 100%)"}}>
         <ScrollToTop />
         {/* Presentación del miembro */}
-            <section className="relative w-full px-4 pt-16 md:pt-28 pb-6">
+            <section className="relative w-full px-4 pt-16 md:pt-28 pb-12 md:pb-16 lg:pb-20">
                 {/* Contenedor principal */}
                 <div className="relative px-2 md:px-12 py-4">
                     {/* Contenedor de imagen y título */}
@@ -93,9 +93,11 @@ function MemberDetail(){
                             <p className="textDetail  text-white">{member.description}</p> : <p className="textDetail  text-white">{member.smallDescription}</p>}
                             {memberName == "tiziano-sorbellini" ? <></> : <ExpandableButton title="Formazione" children={member.training} />}
                             <h2 className="subtitle uppercase text-white">Seguimi su</h2>
-                            <button href={member.socialMedia?.instagram} target="_blank" rel="noopener noreferrer">
-                                <InstagramIcon fillColor="#ffffff" />
-                            </button>
+                            <a href={member.socialMedia?.instagram} target="_blank" rel="noopener noreferrer">
+                                <button type="button">
+                                    <InstagramIcon fillColor="#ffffff" />
+                                </button>
+                            </a>
                             {memberName === "tiziano-sorbellini" &&
                                 <div className="flex flex-row p-4 justify-center">
                                     <a href="/anubhuti#proposte">
@@ -103,42 +105,36 @@ function MemberDetail(){
                                     </a>
                                 </div>
                             }
-                            {memberName === "alba-muzzarelli" 
-                            ?
-                                <div className="flex flex-row p-4 justify-center">
-                                    <a href="/press-e-media">
-                                        <button type="button" className="btn-primary bg-dorado hover:opacity-80 text-oscuro border-dorado hover:border-dorado uppercase font-semibold">Scopri la mia partecipazione in press</button>
-                                    </a>
-                                </div>
-                            :   <></>
-                            }
+                            {member?.classes && 
+                            <div className="hidden md:flex md:justify-center md:items-start md:w-full">
+                                <a href="#classi" className="btn-scopri text-white textButton z-30" >
+                                    SCOPRI LE MIE CLASSI 
+                                </a>
+                            </div>}
                         </div>
                     </div>
-                    {member?.classes && 
-                        <div className="hidden md:flex md:justify-center md:items-start md:w-full">
-                            <a href="#classi" className="btn-scopri bg-verdeOliva text-white textButton z-30" >
-                                SCOPRI LE MIE CLASSI 
-                            </a>
-                        </div>}
                 </div>
                 <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20">
                     <Wave />
                 </div> 
             </section>
             {memberName != "tiziano-sorbellini" && member?.classes 
-                ? <section className="bg-claro px-6 md:px-16 pt-12  md:pt-20 md:pb-4" id="classi">
+                ? <section className="bg-claro px-6 md:px-16 pt-12 md:pt-20 pb-4" id="classi">
                     <div className="w-full items-center justify-between">
-                        <h3 className="title drop-shadow-none uppercase text-center">Le mie classi</h3>
+                        <h3 className="title drop-shadow-none uppercase text-center">{`Pratica con me online e a ${memberName == "alba-muzzarelli" ? "Milano" : "Napoli"}`}</h3>
                         <p className="textDetail"></p>
-                        <div className="flex flex-col md:flex-row gap-3 mt-4">
+                        <div className="flex flex-col sm:flex-row gap-3 mt-4">
                             {member?.classes?.map((classi, index) => (
-                                <div key={index} className="flex-1 text-white hover:scale-105">
+                                <div key={index} className="flex-1 sm:basis-1/4 lg:flex-1 text-white hover:scale-105 relative group ">
                                     <div className="items-center justify-items-center">
                                         <img
-                                        src={imageUrlNavakaranaVinyasa}
-                                        alt='Image Navakarana Vinyasa'
+                                        src={classi?.urlImage}
+                                        alt={classi?.title}  
                                         className="h-[310px] object-cover shadow aspect-square rounded-full" />
                                         <h2 className="textDetail text-center font-semibold drop-shadow-none uppercase p-2">{classi.title}</h2>
+                                        {/* <div className="absolute inset-0 opacity-0 group-hover:opacity-100 h-[310px] bg-verdeOliva rounded-full">
+                                            <p className="text-white text-sm rounded-full p-10">{classi?.detail}</p>
+                                        </div> */}
                                     </div>
                                 </div>
                             ))}
