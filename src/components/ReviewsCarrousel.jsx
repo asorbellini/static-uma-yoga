@@ -22,8 +22,8 @@ function ReviewsCarrousel({ reviews }) {
   const { author, comments, rating = 0, date, experience = null} = reviews[index]
 
   return (
-    <div className="h-56 md:h-64 lg:h-72 w-full max-w-xl mx-auto p-3 md:p-6 rounded-xl bg-terracota transition-all duration-500 ease-in-out flex flex-col justify-between">
-      <div className="flex-1 flex flex-col justify-evenly">
+    <div className="h-56 md:h-64 w-full max-w-xl mx-auto p-3 md:p-6 rounded-xl bg-terracota transition-all duration-500 ease-in-out flex flex-col justify-between">
+      <div className="flex-1 flex flex-col justify-evenly relative">
         <p className="text-base md:text-lg lg:text-xl italic text-white text-center min-h-16 md:min-h-20 drop-shadow-title">“{comments}”</p>
         {experience&& <p className="text-sm lg:text-base italic text-white text-center drop-shadow-title">~ {experience} ~</p>}
         <div className="text-sm text-white text-center">
@@ -39,17 +39,16 @@ function ReviewsCarrousel({ reviews }) {
             </span>
           ))}
         </div>
-      </div>
-      <div className="flex justify-center gap-4">
         <button
+          type="button"
           onClick={handlePrev}
-          className="btn-scopri px-3 py-1"
+          className="absolute left-0 top-1/2 -translate-y-1/2 btn-scopri p-3 rounded-full"
         >
           <PrevSlideArrow />
         </button>
         <button
           onClick={handleNext}
-          className="btn-scopri px-3 py-1 "
+          className="absolute right-0 top-1/2 -translate-y-1/2 btn-scopri p-3 rounded-full "
         >
           <NextSlideArrow />
         </button>
