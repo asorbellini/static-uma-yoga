@@ -13,9 +13,9 @@ const LoadingFootPrints = ({
     const [isVisible, setIsVisible] = useState(true);
 
     const sizeConfig = {
-        small: { iconSize: "w-12 h-12"},
-        default: { iconSize: "w-20 h-20"},
-        large: { iconSize: "w-28 h-28" }
+        small: { iconSize: "size-12"},
+        default: { iconSize: "size-20"},
+        large: { iconSize: "size-28" }
     };
 
     const { iconSize } = sizeConfig[size] || sizeConfig.default;
@@ -39,11 +39,11 @@ const LoadingFootPrints = ({
     }
     return (
         <div className={`flex flex-col items-center justify-center ${className}`}>
-            <div className="relative flex items-center justify-center space-x-2">
-                <div className="absolute left-2 animate-step-right">
+            <div className="relative flex items-center justify-center">
+                <div className="absolute -left-2 animate-step-right">
                     <RightFootPrint className={`${iconSize} footstep-loader`} fillColor={color} />
                 </div>
-                <div className="absolute right-2 animate-step-left">
+                <div className="absolute -right-2 animate-step-left">
                     <LeftFootPrint className={`${iconSize} footstep-loader`} fillColor={color} />
                 </div>
             </div>

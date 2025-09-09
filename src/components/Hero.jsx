@@ -1,5 +1,4 @@
-
-import { BodyHeart, LeftFootPrint, RightFootPrint, Road, Spiral, Wave } from "./Icons";
+import { BothFeets, BodyHeart, Road, Spiral, Wave } from "./Icons";
 
 function Hero() {
   return (
@@ -9,31 +8,27 @@ function Hero() {
         <div className="grid grid-cols-4 gap-2 md:gap-4 lg:gap-8 items-center justify-items-center max-w-6xl mx-auto">
           <div className="flex items-center justify-center relative ">
             <div className="flex items-center relative">
-              <LeftFootPrint 
-                className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28 translate-x-2 md:translate-x-3 translate-y-2 rotate-12 transition-all duration-300" 
-                fillColor="#ffffff" 
-              />
-              <RightFootPrint 
-                className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28 -translate-x-2 md:-translate-x-3 -translate-y-2 -rotate-12 transition-all duration-300" 
+              <BothFeets 
+                className="size-24 md:size-28 lg:size-32 xl:size-36 transition-all duration-300" 
                 fillColor="#ffffff" 
               />
             </div>
           </div>
           <div className="flex items-center justify-center">
             <Spiral 
-              className="w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 transition-all duration-300" 
+              className="size-28 md:size-32 lg:size-36 xl:size-44 transition-all duration-300" 
               fillColor="#ffffff"
             />
           </div>
           <div className="flex items-center justify-center">
             <BodyHeart 
-              className="w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 transition-all duration-300" 
+              className="size-28 md:size-32 lg:size-36 xl:size-44 transition-all duration-300" 
               fillColor="#ffffff"
             />
           </div>
           <div className="flex items-center justify-center">
             <Road 
-              className="w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 transition-all duration-300" 
+              className="size-28 md:size-32 lg:size-36 xl:size-44 transition-all duration-300" 
               fillColor="#ffffff" 
             />
           </div>
