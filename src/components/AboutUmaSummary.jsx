@@ -17,7 +17,7 @@ function AboutUmaSummary(){
         <>
             <section id="about-uma" className="h-fit md:min-h-dvh flex items-center justify-center sm:justify-evenly w-full p-4 pt-4 md:pt-16 bg-claro">
                 <div className="relative px-2 md:px-12">
-                    <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2">
+                    <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2 flex items-center justify-center">
                         <Spiral className="w-16 h-16" fillColor="#A66C5B"/>
                     </div>
                     <div className="flex flex-col justify-center items-center py-4">
@@ -50,7 +50,7 @@ function AboutUmaSummary(){
                         ))}
                     </div>
                     <div className="hidden md:flex flex-row items-center justify-center w-full hover:animate-pulse animate-pulse md:animate-none">
-                        <a href="#perche-uma" className="translate-x-1/4">
+                        <a href="#perche-uma" className="flex items-center justify-center">
                             <ArrowDown />
                         </a>
                     </div>
@@ -58,7 +58,7 @@ function AboutUmaSummary(){
             </section>
             <section id="perche-uma" className="min-h-dvh w-full p-4 pt-4 md:pt-16 justify-items-center bg-claro overflow-hidden">
                 <div className="relative">
-                        <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2">
+                        <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2 flex items-center justify-center">
                             <BodyHeart className="w-16 h-16" fillColor="#A66C5B" />
                         </div>
                 </div>
@@ -80,7 +80,7 @@ function AboutUmaSummary(){
                         <p className="subtitle text-center font-bold uppercase text-terracota">Il viaggio è dentro. L’espansione è infinita.</p>
                     </div>
                     <div className="relative">
-                        <div className="hidden lg:block absolute -bottom-16 left-1/2 -translate-x-1/2">
+                        <div className="hidden lg:block absolute -bottom-16 left-1/2 -translate-x-1/2 flex items-center justify-center">
                             <Road className="w-16 h-16" fillColor="#A66C5B" />
                         </div>
                     </div>

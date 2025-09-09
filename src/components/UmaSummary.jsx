@@ -77,7 +77,7 @@ function UmaSummary(){
         <div>
             <section id="uma-summary" className="h-auto sm:h-screen md:min-h-dvh flex items-center justify-center sm:justify-evenly w-full px-4 pt-4 sm:pt-16 bg-claro">
                 <div className="px-2 md:px-12 relative">
-                    <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2">
+                    <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2 flex items-center justify-center">
                         <Spiral className="w-16 h-16" fillColor="#A66C5B"/>
                     </div>
                     <h3 className="textTitleSection py-4">CHI SIAMO</h3>
@@ -101,7 +101,7 @@ function UmaSummary(){
                     <div className="hidden sm:flex items-center justify-center w-full sm:p-2">
                         <div className="btn-secondary group">
                             <a href="#cosa-facciamo">
-                                <button type="button" className="translate-x-1/4 animate-pulse md:animate-none group-hover:animate-pulse ">
+                                <button type="button" className="flex items-center justify-center animate-pulse md:animate-none group-hover:animate-pulse ">
                                     <ArrowDown />
                                 </button>
                             </a>
@@ -111,7 +111,7 @@ function UmaSummary(){
             </section>
             <section id="cosa-facciamo" className="h-auto lg:min-h-dvh w-full items-center justify-center lg:justify-evenly p-4 pt-4 md:pt-16 bg-claro flex flex-col">
                 <div className="px-2 md:px-12 md:pb-4 relative">
-                    <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2">
+                    <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2 flex items-center justify-center">
                         <BodyHeart className="w-16 h-16" fillColor="#A66C5B"/>
                     </div>
                     <h2 className="textTitleSection py-4">COSA FACCIAMO</h2>
@@ -143,13 +143,13 @@ function UmaSummary(){
                     <div className="hidden lg:flex items-center justify-center w-full sm:p-4">
                         <div className="btn-secondary group">
                             <a href="#eventi-passati">
-                                <button type="button" className="translate-x-1/4 animate-pulse md:animate-none group-hover:animate-pulse ">
+                                <button type="button" className="flex items-center justify-center animate-pulse md:animate-none group-hover:animate-pulse ">
                                     <ArrowDown />
                                 </button>
                             </a>
                         </div>
                     </div>
-                    <div className="hidden sm:block absolute -bottom-16 left-1/2 -translate-x-1/2">
+                    <div className="hidden sm:block absolute -bottom-16 left-1/2 -translate-x-1/2 flex items-center justify-center">
                         <Road className="w-16 h-16" fillColor="#A66C5B"/>
                     </div>
                 </div>

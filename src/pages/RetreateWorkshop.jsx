@@ -128,7 +128,7 @@ function RetreateWorkshop() {
             <section id="uma-retreat" className="h-fit w-full px-4 flex flex-col items-center bg-claro">
                 <div className="px-2 md:px-12 pt-4 md:pt-16">
                     <div className="flex flex-col justify-center items-center space-y-2 max-w-7xl py-4 relative">
-                            <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2 pb-1">
+                            <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2 flex items-center justify-center">
                                 <Spiral className="w-16 h-16" fillColor="#A66C5B"/>
                             </div>
                             <span className="absolute -top-0 left-0 h-0.5 bg-terracota/50 w-full" />
@@ -152,7 +152,7 @@ function RetreateWorkshop() {
             </section>
             <section id="eventi-passati" className="w-full p-4 bg-claro py-4 md:py-16 ">
                 <div className="px-2 md:px-16 relative">
-                    <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2 pb-1">
+                    <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2 flex items-center justify-center">
                         <BodyHeart className="w-16 h-16" fillColor="#A66C5B"/>
                     </div>
                     <h3 className="textTitleSection p-2 md:p-4">EVENTI PASSATI</h3>
@@ -162,7 +162,7 @@ function RetreateWorkshop() {
                                 <ImageCardGlass event={event} />
                             </div>))}
                     </div>
-                    <div className="hidden sm:block absolute -bottom-16 left-1/2 -translate-x-1/2 pb-1">
+                    <div className="hidden sm:block absolute -bottom-16 left-1/2 -translate-x-1/2 flex items-center justify-center">
                         <Road className="w-16 h-16" fillColor="#A66C5B"/>
                     </div>
                 </div>
