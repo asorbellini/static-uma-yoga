@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef, useCallback } from "react"
-import NewSetterImage from "../assets/images/NewSetterImage.png"
+import NewsLetterImage from "../assets/images/NewsLetterImage.png"
 import { useRevealOnScroll } from "../hooks/useRevealHook.jsx"
 
-function NewSetter(){
+function NewsLetter(){
     const [isVisible, setIsVisible] = useState(false)
     const [isMobile, setIsMobile] = useState(false)
     const sectionRef = useRef(null)
@@ -70,7 +70,7 @@ function NewSetter(){
                         className={`absolute -right-16 -translate-y-1/2 ${isMobile ? "hidden" : "w-[400px]"} rounded-l-full overflow-hidden `}
                         >
                         <img
-                            src={NewSetterImage}
+                            src={NewsLetterImage}
                             alt="Alba practising Hasta Uttanasana"
                             className="w-full h-full object-cover"
                         />
@@ -82,4 +82,4 @@ function NewSetter(){
     )
 }
 
-export default NewSetter
+export default NewsLetter

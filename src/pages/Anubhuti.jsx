@@ -67,7 +67,7 @@ const Proposte = ({info}) => {
                                 <div className="flex flex-col sm:flex-row justify-center items-center sm:items-start space-x-3">
                                     <div className="basis-1/4 justify-items-center">
                                         <div className="w-fit h-[40vh] overflow-hidden">
-                                            <img src={`${book?.image?.url}`} alt={`${book?.image?.alt}`} className="h-full md:h-auto lg:h-full aspect-auto rounded-3xl"/>
+                                            <img src={`${book?.image?.url}`} alt={`${book?.image?.alt}`} loading="lazy" className="h-full md:h-auto lg:h-full aspect-auto rounded-3xl"/>
                                         </div>
                                     </div>
                                     <div className="basis-3/4">
@@ -122,10 +122,10 @@ const Proposte = ({info}) => {
 
 function Anubhuti() {
   const [isVisible, setIsVisible] = useState(false)
-  const sectionRef = useRef(null)
-  useRevealOnScroll(sectionRef, {
-          threshold: 0.3,
-          rootMargin: '0px 0px -10% 0px',
+  const contentRef = useRef(null)
+  useRevealOnScroll(contentRef, {
+          threshold: 0.5,
+          rootMargin: '0px 0px -20% 0px',
           onReveal: () => setIsVisible(true)
     })
     return (
@@ -133,8 +133,8 @@ function Anubhuti() {
         <div className="min-h-screen w-full bg-claro overflow-hidden">
             <ScrollToTop />
             <HeroComponent background="linear-gradient(45deg, #4A617A 0%, #93a4ab 50%, #4A617A 100%)" mainColor="#4A617A" logo={logoAnubhuti}  title="Anubhūti"/>
-            <section ref={sectionRef} id="about-anubhuti" className="min-h-screen w-full pt-12 md:pt-24 px-4">
-                <div className={`flex flex-row px-2 sm:px-12 gap-3 items-center transition-all duration-[1000ms] ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}`}>
+            <section id="about-anubhuti" className="min-h-screen w-full pt-12 md:pt-24 px-4">
+                <div ref={contentRef} className={`flex flex-row px-2 sm:px-12 gap-3 items-center transition-all duration-[1000ms] ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}`}>
                     <div className="w-full md:basis-2/5 md:relative md:h-[60vh]">
                         <img
                             src={imgAnubhuti}

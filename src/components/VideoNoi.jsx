@@ -17,8 +17,14 @@ export default function VideoNoi() {
         loop
         muted
         playsInline
+        preload="metadata"
         className={`w-auto h-full object-cover ${isLoading ? "opacity-0" : "opacity-100"}`}
         onLoadedData={() => setIsLoading(false)}
+        style={{
+          filter: 'contrast(1.1) saturate(1.1)',
+          transform: 'translateZ(0)',
+          backfaceVisibility: 'hidden'
+        }}
       />
     </>
   );

@@ -51,10 +51,9 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 w-full z-40 transition-all duration-500 ease-in-out ${
-        isScrolled ? "bg-terracota bg-opacity-70 backdrop-blur-xl" : "bg-transparent py-2 md:py-3"
+        isScrolled ? "bg-terracota bg-opacity-20 backdrop-blur-3xl" : "bg-transparent py-2 md:py-3"
       }`}
     >
-      <div className={`${isScrolled ? "absolute top-0 left-0 w-full h-full bg-black/10 z-40": ""}`}/>
       <nav className="w-full mx-auto flex flex-row justify-between items-center px-2 md:px-4">
         {/* Logo */}
         <div className="z-50">
@@ -80,7 +79,7 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-white p-2" 
+          className="md:hidden text-white p-2 z-50" 
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label={isMobileMenuOpen ? "Chiudi il menu" : "Apri il menu"}
           aria-expanded={isMobileMenuOpen}
@@ -93,15 +92,15 @@ const Header = () => {
       {/* Mobile Menu */}
       <div
         id="mobile-menu"
-        className={`md:hidden transition-all duration-300 ease-in-out ${
+        className={`md:hidden transition-all duration-300 ease-in-out z-40 bg-transparent backdrop-blur-xl border-t border-white/50 ${
           isMobileMenuOpen ? "min-h-screen opacity-100 visible" : "max-h-0 opacity-0 invisible"
-        } bg-transparent backdrop-blur-xl border-t border-white/50`}
+        }`}
         role="navigation"
         aria-label="Menu mobile"
       >
-        <ul className="w-full px-4">
+        <ul className="w-full px-4 z-40">
           {navItems.map((item, index) => (
-            <li key={index} className="py-2">
+            <li key={index} className="py-2  z-50">
               <NavLink
                 to={item.url}
                 className="relative inline-block text-base font-serif tracking-wide text-white transition-colors duration-300 py-2 uppercase"

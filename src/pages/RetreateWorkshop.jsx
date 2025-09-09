@@ -1,5 +1,5 @@
 import HeroReW from "../components/HeroReW"
-import NewSetter from "../components/NewSetter"
+import NewsLetter from "../components/NewsLetter.jsx"
 import ScrollToTop from "../components/ScrollToTop"
 import retreats from "../data/retreats.json"
 import { getTextDate } from "../constants/index.js"
@@ -168,7 +168,7 @@ function RetreateWorkshop() {
                 </div>
             </section>
         </div>
-        <NewSetter />
+        <NewsLetter />
         </>
     )
 }

@@ -6,7 +6,7 @@ function NavakaranaSummary() {
     const [isVisible, setIsVisible] = useState(false)
       const sectionRef = useRef(null)
       useRevealOnScroll(sectionRef, {
-          threshold: 0.3,
+          threshold: 0.5,
           rootMargin: '0px 0px -10% 0px',
           onReveal: () => setIsVisible(true)
           })

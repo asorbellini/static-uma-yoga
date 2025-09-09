@@ -6,10 +6,10 @@ import { ArrowDown, BodyHeart, Road, Spiral } from "./Icons.jsx"
 
 function AboutUmaSummary(){
     const [isVisible, setIsVisible] = useState(false)
-    const sectionRef = useRef(null)
-    useRevealOnScroll(sectionRef, {
+    const contentRef = useRef(null)
+    useRevealOnScroll(contentRef, {
         threshold: 0.3,
-        rootMargin: '0px 0px -10% 0px',
+        rootMargin: '0px 0px -20% 0px',
         onReveal: () => setIsVisible(true)
         })
 
@@ -85,7 +85,7 @@ function AboutUmaSummary(){
                         </div>
                     </div>
                 </div>
-                <section ref={sectionRef} className="min-h-screen w-full relative ">
+                <section className="min-h-screen w-full relative ">
                     <div className="flex flex-col lg:flex-row-reverse px-2 md:px-12 items-center justify-center">
                         <div className="flex-1 flex flex-col items-center justify-center">
                             <h1 className="textTitleSection py-4 z-30">
@@ -103,7 +103,7 @@ function AboutUmaSummary(){
                             </div>
                         </div>
                         <div className="flex-1 h-dvh">
-                            <div className={`relative lg:absolute lg:top-0 transition-all duration-[1000ms] ease-out h-dvh rounded-3xl ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
+                            <div ref={contentRef} className={`relative lg:absolute lg:top-0 transition-all duration-[1000ms] ease-out h-dvh rounded-3xl ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
                                 <img
                                     src={imageUrlClassi}
                                     alt="Yoga Practice"

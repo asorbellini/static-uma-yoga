@@ -67,21 +67,21 @@ const LastRetreatsImages = [
 
 function UmaSummary(){
     const [isVisible, setIsVisible] = useState(false)
-    const sectionRef = useRef(null)
-    useRevealOnScroll(sectionRef, {
+    const componentRef = useRef(null)
+    useRevealOnScroll(componentRef, {
             threshold: 0.3,
-            rootMargin: '0px 0px -10% 0px',
+            rootMargin: '0px 0px -20% 0px',
             onReveal: () => setIsVisible(true)
         })
     return(
         <div>
-            <section ref={sectionRef} id="uma-summary" className="h-auto sm:h-screen md:min-h-dvh flex items-center justify-center sm:justify-evenly w-full px-4 pt-4 sm:pt-16 bg-claro">
+            <section id="uma-summary" className="h-auto sm:h-screen md:min-h-dvh flex items-center justify-center sm:justify-evenly w-full px-4 pt-4 sm:pt-16 bg-claro">
                 <div className="px-2 md:px-12 relative">
                     <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2">
                         <Spiral className="w-16 h-16" fillColor="#A66C5B"/>
                     </div>
                     <h3 className="textTitleSection py-4">CHI SIAMO</h3>
-                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-6">
+                    <div ref={componentRef} className="flex flex-col sm:flex-row gap-3 sm:gap-6">
                         {members.map((member, index) => (
                             <div className="flex-1 items-center justify-center transition-all duration-500 group">
                                 <a href={`/chi-siamo/${member.memberName}`}>
@@ -135,6 +135,7 @@ function UmaSummary(){
                             <img
                                 src={cosaFacciamo2}
                                 alt="Cosa Facciamo"
+                                loading="lazy"
                                 className="w-full h-full object-cover rounded-br-full rounded-tl-full shadow-terracota shadow-lg"
                                 />
                         </div>
