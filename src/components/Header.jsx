@@ -51,7 +51,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 w-full z-40 transition-all duration-500 ease-in-out ${
-        isScrolled ? "bg-terracota bg-opacity-20 backdrop-blur-3xl" : "bg-transparent py-2 md:py-3"
+        isScrolled ? "bg-terracota bg-opacity-40 backdrop-blur-3xl" : "bg-transparent py-2 md:py-3"
       }`}
     >
       <nav className="w-full mx-auto flex flex-row justify-between items-center px-2 md:px-4">
@@ -92,7 +92,7 @@ const Header = () => {
       {/* Mobile Menu */}
       <div
         id="mobile-menu"
-        className={`md:hidden transition-all duration-300 ease-in-out z-40 bg-transparent backdrop-blur-xl border-t border-white/50 ${
+        className={`md:hidden transition-all duration-300 ease-in-out z-50 backdrop-blur-3xl border-t border-white/50 ${
           isMobileMenuOpen ? "min-h-screen opacity-100 visible" : "max-h-0 opacity-0 invisible"
         }`}
         role="navigation"
