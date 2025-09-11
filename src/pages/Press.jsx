@@ -36,7 +36,7 @@ function Press() {
                 <div className="grid grid-cols-1 md:grid-cols-2 px-16 justify-center text-center gap-3 bg-gradient-to-tr from-verdeOliva to-verdeBosque pb-8 sm:pb-12 ">
                     <div className="flex-1 text-white group p-2 shadow-dorado shadow-md rounded-3xl hover:scale-105 hover:bg-verdeOliva transition-all duration-300">
                         <div className="flex flex-row justify-center items-center">
-                            {LinkPreview({url: 'https://www.youtube.com/playlist?list=PLtDlpMIfDcOH4dt8BzlCKE-cFeC4WomAF'})}
+                            {LinkPreview({url: 'https://www.youtube.com/@DeniseDellagiacoma'})}
                             <h1 className="title uppercase text-white px-2">IL PODCAST DI DENISE</h1>
                         </div>
                         <a href="https://youtu.be/BpIY5-QJdk8?si=oI7lYDT4F2d3xt16" target="_blank" rel="noopener noreferrer" >

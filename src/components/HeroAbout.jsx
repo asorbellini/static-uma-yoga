@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Suspense } from "react";
-import { ArrowDown, Wave } from "./Icons.jsx";
+import { Wave } from "./Icons.jsx";
 import { ComponentLoading } from "./LoadingFootPrints.jsx";
 
 const VideoNoi = React.lazy(() => import("./VideoNoi.jsx"));

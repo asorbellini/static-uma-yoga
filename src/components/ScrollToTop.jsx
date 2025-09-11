@@ -26,10 +26,10 @@ const ScrollToTop = () => {
     return (
         <button
             onClick={scrollToTop}
-            className={`flex fixed bottom-2 right-2 z-50 w-12 md:w-16 h-12 md:h-16 rounded-full items-center justify-center shadow-lg hover:animate-pulse transition-all duration-1000 bg-verdeBosque opacity-80 ${isVisible ? "translate-x-0 opacity-100" : "translate-y-20 opacity-0"}`}
+            className={`flex fixed bottom-2 right-2 z-50 w-10 md:w-12 h-10 md:h-12 rounded-full items-center justify-center shadow-lg hover:animate-pulse transition-all duration-1000 bg-verdeBosque opacity-80 ${isVisible ? "translate-x-0 opacity-100" : "translate-y-20 opacity-0"}`}
             aria-label="Volver arriba"
         >
-            <ArrowUp className={"h-10 w-10 md:h-12 md:w-12"} stroke="#ffffff"/>
+            <ArrowUp className={"h-6 w-6 md:h-10 md:w-10"} stroke="#ffffff"/>
         </button>
     );
 };

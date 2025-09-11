@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import UmaLogo from "./Logo.jsx";
-import { MenuAndCloseIcon } from "./Icons.jsx";
+import { MenuAndCloseIcon, InstagramIcon, WhatsAppIcon } from "./Icons.jsx";
 
 const useActiveSection = () => {
     const location = useLocation()
@@ -112,6 +112,31 @@ const Header = () => {
             </li>
           ))}
         </ul>
+        <div className="fixed bottom-[10%] left-1/2 -translate-x-1/2 w-full flex flex-col items-center text-center">
+            <h3 className="text-white font-semibold text-sm uppercase tracking-wider h-6 flex items-center mb-2 ">
+              Seguici su
+            </h3>
+            <div className="flex justify-center space-x-2">
+              <a 
+                href="https://www.instagram.com/uma.retreats/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Segui UMĀ su Instagram"
+                className="group p-2 rounded-full bg-terracota flex items-center justify-center z-50"
+              >
+                <InstagramIcon fillColor="#ffffff"/>
+              </a>
+              <a 
+                href="https://whatsapp.com/channel/0029Vb9vXMHBvvsZAz9TUt1u" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Segui UMĀ sul suo canale WhatsApp"
+                className="group p-2 rounded-full bg-terracota flex items-center justify-center z-50"
+              >
+                <WhatsAppIcon fillColor="#ffffff"/>
+              </a>
+            </div>
+          </div>
       </div>
     </header>
   )
