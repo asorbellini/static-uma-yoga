@@ -1,19 +1,23 @@
-import { useState , useRef } from "react";
+import { useState , useRef, useEffect } from "react";
 import Navakarana from "../assets/images/Navakarana/Navakarana.png"
 import { useRevealOnScroll } from "../hooks/useRevealHook.jsx"
 
 function NavakaranaSummary() {
     const [isVisible, setIsVisible] = useState(false)
-      const sectionRef = useRef(null)
-      useRevealOnScroll(sectionRef, {
-          threshold: 0.5,
-          rootMargin: '0px 0px -10% 0px',
-          onReveal: () => setIsVisible(true)
-          })
+    const [isMobile, setIsMobile] = useState(false)
+    const sectionRef = useRef(null)
+    useEffect(() => {
+        setIsMobile(window.innerWidth <= 768)
+    }, [])
+    useRevealOnScroll(sectionRef, {
+        threshold: isMobile ? 0.1 : 0.5,
+        rootMargin: isMobile ? '0px 0px -5% 0px' : '0px 0px -30% 0px',
+        onReveal: () => setIsVisible(true)
+        })
     return (
         <div className="bg-claro">
             <section ref={sectionRef} id="about-navakarana-vinyasa" className="min-h-screen w-full pt-12 md:pt-24 px-4 bg-claro">
-                <div className={`flex flex-row px-2 md:px-12 gap-3 items-center transition-all duration-[1000ms] ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}`}>
+                <div className={`flex flex-row px-2 md:px-12 gap-3 items-center transition-all duration-[500ms] ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}`}>
                     <div className="w-full md:basis-2/5 md:relative md:h-[60vh]">
                         <img
                             src={Navakarana}

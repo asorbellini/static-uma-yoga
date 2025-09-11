@@ -1,4 +1,4 @@
-import { useState, useRef, Suspense } from "react"
+import { useState, useEffect, useRef, Suspense } from "react"
 import cosaFacciamo2 from "../assets/images/Cosafacciamo2.png"
 import members from "../data/members.json"
 import { ArrowDown, BodyHeart, Road, Spiral } from "./Icons.jsx"
@@ -67,21 +67,22 @@ const LastRetreatsImages = [
 
 function UmaSummary(){
     const [isVisible, setIsVisible] = useState(false)
+    const isMobile =  window.innerWidth <= 768
     const componentRef = useRef(null)
     useRevealOnScroll(componentRef, {
-            threshold: 0.3,
-            rootMargin: '0px 0px -20% 0px',
+            threshold: isMobile ? 0.1 : 0.5,
+            rootMargin: isMobile ? '0px 0px -5% 0px' : '0px 0px -20% 0px',
             onReveal: () => setIsVisible(true)
         })
     return(
         <div>
             <section id="uma-summary" className="h-auto sm:h-screen md:min-h-dvh flex items-center justify-center sm:justify-evenly w-full px-4 pt-4 sm:pt-16 bg-claro">
-                <div className="px-2 md:px-12 relative">
+                <div className="px-2 md:px-12 relative" ref={componentRef} >
                     <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2 flex items-center justify-center">
                         <Spiral className="w-16 h-16" fillColor="#A66C5B"/>
                     </div>
                     <h3 className="textTitleSection py-4">CHI SIAMO</h3>
-                    <div ref={componentRef} className="flex flex-col sm:flex-row gap-3 sm:gap-6">
+                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-6">
                         {members.map((member, index) => (
                             <div className="flex-1 items-center justify-center transition-all duration-500 group">
                                 <a href={`/chi-siamo/${member.memberName}`}>

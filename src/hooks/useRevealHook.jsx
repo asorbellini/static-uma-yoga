@@ -15,7 +15,7 @@ export function useRevealOnScroll(ref, { threshold = 0.3, rootMargin = '0px 0px 
       scrollCompleteReceived.current = true
       isWaitingForInitialScroll.current = false
       
-      // Forzar una nueva verificación del observer después del scroll automático
+      // Verificación del observer después del scroll automático
       setTimeout(() => {
         if (el && !revealed.current) {
           const rect = el.getBoundingClientRect()
@@ -28,8 +28,34 @@ export function useRevealOnScroll(ref, { threshold = 0.3, rootMargin = '0px 0px 
       }, 100)
     }
 
-    // Escuchar el evento de scroll automático completado
+    // Evento de scroll automático completado
     window.addEventListener('scrollToTopComplete', handleScrollComplete)
+
+    // Detectar scroll manual
+    let scrollTimeout
+    const handleManualScroll = () => {
+      if (isWaitingForInitialScroll.current && !scrollCompleteReceived.current) {
+        isWaitingForInitialScroll.current = false
+        scrollCompleteReceived.current = true
+      }
+      
+      // Debounce: limpiar timeout anterior
+      clearTimeout(scrollTimeout)
+      scrollTimeout = setTimeout(() => {
+        // Verificar si el elemento es visible después del scroll manual
+        if (el && !revealed.current) {
+          const rect = el.getBoundingClientRect()
+          const isVisible = rect.top < window.innerHeight && rect.bottom > 0
+          if (isVisible) {
+            revealed.current = true
+            onReveal?.()
+          }
+        }
+      }, 100)
+    }
+    
+    // Escuchar scroll manual
+    window.addEventListener('scroll', handleManualScroll, { passive: true })
 
     const observer = new IntersectionObserver(([entry]) => {
       // La 1ª notificación refleja el estado al montar → ignorarla
@@ -66,7 +92,9 @@ export function useRevealOnScroll(ref, { threshold = 0.3, rootMargin = '0px 0px 
     return () => {
       observer.disconnect()
       window.removeEventListener('scrollToTopComplete', handleScrollComplete)
+      window.removeEventListener('scroll', handleManualScroll)
       clearTimeout(safetyTimeout)
+      clearTimeout(scrollTimeout)
     }
   }, [ref, threshold, rootMargin, onReveal])
 }
