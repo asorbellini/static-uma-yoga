@@ -9,7 +9,7 @@ function ImageCardGlass({event}) {
   return (
     <div className="w-full h-full flex flex-col">
         {/* Mobile: imagen arriba, card debajo */}
-        <div className="block sm:hidden border-2 border-verdeBosque shadow-lg shadow-verdeBosque rounded-2xl">
+        <div className="block sm:hidden shadow-lg shadow-verdeBosque rounded-2xl">
             <div className="block sm:hidden w-full min-h-fit max-h-[280px] rounded-t-2xl overflow-hidden">
                 <img
                 src={event?.image}
@@ -42,7 +42,7 @@ function ImageCardGlass({event}) {
             </div>
         </div>
         {/* Tablet: imagen y card lado a lado */}
-        <div className="hidden sm:flex lg:hidden flex-col items-center border-2 border-verdeBosque rounded-2xl">
+        <div className="hidden sm:flex lg:hidden flex-col items-center rounded-2xl">
             <div className="w-full h-[200px] rounded-t-2xl overflow-hidden">
                 <img
                     src={event?.image}
