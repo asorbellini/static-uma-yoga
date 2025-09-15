@@ -72,15 +72,6 @@ const LazyImage = forwardRef(({
     }
   }, [error, onError])
 
-  // Debug logs
-  console.log('LazyImage render:', {
-    isLoadingHighQuality,
-    showLoadingIndicator,
-    isLoaded: imageState.isLoaded,
-    src: imageState.src,
-    isHighQuality: imageState.isHighQuality
-  })
-
   return (
     <div className="relative">
       {imageState.isLoaded && (

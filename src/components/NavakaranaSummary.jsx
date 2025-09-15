@@ -1,5 +1,5 @@
 import { useState , useRef, useEffect } from "react";
-import Navakarana from "../assets/images/Navakarana/Navakarana.png"
+import Navakarana from "../assets/images/Navakarana/Navakarana.webp"
 import { useRevealOnScroll } from "../hooks/useRevealHook.jsx"
 
 function NavakaranaSummary() {

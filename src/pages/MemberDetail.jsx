@@ -76,7 +76,7 @@ function MemberDetail(){
                     <div className="flex flex-col md:flex-row items-start gap-3 ">
                         {/* Columna izquierda - Imagen */}
                         <div className="w-full md:flex-1">
-                            <div className="relative justify-items-center">
+                            <div className="flex justify-center items-center relative">
                                 <img
                                 src={member.images?.src}
                                 alt={`${member.Name} - ${member.id}`}
@@ -126,7 +126,7 @@ function MemberDetail(){
                         <div className="flex flex-col sm:flex-row gap-3 mt-4">
                             {member?.classes?.map((classi, index) => (
                                 <div key={index} className="flex-1 sm:basis-1/4 lg:flex-1 text-white hover:scale-105 relative group ">
-                                    <div className="items-center justify-items-center">
+                                    <div className="flex flex-col items-center justify-center">
                                         <img
                                         src={classi?.urlImage || imageUrlNavakaranaVinyasa}
                                         alt={classi?.title}  

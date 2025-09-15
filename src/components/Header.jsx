@@ -112,7 +112,7 @@ const Header = () => {
             </li>
           ))}
         </ul>
-        <div className="fixed bottom-[10%] left-1/2 -translate-x-1/2 w-full flex flex-col items-center text-center">
+        <div className="fixed bottom-[20%] left-1/2 -translate-x-1/2 w-full flex flex-col items-center text-center">
             <h3 className="text-white font-semibold text-sm uppercase tracking-wider h-6 flex items-center mb-2 ">
               Seguici su
             </h3>
