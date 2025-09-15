@@ -1,7 +1,8 @@
-"use client"
 
 import { useState, useRef, useEffect } from "react"
-import { CloseIcon, NextSlideArrow, PrevSlideArrow, ZoomIcon } from "./Icons"
+import { CloseIcon, NextSlideArrow, PrevSlideArrow, ZoomIcon } from "./Icons.jsx"
+import LazyImage from "./LazyImage.jsx"
+import { ComponentLoading } from "./LoadingFootPrints.jsx"
 
 const HorizontalGallery = ({ images = [] }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -10,6 +11,7 @@ const HorizontalGallery = ({ images = [] }) => {
   const [isMobile, setIsMobile] = useState(false)
   const [isTransitioning, setIsTransitioning] = useState(false)
   const containerRef = useRef(null)
+  const lightboxImageRef = useRef(null)
   const [containerWidth, setContainerWidth] = useState(0)
 
   const galleryImages = images
@@ -169,7 +171,14 @@ const HorizontalGallery = ({ images = [] }) => {
   const openLightbox = (image, index) => {
     if (isTransitioning) return
     setLightboxImage({ ...image, index })
+    setCurrentIndex(index) // Actualizar el índice del carrusel
     setLightboxOpen(true)
+    // Forzar carga de alta calidad cuando se abre el lightbox
+    setTimeout(() => {
+      if (lightboxImageRef.current) {
+        lightboxImageRef.current.loadHighQuality()
+      }
+    }, 100)
   }
 
   const closeLightbox = () => {
@@ -233,12 +242,20 @@ const HorizontalGallery = ({ images = [] }) => {
                   }
                 }}
               >
-                <img
-                  src={image.src}
-                  alt={`Imagen ${image.alt}`}
+                <LazyImage
+                  thumbnailSrc={image.thumbnail?.src || image.src}
+                  fullSizeSrc={image.fullSize?.src || image.src}
+                  alt={image.alt || `Imagen ${index + 1}`}
                   title={image.title}
                   className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-lg shadow-lg transition-all duration-300 group-hover:shadow-xl"
-                  loading="lazy"
+                  lazyOptions={{
+                    threshold: 0.1,
+                    rootMargin: '50px',
+                    enablePreload: false, 
+                    preloadDelay: 0,
+                    loadOnlyOnDemand: true
+                  }}
+                  showLoadingIndicator={true} 
                 />
 
                 {/* Overlay */}
@@ -309,13 +326,27 @@ const HorizontalGallery = ({ images = [] }) => {
               <CloseIcon />
             </button>
 
-            <img
-              src={lightboxImage.src}
-              alt={lightboxImage.alt}
-              className="max-w-full max-h-full object-contain"
-            />
+             <LazyImage
+               ref={lightboxImageRef}
+               thumbnailSrc={lightboxImage.thumbnail?.src || lightboxImage.src}
+               fullSizeSrc={lightboxImage.fullSize?.src || lightboxImage.src}
+               alt={lightboxImage.alt}
+               title={lightboxImage.title}
+               className="w-auto max-h-dvh object-contain"
+               forceHighQuality={false} 
+               showLoadingIndicator={true}
+               lazyOptions={{
+                 threshold: 0,
+                 rootMargin: '0px',
+                 enablePreload: false,
+                 preloadDelay: 0,
+                 loadOnlyOnDemand: true,
+                 showLoadingOnHighQuality: true,
+                 hideThumbnailInitially: true
+               }}
+             />
 
-            {lightboxImage.title && (
+            {lightboxImage.title &&  (
               <div className="absolute bottom-4 left-4 right-4 text-center">
                 <p className="text-white text-lg font-light bg-oscuro/50 rounded-lg px-4 py-2 inline-block">
                   {lightboxImage.title}
@@ -330,6 +361,13 @@ const HorizontalGallery = ({ images = [] }) => {
                 onClick={() => {
                   const prevIndex = lightboxImage.index > 0 ? lightboxImage.index - 1 : galleryImages.length - 1
                   setLightboxImage({ ...galleryImages[prevIndex], index: prevIndex })
+                  setCurrentIndex(prevIndex) // Actualizar el índice del carrusel
+                  // Forzar carga de alta calidad de la nueva imagen
+                  setTimeout(() => {
+                    if (lightboxImageRef.current) {
+                      lightboxImageRef.current.loadHighQuality()
+                    }
+                  }, 100)
                 }}
                 className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/40 hover:bg-white/60 text-white rounded-full p-3 transition-all duration-300"
                 aria-label="Precedente"
@@ -341,6 +379,13 @@ const HorizontalGallery = ({ images = [] }) => {
                 onClick={() => {
                   const nextIndex = lightboxImage.index < galleryImages.length - 1 ? lightboxImage.index + 1 : 0
                   setLightboxImage({ ...galleryImages[nextIndex], index: nextIndex })
+                  setCurrentIndex(nextIndex) // Actualizar el índice del carrusel
+                  // Forzar carga de alta calidad de la nueva imagen
+                  setTimeout(() => {
+                    if (lightboxImageRef.current) {
+                      lightboxImageRef.current.loadHighQuality()
+                    }
+                  }, 100)
                 }}
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/40 hover:bg-white/60 text-white rounded-full p-3 transition-all duration-300"
                 aria-label="Prossimo"

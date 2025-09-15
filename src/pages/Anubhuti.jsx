@@ -1,56 +1,71 @@
 import { useState, useRef, useEffect } from "react"
 import HeroComponent from "../components/HeroComponent.jsx"
-import imgAnubhuti from "../assets/images/Anubhuti/Anubhuti.png"
+import imgAnubhuti from "../assets/images/Anubhuti/Anubhuti.webp"
 import logoAnubhuti from "../assets/images/LogoAnubhuti.png"
 import ToRetreateWorkshop from "../components/ToRetreateWorkshop.jsx"
 import ScrollToTop from "../components/ScrollToTop.jsx"
 import { useRevealOnScroll } from "../hooks/useRevealHook.jsx"
 import members from "../data/members.json"
 import HorizontalGallery from "../components/Gallery.jsx"
-import anub1 from "../assets/images/Anubhuti/anub1.png"
-import anub2 from "../assets/images/Anubhuti/anub2.png"
-import anub3 from "../assets/images/Anubhuti/anub3.png"
-import anub4 from "../assets/images/Anubhuti/anub4.png"
-import anub5 from "../assets/images/Anubhuti/anub5.png"
-import anub6 from "../assets/images/Anubhuti/anub6.png"
-import anub7 from "../assets/images/Anubhuti/anub7.png"
+import an01400 from "../assets/images/Anubhuti/anub01400px.webp"
+import an02400 from "../assets/images/Anubhuti/anub02400px.webp"
+import an03400 from "../assets/images/Anubhuti/anub03400px.webp"
+import an04400 from "../assets/images/Anubhuti/anub04400px.webp"
+import an05400 from "../assets/images/Anubhuti/anub05400px.webp"
+import an06400 from "../assets/images/Anubhuti/anub06400px.webp"
+import an07400 from "../assets/images/Anubhuti/anub07400px.webp"
+
+import an01full from "../assets/images/Anubhuti/anub1.webp"
+import an02full from "../assets/images/Anubhuti/anub2.webp"
+import an03full from "../assets/images/Anubhuti/anub3.webp"
+import an04full from "../assets/images/Anubhuti/anub4.webp"
+import an05full from "../assets/images/Anubhuti/anub5.webp"
+import an06full from "../assets/images/Anubhuti/anub6.webp"
+import an07full from "../assets/images/Anubhuti/anub7.webp"
 
 
 const AnubhutiImages = [
     {
-        src: anub1,
-        alt: "anubhuti practice",
-        title: "Yoga Practice",
-    },
-    {
-        src: anub2,
-        alt: "yoga session",
-        title: "Yoga Session",
-    },
-    {
-        src: anub3,
-        alt: "meditation",
-        title: "Meditation",
-    },
-    {
-        src: anub4,
-        alt: "yoga pose",
-        title: "Yoga Pose",
-    },
-    {
-        src: anub5,
-        alt: "yoga class",
-        title: "Yoga Class",
-    },
-    {
-        src: anub6,
+        thumbnail: { src: an06400, width: 400, height: 600 },
+        fullSize: { src: an06full, width: 3840, height: 5760 },
         alt: "yoga retreat",
         title: "Yoga Retreat",
     },
     {
-        src: anub7,
+        thumbnail: { src: an07400, width: 400, height: 600 },
+        fullSize: { src: an07full, width: 3840, height: 5760 },
         alt: "navakarana vinyasa",
         title: "Navakarana Vinyasa",
+    },
+        {
+        thumbnail: { src: an04400, width: 600, height: 400 },
+        fullSize: { src: an04full, width: 5760, height: 3840 },
+        alt: "yoga pose",
+        title: "Yoga Pose",
+    },
+        {
+        thumbnail: { src: an02400, width: 600, height: 400 },
+        fullSize: { src: an02full, width: 5760, height: 3840 },
+        alt: "yoga session",
+        title: "Yoga Session",
+    },
+    {
+        thumbnail: { src: an03400, width: 600, height: 400 },
+        fullSize: { src: an03full, width: 5760, height: 3840 },
+        alt: "meditation",
+        title: "Meditation",
+    },
+    {
+        thumbnail: { src: an01400, width: 600, height: 400 },
+        fullSize: { src: an01full, width: 5760, height: 3840 },
+        alt: "anubhuti practice",
+        title: "Yoga Practice",
+    },
+        {
+        thumbnail: { src: an05400, width: 600, height: 400 },
+        fullSize: { src: an05full, width: 5760, height: 3840 },
+        alt: "yoga class",
+        title: "Yoga Class",
     }
 ]
 
@@ -194,14 +209,14 @@ function Anubhuti() {
                     </div>
                 </div>
             </section>
-            <section className="bg-claro px-6 md:px-16 pt-12 md:pt-20 md:pb-4" id="proposte">
-                <Proposte info={members[2]?.projects} />
-            </section>
             {/* GALERÍA DE IMÁGENES */}
             <div className="items-center justify-items-center mx-auto px-6 sm:px-16">
                 <h3 className="w-text-xl md:text-3xl rounded font-serif text-oscuro text-center font-semibold uppercase py-2 md:w-[50vw]">GALLERY</h3>
                     <HorizontalGallery images={AnubhutiImages}/>
             </div>
+            <section className="bg-claro px-6 md:px-16 pt-12 md:pt-20 md:pb-4" id="proposte">
+                <Proposte info={members[2]?.projects} />
+            </section>
         </div>
         <ToRetreateWorkshop />
         </>

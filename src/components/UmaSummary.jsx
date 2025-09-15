@@ -1,68 +1,216 @@
-import { useState, useEffect, useRef, Suspense } from "react"
-import cosaFacciamo2 from "../assets/images/Cosafacciamo2.png"
+import { useState, useRef, Suspense} from "react"
+import cosaFacciamo2 from "../assets/images/Cosafacciamo2.webp"
 import members from "../data/members.json"
 import { ArrowDown, BodyHeart, Road, Spiral } from "./Icons.jsx"
 import { useRevealOnScroll } from "../hooks/useRevealHook.jsx"
 import HorizontalGallery from "./Gallery.jsx"
 import {ComponentLoading} from "./LoadingFootPrints.jsx"
-import lr1 from "../assets/images/LastRetreats/lr1.png"
-import lr2 from "../assets/images/LastRetreats/lr2.png"
-import lr3 from "../assets/images/LastRetreats/lr3.png"
-import lr4 from "../assets/images/LastRetreats/lr4.png"
-import lr5 from "../assets/images/LastRetreats/lr5.png"
-import lr6 from "../assets/images/LastRetreats/lr6.png"
-import lr7 from "../assets/images/LastRetreats/lr7.png"
-import lr8 from "../assets/images/LastRetreats/lr8.png"
-import lr9 from "../assets/images/LastRetreats/lr9.png"
-import  ReviewsCarrousel from "./ReviewsCarrousel.jsx" 
+import LR01400 from "../assets/images/LastRetreats/LR01400px.webp"
+import LR02400 from "../assets/images/LastRetreats/LR02400px.webp"
+import LR03400 from "../assets/images/LastRetreats/LR03400px.webp"
+import LR04400 from "../assets/images/LastRetreats/LR04400px.webp"
+import LR05400 from "../assets/images/LastRetreats/LR05400px.webp"
+import LR06400 from "../assets/images/LastRetreats/LR06400px.webp"
+import LR07400 from "../assets/images/LastRetreats/LR07400px.webp"
+import LR08400 from "../assets/images/LastRetreats/LR08400px.webp"
+import LR09400 from "../assets/images/LastRetreats/LR09400px.webp"
+import LR10400 from "../assets/images/LastRetreats/LR10400px.webp"
+import LR11400 from "../assets/images/LastRetreats/LR11400px.webp"
+import LR12400 from "../assets/images/LastRetreats/LR12400px.webp"
+import LR13400 from "../assets/images/LastRetreats/LR13400px.webp"
+import LR14400 from "../assets/images/LastRetreats/LR14400px.webp"
+import LR15400 from "../assets/images/LastRetreats/LR15400px.webp"
+import LR16400 from "../assets/images/LastRetreats/LR16400px.webp"
+import LR17400 from "../assets/images/LastRetreats/LR17400px.webp"
+import LR18400 from "../assets/images/LastRetreats/LR18400px.webp"
+import LR19400 from "../assets/images/LastRetreats/LR19400px.webp"
+import LR20400 from "../assets/images/LastRetreats/LR20400px.webp"
+import LR21400 from "../assets/images/LastRetreats/LR21400px.webp"
+import LR22400 from "../assets/images/LastRetreats/LR22400px.webp"
+import LR23400 from "../assets/images/LastRetreats/LR23400px.webp"
+import LR24400 from "../assets/images/LastRetreats/LR24400px.webp"
+import LR25400 from "../assets/images/LastRetreats/LR25400px.webp"
+
+import LR01FULL from "../assets/images/LastRetreats/LR01full.webp"
+import LR02FULL from "../assets/images/LastRetreats/LR02full.webp"
+import LR03FULL from "../assets/images/LastRetreats/LR03full.webp"
+import LR04FULL from "../assets/images/LastRetreats/LR04full.webp"
+import LR05FULL from "../assets/images/LastRetreats/LR05full.webp"
+import LR06FULL from "../assets/images/LastRetreats/LR06full.webp"
+import LR07FULL from "../assets/images/LastRetreats/LR07full.webp"
+import LR08FULL from "../assets/images/LastRetreats/LR08full.webp"
+import LR09FULL from "../assets/images/LastRetreats/LR09full.webp"
+import LR10FULL from "../assets/images/LastRetreats/LR10full.webp"
+import LR11FULL from "../assets/images/LastRetreats/LR11full.webp"
+import LR12FULL from "../assets/images/LastRetreats/LR12full.webp"
+import LR13FULL from "../assets/images/LastRetreats/LR13full.webp"
+import LR14FULL from "../assets/images/LastRetreats/LR14full.webp"
+import LR15FULL from "../assets/images/LastRetreats/LR15full.webp"
+import LR16FULL from "../assets/images/LastRetreats/LR16full.webp"
+import LR17FULL from "../assets/images/LastRetreats/LR17full.webp"
+import LR18FULL from "../assets/images/LastRetreats/LR18full.webp"
+import LR19FULL from "../assets/images/LastRetreats/LR19full.webp"
+import LR20FULL from "../assets/images/LastRetreats/LR20full.webp"
+import LR21FULL from "../assets/images/LastRetreats/LR21full.webp"
+import LR22FULL from "../assets/images/LastRetreats/LR22full.webp"
+import LR23FULL from "../assets/images/LastRetreats/LR23full.webp"
+import LR24FULL from "../assets/images/LastRetreats/LR24full.webp"
+import LR25FULL from "../assets/images/LastRetreats/LR25full.webp"
+
+import ReviewsCarrousel from "./ReviewsCarrousel.jsx" 
 import reviews from "../data/lastreviews.json"
 
 const LastRetreatsImages = [
     {
-      src: lr1,
+      thumbnail: { src: LR01400, width: 400, height: 267 },
+      fullSize: { src: LR01FULL, width: 3000, height: 2000 },
       alt: "cappadocia(1)",
       title: "Cappadocia yoga retreat 1",
     },
     {
-      src: lr2,
+      thumbnail: { src: LR02400, width: 400, height: 267 },
+      fullSize: { src: LR02FULL, width: 3000, height: 2000 },
       alt: "yoga session",
       title: "Yoga Session",
     },
     {
-      src: lr3,
+      thumbnail: { src: LR03400, width: 400, height: 267 },
+      fullSize: { src: LR03FULL, width: 3000, height: 2000 },
       alt: "meditation",
       title: "Meditation",
     },
     {
-      src: lr4,
+      thumbnail: { src: LR04400, width: 400, height: 267 },
+      fullSize: { src: LR04FULL, width: 3000, height: 2000 },
       alt: "yoga pose",
       title: "Yoga Pose",
     },
     {
-      src: lr5,
+      thumbnail: { src: LR05400, width: 400, height: 267 },
+      fullSize: { src: LR05FULL, width: 3000, height: 2000 },
       alt: "yoga class",
       title: "Yoga Class",
     },
     {
-      src: lr6,
+      thumbnail: { src: LR06400, width: 400, height: 267 },
+      fullSize: { src: LR06FULL, width: 3000, height: 2000 },
       alt: "yoga retreat",
       title: "Yoga Retreat",
     },
     {
-      src: lr7,
+      thumbnail: { src: LR07400, width: 400, height: 267 },
+      fullSize: { src: LR07FULL, width: 3000, height: 2000 },
       alt: "navakarana vinyasa",
       title: "Navakarana Vinyasa",
     },
-     {
-      src: lr8,
+    {
+      thumbnail: { src: LR08400, width: 400, height: 267 },
+      fullSize: { src: LR08FULL, width: 3000, height: 2000 },
       alt: "navakarana vinyasa",
       title: "Navakarana Vinyasa",
     },
-     {
-      src: lr9,
+    {
+      thumbnail: { src: LR09400, width: 400, height: 267 },
+      fullSize: { src: LR09FULL, width: 3000, height: 2000 },
       alt: "navakarana vinyasa",
       title: "Navakarana Vinyasa",
     },
+    {
+      thumbnail: { src: LR10400, width: 400, height: 267 },
+      fullSize: { src: LR10FULL, width: 3000, height: 2000 },
+      alt: "navakarana vinyasa",
+      title: "Navakarana Vinyasa",
+    },
+    {
+      thumbnail: { src: LR11400, width: 400, height: 267 },
+      fullSize: { src: LR11FULL, width: 3000, height: 2000 },
+      alt: "navakarana vinyasa",
+      title: "Navakarana Vinyasa",
+    },
+    {
+      thumbnail: { src: LR12400, width: 400, height: 267 },
+      fullSize: { src: LR12FULL, width: 3000, height: 2000 },
+      alt: "navakarana vinyasa",
+      title: "Navakarana Vinyasa",
+    },
+    {
+      thumbnail: { src: LR13400, width: 400, height: 267 },
+      fullSize: { src: LR13FULL, width: 3000, height: 2000 },
+      alt: "navakarana vinyasa",
+      title: "Navakarana Vinyasa",
+    },
+    {
+      thumbnail: { src: LR14400, width: 400, height: 267 },
+      fullSize: { src: LR14FULL, width: 3000, height: 2000 },
+      alt: "navakarana vinyasa",
+      title: "Navakarana Vinyasa",
+    },
+    {
+      thumbnail: { src: LR15400, width: 400, height: 267 },
+      fullSize: { src: LR15FULL, width: 3000, height: 2000 },
+      alt: "navakarana vinyasa",
+      title: "Navakarana Vinyasa",
+    },
+    {
+      thumbnail: { src: LR16400, width: 400, height: 267 },
+      fullSize: { src: LR16FULL, width: 3000, height: 2000 },
+      alt: "navakarana vinyasa",
+      title: "Navakarana Vinyasa",
+    },
+    {
+      thumbnail: { src: LR17400, width: 400, height: 267 },
+      fullSize: { src: LR17FULL, width: 3000, height: 2000 },
+      alt: "navakarana vinyasa",
+      title: "Navakarana Vinyasa",
+    },
+    {
+      thumbnail: { src: LR18400, width: 400, height: 267 },
+      fullSize: { src: LR18FULL, width: 3000, height: 2000 },
+      alt: "navakarana vinyasa",
+      title: "Navakarana Vinyasa",
+    },
+    {
+      thumbnail: { src: LR19400, width: 400, height: 267 },
+      fullSize: { src: LR19FULL, width: 3000, height: 2000 },
+      alt: "navakarana vinyasa",
+      title: "Navakarana Vinyasa",
+    },
+    {
+      thumbnail: { src: LR20400, width: 400, height: 267 },
+      fullSize: { src: LR20FULL, width: 3000, height: 2000 },
+      alt: "navakarana vinyasa",
+      title: "Navakarana Vinyasa",
+    },
+    {
+      thumbnail: { src: LR21400, width: 400, height: 267 },
+      fullSize: { src: LR21FULL, width: 3000, height: 2000 },
+      alt: "navakarana vinyasa",
+      title: "Navakarana Vinyasa",
+    },
+    {
+      thumbnail: { src: LR22400, width: 400, height: 267 },
+      fullSize: { src: LR22FULL, width: 3000, height: 2000 },
+      alt: "navakarana vinyasa",
+      title: "Navakarana Vinyasa",
+    },
+    {
+      thumbnail: { src: LR23400, width: 400, height: 267 },
+      fullSize: { src: LR23FULL, width: 3000, height: 2000 },
+      alt: "navakarana vinyasa",
+      title: "Navakarana Vinyasa",
+    },
+    {
+      thumbnail: { src: LR24400, width: 400, height: 267 },
+      fullSize: { src: LR24FULL, width: 3000, height: 2000 },
+      alt: "navakarana vinyasa",
+      title: "Navakarana Vinyasa",
+    },
+    {
+      thumbnail: { src: LR25400, width: 400, height: 267 },
+      fullSize: { src: LR25FULL, width: 3000, height: 2000 },
+      alt: "navakarana vinyasa",
+      title: "Navakarana Vinyasa",
+    }
   ]
 
 function UmaSummary(){
@@ -78,7 +226,7 @@ function UmaSummary(){
         <div>
             <section id="uma-summary" className="h-auto sm:h-screen md:min-h-dvh flex items-center justify-center sm:justify-evenly w-full px-4 pt-4 sm:pt-16 bg-claro">
                 <div className="px-2 md:px-12 relative" ref={componentRef} >
-                    <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2 flex items-center justify-center">
+                    <div className="hidden absolute -top-16 left-1/2 -translate-x-1/2 sm:flex items-center justify-center">
                         <Spiral className="w-16 h-16" fillColor="#A66C5B"/>
                     </div>
                     <h3 className="textTitleSection py-4">CHI SIAMO</h3>
@@ -112,7 +260,7 @@ function UmaSummary(){
             </section>
             <section id="cosa-facciamo" className="h-auto lg:min-h-dvh w-full items-center justify-center lg:justify-evenly p-4 pt-4 md:pt-16 bg-claro flex flex-col">
                 <div className="px-2 md:px-12 md:pb-4 relative">
-                    <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2 flex items-center justify-center">
+                    <div className="hidden absolute -top-16 left-1/2 -translate-x-1/2 sm:flex items-center justify-center">
                         <BodyHeart className="w-16 h-16" fillColor="#A66C5B"/>
                     </div>
                     <h2 className="textTitleSection py-4">COSA FACCIAMO</h2>
@@ -150,7 +298,7 @@ function UmaSummary(){
                             </a>
                         </div>
                     </div>
-                    <div className="hidden sm:block absolute -bottom-16 left-1/2 -translate-x-1/2 flex items-center justify-center">
+                    <div className="hidden absolute -bottom-16 left-1/2 -translate-x-1/2 sm:flex items-center justify-center">
                         <Road className="w-16 h-16" fillColor="#A66C5B"/>
                     </div>
                 </div>
