@@ -164,7 +164,7 @@ function Anubhuti() {
                     <div className="w-full md:basis-3/5 flex flex-col items-start ">
                             <div >
                                 <h3 className="w-text-xl title text-oscuro text-left drop-shadow-none font-semibold tracking-wider uppercase py-2">
-                                    Cos'è il Anubhūti
+                                    COS’È ANUBHŪTI?
                                 </h3>
                                 <p className="textDetail drop-shadow-none text-oscuro text-left pb-2">
                                     Anubhūti NON è un metodo è un complesso meccanismo di pratiche che valorizzano la natura dell’essere umano come esperienza viva, come processo di evoluzione costante, come universo dentro a infiniti universi in movimento. Siamo un corpo che vive, respira e agisce… e nostro corpo è il nostro tempo, il nostro spazio, ed è sopratutto un contenitore di memorie che vanno oltre la memoria mentale alla quale siamo abituati. Anubhūti, parola di origine sanscrita, ha visto un’evoluzione nel tempo: dal suo significato originario di “esperienza di unioni mistiche” o “esperienza che plasma”, si è frammentata nella lingua indiana in concetti come emozione, sensazione, percezione. Noi, attraverso questo percorso, lavoriamo sui singoli concetti moderni con l’obiettivo finale di ritornare al senso profondo del termine: creare un’esperienza che plasmi, che trasformi.
@@ -181,7 +181,7 @@ function Anubhuti() {
                 </div>
                 <div className="flex flex-col items-center justify-start pt-8 md:pt-12 px-2 md:px-12">
                     <h3 className="title text-oscuro text-center drop-shadow-none font-semibold tracking-wider uppercase py-2 md:w-[50vw]">
-                        Perché sceglierlo:
+                        Perché scegliere Anubhūti:
                     </h3>
                     <p className="textDetail text-oscuro text-center drop-shadow-none pb-2 lg:w-[50vw]">
                         Anubhūti è una pratica che invita a ritornare a sé attraverso il corpo, il movimento libero, l’approccio giocoso e l’ascolto profondo. Non si tratta di imitare forme esterne, ma di esplorare in modo autentico e guidato il proprio universo sensoriale, riconnettendosi alle emozioni, agli altri e a tutto ciò che ci circonda. È un viaggio che parte dal corpo e si espande, trasformando ogni gesto in consapevolezza e ogni esperienza in un’opportunità di presenza. Anubhūti apre uno spazio in cui riscoprire la propria verità interiore, attraverso un linguaggio fatto di sensazioni, connessioni e libertà espressiva.
