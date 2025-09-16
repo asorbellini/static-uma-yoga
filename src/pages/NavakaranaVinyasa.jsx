@@ -8,7 +8,7 @@ import navak4 from "../assets/images/Navakarana/navak4.png"
 import navak5 from "../assets/images/Navakarana/navak5.png"
 import navak6 from "../assets/images/Navakarana/navak6.png"
 import navak7 from "../assets/images/Navakarana/navak7.png"
-import logoNavakarana from "../assets/images/LogoNavakarana.webp"
+import logoNavakarana from "../assets/images/LogoNavakarana.png"
 import NavakaranaSummary from "../components/NavakaranaSummary.jsx";
 import ToRetreateWorkshop from "../components/ToRetreateWorkshop.jsx";
 
