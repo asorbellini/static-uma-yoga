@@ -16,6 +16,7 @@ const RetreateWorkshop = lazy(() => import("./pages/RetreateWorkshop.jsx"));
 const ReW = lazy(() => import("./pages/ReWDetail.jsx"));
 const ContactUs = lazy(() => import("./pages/ContactUs.jsx"));
 const Press = lazy(() => import("./pages/Press.jsx"));
+const NotFound = lazy(() => import("./pages/NotFound.jsx"))
 
 function App() {
   return (
@@ -27,15 +28,13 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/chi-siamo" element={<About />}/>
           <Route path="/chi-siamo/:memberName" element={<MemberDetail />}/>
-          {/*<Route path="/classi" element={<Classes />} />
-          <Route path="/classi/:nameClass" element={<ClassesDetail />} /> */}
           <Route path="/navakarana-vinyasa" element={<NavakaranaVinyasa />} />
           <Route path="/anubhuti" element={<Anubhuti />} />
           <Route path="/retreat-e-workshop" element={<RetreateWorkshop />} />
           <Route path="/:type/:slug" element={<ReW />} />
           <Route path="/contatti" element={<ContactUs />} />  
           <Route path="/press-e-media" element={<Press />} /> 
-          {/* <Route path="/events" element={<Events />} />        */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
       <Footer />

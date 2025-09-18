@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { LeftFootPrint, RightFootPrint } from './Icons.jsx';
 
-const LoadingFootPrints = ({ 
+export const LoadingFootPrints = ({ 
     size = "default",
     message = "",
     className = "",
