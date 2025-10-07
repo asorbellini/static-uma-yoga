@@ -2,7 +2,6 @@
 import { useState, useRef, useEffect } from "react"
 import { CloseIcon, NextSlideArrow, PrevSlideArrow, ZoomIcon } from "./Icons.jsx"
 import LazyImage from "./LazyImage.jsx"
-import { ComponentLoading } from "./LoadingFootPrints.jsx"
 
 const HorizontalGallery = ({ images = [] }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -255,7 +254,7 @@ const HorizontalGallery = ({ images = [] }) => {
                     preloadDelay: 0,
                     loadOnlyOnDemand: true
                   }}
-                  showLoadingIndicator={true} 
+                  showLoadingIndicator={true}
                 />
 
                 {/* Overlay */}
@@ -280,7 +279,7 @@ const HorizontalGallery = ({ images = [] }) => {
             <>
               <button
                 onClick={prevSlide}
-                className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-oscuro rounded-full p-2 md:p-3 shadow-lg transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 z-30"
+                className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-oscuro rounded-full p-2 md:p-3 shadow-lg transition-all duration-300 hover:scale-110 z-30"
                 aria-label="Fotografia precedente"
               >
                 <PrevSlideArrow />
@@ -288,7 +287,7 @@ const HorizontalGallery = ({ images = [] }) => {
 
               <button
                 onClick={nextSlide}
-                className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-oscuro rounded-full p-2 md:p-3 shadow-lg transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 z-30"
+                className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-oscuro rounded-full p-2 md:p-3 shadow-lg transition-all duration-300 hover:scale-110 z-30"
                 aria-label="Fotografia prossima"
               >
                 <NextSlideArrow />
@@ -304,7 +303,7 @@ const HorizontalGallery = ({ images = [] }) => {
                 key={index}
                 onClick={() => !isTransitioning && scrollToSlide(index)}
                 disabled={isTransitioning}
-                className={`inset-0 h-2 rounded-full transition-all duration-300 disabled:cursor-not-allowed ${
+                className={`inset-0 h-2 rounded-full transition-all duration-300 ${
                   index === currentIndex ? "bg-oscuro w-6" : "bg-oscuro/30 hover:bg-oscuro/60 w-2"
                 }`}
                 aria-label={`Fotografia ${index + 1}`}
@@ -363,11 +362,11 @@ const HorizontalGallery = ({ images = [] }) => {
                   setLightboxImage({ ...galleryImages[prevIndex], index: prevIndex })
                   setCurrentIndex(prevIndex) // Actualizar el índice del carrusel
                   // Forzar carga de alta calidad de la nueva imagen
-                  setTimeout(() => {
+                  /* setTimeout(() => {
                     if (lightboxImageRef.current) {
                       lightboxImageRef.current.loadHighQuality()
                     }
-                  }, 100)
+                  }, 100) */
                 }}
                 className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/40 hover:bg-white/60 text-white rounded-full p-3 transition-all duration-300"
                 aria-label="Precedente"
@@ -381,11 +380,11 @@ const HorizontalGallery = ({ images = [] }) => {
                   setLightboxImage({ ...galleryImages[nextIndex], index: nextIndex })
                   setCurrentIndex(nextIndex) // Actualizar el índice del carrusel
                   // Forzar carga de alta calidad de la nueva imagen
-                  setTimeout(() => {
+                  /* setTimeout(() => {
                     if (lightboxImageRef.current) {
                       lightboxImageRef.current.loadHighQuality()
                     }
-                  }, 100)
+                  }, 100) */
                 }}
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/40 hover:bg-white/60 text-white rounded-full p-3 transition-all duration-300"
                 aria-label="Prossimo"

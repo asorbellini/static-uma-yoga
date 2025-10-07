@@ -31,10 +31,10 @@ export const useLazyImage = (thumbnailSrc, fullSizeSrc, options = {}) => {
   const [shouldLoadHighQuality, setShouldLoadHighQuality] = useState(hideThumbnailInitially)
   const imgRef = useRef(null)
   const observerRef = useRef(null)
-
+  const loadingRef = useRef(false)
   // Intersection Observer para detectar cuando la imagen entra en viewport
   useEffect(() => {
-    if (!imgRef.current) return
+    if (!imgRef.current || hideThumbnailInitially) return
 
     observerRef.current = new IntersectionObserver(
       ([entry]) => {
@@ -60,7 +60,7 @@ export const useLazyImage = (thumbnailSrc, fullSizeSrc, options = {}) => {
         observerRef.current.disconnect()
       }
     }
-  }, [threshold, rootMargin, enablePreload, preloadDelay, loadOnlyOnDemand])
+  }, [threshold, rootMargin, enablePreload, preloadDelay, loadOnlyOnDemand, hideThumbnailInitially])
 
   // Si hideThumbnailInitially es true, cargar directamente la alta calidad
   useEffect(() => {
@@ -77,12 +77,12 @@ export const useLazyImage = (thumbnailSrc, fullSizeSrc, options = {}) => {
       ...prev, 
       isLoading: true,
       isLoadingHighQuality: showLoadingOnHighQuality,
-      isLoaded: !hideThumbnailInitially // Si hideThumbnailInitially es true, no mostrar nada hasta que esté lista
+      isLoaded: !hideThumbnailInitially, //Si hideThumbnailInitially es true, no mostrar nada hasta que esté lista
     }))
-
     const img = new Image()
     
     img.onload = () => {
+      loadingRef.current = false
       setImageState(prev => ({
         ...prev,
         src: fullSizeSrc,
@@ -95,14 +95,14 @@ export const useLazyImage = (thumbnailSrc, fullSizeSrc, options = {}) => {
     }
 
     img.onerror = () => {
+      loadingRef.current = false
       setImageState(prev => ({
         ...prev,
         isLoading: false,
         isLoadingHighQuality: false,
-        error: 'Error'
+        error: "Errore durante il caricamento dell'immagine ad alta qualità"
       }))
     }
-
     img.src = fullSizeSrc
   }, [shouldLoadHighQuality, fullSizeSrc, imageState.isHighQuality, showLoadingOnHighQuality])
 
@@ -125,8 +125,8 @@ export const useLazyImage = (thumbnailSrc, fullSizeSrc, options = {}) => {
 
   // Forzar carga de alta calidad (para lightbox)
   const loadHighQuality = useCallback(() => {
-    if (!fullSizeSrc || imageState.isHighQuality) return
-
+    if (!fullSizeSrc || imageState.isHighQuality || loadingRef.current) return
+    setShouldLoadHighQuality(true)
     setImageState(prev => ({ 
       ...prev, 
       isLoading: true,
@@ -161,16 +161,18 @@ export const useLazyImage = (thumbnailSrc, fullSizeSrc, options = {}) => {
   }, [fullSizeSrc, imageState.isHighQuality, showLoadingOnHighQuality, hideThumbnailInitially])
 
   const resetImage = useCallback(() => {
+    loadingRef.current = false
+    const initialLoading = hideThumbnailInitially && showLoadingOnHighQuality
     setImageState({
-      src: thumbnailSrc,
-      isLoaded: true,
+      src: hideThumbnailInitially ? '' : thumbnailSrc,
+      isLoaded: !hideThumbnailInitially,
       isHighQuality: false,
-      isLoading: false,
-      isLoadingHighQuality: false,
+      isLoading: hideThumbnailInitially,
+      isLoadingHighQuality: initialLoading,
       error: null
     })
-    setShouldLoadHighQuality(false)
-  }, [thumbnailSrc])
+    setShouldLoadHighQuality(hideThumbnailInitially)
+  }, [thumbnailSrc, hideThumbnailInitially, showLoadingOnHighQuality])
 
   return {
     imgRef,

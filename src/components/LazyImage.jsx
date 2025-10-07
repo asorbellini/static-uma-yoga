@@ -1,7 +1,7 @@
 import { useEffect, useImperativeHandle, forwardRef } from 'react'
 import { useLazyImage } from '../hooks/useLazyImage'
 import { BothFeets } from './Icons'
-import { ComponentLoading } from './LoadingFootPrints.jsx'
+import { LoadingFootPrints} from './LoadingFootPrints.jsx'
 
 /**
  * Componente de imagen con lazy loading
@@ -64,7 +64,7 @@ const LazyImage = forwardRef(({
     if (imageState.isLoaded && onLoad) {
       onLoad(imageState)
     }
-  }, [imageState.isLoaded, onLoad])
+  }, [imageState.isLoaded, onLoad, isLoadingHighQuality])
 
   useEffect(() => {
     if (error && onError) {
@@ -72,26 +72,30 @@ const LazyImage = forwardRef(({
     }
   }, [error, onError])
 
+  const shouldShowImage = imageState.isLoaded && imageState.src
+  const shouldShowLoading = isLoadingHighQuality && showLoadingIndicator
   return (
     <div className="relative">
-      {imageState.isLoaded && (
+      {shouldShowImage && (
         <img
           ref={imgRef}
           src={imageState.src}
           alt={alt}
           title={title}
-          className={`transition-all duration-500 ${className}`}
+          className={`transition-opacity duration-500 ${className} ${shouldShowLoading ? "opacity-0 h-dvh w-dvw" : "opacity-100"}`}
           {...props}
         />
       )}
 
       {/* Loading indicator para alta calidad */}
-      {isLoadingHighQuality && showLoadingIndicator && (
-        <div className="absolute inset-0 w-full h-full flex items-center justify-center bg-dorado/80 backdrop-blur-sm rounded-lg z-40 min-h-[200px]"> 
-          <ComponentLoading 
-            size="default"
-            color="#2c2c2c"
-          />
+      {shouldShowLoading && (
+        <div className="absolute inset-0 flex items-center justify-center backdrop-blur-sm rounded-lg z-50">
+          <div>
+              <LoadingFootPrints 
+                  size="large" 
+                  color='#ffffff'
+              />
+          </div> 
         </div>
       )}
 
