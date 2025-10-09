@@ -5,9 +5,10 @@ import Header from "./components/Header.jsx"
 import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange.jsx"
 import { PageLoading } from "./components/LoadingFootPrints.jsx"
 import Footer from "./components/Footer.jsx"
+import { HelmetProvider } from "react-helmet-async";
+import SEO from "./components/SEO.jsx";
 
 const Home = lazy(() => import("./pages/Home.jsx"));
-// const Classes = lazy(() => import("./pages/Classes")); 
 const About = lazy(() => import("./pages/About.jsx"));
 const MemberDetail = lazy(() => import("./pages/MemberDetail.jsx"));
 const NavakaranaVinyasa = lazy(() => import("./pages/NavakaranaVinyasa.jsx"));
@@ -20,25 +21,28 @@ const NotFound = lazy(() => import("./pages/NotFound.jsx"))
 
 function App() {
   return (
-    <Router>
-      <ScrollToTopOnRouteChange />
-      <Header />
-      <Suspense fallback={<PageLoading />}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/chi-siamo" element={<About />}/>
-          <Route path="/chi-siamo/:memberName" element={<MemberDetail />}/>
-          <Route path="/navakarana-vinyasa" element={<NavakaranaVinyasa />} />
-          <Route path="/anubhuti" element={<Anubhuti />} />
-          <Route path="/retreat-e-workshop" element={<RetreateWorkshop />} />
-          <Route path="/:type/:slug" element={<ReW />} />
-          <Route path="/contatti" element={<ContactUs />} />  
-          <Route path="/press-e-media" element={<Press />} /> 
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
-      <Footer />
-    </Router>
+    <HelmetProvider>
+      <SEO />
+      <Router>
+        <ScrollToTopOnRouteChange />
+        <Header />
+        <Suspense fallback={<PageLoading />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/chi-siamo" element={<About />}/>
+            <Route path="/chi-siamo/:memberName" element={<MemberDetail />}/>
+            <Route path="/navakarana-vinyasa" element={<NavakaranaVinyasa />} />
+            <Route path="/anubhuti" element={<Anubhuti />} />
+            <Route path="/retreat-e-workshop" element={<RetreateWorkshop />} />
+            <Route path="/:type/:slug" element={<ReW />} />
+            <Route path="/contatti" element={<ContactUs />} />  
+            <Route path="/press-e-media" element={<Press />} /> 
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
+        <Footer />
+      </Router>
+    </HelmetProvider>
   )
 }
 

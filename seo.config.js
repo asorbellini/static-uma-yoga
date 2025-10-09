@@ -3,20 +3,21 @@ export default {
   // Meta tags básicos
   meta: {
     title: 'UMĀ YOGA PROJECT - Yoga Retreats & Workshops Transformative',
-    description: 'UMĀ Yoga Project - Uno spazio sacro di crescita ed evoluzione personale attraverso yoga, retreats e workshop transformative. Scopri Navakaraṇa Vinyāsa e Anubhūti.',
-    keywords: 'yoga, retreats, workshop, meditation, navakarana, anubhuti, vinyasa, italy, wellness, mindfulness, spiritual growth',
+    description: "Umā è un movimento. Uno spazio in cui il corpo diventa un percorso, il respiro si trasforma in saggezza e la comunità si crea attraverso l' esperienza condivisa.",
+    keywords: 'yoga, retreats, workshop, meditation, navakarana, anubhuti, vinyasa, wellness, mindfulness, spiritual growth',
     author: 'UMĀ Yoga Project',
     robots: 'index, follow',
-    viewport: 'width=device-width, initial-scale=1.0'
+    viewport: 'width=device-width, initial-scale=1.0',
+    googlebot: 'translate'
   },
   
   // Open Graph tags
   openGraph: {
     type: 'website',
-    url: 'https://umayogaproject.com/',
+    url: 'https://www.umayogaproject.com/',
     title: 'UMĀ YOGA PROJECT',
-    description: 'Uno spazio sacro di crescita ed evoluzione personale attraverso yoga, retreats e workshop transformative.',
-    image: '/images/homebg1.png',
+    description: "Umā è un movimento. Uno spazio in cui il corpo diventa un percorso, il respiro si trasforma in saggezza e la comunità si crea attraverso l' esperienza condivisa.",
+    image: 'https://www.umayogaproject.com/images/umayogaproject.png',
     siteName: 'UMĀ Yoga Project',
     locale: 'it_IT'
   },
@@ -27,8 +28,8 @@ export default {
     site: '@umayoga',
     creator: '@umayoga',
     title: 'UMĀ YOGA PROJECT',
-    description: 'Uno spazio sacro di crescita ed evoluzione personale attraverso yoga, retreats e workshop transformative.',
-    image: '/images/homebg1.png'
+    description: "Umā è un movimento. Uno spazio in cui il corpo diventa un percorso, il respiro si trasforma in saggezza e la comunità si crea attraverso l' esperienza condivisa.",
+    image: 'https://www.umayogaproject.com/images/umayogaproject.png'
   },
   
   // Structured data (JSON-LD)
@@ -38,7 +39,7 @@ export default {
       name: 'UMĀ Yoga Project',
       url: 'https://umayogaproject.com',
       logo: 'https://umayogaproject.com/UMA.svg',
-      description: 'Uno spazio sacro di crescita ed evoluzione personale attraverso yoga, retreats e workshop transformative.',
+      description: "Umā è un movimento. Uno spazio in cui il corpo diventa un percorso, il respiro si trasforma in saggezza e la comunità si crea attraverso l' esperienza condivisa.",
       address: {
         '@type': 'PostalAddress',
         addressCountry: 'IT'
@@ -47,15 +48,6 @@ export default {
         'https://www.instagram.com/uma.retreats/'
       ]
     },
-    yogaClass: {
-      '@type': 'Service',
-      name: 'Navakaraṇa Vinyāsa',
-      description: 'Práctica de yoga transformativa que combina movimiento, respiración y meditación',
-      provider: {
-        '@type': 'Organization',
-        name: 'UMĀ Yoga Project'
-      }
-    }
   },
   
   // Sitemap
@@ -68,6 +60,6 @@ export default {
   // Canonical URLs
   canonical: {
     enabled: true,
-    baseUrl: 'https://umayogaproject.com'
+    baseUrl: 'https://www.umayogaproject.com/'
   }
 }
