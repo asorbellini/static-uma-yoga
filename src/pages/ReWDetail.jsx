@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import { Suspense } from "react";
 import {getTextDate} from "../constants/index.js"
 import retreats from "../data/retreats.json"
-import { ArrowDown } from "../components/Icons.jsx";
 import { ComponentLoading } from "../components/LoadingFootPrints.jsx";
 import HorizontalGallery from "../components/Gallery.jsx";
 import ReviewsCarrousel from "../components/ReviewsCarrousel.jsx";

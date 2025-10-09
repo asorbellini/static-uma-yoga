@@ -1,8 +1,6 @@
 import { Suspense, useEffect, useState } from "react"
 import { getTextDate } from "../constants"
-import { ComponentLoading } from "../components/LoadingFootPrints";
 import NewsLetter from "../components/NewsLetter.jsx";
-import ScrollToTop from "../components/ScrollToTop.jsx";
 
 function LinkPreview({url}) {
   const [data, setData] = useState(null);
@@ -25,7 +23,6 @@ function LinkPreview({url}) {
 function Press() {
     return(
         <>
-            <ScrollToTop />
             <div className="min-h-screen bg-verdeBosque">
                 <div className="relative h-[40vh] w-full flex flex-row items-center justify-center text-white bg-gradient-to-br from-verdeOliva to-verdeBosque" > 
                     <div className="absolute top-1/4 z-20 p-12 text-center">

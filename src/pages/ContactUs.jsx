@@ -1,5 +1,4 @@
 import ContactForm from "../components/ContactForm.jsx"
-import Footer from "../components/Footer.jsx"
 
 function ContactUs() {
     return(

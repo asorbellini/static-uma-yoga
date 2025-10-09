@@ -1,6 +1,5 @@
 import HeroReW from "../components/HeroReW"
 import NewsLetter from "../components/NewsLetter.jsx"
-import ScrollToTop from "../components/ScrollToTop"
 import retreats from "../data/retreats.json"
 import { getTextDate } from "../constants/index.js"
 import { BodyHeart, Road, Spiral } from "../components/Icons.jsx";
@@ -123,7 +122,6 @@ function RetreateWorkshop() {
     return(
         <>
         <div className="min-h-screen w-full">
-            <ScrollToTop />
             <HeroReW />
             <section id="uma-retreat" className="h-fit w-full px-4 flex flex-col items-center bg-claro">
                 <div className="px-2 md:px-12 pt-4 md:pt-16">

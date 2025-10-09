@@ -3,7 +3,6 @@ import HeroComponent from "../components/HeroComponent.jsx"
 import imgAnubhuti from "../assets/images/Anubhuti/Anubhuti.webp"
 import logoAnubhuti from "../assets/images/LogoAnubhuti.png"
 import ToRetreateWorkshop from "../components/ToRetreateWorkshop.jsx"
-import ScrollToTop from "../components/ScrollToTop.jsx"
 import { useRevealOnScroll } from "../hooks/useRevealHook.jsx"
 import members from "../data/members.json"
 import HorizontalGallery from "../components/Gallery.jsx"
@@ -150,7 +149,6 @@ function Anubhuti() {
     return (
         <>
         <div className="min-h-screen w-full bg-claro">
-            <ScrollToTop />
             <HeroComponent background="linear-gradient(45deg, #4A617A 0%, #93a4ab 50%, #4A617A 100%)" mainColor="#4A617A" logo={logoAnubhuti}  title="Anubhūti"/>
             <section ref={contentRef} id="about-anubhuti" className="min-h-screen w-full pt-12 md:pt-24 px-4">
                 <div className={`flex flex-col md:flex-row px-2 sm:px-12 gap-3 items-center transition-all duration-[500ms] ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}`}>
