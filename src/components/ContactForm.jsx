@@ -98,6 +98,7 @@ export default function ContactForm() {
         <div className="flex flex-col md:flex-row py-0 md:py-4">
             <div className="flex-1">
                 <label>Nome</label>
+<<<<<<< HEAD
                 <input type="text" name="name" required 
                   value={formDataState.name} onChange={handleChange} 
                   onBlur={handleBlur} className={inputClass("name")}/>
@@ -107,10 +108,18 @@ export default function ContactForm() {
                 <input type="text" name="surname" required 
                   value={formDataState.surname} onChange={handleChange}
                   onBlur={handleBlur} className={inputClass("surname")} />
+=======
+                <input type="text" name="name" required onBlur={handleBlur} className={inputClass("name")} value={formDataState.name} onChange={handleChange} />
+            </div>
+            <div className="flex-1 md:pl-4 py-4 md:py-0">
+                <label>Cognome</label>
+                <input type="text" name="surname" required onBlur={handleBlur} className={inputClass("surname")} value={formDataState.surname} onChange={handleChange}/>
+>>>>>>> fbcc0d2be5ff2806679d0103d347818cc4d6b458
             </div>
         </div>
         <div className="py-4">
           <label>Questione</label>
+<<<<<<< HEAD
           <input type="text" name="subject" required 
             value={formDataState.subject} onChange={handleChange}
             onBlur={handleBlur} className={inputClass("subject")}/>
@@ -120,6 +129,13 @@ export default function ContactForm() {
           <input type="email" name="email" required 
             value={formDataState.email} onChange={handleChange}
             onBlur={handleBlur} className={inputClass("email")}/>
+=======
+          <input type="text" name="subject" required onBlur={handleBlur} className={inputClass("subject")} value={formDataState.subject} onChange={handleChange}/>
+        </div>
+        <div className="py-4">
+          <label>E-Mail</label>
+          <input type="email" name="email" required onBlur={handleBlur} className={inputClass("email")} value={formDataState.email} onChange={handleChange}/>
+>>>>>>> fbcc0d2be5ff2806679d0103d347818cc4d6b458
         </div>
         <div className="py-4">
           <label>Messaggio</label>
