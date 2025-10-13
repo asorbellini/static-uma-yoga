@@ -1,7 +1,7 @@
 
 import { useRef, useState, useCallback, useMemo } from "react";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
-import {ComponentLoading} from "./LoadingFootPrints.jsx";
+import { ComponentLoading } from "./LoadingFootPrints";
 
 export default function ContactForm() {
   const formRef = useRef(null);
@@ -10,7 +10,6 @@ export default function ContactForm() {
   const [touched, setTouched] = useState({});
   const [loading, setLoading] = useState(false);
   const [hcaptchaToken, setHcaptchaToken] = useState(null);
-  const HpublicKey = "249e79ec-f492-4438-9848-e93a7e023e60";
   const [formDataState, setFormDataState] = useState({
         name: '',
         surname: '',
@@ -35,25 +34,19 @@ export default function ContactForm() {
     e.preventDefault();
     setLoading(true);
     setStatus(null)
-    if (!isFormValid) {
-      setStatus({ ok: false, message: "Si prega di compilare tutti i campi richiesti." });
-      setLoading(false);
-      return;
-    }
-
-    if (!hcaptchaToken) {
-      setStatus({ ok: false, message: "Si prega di completare il controllo di sicurezza (hCaptcha)." });
-      setLoading(false);
-      return;
-    }
+    if (!isFormValid || !hcaptchaToken) {
+        setLoading(false);
+        const message = !isFormValid 
+            ? "Si prega di compilare tutti i campi richiesti." 
+            : "Si prega di completare il controllo di sicurezza (hCaptcha).";
+        setStatus({ ok: false, message: message });
+        return;
+      }
 
     try {
       const formData = new FormData(formRef.current);
       formData.append('access_key', "75601b01-e3e6-43db-b0fb-0f0f96088fd4");
-      Object.keys(formDataState).forEach(key => {
-          formData.append(key, formDataState[key]);
-      });
-      formData.append('h-captcha-response', hcaptchaToken)
+      console.log("FormData", ...formData)
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: formData,
@@ -63,12 +56,13 @@ export default function ContactForm() {
     if (result.success) {
       setStatus({ ok: true, message: "Messaggio inviato con successo!" });
       setSubmited(true)
-      formRef.current.reset();
+      setFormDataState({ name: '', surname: '', subject: '', email: '', message: '' });
+      setTouched({});
     } else {
       setStatus({ ok: false, message: result.message || "Errore durante l'invio." });
     }
     } catch (error) {
-        alert("Si è verificato un problema durante l'invio del modulo.");
+        setStatus({ ok: false, message: "Si è verificato un problema di rete durante l'invio." });
     } finally {
         setLoading(false);
         setHcaptchaToken(null);
@@ -80,84 +74,69 @@ export default function ContactForm() {
     setFormDataState(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleBlur = (e) => {
-      const { name, value } = e.target;
-      setTouched((prev) => ({ ...prev, [name]: !value.trim() }))
-  }
   const inputClass = (name) => `bg-white/30 w-full border-b-2 p-2 rounded-lg transition-all duration-200 text-oscuro ${
       touched[name] && formDataState[name].trim() === '' ? "border-red-500 bg-red-200/30" : "border-transparent"
     }`
 
   return (
-    <form ref={formRef} onSubmit={handleSubmit} className="w-full md:w-[80vw] max-w-3xl px-6 md:px-0">
+    <div className="w-full md:w-[80vw] max-w-3xl px-6 md:px-0">
         {status && (
-          <p className={`bg-white text-sm mt-2 ${status.ok ? "text-green-600" : "text-red-600"}`} role="alert" aria-live="polite">
+          <p className={`bg-white text-sm mt-2 text-center ${status.ok ? "hidden" : "text-red-600"}`} role="alert" aria-live="polite">
             {status.message}
           </p>
         )}
-        <div className="flex flex-col md:flex-row py-0 md:py-4">
-            <div className="flex-1">
-                <label>Nome</label>
-<<<<<<< HEAD
-                <input type="text" name="name" required 
-                  value={formDataState.name} onChange={handleChange} 
-                  onBlur={handleBlur} className={inputClass("name")}/>
-            </div>
-            <div className="flex-1 md:pl-4 py-4 md:py-0">
-                <label>Cognome</label>
-                <input type="text" name="surname" required 
-                  value={formDataState.surname} onChange={handleChange}
-                  onBlur={handleBlur} className={inputClass("surname")} />
-=======
-                <input type="text" name="name" required onBlur={handleBlur} className={inputClass("name")} value={formDataState.name} onChange={handleChange} />
-            </div>
-            <div className="flex-1 md:pl-4 py-4 md:py-0">
-                <label>Cognome</label>
-                <input type="text" name="surname" required onBlur={handleBlur} className={inputClass("surname")} value={formDataState.surname} onChange={handleChange}/>
->>>>>>> fbcc0d2be5ff2806679d0103d347818cc4d6b458
-            </div>
-        </div>
-        <div className="py-4">
-          <label>Questione</label>
-<<<<<<< HEAD
-          <input type="text" name="subject" required 
-            value={formDataState.subject} onChange={handleChange}
-            onBlur={handleBlur} className={inputClass("subject")}/>
-        </div>
-        <div className="py-4">
-          <label>E-Mail</label>
-          <input type="email" name="email" required 
-            value={formDataState.email} onChange={handleChange}
-            onBlur={handleBlur} className={inputClass("email")}/>
-=======
-          <input type="text" name="subject" required onBlur={handleBlur} className={inputClass("subject")} value={formDataState.subject} onChange={handleChange}/>
-        </div>
-        <div className="py-4">
-          <label>E-Mail</label>
-          <input type="email" name="email" required onBlur={handleBlur} className={inputClass("email")} value={formDataState.email} onChange={handleChange}/>
->>>>>>> fbcc0d2be5ff2806679d0103d347818cc4d6b458
-        </div>
-        <div className="py-4">
-          <label>Messaggio</label>
-          <textarea name="message" required 
-              value={formDataState.message} onChange={handleChange} 
-              onBlur={handleBlur} className={inputClass("message")} />
-        </div>
-        <HCaptcha
-         sitekey={HpublicKey}
-         reCaptchaCompat={false}
-         onVerify={onVerify} 
-         onExpire={onExpire}
-      /> 
-      {!hcaptchaToken && isFormValid && !loading && (
-            <p className="text-sm mt-2 text-red-500" aria-live="polite">
-                Per favore, completa il CAPTCHA di sicurezza.
-            </p>
-      )}
-      <button type="submit" className="btn-primary bg-terracota border-2 border-terracota hover:opacity-80 hover:border-terracota text-black transition-all duration-500 uppercase my-4" 
-      disabled={submited || !hcaptchaToken || !isFormValid}>
-        {loading ? "Invio in corso ..." : "Invia"}
-      </button>
-    </form>
+        {submited && status?.ok 
+        ? (
+          <div className="bg-verdeBosque/80 backdrop-blur-xl text-center rounded-3xl py-10">
+            <h2 className="text-2xl font-bold text-white">Messaggio Ricevuto!</h2>
+            <p className="text-white mt-2">Ti risponderemo al più presto. Grazie.</p>
+          </div>
+          ) : (
+                <form ref={formRef} onSubmit={handleSubmit} className="w-full md:w-[80vw] max-w-3xl px-6 md:px-0">
+                  <div className="flex flex-col md:flex-row py-0 md:py-2">
+                      <div className="flex-1">
+                          <label className="text-base md:text-lg">Nome</label>
+                          <input type="text" name="name" required 
+                            value={formDataState.name} onChange={handleChange} 
+                            className={inputClass("name")}/>
+                      </div>
+                      <div className="flex-1 md:pl-4 py-4 md:py-0">
+                          <label className="text-base md:text-lg">Cognome</label>
+                          <input type="text" name="surname" required 
+                            value={formDataState.surname} onChange={handleChange}
+                            className={inputClass("surname")} />
+                      </div>
+                  </div>
+                  <div className="py-2">
+                    <label className="text-base md:text-lg">Questione</label>
+                    <input type="text" name="subject" required 
+                      value={formDataState.subject} onChange={handleChange}
+                      className={inputClass("subject")}/>
+                  </div>
+                  <div className="py-2">
+                    <label className="text-base md:text-lg">E-Mail</label>
+                    <input type="email" name="email" required 
+                      value={formDataState.email} onChange={handleChange}
+                      className={inputClass("email")}/>
+                  </div>
+                  <div className="py-2">
+                    <label className="text-base md:text-lg">Messaggio</label>
+                    <textarea name="message" required 
+                        value={formDataState.message} onChange={handleChange} 
+                        className={inputClass("message")} />
+                  </div>
+                  <HCaptcha
+                  sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                  reCaptchaCompat={false}
+                  onVerify={onVerify} 
+                  onExpire={onExpire}
+                  /> 
+                  <button type="submit" className="btn-scopri border-2 border-claro text-white transition-all duration-500 uppercase my-4 disabled:cursor-not-allowed disabled:hover:none-effect" 
+                  disabled={submited || !hcaptchaToken || !isFormValid}>
+                    {loading ? "Inviando..." : "Invia"}
+                  </button>
+                </form>)
+      }
+    </div>
   );
 }
