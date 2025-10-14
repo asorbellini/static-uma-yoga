@@ -34,7 +34,7 @@ function ToRetreateWorkshop(){
                         }`}
                     >
                         <h2 className="title text-center md:text-left uppercase py-1 text-oscuro drop-shadow-none">
-                            Guarda tutti gli eventi 
+                            Cosa faremo prossimamente? 
                         </h2>
                         <p className="textDetail text-center md:text-left pb-4 text-oscuro drop-shadow-none"> {/* */}
                             Guarda tutti gli eventi, retreat e masterclass in programma, questa sezione è in costante aggiornamento.

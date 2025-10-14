@@ -42,7 +42,7 @@ function Hero() {
               Umā è un movimento. Uno spazio in cui il <span className="italic">corpo</span> diventa un <span className="italic">percorso</span>, il respiro si trasforma in saggezza e la comunità si crea attraverso l' <span className="italic">esperienza condivisa</span>.
             </p>
             <p className="subtitle text-white font-light drop-shadow-title leading-relaxed text-center ">
-              Esploriamo, ci trasformiamo, ci <span className="font-bold">expandiamo</span> - oltre i limiti, oltre le storie, <span className="font-bold">oltre il sé</span>.
+              Esploriamo, ci trasformiamo, ci <span className="font-bold">espandiamo</span> - oltre i limiti, oltre le storie, <span className="font-bold">oltre il sé</span>.
             </p>
           </div>
           <div className="hidden sm:flex justify-center">
