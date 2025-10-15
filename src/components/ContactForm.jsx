@@ -74,12 +74,12 @@ export default function ContactForm() {
     setFormDataState(prev => ({ ...prev, [name]: value }));
   };
 
-  const inputClass = (name) => `bg-white/30 w-full border-b-2 p-2 rounded-lg transition-all duration-200 text-oscuro ${
+  const inputClass = (name) => `bg-white/50 w-full border-b-2 p-2 rounded-lg transition-all duration-200 text-oscuro ${
       touched[name] && formDataState[name].trim() === '' ? "border-red-500 bg-red-200/30" : "border-transparent"
     }`
 
   return (
-    <div className="w-full md:w-[80vw] max-w-3xl px-6 md:px-0">
+    <div className="w-full md:w-[80vw] max-w-3xl px-6 md:px-0 z-30">
         {status && (
           <p className={`bg-white text-sm mt-2 text-center ${status.ok ? "hidden" : "text-red-600"}`} role="alert" aria-live="polite">
             {status.message}
@@ -95,32 +95,32 @@ export default function ContactForm() {
                 <form ref={formRef} onSubmit={handleSubmit} className="w-full md:w-[80vw] max-w-3xl px-6 md:px-0">
                   <div className="flex flex-col md:flex-row py-0 md:py-2">
                       <div className="flex-1">
-                          <label className="text-base md:text-lg">Nome</label>
+                          <label className="text-base md:text-lg font-light">Nome</label>
                           <input type="text" name="name" required 
                             value={formDataState.name} onChange={handleChange} 
                             className={inputClass("name")}/>
                       </div>
                       <div className="flex-1 md:pl-4 py-4 md:py-0">
-                          <label className="text-base md:text-lg">Cognome</label>
+                          <label className="text-base md:text-lg font-light">Cognome</label>
                           <input type="text" name="surname" required 
                             value={formDataState.surname} onChange={handleChange}
                             className={inputClass("surname")} />
                       </div>
                   </div>
                   <div className="py-2">
-                    <label className="text-base md:text-lg">Questione</label>
+                    <label className="text-base md:text-lg font-light">Questione</label>
                     <input type="text" name="subject" required 
                       value={formDataState.subject} onChange={handleChange}
                       className={inputClass("subject")}/>
                   </div>
                   <div className="py-2">
-                    <label className="text-base md:text-lg">E-Mail</label>
+                    <label className="text-base md:text-lg font-light">E-Mail</label>
                     <input type="email" name="email" required 
                       value={formDataState.email} onChange={handleChange}
                       className={inputClass("email")}/>
                   </div>
                   <div className="py-2">
-                    <label className="text-base md:text-lg">Messaggio</label>
+                    <label className="text-base md:text-lg font-light">Messaggio</label>
                     <textarea name="message" required 
                         value={formDataState.message} onChange={handleChange} 
                         className={inputClass("message")} />
