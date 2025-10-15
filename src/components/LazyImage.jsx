@@ -9,7 +9,6 @@ import { LoadingFootPrints} from './LoadingFootPrints.jsx'
  * @param {string} props.thumbnailSrc - URL de la imagen miniatura
  * @param {string} props.fullSizeSrc - URL de la imagen de alta calidad
  * @param {string} props.alt - Texto alternativo
- * @param {string} props.title - Título de la imagen
  * @param {string} props.className - Clases CSS adicionales
  * @param {Function} props.onLoad - Callback cuando la imagen se carga
  * @param {Function} props.onError - Callback cuando hay error
@@ -21,7 +20,6 @@ const LazyImage = forwardRef(({
   thumbnailSrc,
   fullSizeSrc,
   alt = '',
-  title = '',
   className = '',
   onLoad,
   onError,
@@ -81,7 +79,6 @@ const LazyImage = forwardRef(({
           ref={imgRef}
           src={imageState.src}
           alt={alt}
-          title={title}
           className={`transition-opacity duration-500 ${className} ${shouldShowLoading ? "opacity-0 h-dvh w-dvw" : "opacity-100"}`}
           {...props}
         />

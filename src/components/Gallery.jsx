@@ -245,7 +245,6 @@ const HorizontalGallery = ({ images = [] }) => {
                   thumbnailSrc={image.thumbnail?.src || image.src}
                   fullSizeSrc={image.fullSize?.src || image.src}
                   alt={image.alt || `Imagen ${index + 1}`}
-                  title={image.title}
                   className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-lg shadow-lg transition-all duration-300 group-hover:shadow-xl"
                   lazyOptions={{
                     threshold: 0.1,
@@ -263,13 +262,6 @@ const HorizontalGallery = ({ images = [] }) => {
                     <ZoomIcon />
                   </div>
                 </div>
-
-                {/* Título en dispositivos móviles */}
-                {isMobile && image.title && (
-                  <div className="absolute bottom-2 left-2 right-2 bg-black/70 text-white text-xs p-2 rounded backdrop-blur-sm">
-                    {image.title}
-                  </div>
-                )}
               </div>
             ))}
           </div>
@@ -330,7 +322,6 @@ const HorizontalGallery = ({ images = [] }) => {
                thumbnailSrc={lightboxImage.thumbnail?.src || lightboxImage.src}
                fullSizeSrc={lightboxImage.fullSize?.src || lightboxImage.src}
                alt={lightboxImage.alt}
-               title={lightboxImage.title}
                className="w-auto max-h-dvh object-contain"
                forceHighQuality={false} 
                showLoadingIndicator={true}
@@ -344,14 +335,6 @@ const HorizontalGallery = ({ images = [] }) => {
                  hideThumbnailInitially: true
                }}
              />
-
-            {lightboxImage.title &&  (
-              <div className="absolute bottom-4 left-4 right-4 text-center">
-                <p className="text-white text-lg font-light bg-oscuro/50 rounded-lg px-4 py-2 inline-block">
-                  {lightboxImage.title}
-                </p>
-              </div>
-            )}
           </div>
 
           {!isMobile && (
@@ -361,12 +344,6 @@ const HorizontalGallery = ({ images = [] }) => {
                   const prevIndex = lightboxImage.index > 0 ? lightboxImage.index - 1 : galleryImages.length - 1
                   setLightboxImage({ ...galleryImages[prevIndex], index: prevIndex })
                   setCurrentIndex(prevIndex) // Actualizar el índice del carrusel
-                  // Forzar carga de alta calidad de la nueva imagen
-                  /* setTimeout(() => {
-                    if (lightboxImageRef.current) {
-                      lightboxImageRef.current.loadHighQuality()
-                    }
-                  }, 100) */
                 }}
                 className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/40 hover:bg-white/60 text-white rounded-full p-3 transition-all duration-300"
                 aria-label="Precedente"
@@ -379,12 +356,6 @@ const HorizontalGallery = ({ images = [] }) => {
                   const nextIndex = lightboxImage.index < galleryImages.length - 1 ? lightboxImage.index + 1 : 0
                   setLightboxImage({ ...galleryImages[nextIndex], index: nextIndex })
                   setCurrentIndex(nextIndex) // Actualizar el índice del carrusel
-                  // Forzar carga de alta calidad de la nueva imagen
-                  /* setTimeout(() => {
-                    if (lightboxImageRef.current) {
-                      lightboxImageRef.current.loadHighQuality()
-                    }
-                  }, 100) */
                 }}
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/40 hover:bg-white/60 text-white rounded-full p-3 transition-all duration-300"
                 aria-label="Prossimo"
