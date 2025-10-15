@@ -5,9 +5,9 @@ function ContactUs() {
     return(
         <div className="min-h-dvh w-full">
             <div className="relative min-h-dvh w-full flex flex-col justify-center items-center text-white bg-gradient-to-br from-dorado to-verdeBosque py-16" >
-                <div className="relative w-full">
+                <div className="relative w-full overflow-hidden">
                     <div className="absolute w-full h-full flex justify-center items-center z-10 opacity-20"> 
-                        <div className="grid grid-cols-4 gap-10 md:gap-12 lg:gap-16 items-center justify-items-center mx-auto">
+                        <div className="grid grid-cols-4 gap-10 md:gap-12 lg:gap-16 items-center justify-items-center">
                             <div className="flex items-center justify-center animate-pulse">
                                 <BothFeets 
                                 className="size-32 md:size-36 lg:size-40 xl:size-44 transition-all duration-300" 
