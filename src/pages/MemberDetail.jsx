@@ -47,9 +47,9 @@ const ExpandableButton = ({ title, children}) => {
                     >
                 <div ref={contentRef} className="bg-transparent px-1 py-6 space-y-4">
                     {children.map((paragraph, index) => (
-                        <p key={index} className="textDetail text-white ">
-                            {paragraph}
-                        </p>
+                        <p 
+                        key={index} 
+                        className="textDetail text-white "dangerouslySetInnerHTML={{ __html: paragraph }} />
                     ))}
                 </div>
             </div>
@@ -89,8 +89,14 @@ function MemberDetail(){
                         </div>
                         <div className="flex-1 text-left space-y-2 ">
                             <h2 className="subtitle uppercase  text-white">{member.profession}</h2>
-                            {memberName == "tiziano-sorbellini" ? 
-                            <p className="textDetail  text-white">{member.description}</p> : <p className="textDetail  text-white">{member.smallDescription}</p>}
+                            {memberName == "tiziano-sorbellini" 
+                                ? 
+                                <div className="bg-transparent px-1 py-6 space-y-4">
+                                    {member.description.length > 0 && member.description.map((paragraph, index) => (
+                                    <p key={index} className="textDetail text-white" dangerouslySetInnerHTML={{ __html: paragraph }} />
+                                ))}
+                                </div>
+                                : <p className="textDetail  text-white">{member.smallDescription}</p>}
                             {memberName == "tiziano-sorbellini" ? <></> : <ExpandableButton title="Formazione" children={member.training} />}
                             <h2 className="subtitle uppercase text-white">Seguimi su</h2>
                             <a href={member.socialMedia?.instagram} target="_blank" rel="noopener noreferrer">
