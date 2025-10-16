@@ -56,8 +56,8 @@ function NavakaranaSummary() {
                 <div className="flex flex-col sm:flex-row gap-8 my-8 px-2 md:px-12 h-full justify-center text-center">
                     <div className="flex-1 border-2 rounded-t-2xl border-[#a33c3c]">
                         <div className="p-2 md:p-4">
-                            <h2 className="font-serif text-lg md:text-xl font-bold text-[#581414]">Battito delle mani</h2>
-                            <p className="text-oscuro text-base font-normal font-sans">Navakaraṇa Vinyāsa è uno stile di yoga dinamico. La classe è guidata con tempo e melodia e le istruzioni essenziali e concise sono fornite con il battito delle mani.</p>
+                            <h2 className="font-serif text-lg md:text-xl font-bold text-[#581414]">Ritmo</h2>
+                            <p className="text-oscuro text-base font-normal font-sans">Navakaraṇa Vinyāsa è un metodo di yoga dinamico. La classe è guidata con tempo e melodia e le istruzioni essenziali e concise sono fornite con il battito delle mani o con il Navakaraṇa naṭṭuvāṅgam.</p>
                         </div>
                     </div>
                     <div className="flex-1 border-2 rounded-t-2xl border-[#a33c3c]">
@@ -71,6 +71,33 @@ function NavakaranaSummary() {
                         <div className="p-2 md:p-4">
                             <h2 className="font-serif text-lg md:text-xl font-bold text-[#581414]">Le coreografie</h2>
                             <p className="text-oscuro text-base font-normal font-sans">Le coreografie delle sequenze di Navakaraṇa sono disposte metodologicamente in modo da offrire più opzioni per tutti i livelli.</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="flex flex-col items-center justify-start my-8 px-2 md:px-12">
+                    <h3 className="title text-[#581414] text-center drop-shadow-none font-semibold tracking-wider uppercase py-2 md:w-[50vw]">
+                        Hṛdayam Krama Mālā
+                    </h3>
+                    <p className="textDetail text-oscuro font-normal font-sans text-center drop-shadow-none lg:max-w-5xl pb-2">
+                        Hṛdayam Krama Mālā è un viaggio strutturato e raffinato nel cuore della pratica Navakaraṇa: una raccolta di 36 sequenze (krama) organizzate in 12 serie, ognuna con una propria intelligenza, ritmo e finalità.
+                    </p>
+                    <p className="textDetail text-oscuro font-normal font-sans text-center drop-shadow-none lg:max-w-5xl pb-2">
+                        Ogni sequenza è una composizione di movimenti e posture in progressione, pensata per adattarsi ai diversi livelli di esperienza e per offrire una pratica completa e bilanciata. Tutto il corpo viene coinvolto, ma ogni giorno l’attenzione si sposta su un aspetto anatomico e energetico specifico, creando un percorso in continua evoluzione.
+                    </p>
+                    <p className="textDetail text-oscuro font-normal font-sans text-center drop-shadow-none lg:max-w-5xl pb-2">
+                        Quando il praticante raggiunge la padronanza delle 12 serie, entra in una nuova dimensione di pratica e insegnamento: il Navakaraṇa Krama Maṇḍala, il Ciclo delle Sequenze di Navakaraṇa.
+                    </p>
+                    <p className="textDetail text-oscuro font-normal font-sans text-center drop-shadow-none lg:max-w-5xl pb-2">
+                        Hṛdayam Krama Mālā è un viaggio strutturato e raffinato nel cuore della pratica Navakaraṇa: una raccolta di 36 sequenze (krama) organizzate in 12 serie, ognuna con una propria intelligenza, ritmo e finalità.
+                    </p>
+                    <p className="textDetail text-oscuro font-normal font-sans text-center drop-shadow-none lg:max-w-5xl pb-2">
+                        Hṛdayam Krama Mālā non è solo una metodologia di pratica, ma un mandala in movimento, un modo di vivere il corpo e la mente in armonia con i cicli universali.
+                    </p>
+                    <div className="flex items-center justify-start mt-4">
+                        <div className="btn-primary bg-[#581414] border-[#581414] hover:opacity-80 hover:border-[#581414] transition-all duration-500 ">
+                            <a href="/formazioni">
+                                <button className="textButton font-semibold tracking-wide uppercase">Guarda la formazione per insegnanti</button>
+                            </a>
                         </div>
                     </div>
                 </div>
