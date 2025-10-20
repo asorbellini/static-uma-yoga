@@ -95,7 +95,7 @@ function NavakaranaSummary() {
                     </p>
                     <div className="flex items-center justify-start mt-4">
                         <div className="btn-primary bg-[#581414] border-[#581414] hover:opacity-80 hover:border-[#581414] transition-all duration-500 ">
-                            <a href="/formazioni">
+                            <a href="/formazioni-navakarana-vinyasa">
                                 <button className="textButton font-semibold tracking-wide uppercase">Guarda la formazione per insegnanti</button>
                             </a>
                         </div>

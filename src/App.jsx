@@ -17,6 +17,7 @@ const RetreateWorkshop = lazy(() => import("./pages/RetreateWorkshop.jsx"));
 const ReW = lazy(() => import("./pages/ReWDetail.jsx"));
 const ContactUs = lazy(() => import("./pages/ContactUs.jsx"));
 const Press = lazy(() => import("./pages/Press.jsx"));
+const FormazioniNavakaranaVinyasa = lazy(() => import("./pages/Formazioni.jsx"));
 const NotFound = lazy(() => import("./pages/NotFound.jsx"))
 
 function App() {
@@ -37,7 +38,8 @@ function App() {
             <Route path="/:type/:slug" element={<ReW />} />
             <Route path="/contatti" element={<ContactUs />} />  
             <Route path="/press-e-media" element={<Press />} /> 
-            <Route path="*" element={<NotFound />} />
+            <Route path="/formazioni-navakarana-vinyasa" element={<FormazioniNavakaranaVinyasa />} /> 
+            <Route path="/*" element={<NotFound />} />
           </Routes>
         </Suspense>
         <Footer />

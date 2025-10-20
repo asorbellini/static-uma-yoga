@@ -20,9 +20,9 @@ const navItems = [{'name':'Home', 'url':"/"},
   {'name':'Retreat e workshop', 'url':"/retreat-e-workshop"},
   {'name':'Navakaraṇa vinyāsa', 'url':"/navakarana-vinyasa"},
   {'name':'Anubhūti', 'url':"/anubhuti"},
+  {'name':'Formazioni','url':"/formazioni-navakarana-vinyasa"},
   {'name':'Contatti', 'url':"/contatti"}
 ]
-/* {'name':'Classi', 'url':"/classi"}, */
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
