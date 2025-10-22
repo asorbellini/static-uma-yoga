@@ -7,7 +7,6 @@ function NewsLetter(){
     const [isMobile, setIsMobile] = useState(false)
     const sectionRef = useRef(null)
 
-    // Detectar si es dispositivo móvil
     const checkMobile = useCallback(() => {
         setIsMobile(window.innerWidth < 768)
     }, [])
@@ -47,7 +46,7 @@ function NewsLetter(){
                         </h2>
                         <div className={`${isMobile ? "flex justify-center" : ""}`}>
                             <a 
-                              href="https://mailchi.mp/5adff419986c/benvenut" 
+                              href="https://stats.sender.net/forms/aQWqJ0/view"
                               target="_blank" 
                               rel="noopener noreferrer"
                               className="inline-block"
