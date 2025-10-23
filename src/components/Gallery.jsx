@@ -199,7 +199,7 @@ const HorizontalGallery = ({ images = [] }) => {
   }
 
   return (
-    <div className="w-full py-4 md:py-8">
+    <div className="w-full py-4">
       {/* Contenedor principal */}
       <div className="relative w-full">
         {/* Contenedor de la galería con overflow hidden */}

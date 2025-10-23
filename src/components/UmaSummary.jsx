@@ -1,7 +1,7 @@
-import { useState, useRef, Suspense} from "react"
+import { useState, useEffect, useRef, Suspense} from "react"
 import cosaFacciamo2 from "../assets/images/Cosafacciamo2.webp"
 import members from "../data/members.json"
-import { ArrowDown, BodyHeart, Road, Spiral } from "./Icons.jsx"
+import { BodyHeart, Road } from "./Icons.jsx"
 import { useRevealOnScroll } from "../hooks/useRevealHook.jsx"
 import HorizontalGallery from "./Gallery.jsx"
 import {ComponentLoading} from "./LoadingFootPrints.jsx"
@@ -189,27 +189,38 @@ const LastRetreatsImages = [
   ]
 
 function UmaSummary(){
-    const [isVisible, setIsVisible] = useState(false)
-    const isMobile =  window.innerWidth <= 768
-    const componentRef = useRef(null)
-    useRevealOnScroll(componentRef, {
+    const [isVisibleChiSiamo, setIsVisibleChiSiamo] = useState(false)
+    const [isVisibleCosaFacciamo, setIsVisibleCosaFacciamo] = useState(false)
+    const [isMobile, setIsMobile] = useState(() => (typeof window !== "undefined") && window.innerWidth <= 768)
+
+    useEffect(() => {
+        const onResize = () => setIsMobile(window.innerWidth <= 768)
+        window.addEventListener("resize", onResize)
+        return () => window.removeEventListener("resize", onResize)
+    }, [])
+    const chiSiamoRef = useRef(null)
+    const cosaFacciamoRef = useRef(null)
+    useRevealOnScroll(chiSiamoRef, {
             threshold: isMobile ? 0.1 : 0.5,
-            rootMargin: isMobile ? '0px 0px -5% 0px' : '0px 0px -20% 0px',
-            onReveal: () => setIsVisible(true)
+            rootMargin: isMobile ? '0px 0px -5% 0px' : '-64px 0px -20% 0px',
+            onReveal: () => setIsVisibleChiSiamo(true)
         })
+    useRevealOnScroll(cosaFacciamoRef, {
+          threshold: isMobile ? 0.1 : 0.5,
+          rootMargin: isMobile ? '0px 0px -5% 0px' : '-64px 0px -20% 0px',
+          onReveal: () => setIsVisibleCosaFacciamo(true)
+      })
+    
     return(
         <div>
-            <section id="uma-summary" className="h-auto sm:h-screen md:min-h-dvh flex items-center justify-center sm:justify-evenly w-full px-4 pt-4 sm:pt-16 bg-claro">
-                <div className="px-2 md:px-12 relative" ref={componentRef} >
-                    <div className="hidden absolute -top-16 left-1/2 -translate-x-1/2 sm:flex items-center justify-center">
-                        <Spiral className="w-16 h-16" fillColor="#A66C5B"/>
-                    </div>
+            <section id="uma-summary" className="h-auto lg:h-fit flex items-start justify-center w-full px-4 bg-claro">
+                <div className="px-2 md:px-12 relative" ref={chiSiamoRef} >
                     <h3 className="textTitleSection py-4">CHI SIAMO</h3>
                     <div className="flex flex-col sm:flex-row gap-3 sm:gap-6">
                         {members.map((member, index) => (
-                            <div className="flex-1 items-center justify-center transition-all duration-500 group">
+                            <div className="flex-1 items-center justify-center transition-all duration-500 group" key={member.memberName}>
                                 <a href={`/chi-siamo/${member.memberName}`}>
-                                    <div className={`flex items-center justify-center transition-all duration-500 ease-out group-hover:scale-105  ${isVisible ? "opacity-100 translate-x-0 " : "opacity-0 -translate-x-10 "}`}>
+                                    <div className={`flex items-center justify-center transition-all duration-500 ease-in-out group-hover:scale-105  ${isVisibleChiSiamo ? "opacity-100 translate-y-0 " : "opacity-0 translate-y-10 "}`}>
                                         <img
                                         src={member.images?.src}
                                         alt={`Image ${member.Name}`}
@@ -222,64 +233,78 @@ function UmaSummary(){
                             </div>
                         ))}
                     </div>
-                    <div className="hidden sm:flex items-center justify-center w-full sm:p-2">
-                        <div className="btn-secondary group">
-                            <a href="#cosa-facciamo">
-                                <button type="button" className="flex items-center justify-center animate-pulse md:animate-none group-hover:animate-pulse ">
-                                    <ArrowDown />
-                                </button>
-                            </a>
-                        </div>
+                    <div className="hidden sm:flex sm:relative items-center justify-center w-full">
+                      <a href="#cosa-facciamo">
+                          <button type="button" className="flex items-center justify-center animate-pulse ">
+                              <BodyHeart className="w-16 h-16" fillColor="#A66C5B"/>
+                          </button>
+                      </a>
                     </div>
                 </div>
             </section>
-            <section id="cosa-facciamo" className="h-auto lg:min-h-dvh w-full items-center justify-center lg:justify-evenly p-4 pt-4 md:pt-16 bg-claro flex flex-col">
-                <div className="px-2 md:px-12 md:pb-4 relative">
-                    <div className="hidden absolute -top-16 left-1/2 -translate-x-1/2 sm:flex items-center justify-center">
-                        <BodyHeart className="w-16 h-16" fillColor="#A66C5B"/>
-                    </div>
+            <section id="cosa-facciamo" className="h-auto lg:h-fit w-full flex flex-col items-start justify-center px-4 bg-claro ">
+                <div className="px-2 md:px-12">
                     <h2 className="textTitleSection py-4">COSA FACCIAMO</h2>
-                    <div className="flex flex-col sm:flex-row items-center relative text-center">
-                        <div className="flex flex-col items-center justify-center space-y-3">
-                            <div className="space-y-1">
-                                <h3 className="title">RETREAT E WORKSHOP</h3>
-                                <p className="textDetail center max-w-2xl">
+
+                    <div ref={cosaFacciamoRef} className={`grid grid-cols-1 lg:grid-cols-4 gap-3 transition-all duration-500 ease-in-out ${isVisibleCosaFacciamo ? "opacity-100 translate-y-0 " : "opacity-0 translate-y-10 "}`}>
+                        <div className="sm:col-span-1 flex flex-col justify-start items-center">
+                            <div className="max-w-xl space-y-1">
+                                <h3 className="title text-center">RETREAT E WORKSHOP</h3>
+                                <p className="textDetail">
                                     Creiamo esperienze che nutrono corpo e coscienza: retreat immersivi, workshop tematici e percorsi che intrecciano filosofia, pratica fisica e introspezione.
                                 </p>
-                            </div>
-                            <div className="btn-primary justify-center">
-                                <a href="/retreat-e-workshop">
-                                    <button className="textButton">
-                                        SCOPRI TUTTI GLI EVENTI
-                                    </button>
-                                </a>
+                                <div className="flex justify-center items-center">
+                                  <div className="btn-primary justify-center items-center mt-2">
+                                      <a href="/retreat-e-workshop">
+                                          <button className="textButton">
+                                              SCOPRI TUTTI GLI EVENTI
+                                          </button>
+                                      </a>
+                                  </div>
+                                </div>
                             </div>
                         </div>
-                        <div className="w-full py-2 sm:p-2 lg:relative lg:w-[40vw] lg:h-[50vh] xl:h-[60vh]">
-                            <img
-                                src={cosaFacciamo2}
-                                alt="Cosa Facciamo"
-                                loading="lazy"
-                                className="w-full h-full object-cover rounded-br-full rounded-tl-full shadow-terracota shadow-lg"
-                                />
+
+                        <div className="lg:col-span-2 flex items-center justify-center">
+                          <div className="w-full sm:w-[40vw] lg:w-full h-[40vh] sm:h-[50vh] lg:h-[60vh] flex items-center justify-center">
+                              <img
+                                  src={cosaFacciamo2}
+                                  alt="Cosa Facciamo"
+                                  loading="lazy"
+                                  className="w-full h-full object-cover mx-auto
+                                    rounded-tl-full rounded-br-full shadow-terracota shadow-lg"
+                                  />
+                          </div>
+                        </div>
+                        <div className="sm:col-span-1 flex flex-col justify-end items-center sm:items-end">
+                            <div className="max-w-xl text-center space-y-1">
+                                <h3 className="title">FORMAZIONI</h3>
+                                <p className="textDetail center max-w-xl">
+                                    La Formazione per insegnanti nel metodo Navakaraṇa guidata da Alba e Diletta, è un viaggio di trasformazione profonda: un percorso tecnico, esperienziale e iniziatico che unisce biomeccanica, respiro, ritmo e suono. 
+                                </p>
+                                <div className="flex justify-center items-center">
+                                  <div className="btn-primary justify-center mt-2">
+                                      <a href="/formazioni-navakarana-vinyasa">
+                                          <button className="textButton">
+                                              SCOPRI TUTTO SULLE FORMAZIONI
+                                          </button>
+                                      </a>
+                                  </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="hidden lg:flex items-center justify-center w-full sm:p-4">
-                        <div className="btn-secondary group">
-                            <a href="#eventi-passati">
-                                <button type="button" className="flex items-center justify-center animate-pulse md:animate-none group-hover:animate-pulse ">
-                                    <ArrowDown />
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="hidden absolute -bottom-16 left-1/2 -translate-x-1/2 sm:flex items-center justify-center">
-                        <Road className="w-16 h-16" fillColor="#A66C5B"/>
+                    <div className="hidden sm:flex sm:relative items-center justify-center w-full">
+                      <a href="#eventi-passati">
+                          <button type="button" className="flex items-center justify-center animate-pulse">
+                              <Road className="w-16 h-16" fillColor="#A66C5B"/>
+                          </button>
+                      </a>
                     </div>
                 </div>
             </section>
-            <section id="eventi-passati" className="h-auto lg:min-h-dvh w-full items-center justify-center lg:justify-evenly bg-claro flex flex-row p-4 pt-0 sm:pt-16">
-                <div className="px-2 md:px-12 pb-4 overflow-hidden">
+            <section id="eventi-passati" className="h-auto lg:h-fit w-full items-center justify-center lg:justify-evenly bg-claro flex flex-row px-4 pb-8">
+                <div className="px-2 md:px-12 overflow-hidden">
                     <h2 className="textTitleSection py-4">ULTIMI EVENTI</h2>
                         <Suspense fallback={<ComponentLoading />}>
                                 <HorizontalGallery images={LastRetreatsImages}/>

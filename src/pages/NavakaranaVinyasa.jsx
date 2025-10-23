@@ -59,8 +59,8 @@ function NavakaranaVinyasa() {
         <HeroComponent background="linear-gradient(45deg, #581414 0%, #921e1e 25%,  #a33c3c 50%, #b23d3d 75%, #b64c4c 100%)" mainColor="#581414" logo={logoNavakarana} title="navakaraṆa vinyāsa" />
         <NavakaranaSummary />
         {/* GALERÍA DE IMÁGENES */}
-        <div className="items-center justify-items-center mx-auto px-6 sm:px-16">
-          <h3 className="w-text-xl md:text-3xl rounded font-serif text-oscuro text-center font-semibold uppercase py-2 md:w-[50vw]">GALLERY</h3>
+        <div className="items-center justify-items-center mx-auto px-6 sm:px-16 pb-8">
+          <h3 className="textTitleSection py-4">GALLERY</h3>
           <HorizontalGallery images={NavakaranaImages}/>
         </div>
     </div>  

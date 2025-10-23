@@ -148,10 +148,10 @@ function Anubhuti() {
     })
     return (
         <>
-        <div className="min-h-screen w-full bg-claro">
+        <div className="min-h-dvh w-full bg-claro">
             <HeroComponent background="linear-gradient(45deg, #4A617A 0%, #93a4ab 50%, #4A617A 100%)" mainColor="#4A617A" logo={logoAnubhuti}  title="Anubhūti"/>
-            <section ref={contentRef} id="about-anubhuti" className="min-h-screen w-full pt-12 md:pt-24 px-4">
-                <div className={`flex flex-col md:flex-row px-2 sm:px-12 gap-3 items-center transition-all duration-[500ms] ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}`}>
+            <section id="about-anubhuti" className="h-fit w-full px-4">
+                <div ref={contentRef}  className={`flex flex-col md:flex-row px-2 sm:px-12 gap-3 items-center transition-all duration-[500ms] ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}`}>
                     <div className="w-full flex flex-col md:basis-2/5 md:relative md:h-[60vh]">
                         <img
                             src={imgAnubhuti}
@@ -161,7 +161,7 @@ function Anubhuti() {
                     </div>
                     <div className="w-full md:basis-3/5 flex flex-col items-start ">
                             <div >
-                                <h3 className="w-text-xl title text-oscuro text-left drop-shadow-none font-semibold tracking-wider uppercase py-2">
+                                <h3 className="title text-oscuro text-center drop-shadow-none font-semibold tracking-wider uppercase py-2">
                                     COS’È ANUBHŪTI?
                                 </h3>
                                 <p className="textDetail drop-shadow-none text-oscuro text-left pb-2">
@@ -177,7 +177,7 @@ function Anubhuti() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col items-center justify-start pt-8 md:pt-12 px-2 md:px-12">
+                <div className="flex flex-col items-center justify-start px-2 md:px-12">
                     <h3 className="title text-oscuro text-center drop-shadow-none font-semibold tracking-wider uppercase py-2 md:w-[50vw]">
                         Perché scegliere Anubhūti:
                     </h3>
@@ -207,12 +207,11 @@ function Anubhuti() {
                     </div>
                 </div>
             </section>
-            {/* GALERÍA DE IMÁGENES */}
             <div className="items-center justify-items-center mx-auto px-6 sm:px-16">
-                <h3 className="w-text-xl md:text-3xl rounded font-serif text-oscuro text-center font-semibold uppercase py-2 md:w-[50vw]">GALLERY</h3>
+                <h3 className="textTitleSection py-4">GALLERY</h3>
                     <HorizontalGallery images={AnubhutiImages}/>
             </div>
-            <section className="bg-claro px-6 md:px-16 pt-12 md:pt-20 md:pb-4" id="proposte">
+            <section className="bg-claro px-6 md:px-16 py-8" id="proposte">
                 <Proposte info={members[2]?.projects} />
             </section>
         </div>

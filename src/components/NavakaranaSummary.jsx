@@ -16,8 +16,8 @@ function NavakaranaSummary() {
         })
     return (
         <div className="bg-claro">
-            <section ref={sectionRef} id="about-navakarana-vinyasa" className="min-h-screen w-full pt-12 md:pt-24 px-4 bg-claro">
-                <div className={`flex flex-row px-2 md:px-12 gap-3 items-center transition-all duration-[500ms] ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}`}>
+            <section ref={sectionRef} id="about-navakarana-vinyasa" className="min-h-dvh w-full px-4 bg-claro">
+                <div className={`flex flex-row px-2 md:px-12 gap-3 items-center transition-all duration-500 ease-in-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}`}>
                     <div className="w-full md:basis-2/5 md:relative md:h-[60vh]">
                         <img
                             src={Navakarana}
@@ -45,11 +45,11 @@ function NavakaranaSummary() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col items-center justify-start pt-12 px-2 md:px-12">
+                <div className="flex flex-col items-center justify-start px-2 md:px-12">
                     <h3 className="title text-oscuro text-center drop-shadow-none font-semibold tracking-wider uppercase py-2 md:w-[50vw]">
                         Perché sceglierlo:
                     </h3>
-                    <p className="textDetail text-oscuro text-center drop-shadow-none pb-2 lg:w-[50vw]">
+                    <p className="textDetail text-oscuro text-center drop-shadow-none py-2 lg:w-[50vw]">
                         Navakaraṇa vinyāsa è un metodo di auto trasformazione risultato dell’integrazione di molteplici conoscenze quali l’anatomia, la kinesiologia, la psicologia, la manipolazione del corpo, la musicoterapia, l’autoguarigione e diverse tecniche tantriche. In questo metodo troverai verità, tradizione, ricerca e innovazione per promuovere un autentico stato di benessere psico-fisico.
                     </p>
                 </div>
@@ -74,7 +74,7 @@ function NavakaranaSummary() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col items-center justify-start my-8 px-2 md:px-12">
+                <div className="flex flex-col items-center justify-start px-2 md:px-12">
                     <h3 className="title text-[#581414] text-center drop-shadow-none font-semibold tracking-wider uppercase py-2 md:w-[50vw]">
                         Hṛdayam Krama Mālā
                     </h3>
@@ -93,7 +93,7 @@ function NavakaranaSummary() {
                     <p className="textDetail text-oscuro font-normal font-sans text-center drop-shadow-none lg:max-w-5xl pb-2">
                         Hṛdayam Krama Mālā non è solo una metodologia di pratica, ma un mandala in movimento, un modo di vivere il corpo e la mente in armonia con i cicli universali.
                     </p>
-                    <div className="flex items-center justify-start mt-4">
+                    <div className="flex items-center justify-start py-4">
                         <div className="btn-primary bg-[#581414] border-[#581414] hover:opacity-80 hover:border-[#581414] transition-all duration-500 ">
                             <a href="/formazioni-navakarana-vinyasa">
                                 <button className="textButton font-semibold tracking-wide uppercase">Guarda la formazione per insegnanti</button>

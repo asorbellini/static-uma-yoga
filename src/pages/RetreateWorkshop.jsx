@@ -2,7 +2,7 @@ import HeroReW from "../components/HeroReW"
 import NewsLetter from "../components/NewsLetter.jsx"
 import retreats from "../data/retreats.json"
 import { getTextDate } from "../constants/index.js"
-import { BodyHeart, Road, Spiral } from "../components/Icons.jsx";
+import { BothFeets, Spiral } from "../components/Icons.jsx";
 
 function ImageCardGlass({event}) {
   return (
@@ -121,14 +121,11 @@ function RetreateWorkshop() {
     );
     return(
         <>
-        <div className="min-h-screen w-full">
+        <div className="min-h-dvh w-full">
             <HeroReW />
-            <section id="uma-retreat" className="h-fit w-full px-4 flex flex-col items-center bg-claro">
-                <div className="px-2 md:px-12 pt-4 md:pt-16">
+            <section id="uma-retreat" className="h-auto sm:h-fit w-full px-4 flex flex-col items-center bg-claro">
+                <div className="px-2 md:px-12">
                     <div className="flex flex-col justify-center items-center space-y-2 max-w-7xl py-4 relative">
-                            <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2 flex items-center justify-center">
-                                <Spiral className="w-16 h-16" fillColor="#A66C5B"/>
-                            </div>
                             <span className="absolute -top-0 left-0 h-0.5 bg-terracota/50 w-full" />
                             <h3 className="subtitle text-lg lg:text-xl text-center italic">Uniamo l’arte del movimento alla profondità della ricerca interiore: attraverso il corpo liberiamo emozioni, attraverso la presenza superiamo i limiti.
                             </h3>
@@ -147,21 +144,22 @@ function RetreateWorkshop() {
                         </div>
                     </div>
                 </div>
+                <div className="flex relative items-center justify-center w-full">
+                    <a href="#eventi-passati" className="flex items-center justify-center">
+                        <button type="button" className="animate-pulse">
+                            <Spiral className="w-16 h-16" fillColor="#A66C5B"/>
+                        </button>
+                    </a>
+                </div>
             </section>
-            <section id="eventi-passati" className="w-full p-4 bg-claro py-4 md:py-16 ">
+            <section id="eventi-passati" className="w-full px-4 bg-claro pb-8">
                 <div className="px-2 md:px-16 relative">
-                    <div className="hidden sm:block absolute -top-16 left-1/2 -translate-x-1/2 flex items-center justify-center">
-                        <BodyHeart className="w-16 h-16" fillColor="#A66C5B"/>
-                    </div>
-                    <h3 className="textTitleSection p-2 md:p-4">EVENTI PASSATI</h3>
+                    <h3  className="textTitleSection py-4">EVENTI PASSATI</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-7xl mx-auto">
                         {pastEvents.map(event => (
-                            <div key={event.slug} className="w-full">{/*min-h-fit sm:min-h-[550px]  */}
+                            <div key={event.slug} className="w-full">
                                 <ImageCardGlass event={event} />
                             </div>))}
-                    </div>
-                    <div className="hidden sm:block absolute -bottom-16 left-1/2 -translate-x-1/2 flex items-center justify-center">
-                        <Road className="w-16 h-16" fillColor="#A66C5B"/>
                     </div>
                 </div>
             </section>
