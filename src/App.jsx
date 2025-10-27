@@ -18,6 +18,8 @@ const ReW = lazy(() => import("./pages/ReWDetail.jsx"));
 const ContactUs = lazy(() => import("./pages/ContactUs.jsx"));
 const Press = lazy(() => import("./pages/Press.jsx"));
 const FormazioniNavakaranaVinyasa = lazy(() => import("./pages/Formazioni.jsx"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy.jsx"));
+const TermsOfService = lazy(() => import("./pages/TermsOfService.jsx"));
 const NotFound = lazy(() => import("./pages/NotFound.jsx"))
 
 function App() {
@@ -39,6 +41,8 @@ function App() {
             <Route path="/contatti" element={<ContactUs />} />  
             <Route path="/press-e-media" element={<Press />} /> 
             <Route path="/formazioni-navakarana-vinyasa" element={<FormazioniNavakaranaVinyasa />} /> 
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} /> 
+            <Route path="/terms-of-service" element={<TermsOfService />} /> 
             <Route path="/*" element={<NotFound />} />
           </Routes>
         </Suspense>

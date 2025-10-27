@@ -30,9 +30,9 @@ function Footer() {
             <h3 className="text-oscuro font-semibold text-sm uppercase tracking-wider h-6 flex items-top">
               Link Utili
             </h3>
-            <div className="grid grid-cols-3 lg:space-x-4 space-x-2 justify-center items-center">
+            <div className="grid grid-cols-4 space-x-2 justify-center items-center">
               <a 
-                href="/privacy-e-cookie-policy" 
+                href="/privacy-policy" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-oscuro hover:text-terracota text-center transition-colors duration-300 text-sm font-normal hover:underline"
@@ -40,13 +40,25 @@ function Footer() {
                 Privacy Policy
               </a>
               <a 
-                href="/press-e-media" 
+                href="/terms-of-service" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-oscuro hover:text-terracota text-center transition-colors duration-300 text-sm font-normal hover:underline"
+              >
+                Condizioni d’uso
+              </a>
+              <a 
+                href="/press-e-media"
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="text-oscuro hover:text-terracota text-center transition-colors duration-300 text-sm font-normal hover:underline"
               >
                 Press e Media
               </a>
               <a 
-                href="/contatti" 
+                href="/contatti"
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="text-oscuro hover:text-terracota text-center transition-colors duration-300 text-sm font-normal hover:underline"
               >
                 Contatti
