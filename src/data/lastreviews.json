@@ -1,37 +1,72 @@
 [
-            {
-                "author":"Giulia R.",
-                "comments":"Un'esperienza trasformativa. La guida di Diletta è stata eccezionale.",
-                "rating":2,
-                "date":"2023-10-18", 
-                "experience":"Retreat in Cappadocia"
-            },
-            {
-                "author":"Carlos A.",
-                "comments":"Un'esperienza trasformativa. La guida di Alba è stata eccezionale.",
-                "rating":4,
-                "date":"2023-10-20",
-                "experience":"Retreat in Cappadocia"
-            },
-            {
-                "author":"Daniella G.",
-                "comments":". Anubhuti è un'esperienza trasformativa",
-                "rating":5,
-                "date":"2023-10-30",
-                "experience":"Retreat in Cappadocia"
-            },
-            {
-                "author":"Daniella G.",
-                "comments":". Anubhuti è un'esperienza trasformativa",
-                "rating":5,
-                "date":"2023-10-30",
-                "experience":"Retreat in Cappadocia"
-            },
-            {
-                "author":"Daniella G.",
-                "comments":". Anubhuti è un'esperienza trasformativa",
-                "rating":5,
-                "date":"2023-10-30",
-                "experience":"Retreat in Cappadocia"
-            }
+    {
+        "author":"Laura",
+        "comments":"Grazie al ricordo di questa avventura inaspettatamente meravigliosa, che mi ha dato l’opportunità di visitare e ammirare questa terra sorprendentemente gentile e fantastica, sia dall’alto che attraverso sentieri naturali, ricchi di tesori millenari nascosti, in compagnia di amici nuovi e ritrovati, ma soprattutto in compagnia Diletta, Alba e Tiziano, 3 splendidi ‘esseri umani’, sempre capaci di realizzare esperienze emotive straordinarie! Grazie mille e buon proseguimento, miei cari amici pellegrini!",
+        "rating":5,
+        "date":"2025-06-03", 
+        "experience":"Cappadocia Yoga Retreat"
+    },
+    {
+        "author":"Veronica",
+        "comments":"Comincio questa giornata con una energia che solo chi ha respirato questa magnifica esperienza, puó condividere. Avete tutti lasciato una impronta e GRAZIE per quello che avete donato.",
+        "rating":5,
+        "date":"2025-06-03", 
+        "experience":"Cappadocia Yoga Retreat"
+    },
+    {
+        "author":"Renata",
+        "comments":"Vorrei fare un ringraziamento profondo per aver vissuto così come è stato questi giorni insieme, sono grata dell’energia ricevuta e del micro mondo che si è creato naturalmente in così poco tempo. Mi sento tanto e sinceramente grata.",
+        "rating":5,
+        "date":"2024-06-03", 
+        "experience":"Indomito Retreat, Umbria"
+    },
+    {
+        "author":"Maddalena",
+        "comments":"Vi ringrazio tantissimo anche io per questa bellissima esperienza, è stato davvero molto bello conoscere nuove persone e condividere momenti intensi… grazie a tutti!",
+        "rating":5,
+        "date":"2024-06-03", 
+        "experience":"Indomito Retreat, Umbria"
+    },
+    {
+        "author":"Carlotta",
+        "comments":"Solo ora riesco a scrivervi, vi ringrazio tutti, uno ad uno, per questa esperienza. Ognuno di voi mi ha lasciato un pezzettino unico e inimitabile, sono davvero felice e spero di portarmi questa serenità dentro in ogni momento. Grazie grazie grazie!!",
+        "rating":5,
+        "date":"2024-06-03", 
+        "experience":"Indomito Retreat, Umbria"
+    },
+    {
+        "author":"Elena",
+        "comments":"Arrivata anch'io una mezz'oretta fa! Adesso sono a letto col cuore pieno di emozioni e di gratitudine! So di essere stata al ritiro giusto con le giuste persone e al momento giusto.",
+        "rating":5,
+        "date":"2024-06-03", 
+        "experience":"Indomito Retreat, Umbria"
+    },
+    {
+        "author":"Benedetta",
+        "comments":"Vi ho già ringraziato vero? Spero che tutti voi abbiate nel cuore, come me ora, questa splendida sensazione di serenità e di pienezza, un regalo lasciati dai nostri giorni insieme! Buona vita a tutti, sperando che le nostre strade siano destinate a incontrarsi nuovamente!!",
+        "rating":5,
+        "date":"2024-06-03", 
+        "experience":"Indomito Retreat, Umbria"
+    },
+    {
+        "author":"Jasmine",
+        "comments":"Grazie a Diletta, Tiziano, Alba. La vostra energia e l’amore con cui ci avete accolti è stata incredibile! Grazie a tutti voi indomiti che siete stati un gruppo stupendo e che il fuoco dei vostri cuori indomabili arda sempre forte! ",
+        "rating":5,
+        "date":"2024-06-03", 
+        "experience":"Indomito Retreat, Umbria"
+    },
+    {
+        "author":"Andrea",
+        "comments":"Non era solo un ritiro, era un incontro con parti di me che avevo dimenticato. Grazie per aver creato un luogo così sincero e potente, dove ogni cosa trova il suo posto. Non è scontato, nemmeno in un ritiro di yoga.",
+        "rating":5,
+        "date":"2024-06-03", 
+        "experience":"Indomito Retreat, Umbria"
+    },
+    {
+        "author":"Arianna",
+        "comments":"Torno con il cuore colmo e la mente quieta. Ho trovato fratellanza, presenza e tanta umanità. Grazie a voi insegnanti e a ognuno del gruppo per aver reso questo viaggio così speciale!",
+        "rating":5,
+        "date":"2023-05-23", 
+        "experience":"Spirito Guerriero retreat, Toscana"
+    }
 ]
