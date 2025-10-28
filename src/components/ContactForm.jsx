@@ -10,6 +10,7 @@ export default function ContactForm() {
   const [touched, setTouched] = useState({});
   const [loading, setLoading] = useState(false);
   const [hcaptchaToken, setHcaptchaToken] = useState(null);
+  const [consent, setConsent] = useState(false);
   const [formDataState, setFormDataState] = useState({
         name: '',
         surname: '',
@@ -18,8 +19,8 @@ export default function ContactForm() {
         message: '',
     });
   const isFormValid = useMemo(() => {
-        return Object.values(formDataState).every(value => value.trim() !== '');
-    }, [formDataState]);
+        return Object.values(formDataState).every(value => value.trim() !== '') && consent
+    }, [formDataState, consent]);
 
   const onVerify = useCallback((token) => {
       setHcaptchaToken(token);
@@ -37,7 +38,7 @@ export default function ContactForm() {
     if (!isFormValid || !hcaptchaToken) {
         setLoading(false);
         const message = !isFormValid 
-            ? "Si prega di compilare tutti i campi richiesti." 
+            ? (consent ? "Si prega di compilare tutti i campi richiesti." : "Devi accettare l'Informativa sulla Privacy per procedere.")
             : "Si prega di completare il controllo di sicurezza (hCaptcha).";
         setStatus({ ok: false, message: message });
         return;
@@ -46,6 +47,7 @@ export default function ContactForm() {
     try {
       const formData = new FormData(formRef.current);
       formData.append('access_key', "75601b01-e3e6-43db-b0fb-0f0f96088fd4");
+      formData.append('PrivacyPolicyAccepted', consent ? 'true' : 'false');
       console.log("FormData", ...formData)
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -131,6 +133,17 @@ export default function ContactForm() {
                   onVerify={onVerify} 
                   onExpire={onExpire}
                   /> 
+                  <label className="flex items-start gap-3 mt-4 text-sm">
+                    <input 
+                    type="checkbox"
+                    name="PrivacyPolicyAccepted"
+                    checked={consent}
+                    onChange={(e) => setConsent(e.target.checked)}
+                    className="mt-1 h-4 w-4 rounded border-gray-300" />
+                      <span>
+                        Ho letto e accetto i <a href="/terms-of-service" className="underline hover:text-gray-300" target="_blank">Termini e Condizioni</a> e <a href="/privacy-policy" className="underline hover:text-gray-300" target="_blank">l'Informativa sulla Privacy</a> di UMĀ YOGA PROJECT.
+                      </span>
+                  </label>
                   <button type="submit" className="btn-scopri border-2 border-claro text-white transition-all duration-500 uppercase my-4 disabled:cursor-not-allowed disabled:hover:none-effect" 
                   disabled={submited || !hcaptchaToken || !isFormValid}>
                     {loading ? "Inviando..." : "Invia"}
