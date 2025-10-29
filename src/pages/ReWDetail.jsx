@@ -76,7 +76,7 @@ function ReWDetail(){
                         </a>
                     </div>
                 </div>
-                <section id="detail" className="max-w-6xl mx-auto pt-12 md:pt-20 ">
+                <section id="detail" className="max-w-7xl mx-auto pt-12 md:pt-20 ">
                         <h1 className="textTitleSection py-4 uppercase text-white drop-shadow-text">{RW?.title}</h1>
                         {RW?.subtitle.length > 0 && 
                             <h2 className="title text-center py-2 italic  text-white drop-shadow-text">“{RW?.subtitle}“</h2>
@@ -160,7 +160,7 @@ function ReWDetail(){
                         </div>
                         }
                         {RW?.reviews?.length > 0 &&
-                        <div className="py-16 px-4">
+                        <div className="pb-8 flex flex-col justify-center">
                             <h2 className="title font-bold text-center py-2 uppercase text-white">Recensioni dei partecipanti</h2>
                             <ReviewsCarrousel reviews={RW.reviews} />
                         </div>}
