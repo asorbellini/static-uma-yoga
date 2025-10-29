@@ -76,7 +76,7 @@ function ReWDetail(){
                         </a>
                     </div>
                 </div>
-                <section id="detail" className="max-w-7xl mx-auto pt-12 md:pt-20 ">
+                <section id="detail" className="max-w-7xl mx-auto">
                         <h1 className="textTitleSection py-4 uppercase text-white drop-shadow-text">{RW?.title}</h1>
                         {RW?.subtitle.length > 0 && 
                             <h2 className="title text-center py-2 italic  text-white drop-shadow-text">“{RW?.subtitle}“</h2>
@@ -92,7 +92,7 @@ function ReWDetail(){
                                 {RW?.location?.place}</a>
                             : <>{RW?.location?.place}</>
                             }, {RW?.location?.city}, {RW?.location?.region}, {RW?.location?.country}</h3>
-                        {eventoPasado && 
+                        {eventoPasado && RW?.cost.length > 0 &&
                             <p className="textDetail text-center pb-2 font-light text-dorado drop-shadow-text">
                                 <span className="uppercase">Investimento: </span>{RW?.cost}</p>
                         }
@@ -137,7 +137,9 @@ function ReWDetail(){
                                         <p className="font-sans text-white text-base font-light"><strong>Fine: </strong>{`${getTextDate(RW?.dateEnd)}, ${RW?.timeEnd}`}</p>
                                     </>)
                                 }
-                                <p className="font-sans text-white text-base font-light"><strong>Luogo: </strong><a href={RW?.location?.url}  target="_blank" rel="noopener noreferrer" className="hover:underline">{RW?.location?.place}</a>, {RW?.location?.city}, {RW?.location?.region}, {RW?.location?.country} <a href={RW?.location?.maps}  target="_blank" rel="noopener noreferrer" className="underline hover:text-dorado cursor-pointer">+ Google Maps</a></p>
+                                <p className="font-sans text-white text-base font-light"><strong>Luogo: </strong>
+                                {RW?.location?.url.length > 0 ? (<a href={RW?.location?.url} target="_blank" rel="noopener noreferrer" className="hover:underline">{RW?.location?.place}</a>) : <span>{RW?.location?.place}</span>}, {RW?.location?.city}, {RW?.location?.region}, {RW?.location?.country} 
+                                {RW?.location?.maps.length > 0 && (<a href={RW?.location?.maps}  target="_blank" rel="noopener noreferrer" className="underline hover:text-dorado cursor-pointer">+ Google Maps</a>)}</p>
                                 <p className="font-sans text-white text-base font-light drop-shadow-text"><strong>Categoria: </strong>
                                     {RW?.type
                                     ? RW.type.charAt(0).toUpperCase()+RW.type.slice(1)

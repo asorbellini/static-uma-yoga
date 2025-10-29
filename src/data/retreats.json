@@ -1,6 +1,42 @@
 [
     {
         "id":1,
+        "type":"retreat",
+        "slug":"retreat-spirito-guerriero",
+        "title":"SPIRITO GUERRIERO",
+        "dateStart":"2023-05-19",
+        "timeStart":"09:30",
+        "dateEnd":"2023-05-21",
+        "timeEnd":"13:30",
+        "location":{
+            "place":"Podere Monellini",
+            "city":"Scansano",
+            "region":"Toscana",
+            "country":"Italia",
+            "url":"",
+            "maps":""
+        },
+        "cost":"",
+        "image":"/images/eventsCover/SpiritoGuerriero.webp",
+        "subtitle":"navakarana yoga retreat",
+        "smallDescription":"",
+        "description":[
+            {"type":"p","text":["Ognuno di noi ha commesso degli errori.","Ognuno di noi ha ferito ed è stato ferito.","Ognuno di noi ha tradito la fiducia di qualcuno ed ha perso la fiducia in qualcuno.","Ognuno di noi ha amato senza essere stato ricambiato.","Ognuno di noi ha rifiutato l’amore di qualcuno.","Ognuno di noi ha pronunciato parole che provenivano dall’ego.","Ognuno di noi si è sentito perso.","Ed è proprio in quel momento di smarrimento atroce che qualcosa in noi vibra.","Che qualcosa brucia","Non si è Eroi o Guerrieri solo se si è perfetti, solo se non si sbaglia mai.","Anzi.","Ognuno di noi ha pensato di non meritarsi un momento di felicità. Ed è proprio per questo che ognuno di noi è un Guerriero. Perché nonostante tutto siamo qui a metterci in gioco, perché nonostante tutto abbiamo il coraggio di guardare nella nostra oscurità."]},
+            {"type":"p","text":["Fai esperienza del tuo spirito guerriero","per abbracciare la tua integrità,","sviluppare fermezza e coraggio,"," migliorare l'autodisciplina,","coltivare benevolenza e compassione,","riscoprire il senso dell'onore,","connetterti con il tuo cuore di fuoco."]}
+        ],
+        "quote":[],
+        "hosts":["Alba Muzzarelli", "Tiziano Sorbellini","Diletta Muzzarelli"],
+        "soldout":false,
+        "reviews":[
+            {
+                "author":"Arianna",
+                "comments":"Torno con il cuore colmo e la mente quieta. Ho trovato fratellanza, presenza e tanta umanità. Grazie a voi insegnanti e a ognuno del gruppo per aver reso questo viaggio così speciale!",
+                "rating":5,
+                "date":"2023-05-23"
+            }]
+    },
+    {
+        "id":2,
         "type":"workshop",
         "slug":"workshop-essenziali-di-navakarana-vinyasa",
         "title":"Workshop Essenziali di Navakaraṇa Vinyāsa",
@@ -29,7 +65,7 @@
         "reviews":[]
     },
     {
-        "id":2,
+        "id":3,
         "type":"workshop",
         "slug":"il-coraggio-di-essere",
         "title":"IL CORAGGIO DI ESSERE",
@@ -69,7 +105,7 @@
         "reviews":[]
     },
     {
-        "id":3,
+        "id":4,
         "type":"retreat",
         "slug":"indomito-retreat-di-navakarana-yoga",
         "title":"INDOMITO RETREAT",
@@ -159,7 +195,7 @@
         ]
     },
     {
-        "id":4,
+        "id":5,
         "type":"workshop",
         "slug":"morning-escape",
         "title":"MORNING ESCAPE",
@@ -193,7 +229,7 @@
         "reviews":[]
     },
     {
-        "id":5,
+        "id":6,
         "type":"retreat",
         "slug":"cappadocia-yoga-retreat",
         "title":"CAPPADOCIA YOGA RETREAT",
@@ -246,8 +282,8 @@
             }
         ]
     },
-        {
-        "id":6,
+    {
+        "id":7,
         "type":"retreat",
         "slug":"tapas-ritiro-intensivo",
         "title":"TAPAS",
