@@ -14,7 +14,7 @@ function HeroComponent({background, mainColor, logo, title, subtitle = null}) {
                     </div>
                     { subtitle &&
                         <div className="pb-4 px-8 md:px-12 text-center">
-                            <h2 className="secondaryTitle text-white drop-shadow-title">{subtitle}</h2>
+                            <h2 className="subtitle text-center text-white drop-shadow-title">{subtitle}</h2>
                         </div>
                     }
                     <a href={`${title === "navakaraṆa vinyāsa" ? "#about-navakarana-vinyasa" : (title == "FORMAZIONE DI NAVAKARAṆA VINYĀSA" ? "#about-formazioni" : "#about-anubhuti")}`} className="btn-scopri"
