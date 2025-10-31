@@ -13,10 +13,10 @@ const ExpandableButton = ({ title, children}) => {
     const width = window.innerWidth
     const contentRef = useRef(null)
     useEffect(() => {
-    if (width < 768) {
-        setIsOpen(false);
-    }
-    }, [width]);
+        if (title === "Biografia" && width >= 768) {
+            setIsOpen(true);
+        }
+        }, [title, width]);
     useEffect(() => {
         if (contentRef.current) {
         setContentHeight(contentRef.current.scrollHeight)
@@ -89,32 +89,22 @@ function MemberDetail(){
                         </div>
                         <div className="flex-1 text-left space-y-2 ">
                             <h2 className="subtitle uppercase  text-white">{member.profession}</h2>
-                            {memberName == "tiziano-sorbellini" 
-                                ? 
-                                <div className="bg-transparent px-1 py-6 space-y-4">
-                                    {member.description.length > 0 && member.description.map((paragraph, index) => (
-                                    <p key={index} className="textDetail text-white" dangerouslySetInnerHTML={{ __html: paragraph }} />
-                                ))}
-                                </div>
-                                : <p className="textDetail  text-white">{member.smallDescription}</p>}
-                            {memberName == "tiziano-sorbellini" ? <></> : <ExpandableButton title="Formazione" children={member.training} />}
+                            {memberName != "tiziano-sorbellini" 
+                                ? <>
+                                    <p className="textDetail text-white">{member.smallDescription}</p>
+                                    <ExpandableButton title="Formazione" children={member.training} />
+                                </>
+                                : <ExpandableButton title="Biografia" children={member.description} />}
                             <h2 className="subtitle uppercase text-white">Seguimi su</h2>
                             <a href={member.socialMedia?.instagram} target="_blank" rel="noopener noreferrer">
                                 <button type="button">
                                     <InstagramIcon fillColor="#ffffff" />
                                 </button>
                             </a>
-                            {memberName === "tiziano-sorbellini" &&
-                                <div className="flex flex-row p-4 justify-center">
-                                    <a href="/anubhuti#proposte">
-                                        <button type="button" className="btn-scopri text-white textButton uppercase font-semibold">Scopri i miei progetti e proposte</button>
-                                    </a>
-                                </div>
-                            }
-                            {member?.classes && 
+                            {(member?.classes || member?.projects) &&
                             <div className="hidden md:flex md:justify-center md:items-start md:w-full">
-                                <a href="#classi" className="btn-scopri text-white textButton z-30" >
-                                    SCOPRI LE MIE CLASSI 
+                                <a href={member?.classes ? "#classi" : "#proposte"} className="btn-scopri text-white textButton z-30" >
+                                    SCOPRI {member?.classes ? "LE MIE CLASSI" : "I MIEI PROPOSTE"}
                                 </a>
                             </div>}
                         </div>
@@ -124,11 +114,10 @@ function MemberDetail(){
                     <Wave />
                 </div> 
             </section>
-            {memberName != "tiziano-sorbellini" && member?.classes 
-                ? <section className="bg-claro px-6 md:px-16 pt-12 md:pt-20 pb-4" id="classi">
+            {member?.classes 
+                ? (<section className="bg-claro px-6 md:px-16 pb-8" id="classi">
                     <div className="w-full items-center justify-between">
                         <h3 className="title drop-shadow-none uppercase text-center">{`Pratica con me online e a ${memberName == "alba-muzzarelli" ? "Milano" : "Napoli"}`}</h3>
-                        <p className="textDetail"></p>
                         <div className="flex flex-col sm:flex-row gap-3 mt-4">
                             {member?.classes?.map((classi, index) => (
                                 <div key={index} className="flex-1 sm:basis-1/4 lg:flex-1 text-white hover:scale-105 relative group ">
@@ -145,7 +134,7 @@ function MemberDetail(){
                                 </div>
                             ))}
                         </div>
-                        <div className="justify-self-center">
+                        <div className="justify-self-center pt-4">
                             <a href="/contatti">
                                 <button className="btn-primary">
                                     <p className="textButton">RICHIEDI INFORMAZIONI</p>
@@ -153,8 +142,43 @@ function MemberDetail(){
                             </a>
                         </div>
                     </div>
-                </section>
-                : <></>
+                </section>)
+            : (<section className="bg-claro px-6 md:px-16 pb-8" id="proposte">
+                <div className="w-full items-center justify-between">
+                    <h3 className="title drop-shadow-none uppercase text-center">I miei proposte</h3>
+                    <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                        {member?.projects?.books?.map((book, index) => (
+                            <div key={index+1} className="flex-1 sm:basis-1/4 lg:flex-1 text-white hover:scale-105 relative group ">
+                                <a href={`/anubhuti#proposte#${book?.title}`}>
+                                    <div className="flex flex-col items-center justify-center">
+                                        <img
+                                        src={book?.image?.url}
+                                        alt={book?.image?.alt}  
+                                        className="h-[310px] object-cover shadow-md hover:shadow-lg aspect-[3/4] rounded-3xl" />
+                                    </div>
+                                </a>
+                            </div>
+                            )
+                        )}
+                        {member?.projects?.podcast &&
+                            <div className="flex-1 sm:basis-1/4 lg:flex-1 text-white hover:scale-105 relative group ">
+                                <a href={`/anubhuti#proposte`}>
+                                    <div className="flex flex-col items-center justify-center">
+                                        <img
+                                        src={member?.projects?.podcast?.image?.url}
+                                        alt={member?.projects?.podcast?.image?.alt}  
+                                        className="h-[310px] object-cover shadow-md hover:shadow-lg aspect-square rounded-3xl" />
+                                        {/* <div className="absolute inset-0 opacity-0 group-hover:opacity-100 h-[310px] bg-verdeOliva rounded-full">
+                                            <p className="text-white text-sm rounded-full p-10">{member?.projects?.podcast?.smallDescription}</p>
+                                        </div> */}
+                                    </div>
+                                </a>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </section>)
             }
         </div>
         <ToRetreateWorkshop />
