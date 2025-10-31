@@ -17,26 +17,26 @@ function NavakaranaSummary() {
     return (
         <div className="bg-claro">
             <section ref={sectionRef} id="about-navakarana-vinyasa" className="min-h-dvh w-full px-4 bg-claro">
-                <div className={`flex flex-row px-2 md:px-12 gap-3 items-center transition-all duration-500 ease-in-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}`}>
-                    <div className="w-full md:basis-2/5 md:relative md:h-[60vh]">
+                <div className={`flex flex-col-reverse lg:flex-row px-2 md:px-12 gap-3 items-center transition-all duration-500 ease-in-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}`}>
+                    <div className="w-full lg:basis-2/5 lg:relative md:h-[60vh] pt-8 md:pt-0">
                         <img
                             src={Navakarana}
                             alt="Navakarana Vinyasa"
-                            className={`w-full h-[60vh] md:absolute md:-left-16 md:top-0 rounded-br-[8rem] object-cover transition-all duration-[1000ms] ease-out ${
+                            className={`w-full h-[50dvh] lg:h-full lg:absolute lg:-left-16 lg:top-0 rounded-3xl lg:rounded-none lg:rounded-br-[8rem] object-cover transition-all duration-[1000ms] ease-out ${
                             isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
                             }`}
                         />
                     </div>
-                    <div className="w-full md:basis-3/5 flex flex-col items-start">
-                        <h3 className="title text-oscuro text-center drop-shadow-none font-semibold tracking-wider uppercase py-2">
-                            Cos'è il Navakaraṇa vinyāsa
+                    <div className="w-full lg:basis-3/5 flex flex-col">
+                        <h3 className="title text-oscuro text-center lg:text-left drop-shadow-none font-semibold tracking-wider uppercase py-2">
+                            Cos'è Navakaraṇa vinyāsa?
                         </h3>
                         <p className="textDetail drop-shadow-none text-oscuro text-left pb-2">
                             Navakaraṇa è una pratica di vinyāsa vigorosa ed energica che consiste in coreografie dinamiche
                             caratterizzate da una combinazione armonica di movimento e staticità ottenuta attraverso la regolazione del
                             respiro e del prāṇa (energia vitale).
                         </p>
-                        <div className="flex items-center justify-start">
+                        <div className="w-full flex justify-center">
                             <div className="btn-primary bg-[#581414] border-[#581414] hover:opacity-80 hover:border-[#581414] transition-all duration-500 ">
                                 <a href="/retreat-e-workshop">
                                     <button className="textButton font-semibold tracking-wide">GUARDA GLI EVENTI</button>
@@ -45,7 +45,7 @@ function NavakaranaSummary() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col items-center justify-start px-2 md:px-12">
+                <div className="flex flex-col items-center justify-start pt-4 px-2 md:px-12">
                     <h3 className="title text-oscuro text-center drop-shadow-none font-semibold tracking-wider uppercase py-2 md:w-[50vw]">
                         Perché sceglierlo:
                     </h3>

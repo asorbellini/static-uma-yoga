@@ -1,10 +1,11 @@
 
 import { useState } from "react"
+import { Wave } from "./Icons.jsx"
 
 function HeroComponent({background, mainColor, logo, title, subtitle = null}) {
     const [hovered, setHovered] = useState(false)
     return(
-            <div className="relative h-[60vh] w-full flex flex-col items-center justify-center" 
+            <div className="relative min-h-[65dvh] md:min-h-[70dvh] w-full flex flex-col items-center justify-center py-4" 
                 style={{background: background }}>
                     <div className="mt-16">
                         <img src={logo} alt={`Logo ${title}`} className="h-28"/>
@@ -21,10 +22,13 @@ function HeroComponent({background, mainColor, logo, title, subtitle = null}) {
                         style={{borderColor: hovered ? mainColor : undefined}}
                         onMouseEnter={() => setHovered(true)}
                         onMouseLeave={() => setHovered(false)}>
-                        <button className="textButton justify-items-center">
+                        <button className="textButton justify-items-center z-30">
                             SCOPRI
                         </button>
                     </a>
+                    <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
+                        <Wave />
+                    </div>
             </div>
     )
 }

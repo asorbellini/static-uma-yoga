@@ -151,24 +151,26 @@ function Anubhuti() {
         <div className="min-h-dvh w-full bg-claro">
             <HeroComponent background="linear-gradient(45deg, #4A617A 0%, #93a4ab 50%, #4A617A 100%)" mainColor="#4A617A" logo={logoAnubhuti}  title="Anubhūti"/>
             <section id="about-anubhuti" className="h-fit w-full px-4">
-                <div ref={contentRef}  className={`flex flex-col md:flex-row px-2 sm:px-12 gap-3 items-center transition-all duration-[500ms] ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}`}>
-                    <div className="w-full flex flex-col md:basis-2/5 md:relative md:h-[60vh]">
+                <div ref={contentRef}  className={`flex flex-col-reverse lg:flex-row lg:pt-8 md:pt-0 px-2 sm:px-12 gap-3 items-center transition-all duration-[500ms] ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}`}>
+                    <div className="w-full flex flex-col lg:basis-2/5 lg:relative lg:h-[70dvh]">
                         <img
                             src={imgAnubhuti}
                             alt="Anubhuti"
-                            className="w-full h-[60vh] md:absolute md:-left-16 md:top-0 rounded-br-[8rem] object-cover"
+                            className={`w-full h-[50dvh] lg:h-full lg:absolute lg:-left-16 lg:top-0 rounded-3xl lg:rounded-none lg:rounded-br-[8rem] object-cover transition-all duration-[1000ms] ease-out ${
+                            isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+                            }`}
                         />
                     </div>
-                    <div className="w-full md:basis-3/5 flex flex-col items-start ">
+                    <div className="w-full lg:basis-3/5 flex flex-col">
                             <div >
-                                <h3 className="title text-oscuro text-center drop-shadow-none font-semibold tracking-wider uppercase py-2">
+                                <h3 className="title text-oscuro text-center lg:text-left drop-shadow-none font-semibold tracking-wider uppercase pb-2 pt-4">
                                     COS’È ANUBHŪTI?
                                 </h3>
                                 <p className="textDetail drop-shadow-none text-oscuro text-left pb-2">
                                     Anubhūti NON è un metodo, è un complesso meccanismo di pratiche che valorizzano la natura dell’essere umano come esperienza viva, come processo di evoluzione costante, come universo dentro a infiniti universi in movimento. Siamo un corpo che vive, respira e agisce… e il nostro corpo è il nostro tempo, il nostro spazio, ed è sopratutto un contenitore di memorie che vanno oltre la memoria mentale alla quale siamo abituati. Anubhūti, parola di origine sanscrita, ha visto un’evoluzione nel tempo: dal suo significato originario di “esperienza di unioni mistiche” o “esperienza che plasma”, si è frammentata nella lingua indiana in concetti come “emozione“, “sensazione“, “percezione“. Noi, attraverso questo percorso, lavoriamo sui singoli concetti moderni con l’obiettivo finale di ritornare al senso profondo del termine: creare un’esperienza che plasmi, che trasformi.
                                 </p>
                             </div>
-                        <div className="flex items-center justify-start">
+                        <div className="w-full flex justify-center">
                                 <div className="btn-primary bg-[#4A617A] border-[#4A617A] justify-center my-2 hover:opacity-80 hover:border-[#4A617A] transition-all duration-500 ">
                                     <a href="/retreat-e-workshop">
                                         <button className="textButton font-semibold tracking-wide">GUARDA GLI EVENTI</button>
@@ -177,7 +179,7 @@ function Anubhuti() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col items-center justify-start px-2 md:px-12">
+                <div className="flex flex-col items-center justify-start pt-4 px-2 md:px-12">
                     <h3 className="title text-oscuro text-center drop-shadow-none font-semibold tracking-wider uppercase py-2 md:w-[50vw]">
                         Perché scegliere Anubhūti:
                     </h3>
@@ -185,7 +187,7 @@ function Anubhuti() {
                         Anubhūti è una pratica che invita a ritornare a sé attraverso il corpo, il movimento libero, l’approccio giocoso e l’ascolto profondo. Non si tratta di imitare forme esterne, ma di esplorare in modo autentico e guidato il proprio universo sensoriale, riconnettendosi alle emozioni, agli altri e a tutto ciò che ci circonda. È un viaggio che parte dal corpo e si espande, trasformando ogni gesto in consapevolezza e ogni esperienza in un’opportunità di presenza. Anubhūti apre uno spazio in cui riscoprire la propria verità interiore, attraverso un linguaggio fatto di sensazioni, connessioni e libertà espressiva.
                     </p>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-8 my-8 px-2 md:px-12 h-full justify-center text-center ">
+                <div className="flex flex-col lg:flex-row gap-8 my-8 px-2 md:px-12 h-full justify-center text-center ">
                     <div className="flex-1 border-2 rounded-t-2xl border-[#4A617A]">
                         <div className="p-2 md:p-4">
                             <h2 className="font-serif text-lg md:text-xl font-bold text-[#4A617A]">Metafore e poesia</h2>
