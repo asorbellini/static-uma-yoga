@@ -12,26 +12,26 @@ const description = [
     description: ["Il sistema originale di Navakaraṇa si fonda su 36 sequenze e 12 serie, strutturate con rigore scientifico e radicate in una visione spirituale.",
         "Un approccio codificato per sviluppare forza, equilibrio, consapevolezza e libertà interiore."]},
     {icon: "BodyHeart" ,subtitle: "Precisione, respiro, sicurezza",
-    description: ["Ogni pratica lavora sull’intero corpo con progressione intelligente e attenzione biomeccanica.",
+    description: ["Ogni pratica lavora sull’intero corpo con progressione intelligente e attenzione biomeccanica. ",
         "Attraverso lo studio della struttura del movimento, del respiro e dell’assistenza, impari a costruire lezioni efficaci, sicure e adattabili a ogni praticante."]},
     {icon: "Road",subtitle: "Il suono come veicolo di consapevolezza",
-    description: ["Nel metodo Navakaraṇa, il nāda, la vibrazione del suono, è parte integrante della pratica.",
+    description: ["Nel metodo Navakaraṇa, il nāda, la vibrazione del suono, è parte integrante della pratica. ",
         "Voce, ritmo e vibrazione diventano strumenti di trasmissione: il movimento si fa meditazione, e la meditazione diventa vita."]},
     {icon: "BothFeets",subtitle: "Tradizione viva, approccio contemporaneo",
-    description: ["Radici antiche e linguaggio moderno si intrecciano in un metodo che evolve con te.",
+    description: ["Radici antiche e linguaggio moderno si intrecciano in un metodo che evolve con te. ",
         "Navakaraṇa è rigoroso, musicale e libero: un ponte tra la precisione della tradizione e la creatività dell’esperienza personale."]},
     {icon: "Spiral",subtitle: "Guida di insegnanti riconosciute e devote",
-    description: ["Con Alba e Diletta, la formazione è un dialogo continuo tra tecnica e presenza.",
+    description: ["Con Alba e Diletta, la formazione è un dialogo continuo tra tecnica e presenza. ",
         "La loro esperienza, dedizione e devozione rendono ogni incontro un atto di trasmissione reale, dove l’apprendimento si fa relazione, e la relazione, trasformazione."]},
     {icon: "Road",subtitle: "Una metodologia completa e adattabile",
-    description: ["Analisi, osservazione, assistenza e correzione: ogni dettaglio conta.",
+    description: ["Analisi, osservazione, assistenza e correzione: ogni dettaglio conta. ",
         "Diventi un insegnante capace di unire rigore tecnico e sensibilità artistica, precisione e ispirazione."]},
     {icon: "BodyHeart",subtitle: "Un luogo sacro di apprendimento",
-    description: ["La formazione si svolge a Casalecchio di Reno (BO), in un luogo che custodisce storia, memoria e presenza.",
+    description: ["La formazione si svolge a Casalecchio di Reno (BO), in un luogo che custodisce storia, memoria e presenza. ",
         "L’edificio che oggi ospita l’Accademia Navakaraṇa Vinyāsa fu costruito dal nonno di Alba e Diletta e oggi vive come uno spazio sacro di pratica e trasmissione, dove silenzio, suono e devozione si incontrano."]},
     {icon: "BothFeets",subtitle: "Crescita reale, dentro e fuori la pratica",
-    description: ["La Formazione Navakaraṇa non offre soltanto un titolo, ma un processo di trasformazione interiore.",
-        "È un cammino per chi desidera unire disciplina e libertà, tradizione e creatività, tecnica e devozione.",
+    description: ["La Formazione Navakaraṇa non offre soltanto un titolo, ma un processo di trasformazione interiore. ",
+        "È un cammino per chi desidera unire disciplina e libertà, tradizione e creatività, tecnica e devozione. ",
         "Un invito a immergersi nella pratica con profondità e autenticità, lasciando che il movimento diventi preghiera e il respiro, tempio vivente."]},
     ]
 const ICON_MAP = {
@@ -46,7 +46,7 @@ function CardInfo({ item, isExpanded, onExpandToggle, onMouseEnter, onMouseLeave
 
     const IconDiv = IconComponent ? (
         <div className="absolute inset-0 z-10 w-full h-full flex items-center justify-center opacity-10">
-            <IconComponent className="w-52 h-52" fillColor="#b64c4c" />
+            <IconComponent className="w-48 h-48" fillColor="#b64c4c" />
         </div>
     ) : null;
 
@@ -58,7 +58,7 @@ function CardInfo({ item, isExpanded, onExpandToggle, onMouseEnter, onMouseLeave
             onClick={onExpandToggle}
         >
                 {IconDiv}
-                <div className={`min-h-[200px] p-4 sm:p-5 lg:p-6 flex flex-col transition-all duration-500 justify-center`}>
+                <div className={`min-h-[200px] lg:min-h-full p-4 sm:p-5 lg:p-6 flex flex-col transition-all duration-500 justify-center`}>
                     <>
                         <h3 className="textTitleSection text-center tracking-wider text-[#581414] drop-shadow-md transition-all duration-500">{item.subtitle}</h3>
                         <div
@@ -79,7 +79,7 @@ function FormazioniNVSummary() {
     const [hoveredIndex, setHoveredIndex] = useState(null); 
 
     const handleCardClick = (i) => {
-        setExpandedIndex(expandedIndex === i ? null : i);
+            setExpandedIndex(expandedIndex === i ? null : i);
     };
 
     const [isVisible, setIsVisible] = useState(false);
@@ -113,7 +113,7 @@ function FormazioniNVSummary() {
                             item={item}
                             isExpanded={expandedIndex === globalIndex || hoveredIndex === globalIndex}
                             onExpandToggle={() => handleCardClick(globalIndex)}
-                            onMouseEnter={() => setHoveredIndex(globalIndex)}
+                            onMouseEnter={() => setHoveredIndex(globalIndex)}    
                             onMouseLeave={() => setHoveredIndex(null)}
                         />
                     );
@@ -123,12 +123,12 @@ function FormazioniNVSummary() {
 
         const imageBlock = (
             <div key={`img-${start}`} className="relative rounded-lg overflow-hidden shadow-lg group">
-                <div className="aspect-square w-full">
-                    <Suspense fallback="loading...">
+                <div className="aspect-square w-full flex items-center justify-center z-0">
+                    <Suspense fallback="caricamento...">
                         <img
                             src={imageSrc}
                             alt="Decorative image"
-                            className="w-full h-full object-cover object-center"
+                            className="w-full h-full object-cover object-center z-10"
                         />
                     </Suspense>
                 </div>
@@ -172,11 +172,11 @@ function FormazioniNVSummary() {
                 
                 
                 <div ref={sectionRef} className={`hidden sm:absolute md:top-0 inset-x-0 sm:flex justify-center items-center py-4 transition-all duration-500 ${isVisible ? "opacity-30 translate-y-0" : "opacity-0 translate-y-40"}`}>
-                     <h3 className="textTitleSection text-[#581414] text-center drop-shadow-none font-semibold tracking-wider uppercase">TRAIN</h3>
-                        <h3 className="textTitleSection text-[#581414] text-center drop-shadow-none font-semibold tracking-wider uppercase hidden md:block">&bull;</h3>
-                        <h3 className="textTitleSection text-[#581414] text-center drop-shadow-none font-semibold tracking-wider uppercase">TRANSFORM</h3>
-                        <h3 className="textTitleSection text-[#581414] text-center drop-shadow-none font-semibold tracking-wider uppercase hidden md:block">&bull;</h3>
-                        <h3 className="textTitleSection text-[#581414] text-center drop-shadow-none font-semibold tracking-wider uppercase">TEACH</h3>
+                     <h3 className="textTitleSection text-[#581414] text-center drop-shadow-none font-semibold tracking-wider uppercase px-2">TRAIN</h3>
+                        <h3 className="textTitleSection text-[#581414] text-center drop-shadow-none font-semibold tracking-wider uppercase hidden md:block px-2">&bull;</h3>
+                        <h3 className="textTitleSection text-[#581414] text-center drop-shadow-none font-semibold tracking-wider uppercase px-2">TRANSFORM</h3>
+                        <h3 className="textTitleSection text-[#581414] text-center drop-shadow-none font-semibold tracking-wider uppercase hidden md:block px-2">&bull;</h3>
+                        <h3 className="textTitleSection text-[#581414] text-center drop-shadow-none font-semibold tracking-wider uppercase px-2">TEACH</h3>
                 </div>
                 
                 {isMobile 
