@@ -1,8 +1,8 @@
 import { Suspense, useEffect, useRef, useState } from "react";
 import { useRevealOnScroll } from "../hooks/useRevealHook.jsx"
 import FormazioneNV1 from "../assets/images/FormazioneNV1.webp";
-import FormazioneNV2 from "../assets/images/formazioneNV2.webp";
-import FormazioneNV3 from "../assets/images/Classi.png";
+import FormazioneNV2 from "../assets/images/formazioneNV3.webp";
+import FormazioneNV3 from "../assets/images/FormazioneNV2.webp";
 import FormazioneNV4 from "../assets/images/NavakaranaVinyasa.png";
 import { Spiral, BothFeets, BodyHeart, Road, Wave } from "./Icons";
 
@@ -163,7 +163,7 @@ function FormazioniNVSummary() {
                         Non è soltanto un corso per insegnare, è un cammino per diventare strumento consapevole di trasmissione, dove corpo, voce e presenza si fondono in una danza sacra di movimento e consapevolezza.
                     </p>
                     <p className="textDetail font-normal text-oscuro text-center drop-shadow-none pb-2 leading-relaxed">
-                        Fondata sull’insegnamento e sulla visione del maestro Dario Calvaruso, creatore del sistema originale Navakaraṇa, questa formazione onora la sua trasmissione viva e rigorosa, mantenendo intatta la connessione con la radice del metodo e con lo spirito della pratica.
+                        Fondata sull’insegnamento e sulla visione del maestro <a href="https://navakarana.com/lineage/" target="_blank" rel="noopener noreferrer"></a>Dario Calvaruso, creatore del sistema originale Navakaraṇa, questa formazione onora la sua trasmissione viva e rigorosa, mantenendo intatta la connessione con la radice del metodo e con lo spirito della pratica.
                     </p>
                     <p className="textDetail font-normal text-oscuro text-center drop-shadow-none pb-2 leading-relaxed">
                         Guidata da Alba e Diletta, le uniche formatrici autorizzate in Italia e praticanti devote del metodo, la formazione nasce dal desiderio di condividere la saggezza di Navakaraṇa in modo autentico, vibrante e fedele alla tradizione. Insieme, accompagnano ogni partecipante in un processo di crescita che intreccia precisione tecnica, sensibilità artistica e profondità interiore.
@@ -207,7 +207,7 @@ function FormazioniNVSummary() {
                 </div>
                 <div className="flex justify-center items-center pb-8">
                     <div className="btn-primary bg-[#581414] border-[#581414] hover:opacity-80 hover:border-[#581414] transition-all duration-500 justify-center">
-                        <a href="/contatti">
+                        <a href="https://navakarana.com/courses/alumnui-grounding-opening-april-2026-bologna/" target="_blank" rel="noopener noreferrer">
                             <button className="textButton">       
                                 RICHIEDI INFORMAZIONI
                             </button>

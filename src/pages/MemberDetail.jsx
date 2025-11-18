@@ -1,8 +1,8 @@
 
 import { useState, useEffect, useRef } from "react"
-import { useParams } from "react-router-dom"
+import { redirect, useParams } from "react-router-dom"
 import members from "../data/members.json"
-import { Wave, ArrowUp, InstagramIcon } from "../components/Icons"
+import { Wave, ArrowUp, InstagramIcon, CloseIcon } from "../components/Icons"
 import ToRetreateWorkshop from "../components/ToRetreateWorkshop.jsx"
 import ScrollToTop from "../components/ScrollToTop.jsx"
 import imageUrlNavakaranaVinyasa from "../assets/images/NavakaranaVinyasa.png"
@@ -62,7 +62,12 @@ function MemberDetail(){
     const { memberName } = useParams();
     const member = members.find(m => m.memberName === memberName);
 
-    if (!member) return <p>Miembro no encontrado</p>;
+    if (!member) return redirect('/')
+    const [expandedIndex, setExpandedIndex] = useState(null)
+
+    const handleCardInteraction = (index) => {
+        setExpandedIndex(expandedIndex === index ? null : index)
+    }
     return(
         <>
         <div className="min-h-screen" 
@@ -110,64 +115,139 @@ function MemberDetail(){
                         </div>
                     </div>
                 </div>
-                <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20">
+                {/* <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20">
                     <Wave />
-                </div> 
+                </div>  */}
             </section>
             {member?.classes 
                 ? (<section className="bg-claro px-6 md:px-16 pb-8" id="classi">
-                    <div className="w-full items-center justify-between">
-                        <h3 className="title drop-shadow-none uppercase text-center">{`Pratica con me online e a ${memberName == "alba-muzzarelli" ? "Milano" : "Napoli"}`}</h3>
-                        <div className="flex flex-col sm:flex-row gap-3 mt-4">
-                            {member?.classes?.map((classi, index) => (
-                                <div key={index} className="flex-1 sm:basis-1/4 lg:flex-1 text-white hover:scale-105 relative group ">
-                                    <div className="flex flex-col items-center justify-center">
+                        <div className="w-full items-center justify-between max-w-7xl mx-auto">
+                            <h3 className="title drop-shadow-none uppercase text-center py-2">{`Pratica con me online e a ${memberName == "alba-muzzarelli" ? "Milano" : "Napoli"}`}</h3>
+                                <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 justify-items-center mb-8 ">
+                                {member?.classes?.map((classi, index) => (
+                                <div key={`${classi.title}-${index}`} className="w-full flex justify-center">
+                                    <div
+                                    className="cursor-pointer transition-all duration-300 group"
+                                    onMouseEnter={() => setExpandedIndex(index)}
+                                    onMouseLeave={() => setExpandedIndex(null)}
+                                    onTouchStart={() => handleCardInteraction(index)}
+                                    role="button"
+                                    tabIndex={0}
+                                    aria-expanded={expandedIndex === index}
+                                    aria-label={`${classi?.title} - click per detalles`}
+                                    onKeyDown={(e) => {
+                                        if (e.key === "Enter" || e.key === " ") {
+                                        e.preventDefault()
+                                        handleCardInteraction(index)
+                                        }
+                                    }}
+                                    >
+                                    {/* Card Container */}
+                                    <div className="flex flex-col items-center justify-center transition-all duration-300 group-hover:opacity-60 active:opacity-60">
                                         <img
-                                        src={classi?.urlImage || imageUrlNavakaranaVinyasa}
-                                        alt={classi?.title}  
-                                        className="h-[310px] object-cover shadow aspect-square rounded-full" />
-                                        <h2 className="textDetail text-center font-semibold drop-shadow-none uppercase p-2">{classi.title}</h2>
-                                        {/* <div className="absolute inset-0 opacity-0 group-hover:opacity-100 h-[310px] bg-verdeOliva rounded-full">
-                                            <p className="text-white text-sm rounded-full p-10">{classi?.detail}</p>
-                                        </div> */}
+                                        src={classi?.urlImage}
+                                        alt={classi?.title}
+                                        className="h-56 w-56 md:h-40 md:w-40 lg:h-56 lg:w-56 object-cover shadow-lg aspect-square rounded-full transition-transform duration-300 group-hover:scale-105 active:scale-105 group-hover:shadow-xl"
+                                        loading="lazy"
+                                        />
+                                            <h2 className="title font-semibold drop-shadow-none uppercase p-2 text-xs sm:text-sm md:text-base mt-3 text-oscuro text-center">
+                                            {classi?.title}
+                                            </h2>
+                                    </div>
+
+                                    {/* Overlay - desktop absolute, mobile fixed panel */}
+                                    {/* Desktop / Tablet overlay (hover / focus) */}
+                                    <div
+                                        className={`absolute inset-0 z-30 hidden md:flex items-center justify-center overflow-y-auto transition-all duration-300 rounded-2xl ${
+                                            expandedIndex === index ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                                       }`}
+                                   >
+                                        {/* Backdrop */}
+                                        <div className="absolute inset-0 bg-verdeOliva/90 backdrop-blur-md rounded-2xl w-full h-full" />
+                                        {/* Content Container */}
+                                        <div className="relative z-30 w-full h-full min-h-fit flex flex-col items-start justify-start mx-auto p-6 md:p-8 overflow-y-auto rounded-2xl">
+                                            <button
+                                                onClick={() => setExpandedIndex(null)}
+                                                className="absolute top-3 right-3 p-2 bg-white/50 hover:bg-white/90 rounded-full transition-colors active:bg-white focus:outline-none focus:ring-2 focus:ring-white z-20"
+                                                aria-label="Chiudere description"
+                                            >
+                                                <CloseIcon />
+                                            </button>
+                                            <div className="py-4">
+                                                <h3 className="subtitle text-center text-white uppercase py-2 font-medium">
+                                                    {classi?.title}
+                                                </h3>
+                                                <p className="textDetail text-white leading-relaxed">
+                                                    {classi?.detail}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Mobile fixed panel (two-column layout inside) */}
+                                    {expandedIndex === index && (
+                                        <div className="md:hidden fixed inset-x-0 bottom-0 z-50">
+                                            <div className="max-w-3xl mx-auto bg-verdeOliva/95 backdrop-blur-md rounded-t-2xl p-4 shadow-xl max-h-[80vh] overflow-y-auto">
+                                                <div className="flex items-start justify-between">
+                                                    <h3 className="subtitle text-white uppercase font-medium">{classi?.title}</h3>
+                                                    <button
+                                                        onClick={() => setExpandedIndex(null)}
+                                                        className="p-2 hover:bg-white/10 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white"
+                                                        aria-label="Chiudere description"
+                                                    >
+                                                        <CloseIcon />
+                                                    </button>
+                                                </div>
+                                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-3 items-start">
+                                                    <div>
+                                                        <p className="textDetail text-white leading-relaxed">
+                                                            {classi?.detail}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
                                     </div>
                                 </div>
-                            ))}
+                                ))}
+                            </div>
+                            <div className="justify-self-center pt-4">
+                                <a href="/contatti">
+                                    <button className="btn-primary">
+                                        <p className="textButton">RICHIEDI INFORMAZIONI</p>
+                                    </button>
+                                </a>
+                            </div>
                         </div>
-                        <div className="justify-self-center pt-4">
-                            <a href="/contatti">
-                                <button className="btn-primary">
-                                    <p className="textButton">RICHIEDI INFORMAZIONI</p>
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </section>)
+                    </section>)
             : (<section className="bg-claro px-6 md:px-16 pb-8" id="proposte">
                 <div className="w-full items-center justify-between">
                     <h3 className="title drop-shadow-none uppercase text-center">I miei proposte</h3>
                     <div className="flex flex-col sm:flex-row gap-3 mt-4">
                         {member?.projects?.books?.map((book, index) => (
-                            <div key={index+1} className="flex-1 sm:basis-1/4 lg:flex-1 text-white hover:scale-105 relative group ">
-                                <a href={`/anubhuti#proposte#${book?.title}`}>
+                            <div key={index+1} className="flex-1 sm:basis-1/4 lg:flex-1 hover:scale-105 relative group ">
+                                <a href={`/anubhuti#proposte`}>
                                     <div className="flex flex-col items-center justify-center">
                                         <img
                                         src={book?.image?.url}
                                         alt={book?.image?.alt}  
                                         className="h-[310px] object-cover shadow-md hover:shadow-lg aspect-[3/4] rounded-3xl" />
+                                        <h3 className="subtitle text-oscuro font-semibold uppercase mb-4">{book.title}</h3>
                                     </div>
                                 </a>
                             </div>
                             )
                         )}
                         {member?.projects?.podcast &&
-                            <div className="flex-1 sm:basis-1/4 lg:flex-1 text-white hover:scale-105 relative group ">
+                            <div className="flex-1 sm:basis-1/4 lg:flex-1 hover:scale-105 relative group ">
                                 <a href={`/anubhuti#proposte`}>
                                     <div className="flex flex-col items-center justify-center">
                                         <img
                                         src={member?.projects?.podcast?.image?.url}
                                         alt={member?.projects?.podcast?.image?.alt}  
                                         className="h-[310px] object-cover shadow-md hover:shadow-lg aspect-square rounded-3xl" />
+                                        <h3 className="subtitle text-oscuro font-semibold uppercase mb-4">{member?.projects?.podcast?.title}</h3>
                                         {/* <div className="absolute inset-0 opacity-0 group-hover:opacity-100 h-[310px] bg-verdeOliva rounded-full">
                                             <p className="text-white text-sm rounded-full p-10">{member?.projects?.podcast?.smallDescription}</p>
                                         </div> */}
@@ -175,7 +255,6 @@ function MemberDetail(){
                                 </a>
                             </div>
                         }
-
                     </div>
                 </div>
             </section>)
