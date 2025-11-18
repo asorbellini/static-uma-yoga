@@ -153,7 +153,7 @@ function ReWDetail(){
                                 ))}  
                             </div>
                         </div>
-                        {RW?.imagesGallery?.length > 0 &&
+                        {/* {RW?.imagesGallery?.length > 0 &&
                         <div className="relative justify-center items-center">
                             <h2 className="title font-bold text-center py-2 uppercase text-white">GALLERY</h2>
                             <Suspense fallback={<ComponentLoading />}>
@@ -165,7 +165,7 @@ function ReWDetail(){
                         <div className="pb-8 flex flex-col justify-center">
                             <h2 className="title font-bold text-center py-2 uppercase text-white">Recensioni dei partecipanti</h2>
                             <ReviewsCarrousel reviews={RW.reviews} />
-                        </div>}
+                        </div>} */}
                 </section>
             </div>
             <NewsLetter />
