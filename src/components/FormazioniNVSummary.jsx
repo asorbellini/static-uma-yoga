@@ -1,8 +1,8 @@
 import { Suspense, useEffect, useRef, useState } from "react";
 import { useRevealOnScroll } from "../hooks/useRevealHook.jsx"
 import FormazioneNV1 from "../assets/images/FormazioneNV1.webp";
-import FormazioneNV2 from "../assets/images/formazioneNV3.webp";
-import FormazioneNV3 from "../assets/images/FormazioneNV2.webp";
+import FormazioneNV2 from "../assets/images/FormazioneNV3.webp";
+import FormazioneNV3 from "../assets/images/formazioneNV2.webp";
 import FormazioneNV4 from "../assets/images/NavakaranaVinyasa.png";
 import { Spiral, BothFeets, BodyHeart, Road, Wave } from "./Icons";
 
