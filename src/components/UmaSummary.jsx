@@ -97,6 +97,96 @@ import ReviewsCarrousel from "./ReviewsCarrousel.jsx"
 import reviews from "../data/lastreviews.json"
 
 const LastRetreatsImages = [
+  {
+      thumbnail: { src: LR26400, width: 400, height: 267 },
+      fullSize: { src: LR26FULL, width: 3000, height: 2000 },
+      alt: "Pratica di Yoga",
+    },
+    {
+      thumbnail: { src: LR27400, width: 400, height: 267 },
+      fullSize: { src: LR27FULL, width: 3000, height: 2000 },
+      alt: "Pratica di Navakarana",
+    },
+    {
+      thumbnail: { src: LR28400, width: 400, height: 267 },
+      fullSize: { src: LR28FULL, width: 3000, height: 2000 },
+      alt: "Pratica di Vinyasa",
+    },
+    {
+      thumbnail: { src: LR29400, width: 400, height: 267 },
+      fullSize: { src: LR29FULL, width: 3000, height: 2000 },
+      alt: "Diletta insegnando",
+    },
+    {
+      thumbnail: { src: LR30400, width: 400, height: 267 },
+      fullSize: { src: LR30FULL, width: 3000, height: 2000 },
+      alt: "Pratica",
+    },
+    {
+      thumbnail: { src: LR31400, width: 400, height: 267 },
+      fullSize: { src: LR31FULL, width: 3000, height: 2000 },
+      alt: "Pose dell'Lione",
+    },
+    {
+      thumbnail: { src: LR32400, width: 400, height: 267 },
+      fullSize: { src: LR32FULL, width: 3000, height: 2000 },
+      alt: "Pratica intensa",
+    },
+    {
+      thumbnail: { src: LR33400, width: 400, height: 267 },
+      fullSize: { src: LR33FULL, width: 3000, height: 2000 },
+      alt: "Alba corregendo",
+    },
+    {
+      thumbnail: { src: LR34400, width: 400, height: 267 },
+      fullSize: { src: LR34FULL, width: 3000, height: 2000 },
+      alt: "Godendo",
+    },
+    {
+      thumbnail: { src: LR35400, width: 400, height: 267 },
+      fullSize: { src: LR35FULL, width: 3000, height: 2000 },
+      alt: "Ridendo",
+    },
+    {
+      thumbnail: { src: LR36400, width: 400, height: 267 },
+      fullSize: { src: LR36FULL, width: 3000, height: 2000 },
+      alt: "Ballare",
+    },
+    {
+      thumbnail: { src: LR37400, width: 400, height: 267 },
+      fullSize: { src: LR37FULL, width: 3000, height: 2000 },
+      alt: "Unendo le mani",
+    },
+    {
+      thumbnail: { src: LR38400, width: 400, height: 267 },
+      fullSize: { src: LR38FULL, width: 3000, height: 2000 },
+      alt: "Spiegando",
+    },
+    {
+      thumbnail: { src: LR39400, width: 400, height: 267 },
+      fullSize: { src: LR39FULL, width: 3000, height: 2000 },
+      alt: "Diletta corregge la postura 1",
+    },
+    {
+      thumbnail: { src: LR40400, width: 400, height: 267 },
+      fullSize: { src: LR40FULL, width: 3000, height: 2000 },
+      alt: "Diletta corregge la postura 2",
+    },
+    {
+      thumbnail: { src: LR41400, width: 400, height: 267 },
+      fullSize: { src: LR41FULL, width: 3000, height: 2000 },
+      alt: "Alba correge la postura 1",
+    },
+    {
+      thumbnail: { src: LR42400, width: 400, height: 267 },
+      fullSize: { src: LR42FULL, width: 3000, height: 2000 },
+      alt: "Uno gruppo di partecipanti al ritiro Tapas",
+    },
+    {
+      thumbnail: { src: LR43400, width: 400, height: 267 },
+      fullSize: { src: LR43FULL, width: 3000, height: 2000 },
+      alt: "Gruppo di partecipanti al ritiro ",
+    },
     {
       thumbnail: { src: LR01400, width: 400, height: 267 },
       fullSize: { src: LR01FULL, width: 3000, height: 2000 },
@@ -222,96 +312,6 @@ const LastRetreatsImages = [
       fullSize: { src: LR25FULL, width: 3000, height: 2000 },
       alt: "Pratica di Navakarana Vinyasa",
     },
-    {
-      thumbnail: { src: LR26400, width: 400, height: 267 },
-      fullSize: { src: LR26FULL, width: 3000, height: 2000 },
-      alt: "Pratica di Yoga",
-    },
-    {
-      thumbnail: { src: LR27400, width: 400, height: 267 },
-      fullSize: { src: LR27FULL, width: 3000, height: 2000 },
-      alt: "Pratica di Navakarana",
-    },
-    {
-      thumbnail: { src: LR28400, width: 400, height: 267 },
-      fullSize: { src: LR28FULL, width: 3000, height: 2000 },
-      alt: "Pratica di Vinyasa",
-    },
-    {
-      thumbnail: { src: LR29400, width: 400, height: 267 },
-      fullSize: { src: LR29FULL, width: 3000, height: 2000 },
-      alt: "Diletta insegnando",
-    },
-    {
-      thumbnail: { src: LR30400, width: 400, height: 267 },
-      fullSize: { src: LR30FULL, width: 3000, height: 2000 },
-      alt: "Pratica",
-    },
-    {
-      thumbnail: { src: LR31400, width: 400, height: 267 },
-      fullSize: { src: LR31FULL, width: 3000, height: 2000 },
-      alt: "Pose dell'Lione",
-    },
-    {
-      thumbnail: { src: LR32400, width: 400, height: 267 },
-      fullSize: { src: LR32FULL, width: 3000, height: 2000 },
-      alt: "Pratica intensa",
-    },
-    {
-      thumbnail: { src: LR33400, width: 400, height: 267 },
-      fullSize: { src: LR33FULL, width: 3000, height: 2000 },
-      alt: "Alba corregendo",
-    },
-    {
-      thumbnail: { src: LR34400, width: 400, height: 267 },
-      fullSize: { src: LR34FULL, width: 3000, height: 2000 },
-      alt: "Godendo",
-    },
-    {
-      thumbnail: { src: LR35400, width: 400, height: 267 },
-      fullSize: { src: LR35FULL, width: 3000, height: 2000 },
-      alt: "Ridendo",
-    },
-    {
-      thumbnail: { src: LR36400, width: 400, height: 267 },
-      fullSize: { src: LR36FULL, width: 3000, height: 2000 },
-      alt: "Ballare",
-    },
-    {
-      thumbnail: { src: LR37400, width: 400, height: 267 },
-      fullSize: { src: LR37FULL, width: 3000, height: 2000 },
-      alt: "Unendo le mani",
-    },
-    {
-      thumbnail: { src: LR38400, width: 400, height: 267 },
-      fullSize: { src: LR38FULL, width: 3000, height: 2000 },
-      alt: "Spiegando",
-    },
-    {
-      thumbnail: { src: LR39400, width: 400, height: 267 },
-      fullSize: { src: LR39FULL, width: 3000, height: 2000 },
-      alt: "Diletta corregge la postura 1",
-    },
-    {
-      thumbnail: { src: LR40400, width: 400, height: 267 },
-      fullSize: { src: LR40FULL, width: 3000, height: 2000 },
-      alt: "Diletta corregge la postura 2",
-    },
-    {
-      thumbnail: { src: LR41400, width: 400, height: 267 },
-      fullSize: { src: LR41FULL, width: 3000, height: 2000 },
-      alt: "Alba correge la postura 1",
-    },
-    {
-      thumbnail: { src: LR42400, width: 400, height: 267 },
-      fullSize: { src: LR42FULL, width: 3000, height: 2000 },
-      alt: "Uno gruppo di partecipanti al ritiro Tapas",
-    },
-    {
-      thumbnail: { src: LR43400, width: 400, height: 267 },
-      fullSize: { src: LR43FULL, width: 3000, height: 2000 },
-      alt: "Gruppo di partecipanti al ritiro ",
-    }
   ]
 
 function UmaSummary(){
