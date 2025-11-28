@@ -13,6 +13,11 @@ import an04400 from "../assets/images/Anubhuti/anub04400px.webp"
 import an05400 from "../assets/images/Anubhuti/anub05400px.webp"
 import an06400 from "../assets/images/Anubhuti/anub06400px.webp"
 import an07400 from "../assets/images/Anubhuti/anub07400px.webp"
+import an08400 from "../assets/images/Anubhuti/anub08400px.webp"
+import an09400 from "../assets/images/Anubhuti/anub09400px.webp"
+import an10400 from "../assets/images/Anubhuti/anub10400px.webp"
+import an11400 from "../assets/images/Anubhuti/anub11400px.webp"
+
 
 import an01full from "../assets/images/Anubhuti/anub1.webp"
 import an02full from "../assets/images/Anubhuti/anub2.webp"
@@ -21,51 +26,79 @@ import an04full from "../assets/images/Anubhuti/anub4.webp"
 import an05full from "../assets/images/Anubhuti/anub5.webp"
 import an06full from "../assets/images/Anubhuti/anub6.webp"
 import an07full from "../assets/images/Anubhuti/anub7.webp"
+import an08full from "../assets/images/Anubhuti/anub8.webp"
+import an09full from "../assets/images/Anubhuti/anub9.webp"
+import an10full from "../assets/images/Anubhuti/anub10.webp"
+import an11full from "../assets/images/Anubhuti/anub11.webp"
 
 
 const AnubhutiImages = [
     {
         thumbnail: { src: an06400, width: 400, height: 600 },
         fullSize: { src: an06full, width: 3840, height: 5760 },
-        alt: "yoga retreat",
-        title: "Yoga Retreat",
+        alt: "Retreat",
+        title: "Retreat",
+    },
+        {
+        thumbnail: { src: an11400, width: 400, height: 600 },
+        fullSize: { src: an11full, width: 3840, height: 5760 },
+        alt: "Anubhuti practice 2",
+        title: "Anubhuti practice 2",
     },
     {
         thumbnail: { src: an07400, width: 400, height: 600 },
         fullSize: { src: an07full, width: 3840, height: 5760 },
-        alt: "navakarana vinyasa",
-        title: "Navakarana Vinyasa",
+        alt: "Anubhuti",
+        title: "Anubhuti",
     },
         {
         thumbnail: { src: an04400, width: 600, height: 400 },
         fullSize: { src: an04full, width: 5760, height: 3840 },
-        alt: "yoga pose",
-        title: "Yoga Pose",
+        alt: "Anubhuti pose",
+        title: "Anubhuti Pose",
     },
-        {
+    {
+        thumbnail: { src: an09400, width: 400, height: 600 },
+        fullSize: { src: an09full, width: 3840, height: 5760 },
+        alt: "Tapas yoga retreat anubhuti",
+        title: "Tapas yoga retreat anubhuti",
+    },
+    {
         thumbnail: { src: an02400, width: 600, height: 400 },
         fullSize: { src: an02full, width: 5760, height: 3840 },
-        alt: "yoga session",
-        title: "Yoga Session",
+        alt: "Anubhuti session",
+        title: "Anubhuti Session",
     },
     {
         thumbnail: { src: an03400, width: 600, height: 400 },
         fullSize: { src: an03full, width: 5760, height: 3840 },
-        alt: "meditation",
+        alt: "Meditation",
         title: "Meditation",
+    },
+    {
+        thumbnail: { src: an10400, width: 400, height: 600 },
+        fullSize: { src: an10full, width: 3840, height: 5760 },
+        alt: "Anubhuti practice",
+        title: "Anubhuti practice",
     },
     {
         thumbnail: { src: an01400, width: 600, height: 400 },
         fullSize: { src: an01full, width: 5760, height: 3840 },
-        alt: "anubhuti practice",
-        title: "Yoga Practice",
+        alt: "Anubhuti practice",
+        title: "Anubhuti Practice",
     },
-        {
+    {
         thumbnail: { src: an05400, width: 600, height: 400 },
         fullSize: { src: an05full, width: 5760, height: 3840 },
-        alt: "yoga class",
-        title: "Yoga Class",
-    }
+        alt: "Anubhuti class",
+        title: "Anubhuti Class",
+    },
+    {
+        thumbnail: { src: an08400, width: 400, height: 600 },
+        fullSize: { src: an08full, width: 3840, height: 5760 },
+        alt: "Tapas retreat",
+        title: "Tapas Retreat",
+    },
 ]
 
 const Proposte = ({info}) => {

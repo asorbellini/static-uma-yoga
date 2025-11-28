@@ -30,6 +30,24 @@ import LR22400 from "../assets/images/LastRetreats/LR22400px.webp"
 import LR23400 from "../assets/images/LastRetreats/LR23400px.webp"
 import LR24400 from "../assets/images/LastRetreats/LR24400px.webp"
 import LR25400 from "../assets/images/LastRetreats/LR25400px.webp"
+import LR26400 from "../assets/images/LastRetreats/LR26400px.webp"
+import LR27400 from "../assets/images/LastRetreats/LR27400px.webp"
+import LR28400 from "../assets/images/LastRetreats/LR28400px.webp"
+import LR29400 from "../assets/images/LastRetreats/LR29400px.webp"
+import LR30400 from "../assets/images/LastRetreats/LR30400px.webp"
+import LR31400 from "../assets/images/LastRetreats/LR31400px.webp"
+import LR32400 from "../assets/images/LastRetreats/LR32400px.webp"
+import LR33400 from "../assets/images/LastRetreats/LR33400px.webp"
+import LR34400 from "../assets/images/LastRetreats/LR34400px.webp"
+import LR35400 from "../assets/images/LastRetreats/LR35400px.webp"
+import LR36400 from "../assets/images/LastRetreats/LR36400px.webp"
+import LR37400 from "../assets/images/LastRetreats/LR37400px.webp"
+import LR38400 from "../assets/images/LastRetreats/LR38400px.webp"
+import LR39400 from "../assets/images/LastRetreats/LR39400px.webp"
+import LR40400 from "../assets/images/LastRetreats/LR40400px.webp"
+import LR41400 from "../assets/images/LastRetreats/LR41400px.webp"
+import LR42400 from "../assets/images/LastRetreats/LR42400px.webp"
+import LR43400 from "../assets/images/LastRetreats/LR43400px.webp"
 
 import LR01FULL from "../assets/images/LastRetreats/LR01full.webp"
 import LR02FULL from "../assets/images/LastRetreats/LR02full.webp"
@@ -56,6 +74,24 @@ import LR22FULL from "../assets/images/LastRetreats/LR22full.webp"
 import LR23FULL from "../assets/images/LastRetreats/LR23full.webp"
 import LR24FULL from "../assets/images/LastRetreats/LR24full.webp"
 import LR25FULL from "../assets/images/LastRetreats/LR25full.webp"
+import LR26FULL from "../assets/images/LastRetreats/LR26full.webp"
+import LR27FULL from "../assets/images/LastRetreats/LR27full.webp"
+import LR28FULL from "../assets/images/LastRetreats/LR28full.webp"
+import LR29FULL from "../assets/images/LastRetreats/LR29full.webp"
+import LR30FULL from "../assets/images/LastRetreats/LR30full.webp"
+import LR31FULL from "../assets/images/LastRetreats/LR31full.webp"
+import LR32FULL from "../assets/images/LastRetreats/LR32full.webp"
+import LR33FULL from "../assets/images/LastRetreats/LR33full.webp"
+import LR34FULL from "../assets/images/LastRetreats/LR34full.webp"
+import LR35FULL from "../assets/images/LastRetreats/LR35full.webp"
+import LR36FULL from "../assets/images/LastRetreats/LR36full.webp"
+import LR37FULL from "../assets/images/LastRetreats/LR37full.webp"
+import LR38FULL from "../assets/images/LastRetreats/LR38full.webp"
+import LR39FULL from "../assets/images/LastRetreats/LR39full.webp"
+import LR40FULL from "../assets/images/LastRetreats/LR40full.webp"
+import LR41FULL from "../assets/images/LastRetreats/LR41full.webp"
+import LR42FULL from "../assets/images/LastRetreats/LR42full.webp"
+import LR43FULL from "../assets/images/LastRetreats/LR43full.webp"
 
 import ReviewsCarrousel from "./ReviewsCarrousel.jsx" 
 import reviews from "../data/lastreviews.json"
@@ -185,6 +221,96 @@ const LastRetreatsImages = [
       thumbnail: { src: LR25400, width: 400, height: 267 },
       fullSize: { src: LR25FULL, width: 3000, height: 2000 },
       alt: "Pratica di Navakarana Vinyasa",
+    },
+    {
+      thumbnail: { src: LR26400, width: 400, height: 267 },
+      fullSize: { src: LR26FULL, width: 3000, height: 2000 },
+      alt: "Pratica di Yoga",
+    },
+    {
+      thumbnail: { src: LR27400, width: 400, height: 267 },
+      fullSize: { src: LR27FULL, width: 3000, height: 2000 },
+      alt: "Pratica di Navakarana",
+    },
+    {
+      thumbnail: { src: LR28400, width: 400, height: 267 },
+      fullSize: { src: LR28FULL, width: 3000, height: 2000 },
+      alt: "Pratica di Vinyasa",
+    },
+    {
+      thumbnail: { src: LR29400, width: 400, height: 267 },
+      fullSize: { src: LR29FULL, width: 3000, height: 2000 },
+      alt: "Diletta insegnando",
+    },
+    {
+      thumbnail: { src: LR30400, width: 400, height: 267 },
+      fullSize: { src: LR30FULL, width: 3000, height: 2000 },
+      alt: "Pratica",
+    },
+    {
+      thumbnail: { src: LR31400, width: 400, height: 267 },
+      fullSize: { src: LR31FULL, width: 3000, height: 2000 },
+      alt: "Pose dell'Lione",
+    },
+    {
+      thumbnail: { src: LR32400, width: 400, height: 267 },
+      fullSize: { src: LR32FULL, width: 3000, height: 2000 },
+      alt: "Pratica intensa",
+    },
+    {
+      thumbnail: { src: LR33400, width: 400, height: 267 },
+      fullSize: { src: LR33FULL, width: 3000, height: 2000 },
+      alt: "Alba corregendo",
+    },
+    {
+      thumbnail: { src: LR34400, width: 400, height: 267 },
+      fullSize: { src: LR34FULL, width: 3000, height: 2000 },
+      alt: "Godendo",
+    },
+    {
+      thumbnail: { src: LR35400, width: 400, height: 267 },
+      fullSize: { src: LR35FULL, width: 3000, height: 2000 },
+      alt: "Ridendo",
+    },
+    {
+      thumbnail: { src: LR36400, width: 400, height: 267 },
+      fullSize: { src: LR36FULL, width: 3000, height: 2000 },
+      alt: "Ballare",
+    },
+    {
+      thumbnail: { src: LR37400, width: 400, height: 267 },
+      fullSize: { src: LR37FULL, width: 3000, height: 2000 },
+      alt: "Unendo le mani",
+    },
+    {
+      thumbnail: { src: LR38400, width: 400, height: 267 },
+      fullSize: { src: LR38FULL, width: 3000, height: 2000 },
+      alt: "Spiegando",
+    },
+    {
+      thumbnail: { src: LR39400, width: 400, height: 267 },
+      fullSize: { src: LR39FULL, width: 3000, height: 2000 },
+      alt: "Diletta corregge la postura 1",
+    },
+    {
+      thumbnail: { src: LR40400, width: 400, height: 267 },
+      fullSize: { src: LR40FULL, width: 3000, height: 2000 },
+      alt: "Diletta corregge la postura 2",
+    },
+    {
+      thumbnail: { src: LR41400, width: 400, height: 267 },
+      fullSize: { src: LR41FULL, width: 3000, height: 2000 },
+      alt: "Alba correge la postura 1",
+    },
+    {
+      thumbnail: { src: LR42400, width: 400, height: 267 },
+      fullSize: { src: LR42FULL, width: 3000, height: 2000 },
+      alt: "Uno gruppo di partecipanti al ritiro Tapas",
+    },
+    {
+      thumbnail: { src: LR43400, width: 400, height: 267 },
+      fullSize: { src: LR43FULL, width: 3000, height: 2000 },
+      alt: "Gruppo di partecipanti al ritiro ",
     }
   ]
 
