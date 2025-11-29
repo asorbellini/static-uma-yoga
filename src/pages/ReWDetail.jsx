@@ -11,7 +11,7 @@ const renderers = {
     p: (d) => (
         <div className="py-2">
             {d.text.map((p, index) => (
-                <p key={index} className="textDetail pb-1 text-white drop-shadow-text">{p}</p>
+                <p key={index} className="textDetail pb-1 text-white drop-shadow-text" dangerouslySetInnerHTML={{ __html: p }} />
             ))}
         </div>
     ),
@@ -24,7 +24,7 @@ const renderers = {
     ul: (d) => (
         <ul className="text-white">
         {Array.isArray(d.items) && d.items.map((item, index) => (
-            <li key={index} className="list-disc list-inside textDetail pl-2 text-white drop-shadow-text">{item}</li>
+            <li key={index} className="list-disc list-inside textDetail pl-2 text-white drop-shadow-text" dangerouslySetInnerHTML={{ __html: item }} />
         ))}
         </ul>
     ),
@@ -92,10 +92,6 @@ function ReWDetail(){
                                 {RW?.location?.place}</a>
                             : <>{RW?.location?.place}</>
                             }, {RW?.location?.city}, {RW?.location?.region}, {RW?.location?.country}</h3>
-                        {eventoPasado && RW?.cost.length > 0 &&
-                            <p className="textDetail text-center pb-2 font-light text-dorado drop-shadow-text">
-                                <span className="uppercase">Investimento: </span>{RW?.cost}</p>
-                        }
                         {RW?.quote.length > 0 && 
                         <>
                             {RW.quote.map((phrase, index) => (
