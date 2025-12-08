@@ -70,7 +70,7 @@ function AboutUmaSummary(){
                 </div>
             </section>
             <section id="perche-uma" className="min-h-dvh w-full px-4 justify-items-center bg-claro overflow-hidden">
-                <div className="flex flex-col items-center justify-center px-2 md:px-12 md:w-full lg:max-w-4xl xl:max-w-6xl">
+                <div className="flex flex-col items-center justify-center px-2 md:px-12 w-full max-w-6xl mx-auto">
                     <h3 className="textTitleSection drop-shadow-none font-semibold tracking-wider uppercase py-4 text-terracota">
                         Perché UMĀ 
                     </h3>
