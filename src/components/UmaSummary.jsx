@@ -93,8 +93,21 @@ import LR41FULL from "../assets/images/LastRetreats/LR41full.webp"
 import LR42FULL from "../assets/images/LastRetreats/LR42full.webp"
 import LR43FULL from "../assets/images/LastRetreats/LR43full.webp"
 
+import DolomitiWellnessFestival from "../assets/images/Brands/dolomiti-wellness-festival.png"
+import GiardinoDeiVisionari from "../assets/images/Brands/giardino-dei-visionari.png"
+import KaleMana from "../assets/images/Brands/kalemana.png"
+import LoYoga from "../assets/images/Brands/lo-yoga.png"
+import Yoga from "../assets/images/Brands/yoga.png"
+import NaturalStyle from "../assets/images/Brands/natural-style.png"
+import StartsSystem from "../assets/images/Brands/stars-system.png"
+import Wanderlust from "../assets/images/Brands/wanderlust.png"
+import VanityFair from "../assets/images/Brands/vanityfair.png"
+import Xmasters from "../assets/images/Brands/xmasters.png"
+
+
 import ReviewsCarrousel from "./ReviewsCarrousel.jsx" 
 import reviews from "../data/lastreviews.json"
+import LogosCarrousel from "./LogosCarrousel.jsx"
 
 const LastRetreatsImages = [
   {
@@ -314,6 +327,19 @@ const LastRetreatsImages = [
     },
   ]
 
+const Brands = [
+    { name: "Dolomiti wellness festival", src: DolomitiWellnessFestival },
+    { name: "Giardino dei visionari", src: GiardinoDeiVisionari },
+    { name: "Kalemana", src: KaleMana },
+    { name: "lo yoga", src: LoYoga },
+    { name: "Yoga", src: Yoga },
+    { name: "Natural Style", src: NaturalStyle },
+    { name: "Starts System", src: StartsSystem },
+    { name: "Wanderlust", src: Wanderlust },
+    { name: "Vanity Fair", src: VanityFair },
+    { name: "Xmasters", src: Xmasters },
+]
+
 function UmaSummary(){
     const [isVisibleChiSiamo, setIsVisibleChiSiamo] = useState(false)
     const [isVisibleCosaFacciamo, setIsVisibleCosaFacciamo] = useState(false)
@@ -436,7 +462,11 @@ function UmaSummary(){
                                 <HorizontalGallery images={LastRetreatsImages}/>
                         </Suspense>
                     <h2 className="textTitleSection py-4">DICONO DI NOI</h2>
-                    <ReviewsCarrousel reviews={reviews}/> 
+                    <ReviewsCarrousel reviews={reviews}/>
+                    <h2 className="textTitleSection py-4">CHI CI HA SCELTO</h2>
+                    <Suspense fallback={<ComponentLoading />}>
+                      <LogosCarrousel logos={Brands} speed={40} pauseOnHover={true}/> 
+                    </Suspense>
                 </div>
             </section>
         </div>

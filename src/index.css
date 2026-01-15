@@ -177,6 +177,20 @@ body {
   animation: flipBack 0.7s cubic-bezier(0.4, 0.0, 0.6, 1);
 }
 
+@keyframes infinte-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-infinite-scroll {
+  animation: infinte-scroll var(--duration, 50s) linear infinite;
+  width: max-content;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
